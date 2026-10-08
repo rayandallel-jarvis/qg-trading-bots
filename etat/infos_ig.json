@@ -1,0 +1,500 @@
+{
+ "ts": "2026-10-08T23:15:50+00:00",
+ "ok": true,
+ "compte": "…F0CH",
+ "recherche_eurusd": {
+  "EURUSD": [
+   {
+    "epic": "CS.D.EURUSD.CEF.IP",
+    "nom": "EUR/USD ",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   },
+   {
+    "epic": "CS.D.EURUSD.CEFM.IP",
+    "nom": "EUR/USD Mini",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   }
+  ],
+  "EUR USD": [
+   {
+    "epic": "CS.D.EURUSD.CEF.IP",
+    "nom": "EUR/USD ",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   },
+   {
+    "epic": "CS.D.EURUSD.CEFM.IP",
+    "nom": "EUR/USD Mini",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   },
+   {
+    "epic": "IX.D.SUNEURUSD.CEF.IP",
+    "nom": "Weekend EUR/USD",
+    "type": "CURRENCIES",
+    "statut": "EDITS_ONLY",
+    "bid": 1.12063,
+    "offer": 1.12183
+   },
+   {
+    "epic": "KA.D.SUD5LN.CASH.IP",
+    "nom": "ETFS 5x Long EUR Short USD",
+    "type": "SHARES",
+    "statut": "CLOSED",
+    "bid": null,
+    "offer": null
+   },
+   {
+    "epic": "KA.D.EURPLN.CASH.IP",
+    "nom": "WisdomTree Long EUR Short USD",
+    "type": "SHARES",
+    "statut": "CLOSED",
+    "bid": null,
+    "offer": null
+   },
+   {
+    "epic": "KA.D.LUD5LN.CASH.IP",
+    "nom": "WisdomTree Short EUR Long USD",
+    "type": "SHARES",
+    "statut": "CLOSED",
+    "bid": null,
+    "offer": null
+   },
+   {
+    "epic": "KA.D.CE9GLN.CASH.IP",
+    "nom": "Amundi MSCI Eastern Europe Ex Russia UCITS ETF-C USD",
+    "type": "SHARES",
+    "statut": "CLOSED",
+    "bid": null,
+    "offer": null
+   }
+  ],
+  "Euro": [
+   {
+    "epic": "CS.D.EURGBP.CFD.IP",
+    "nom": "EUR/GBP",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 0.84752,
+    "offer": 0.84761
+   },
+   {
+    "epic": "CS.D.EURJPY.CFD.IP",
+    "nom": "EUR/JPY",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 177.108,
+    "offer": 177.142
+   },
+   {
+    "epic": "CS.D.EURUSD.CEF.IP",
+    "nom": "EUR/USD ",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   },
+   {
+    "epic": "CS.D.EURUSD.CEFM.IP",
+    "nom": "EUR/USD Mini",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.12118,
+    "offer": 1.12131
+   },
+   {
+    "epic": "CS.D.EURCAD.CFD.IP",
+    "nom": "EUR/CAD",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.59483,
+    "offer": 1.59508
+   },
+   {
+    "epic": "CS.D.EURCHF.CFD.IP",
+    "nom": "EUR/CHF",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 0.93208,
+    "offer": 0.93238
+   },
+   {
+    "epic": "CS.D.EURAUD.CFD.IP",
+    "nom": "EUR/AUD",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.61115,
+    "offer": 1.61133
+   },
+   {
+    "epic": "CS.D.EURCAD.MINI.IP",
+    "nom": "EUR/CAD Mini",
+    "type": "CURRENCIES",
+    "statut": "TRADEABLE",
+    "bid": 1.59483,
+    "offer": 1.59508
+   }
+  ]
+ },
+ "marches": {
+  "IX.D.NASDAQ.IFD.IP": {
+   "nom": "US Tech 100 au comptant (100$)",
+   "type": "INDICES",
+   "statut": "TRADEABLE",
+   "bid": 30799.3,
+   "offer": 30801.3,
+   "ecart": 2.0,
+   "facteur_echelle": 1,
+   "valeur_point": "100.00",
+   "unite_point": "1 Index Point",
+   "taille_contrat": "100",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.2
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 4.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 10.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "marge": 5,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  },
+  "IX.D.NASDAQ.IEN.IP": {
+   "nom": "US Tech 100 au comptant (1$)",
+   "type": "INDICES",
+   "statut": "TRADEABLE",
+   "bid": 30798.9,
+   "offer": 30801.4,
+   "ecart": 2.5,
+   "facteur_echelle": 1,
+   "valeur_point": "1.00",
+   "unite_point": "1 Index Point",
+   "taille_contrat": "1",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.2
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 4.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 10.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "marge": 5,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  },
+  "IX.D.NASDAQ.IFM.IP": {
+   "nom": "US Tech 100 au comptant (20$)",
+   "type": "INDICES",
+   "statut": "TRADEABLE",
+   "bid": 30798.6,
+   "offer": 30800.6,
+   "ecart": 2.0,
+   "facteur_echelle": 1,
+   "valeur_point": "20.00",
+   "unite_point": "1 Index Point",
+   "taille_contrat": "20",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.25
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 4.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 10.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "marge": 5,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  },
+  "CS.D.CFEGOLD.CEF.IP": {
+   "nom": "Spot Gold ($1)",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": 4139.85,
+   "offer": 4140.85,
+   "ecart": 1.0,
+   "facteur_echelle": 1,
+   "valeur_point": "1.00",
+   "unite_point": "1",
+   "taille_contrat": "1",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.1
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 2.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "marge": 5,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 2
+  },
+  "CS.D.BITCOIN.CEF.IP": {
+   "nom": "Bitcoin ($1)",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": 81772,
+   "offer": 81922,
+   "ecart": 150,
+   "facteur_echelle": 1,
+   "valeur_point": "1.00",
+   "unite_point": "1",
+   "taille_contrat": "1",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.01
+   },
+   "stop_min": {
+    "unit": "PERCENTAGE",
+    "value": 1.0
+   },
+   "stop_garanti_min": {
+    "unit": "PERCENTAGE",
+    "value": 10.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 20.0
+   },
+   "marge": 50,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 0
+  },
+  "CS.D.BITCOIN.CFE.IP": {
+   "nom": "Bitcoin (E1)",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": 81772,
+   "offer": 81922,
+   "ecart": 150,
+   "facteur_echelle": 1,
+   "valeur_point": "1.00",
+   "unite_point": "1",
+   "taille_contrat": "1",
+   "devises": [
+    "EUR"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.01
+   },
+   "stop_min": {
+    "unit": "PERCENTAGE",
+    "value": 1.0
+   },
+   "stop_garanti_min": {
+    "unit": "PERCENTAGE",
+    "value": 10.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 20.0
+   },
+   "marge": 50,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 0
+  },
+  "CS.D.EURUSD.CFD.IP": {
+   "nom": "EUR/USD ",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": null,
+   "offer": null,
+   "ecart": null,
+   "facteur_echelle": 1,
+   "valeur_point": "10.00",
+   "unite_point": "0.0001 USD/EUR",
+   "taille_contrat": "100000",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 1.0
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 2.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "marge": 3.33,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  },
+  "CS.D.EURUSD.MINI.IP": {
+   "nom": "EUR/USD Mini",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": null,
+   "offer": null,
+   "ecart": null,
+   "facteur_echelle": 1,
+   "valeur_point": "1.00",
+   "unite_point": "0.0001 USD/EUR",
+   "taille_contrat": "10000",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.1
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 2.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "marge": 3.33,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  },
+  "CS.D.EURUSD.CSD.IP": {
+   "nom": "EUR/USD ",
+   "type": "CURRENCIES",
+   "statut": "TRADEABLE",
+   "bid": null,
+   "offer": null,
+   "ecart": null,
+   "facteur_echelle": 1,
+   "valeur_point": "10.00",
+   "unite_point": "0.0001 USD/EUR",
+   "taille_contrat": "100000",
+   "devises": [
+    "USD"
+   ],
+   "taille_min": {
+    "unit": "POINTS",
+    "value": 0.1
+   },
+   "stop_min": {
+    "unit": "POINTS",
+    "value": 2.0
+   },
+   "stop_garanti_min": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "pas_taille": {
+    "unit": "POINTS",
+    "value": 5.0
+   },
+   "marge": 3.33,
+   "marge_unite": "PERCENTAGE",
+   "heures": null,
+   "decimales": 1
+  }
+ },
+ "quota_historique": {
+  "remainingAllowance": 9997,
+  "totalAllowance": 10000,
+  "allowanceExpiry": 604799
+ },
+ "exemple_prix": [
+  {
+   "snapshotTime": "2026/10/09 01:13:00",
+   "snapshotTimeUTC": "2026-10-08T23:13:00",
+   "openPrice": {
+    "bid": 4140.68,
+    "ask": 4141.68,
+    "lastTraded": null
+   },
+   "closePrice": {
+    "bid": 4139.37,
+    "ask": 4140.37,
+    "lastTraded": null
+   },
+   "highPrice": {
+    "bid": 4140.68,
+    "ask": 4141.68,
+    "lastTraded": null
+   },
+   "lowPrice": {
+    "bid": 4138.92,
+    "ask": 4140.24,
+    "lastTraded": null
+   },
+   "lastTradedVolume": 83
+  }
+ ],
+ "positions_ouvertes": 1,
+ "ordres_en_attente": 0
+}
