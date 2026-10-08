@@ -1,0 +1,5 @@
+{
+ "ts": "2026-10-08T22:06:09Z",
+ "ok": false,
+ "message": "Connexion IG refusée (HTTP 403) : {\"errorCode\":\"error.security.api-key-invalid\"}"
+}
