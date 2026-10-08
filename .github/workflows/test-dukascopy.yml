@@ -17,7 +17,7 @@ jobs:
         run: |
           mkdir -p dl
           for i in usatechidxusd xauusd eurusd btcusd; do
-            npx -y dukascopy-node -i $i -from 2026-09-29 -to 2026-10-02 -t m1 -f csv -v true -dir dl || true
+            npx -y dukascopy-node -i $i --debug -from 2025-03-03 -to 2025-03-05 -t m1 -f csv -v true -dir dl || true
           done
           mkdir -p etat
           { for f in dl/*.csv; do echo "$(basename $f) $(wc -l < $f) lignes"; head -3 $f; done; } > etat/test_dukascopy.txt

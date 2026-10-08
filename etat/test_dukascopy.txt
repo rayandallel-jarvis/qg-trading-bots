@@ -1,4 +1,0 @@
-btcusd-m1-bid-2026-09-29-2026-10-02.csv 0 lignes
-eurusd-m1-bid-2026-09-29-2026-10-02.csv 0 lignes
-usatechidxusd-m1-bid-2026-09-29-2026-10-02.csv 0 lignes
-xauusd-m1-bid-2026-09-29-2026-10-02.csv 0 lignes
