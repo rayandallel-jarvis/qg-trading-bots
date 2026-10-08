@@ -1,0 +1,4 @@
+btcusd-m1-bid-2025-03-03-2025-03-05.csv 0 lignes
+eurusd-m1-bid-2025-03-03-2025-03-05.csv 0 lignes
+usatechidxusd-m1-bid-2025-03-03-2025-03-05.csv 0 lignes
+xauusd-m1-bid-2025-03-03-2025-03-05.csv 0 lignes
