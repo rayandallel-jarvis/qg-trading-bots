@@ -5,6 +5,8 @@ expiration (en bougies 1 min, pour un ordre limite).
 """
 from datetime import timedelta
 
+import numpy as np
+
 NY_DEBUT, NY_FIN = 15 * 60 + 30, 17 * 60 + 30     # heure de Paris
 LONDRES_DEBUT, LONDRES_FIN = 8 * 60, 11 * 60
 
@@ -17,63 +19,110 @@ def _signal(sens, entree, stop, cible, setup, r_min, ordre="marche", expiration=
     if r < r_min:
         return None
     return {"sens": sens, "entree": float(entree), "stop": float(stop), "cible": float(cible),
-            "setup": setup, "ordre": ordre, "expiration": expiration, "r_prevu": round(r, 2)}
+            "setup": setup, "ordre": ordre, "expiration": expiration, "r_prevu": round(float(r), 2)}
 
 
-# ---------------------------------------------------------------- 1. ICT
+# ---------------------------------------------------------------- 1. ICT (modèle de Rayan, 8 oct.)
+# Tendance 1 h (structure) · jambe 1 h depuis le dernier swing opposé jusqu'à l'extrême
+# · zone = order block 1 h ∩ OTE (62–79 %) · le prix touche la zone · MSS 5 min
+# (clôture au-delà du dernier swing 5 min avant l'extrême de la correction) · entrée au marché
+# · stop sur l'extrême de la correction · objectif : liquidité 1 h (swing) à au moins 2R,
+# sinon la suivante · break-even à 1R.
 def ict(m, i, p):
-    if i < p["fenetre_sweep"] + 5:
+    if not m.fin_bougie5(i):
         return None
-    pm = m.paris_min[i]
-    dans_ny = NY_DEBUT <= pm < NY_FIN
-    dans_londres = m.type == "crypto" and LONDRES_DEBUT <= pm < LONDRES_FIN
-    if not (dans_ny or dans_londres):
+    n60 = m.n60[i]
+    if n60 < 30:
         return None
-    d = i - 1                                   # bougie de déplacement ; i ferme le FVG
-    if m.h[d] - m.l[d] < p["deplacement_atr"] * m.atr1[d]:
+    s = m.s60
+    sens = int(s["tendance"][n60 - 1])
+    if sens == 0:
         return None
-    biais = m.biais(i)
-    if biais == 0:
+    # dernière cassure (BOS) dans le sens de la tendance, sur les bougies 1 h terminées
+    k = int(np.searchsorted(m.bos60_m, n60 - 1, side="right")) - 1
+    while k >= 0 and s["bos"][k][1] != sens:
+        k -= 1
+    if k < 0:
         return None
-    hauts, bas = m.liquidite(i)
-    debut = max(0, d - p["fenetre_sweep"])
+    mb, _, _, i_origine = s["bos"][k]
+    if i_origine < 0 or n60 - 1 - mb > p["age_max_bos_h"]:
+        return None
+    h60, l60, o60, c60 = m.h60, m.l60, m.o60, m.c60
+    if sens == -1:
+        haut = h60[i_origine]                         # départ de la jambe baissière
+        bas = l60[i_origine:n60].min()
+        # order block : dernière bougie haussière avant la bougie de cassure
+        ob = next((j for j in range(mb - 1, i_origine - 1, -1) if c60[j] > o60[j]), None)
+        if ob is None:
+            return None
+        ote_bas, ote_haut = bas + p["ote_min"] * (haut - bas), bas + p["ote_max"] * (haut - bas)
+    else:
+        bas = l60[i_origine]
+        haut = h60[i_origine:n60].max()
+        ob = next((j for j in range(mb - 1, i_origine - 1, -1) if c60[j] < o60[j]), None)
+        if ob is None:
+            return None
+        ote_bas, ote_haut = haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas)
+    z_bas, z_haut = max(l60[ob], ote_bas), min(h60[ob], ote_haut)
+    if z_bas >= z_haut:
+        return None                                   # pas de chevauchement OB / OTE
 
-    if biais == 1 and m.c[d] > m.o[d] and m.l[i] > m.h[i - 2]:
-        sh = m.dernier_sh1[d - 1]
-        if sh != sh or m.c[d] <= sh:            # pas de changement de structure
+    # bougies 5 min depuis la clôture de la bougie de cassure
+    b = m.n5[i] - 1
+    debut = int(np.searchsorted(m.fin5, m.fin60[mb], side="left"))
+    if debut >= b:
+        return None
+    h5, l5, c5 = m.h5, m.l5, m.c5
+    if sens == -1:
+        touche = next((x for x in range(debut, b) if h5[x] >= z_bas), None)
+        if touche is None or h5[touche:b + 1].max() > haut:
+            return None                               # pas encore dans la zone, ou jambe invalidée
+        xi = touche + int(np.argmax(h5[touche:b]))    # extrême de la correction (avant la bougie b)
+        extreme = h5[xi]
+        swings5 = [j for j in m.idx_sl5 if j < xi and j + m.k5 <= b]
+        if not swings5:
             return None
-        balaye = None
-        for s in range(d - 1, debut - 1, -1):
-            if any(m.l[s] < L < m.c[s] for L in bas):
-                balaye = s
-                break
-        if balaye is None:
+        niveau = l5[swings5[-1]]
+        if not (c5[b] < niveau <= c5[b - 1]):
             return None
-        stop = m.l[balaye:i + 1].min() - p["marge_stop_atr"] * m.atr1[i]
-        entree = (m.l[i] + m.h[i - 2]) / 2
-        cibles = sorted(x for x in hauts if x > entree)
-        if not cibles:
+    else:
+        touche = next((x for x in range(debut, b) if l5[x] <= z_haut), None)
+        if touche is None or l5[touche:b + 1].min() < bas:
             return None
-        return _signal(1, entree, stop, cibles[0], "sweep_fvg", p["r_min"], "limite", p["expiration_bougies"])
+        xi = touche + int(np.argmin(l5[touche:b]))
+        extreme = l5[xi]
+        swings5 = [j for j in m.idx_sh5 if j < xi and j + m.k5 <= b]
+        if not swings5:
+            return None
+        niveau = h5[swings5[-1]]
+        if not (c5[b] > niveau >= c5[b - 1]):
+            return None
+    if b - touche > p["attente_mss_bougies5"]:
+        return None
 
-    if biais == -1 and m.c[d] < m.o[d] and m.h[i] < m.l[i - 2]:
-        sl = m.dernier_sl1[d - 1]
-        if sl != sl or m.c[d] >= sl:
-            return None
-        balaye = None
-        for s in range(d - 1, debut - 1, -1):
-            if any(m.h[s] > L > m.c[s] for L in hauts):
-                balaye = s
-                break
-        if balaye is None:
-            return None
-        stop = m.h[balaye:i + 1].max() + p["marge_stop_atr"] * m.atr1[i]
-        entree = (m.h[i] + m.l[i - 2]) / 2
-        cibles = sorted((x for x in bas if x < entree), reverse=True)
-        if not cibles:
-            return None
-        return _signal(-1, entree, stop, cibles[0], "sweep_fvg", p["r_min"], "limite", p["expiration_bougies"])
-    return None
+    entree = c5[b]
+    stop = extreme + sens * p["marge_stop_atr"] * m.atr5[b]
+    risque = (entree - stop) * sens
+    if risque <= 0:
+        return None
+    # liquidité 1 h : bas (ou hauts) des swings confirmés, du plus proche au plus lointain
+    lim = n60 - 1 - m.s60_k
+    if sens == -1:
+        niveaux = sorted({float(l60[j]) for j in np.where(s["sl"])[0] if j <= lim and l60[j] < entree}
+                         | {float(bas)}, reverse=True)
+        niveaux = [x for x in niveaux if x < entree]
+    else:
+        niveaux = sorted({float(h60[j]) for j in np.where(s["sh"])[0] if j <= lim and h60[j] > entree}
+                         | {float(haut)})
+        niveaux = [x for x in niveaux if x > entree]
+    cible = next((x for x in niveaux if (x - entree) * sens / risque >= p["r_min"]), None)
+    if cible is None:
+        return None
+    sig = _signal(sens, entree, stop, cible, "ob_ote_mss", p["r_min"])
+    if sig:
+        sig["be_r"] = p.get("break_even_r")
+        sig["zone"] = [round(float(z_bas), 4), round(float(z_haut), 4)]
+    return sig
 
 
 # ---------------------------------------------------------------- 2. Support / résistance

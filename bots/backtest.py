@@ -9,6 +9,11 @@ from datetime import datetime, timezone
 
 from .commun import Garde, charger_config, ecrire_json, notifier, resultat_r, statistiques, taille
 from .marche import Marche
+
+
+def construire_marche(df, a, cfg):
+    st = cfg["strategies"]
+    return Marche(df, a["type"], cfg["swing_k"], st["vp"]["zone_valeur"], st["ict"]["k_h1"], st["ict"]["k_m5"])
 from .strategies import NOMS, STRATEGIES
 
 
@@ -41,8 +46,12 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
                     sortie, motif = pos["cible"], "objectif"
             if sortie is None and a["type"] == "action" and (m.paris_min[i] >= cloture or derniere_de_session):
                 sortie, motif = m.c[i], "cloture"
+            if sortie is None and pos.get("be_r") and not pos.get("be"):
+                seuil = pos["entree"] + sens * pos["be_r"] * abs(pos["entree"] - pos["stop_initial"])
+                if (m.h[i] if sens == 1 else -m.l[i]) >= seuil * sens:
+                    pos["stop"], pos["be"] = pos["entree"], True
             if sortie is not None:
-                r = resultat_r(sens, pos["entree"], sortie, pos["stop"], a)
+                r = resultat_r(sens, pos["entree"], sortie, pos["stop_initial"], a)
                 trades.append({**pos, "sortie": round(float(sortie), 4), "motif": motif, "r": r,
                                "fin": str(m.fin1[i])})
                 garde.ferme(nom, pos["jour"], r)
@@ -63,13 +72,14 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
                 att = None
             if entree is not None:
                 pos = {"strategie": nom, "actif": symbole, "setup": att["setup"], "sens": sens,
-                       "entree": round(float(entree), 4), "stop": att["stop"], "cible": att["cible"],
-                       "r_prevu": att["r_prevu"], "jour": att["jour"], "debut": str(m.fin1[i])}
+                       "entree": round(float(entree), 4), "stop": att["stop"], "stop_initial": att["stop"],
+                       "cible": att["cible"], "be_r": att.get("be_r"),
+                       "r_prevu": att["r_prevu"], "jour": str(att["jour"]), "debut": str(m.fin1[i])}
                 garde.ouvert(nom, symbole, att["jour"])
                 att = None
                 # un stop touché dans la bougie d'entrée d'un ordre limite compte comme perte
                 if (sens == 1 and m.l[i] <= pos["stop"]) or (sens == -1 and m.h[i] >= pos["stop"]):
-                    r = resultat_r(sens, pos["entree"], pos["stop"], pos["stop"], a)
+                    r = resultat_r(sens, pos["entree"], pos["stop"], pos["stop_initial"], a)
                     trades.append({**pos, "sortie": pos["stop"], "motif": "stop", "r": r, "fin": str(m.fin1[i])})
                     garde.ferme(nom, pos["jour"], r)
                     pos = None
@@ -98,11 +108,11 @@ def main():
     jours = cfg["backtest"]["jours"]
     resultats, tous = {}, []
     for symbole, a in cfg["actifs"].items():
-        df = d.historique(symbole, a["type"], jours + 5)
+        df = d.historique(symbole, a["type"], jours + 20)
         print(symbole, len(df), "bougies")
         if len(df) < 500:
             continue
-        m = Marche(df, a["type"], cfg["swing_k"], cfg["strategies"]["vp"]["zone_valeur"])
+        m = construire_marche(df, a, cfg)
         for nom, p in cfg["strategies"].items():
             if not p.get("actif", True):
                 continue

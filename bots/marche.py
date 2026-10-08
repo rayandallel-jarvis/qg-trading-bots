@@ -71,8 +71,41 @@ def profil_volume(h, l, c, v, part=0.70, nb=120):
     return {"poc": (bords[poc] + bords[poc + 1]) / 2, "vah": bords[i_haut + 1], "val": bords[i_bas]}
 
 
+def structure(h, l, c, k):
+    """Structure de marché : derniers swings confirmés (valeur et indice), tendance et cassures (BOS).
+
+    tendance[m] : 1 haussière, -1 baissière, 0 inconnue, à la clôture de la bougie m.
+    bos : liste de (m, sens, niveau cassé, indice du swing opposé qui ouvre la jambe).
+    """
+    n = len(c)
+    sh, sl = swings(h, l, k)
+    dsh = np.full(n, np.nan); dsl = np.full(n, np.nan)
+    ish = np.full(n, -1); isl = np.full(n, -1)
+    for j in np.where(sh)[0]:
+        if j + k < n:
+            dsh[j + k], ish[j + k] = h[j], j
+    for j in np.where(sl)[0]:
+        if j + k < n:
+            dsl[j + k], isl[j + k] = l[j], j
+    dsh = pd.Series(dsh).ffill().to_numpy(); dsl = pd.Series(dsl).ffill().to_numpy()
+    ish = pd.Series(np.where(ish < 0, np.nan, ish)).ffill().fillna(-1).astype(int).to_numpy()
+    isl = pd.Series(np.where(isl < 0, np.nan, isl)).ffill().fillna(-1).astype(int).to_numpy()
+    tendance = np.zeros(n, dtype=int)
+    bos = []
+    etat, casse_h, casse_l = 0, None, None
+    for m in range(n):
+        if dsh[m] == dsh[m] and c[m] > dsh[m] and casse_h != ish[m]:
+            etat, casse_h = 1, ish[m]
+            bos.append((m, 1, float(dsh[m]), int(isl[m])))
+        elif dsl[m] == dsl[m] and c[m] < dsl[m] and casse_l != isl[m]:
+            etat, casse_l = -1, isl[m]
+            bos.append((m, -1, float(dsl[m]), int(ish[m])))
+        tendance[m] = etat
+    return {"sh": sh, "sl": sl, "dsh": dsh, "dsl": dsl, "ish": ish, "isl": isl, "tendance": tendance, "bos": bos}
+
+
 class Marche:
-    def __init__(self, df, type_actif, k=3, part_valeur=0.70):
+    def __init__(self, df, type_actif, k=3, part_valeur=0.70, k_h1=2, k_m5=2):
         self.type = type_actif
         self.k = k
         self.part_valeur = part_valeur
@@ -125,6 +158,27 @@ class Marche:
         self.session15 = np.array([str(d) for d in (
             self.d15.index.tz_convert("America/New_York").date if type_actif == "action"
             else self.d15.index.date)])
+
+        # 1 heure (actions : bougies calées sur l'ouverture de 9 h 30 à New York)
+        decal = "30min" if type_actif == "action" else None
+        self.d60 = df.resample("1h", label="left", closed="left", offset=decal).agg(
+            {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}).dropna()
+        self.fin60 = (self.d60.index + pd.Timedelta(hours=1)).to_numpy()
+        if type_actif == "action":   # la dernière bougie de la séance (15 h 30–16 h) ne dure que 30 min
+            ny = self.d60.index.tz_convert("America/New_York")
+            courte = (ny.hour == 15) & (ny.minute == 30)
+            self.fin60 = np.where(courte, (self.d60.index + pd.Timedelta(minutes=30)).to_numpy(), self.fin60)
+        self.n60 = np.searchsorted(self.fin60, self.fin1.to_numpy(), side="right")
+        self.o60, self.h60 = self.d60["open"].to_numpy(), self.d60["high"].to_numpy()
+        self.l60, self.c60 = self.d60["low"].to_numpy(), self.d60["close"].to_numpy()
+        self.s60 = structure(self.h60, self.l60, self.c60, k_h1)
+        self.s60_k = k_h1
+        self.bos60_m = np.array([b[0] for b in self.s60["bos"]], dtype=int)
+        # swings 5 min pour le changement de structure
+        self.k5 = k_m5
+        sh5, sl5 = swings(self.h5, self.l5, k_m5)
+        self.idx_sh5 = np.where(sh5)[0]
+        self.idx_sl5 = np.where(sl5)[0]
 
         # Plus haut / plus bas de la session précédente
         ser = pd.DataFrame({"s": self.session, "h": self.h, "l": self.l})

@@ -31,14 +31,18 @@ actifs:
     vente_a_decouvert: false       # Alpaca n'autorise pas la vente à découvert de crypto
 
 strategies:
-  ict:
+  ict:                             # modèle de Rayan (8 oct.)
     actif: true
     max_trades_jour: 2
-    r_min: 2.0
-    deplacement_atr: 1.5
-    marge_stop_atr: 0.1
-    expiration_bougies: 15
-    fenetre_sweep: 60
+    k_h1: 2                        # swing 1 h : 2 bougies de chaque côté (fractale)
+    k_m5: 2                        # swing 5 min pour le changement de structure
+    ote_min: 0.62                  # OTE : 62–79 % de la dernière jambe 1 h
+    ote_max: 0.79
+    r_min: 2.0                     # objectif mini 1 pour 2, sinon liquidité 1 h suivante
+    break_even_r: 1.0              # stop au prix d'entrée dès 1R
+    marge_stop_atr: 0.05           # petite marge au-delà de l'extrême de la correction
+    attente_mss_bougies5: 48       # le MSS doit venir dans les 4 h après le contact avec la zone
+    age_max_bos_h: 72              # une jambe 1 h de plus de 72 h n'est plus jouée
   sr:
     actif: true
     max_trades_jour: 3

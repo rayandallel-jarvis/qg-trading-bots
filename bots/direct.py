@@ -19,7 +19,7 @@ from alpaca.trading.requests import GetOrdersRequest, LimitOrderRequest, MarketO
 from .commun import (RACINE, Garde, charger_config, ecrire_json, lire_json, notifier, resultat_r,
                      statistiques, taille)
 from .donnees import Donnees
-from .marche import Marche
+from .backtest import construire_marche
 from .strategies import NOMS, STRATEGIES
 
 PREFIXE = "qg"
@@ -76,13 +76,13 @@ class Bot:
     def maj_barres(self, s):
         a = self.actif(s)
         if s not in self.barres or self.barres[s].empty:
-            self.barres[s] = self.d.historique(s, a["type"], 6)
+            self.barres[s] = self.d.historique(s, a["type"], 20)
         else:
             debut = self.barres[s].index[-1] - pd.Timedelta(minutes=5)
             neuf = self.d.barres(s, a["type"], debut.to_pydatetime())
             df = pd.concat([self.barres[s], neuf])
             df = df[~df.index.duplicated(keep="last")].sort_index()
-            self.barres[s] = df[df.index >= df.index[-1] - pd.Timedelta(days=6)]
+            self.barres[s] = df[df.index >= df.index[-1] - pd.Timedelta(days=20)]
         return self.barres[s]
 
     def arrondi(self, s, prix):
@@ -148,11 +148,17 @@ class Bot:
             motif = None
             for _, b in nouv.iterrows():
                 if (t["sens"] == 1 and b.low <= t["stop"]) or (t["sens"] == -1 and b.high >= t["stop"]):
-                    motif = "stop"
+                    motif = "break-even" if t.get("be") else "stop"
                     break
                 if (t["sens"] == 1 and b.high >= t["cible"]) or (t["sens"] == -1 and b.low <= t["cible"]):
                     motif = "objectif"
                     break
+                if t.get("be_r") and not t.get("be"):
+                    seuil = t["entree_reelle"] + t["sens"] * t["be_r"] * abs(t["entree_reelle"] - t["stop_initial"])
+                    if (b.high >= seuil) if t["sens"] == 1 else (b.low <= seuil):
+                        t["stop"], t["be"] = t["entree_reelle"], True
+                        notifier(f"{NOMS[t['strategie']]} · {t['actif']} : +1R atteint, stop au prix d'entrée.",
+                                 tags="shield")
             if not nouv.empty:
                 t["verifie"] = str(nouv.index[-1] + pd.Timedelta(minutes=1))
             if motif is None and fin_actions:
@@ -161,7 +167,7 @@ class Bot:
                 self.fermer(t, motif)
 
     def ouvrir(self, t, prix, qte):
-        t.update({"statut": "ouvert", "entree_reelle": prix, "qte": qte,
+        t.update({"statut": "ouvert", "entree_reelle": prix, "qte": qte, "stop_initial": t["stop"],
                   "ouvert_le": maintenant().isoformat(timespec="seconds"),
                   "verifie": str(pd.Timestamp(maintenant()).floor("min"))})
         self.garde.ouvert(t["strategie"], t["actif"], t["jour"])
@@ -175,7 +181,7 @@ class Bot:
         o = self.attendre_execution(o.id)
         sortie = float(o.filled_avg_price) if o and o.filled_avg_price else (
             t["stop"] if motif == "stop" else t["cible"])
-        r = resultat_r(t["sens"], t["entree_reelle"], sortie, t["stop"], self.actif(t["actif"]))
+        r = resultat_r(t["sens"], t["entree_reelle"], sortie, t.get("stop_initial", t["stop"]), self.actif(t["actif"]))
         t.update({"statut": "ferme", "sortie": sortie, "motif": motif, "r": r,
                   "ferme_le": maintenant().isoformat(timespec="seconds")})
         self.garde.ferme(t["strategie"], t["jour"], r)
@@ -229,7 +235,7 @@ class Bot:
                     continue
                 self.derniere[s] = df.index[-1]
                 a = self.actif(s)
-                m = Marche(df, a["type"], self.cfg["swing_k"], self.cfg["strategies"]["vp"]["zone_valeur"])
+                m = construire_marche(df, a, self.cfg)
                 for t in [t for t in self.etat["en_cours"] if t["actif"] == s]:
                     self.suivre(t, m)
                 self.chercher(s, m)
