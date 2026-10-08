@@ -58,22 +58,23 @@ def ict(m, i, p):
     h60, l60, o60, c60 = m.h60, m.l60, m.o60, m.c60
     if sens == -1:
         haut = h60[i_origine]                         # départ de la jambe baissière
-        bas = l60[i_origine:n60].min()
-        # order block : dernière bougie haussière avant la bougie de cassure
-        ob = next((j for j in range(mb - 1, i_origine - 1, -1) if c60[j] > o60[j]), None)
-        if ob is None:
-            return None
+        i_ext = i_origine + int(np.argmin(l60[i_origine:n60]))
+        bas = l60[i_ext]
+        # order blocks : bougies haussières de la jambe (du départ jusqu'au plus bas)
+        obs = [j for j in range(i_origine, i_ext + 1) if c60[j] > o60[j]]
         ote_bas, ote_haut = bas + p["ote_min"] * (haut - bas), bas + p["ote_max"] * (haut - bas)
     else:
         bas = l60[i_origine]
-        haut = h60[i_origine:n60].max()
-        ob = next((j for j in range(mb - 1, i_origine - 1, -1) if c60[j] < o60[j]), None)
-        if ob is None:
-            return None
+        i_ext = i_origine + int(np.argmax(h60[i_origine:n60]))
+        haut = h60[i_ext]
+        obs = [j for j in range(i_origine, i_ext + 1) if c60[j] < o60[j]]
         ote_bas, ote_haut = haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas)
-    z_bas, z_haut = max(l60[ob], ote_bas), min(h60[ob], ote_haut)
-    if z_bas >= z_haut:
-        return _non("OB hors OTE")                                   # pas de chevauchement OB / OTE
+    # zone = parties des order blocks de la jambe qui tombent dans l'OTE
+    zones = [(max(l60[j], ote_bas), min(h60[j], ote_haut)) for j in obs]
+    zones = [z for z in zones if z[0] < z[1]]
+    if not zones:
+        return _non("OB hors OTE")
+    z_bas, z_haut = min(z[0] for z in zones), max(z[1] for z in zones)                                   # pas de chevauchement OB / OTE
 
     # bougies 5 min depuis la clôture de la bougie de cassure
     b = m.n5[i] - 1

@@ -29,6 +29,7 @@ actifs:
     glissement_pct: 0.01
     notionnel_max_pct: 90
     vente_a_decouvert: false       # Alpaca n'autorise pas la vente à découvert de crypto
+    frais_max_part_risque: 10      # filtre de frais désactivé sur BTC (argent fictif, choix de Rayan) ; frais toujours déduits des résultats
 
 strategies:
   ict:                             # modèle de Rayan (8 oct.)
@@ -62,5 +63,5 @@ strategies:
     meche_min: 0.5
 
 backtest:
-  jours: 28
+  jours: 182                      # 6 mois
   trades_min: 30

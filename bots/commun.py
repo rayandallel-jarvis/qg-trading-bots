@@ -27,7 +27,7 @@ def taille(signal, capital, a, cfg):
     r = cfg["risque"]
     risque_u = abs(signal["entree"] - signal["stop"])
     cout = cout_unitaire(signal["entree"], a)
-    if cout > r["frais_max_part_risque"] * risque_u:
+    if cout > a.get("frais_max_part_risque", r["frais_max_part_risque"]) * risque_u:
         return 0, 0, "frais trop lourds"
     qte = capital * r["risque_par_trade_pct"] / 100 / risque_u
     qte = min(qte, capital * a.get("notionnel_max_pct", 100) / 100 / signal["entree"])
