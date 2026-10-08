@@ -1,5 +1,5 @@
 name: Test de connexion IG
-# relance : 2026-10-08T22:42:25Z
+# relance : 2026-10-08T22:58:48Z
 on:
   workflow_dispatch:
   push:
