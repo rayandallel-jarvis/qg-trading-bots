@@ -1,0 +1,24 @@
+name: Infos marchés IG
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/infos_ig.py, bots/ig.py, .github/workflows/infos-ig.yml]
+permissions:
+  contents: write
+jobs:
+  infos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/infos_ig.py
+        env:
+          IG_API_KEY: ${{ secrets.IG_API_KEY }}
+          IG_USERNAME: ${{ secrets.IG_USERNAME }}
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          IG_ACC_TYPE: ${{ secrets.IG_ACC_TYPE }}
+      - run: |
+          git config user.name "qg-bots"; git config user.email "qg-bots@users.noreply.github.com"
+          git add etat/infos_ig.json && git commit -qm "Infos marchés IG" && git pull -q --rebase && git push -q
