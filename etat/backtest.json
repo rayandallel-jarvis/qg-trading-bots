@@ -1,5 +1,5 @@
 {
- "date": "2026-10-08T20:32:14+00:00",
+ "date": "2026-10-08T20:42:57+00:00",
  "jours": 182,
  "par_strategie": {
   "ict": {
@@ -10,6 +10,7 @@
    "total_r": -348.14,
    "drawdown_max_r": -348.14,
    "esperance_brute_r": -0.139,
+   "reussite_brute": 0.223,
    "feu_vert": false
   },
   "perso_1h": {
@@ -20,6 +21,7 @@
    "total_r": -119.88,
    "drawdown_max_r": -122.61,
    "esperance_brute_r": -0.108,
+   "reussite_brute": 0.267,
    "feu_vert": false
   },
   "perso_2h": {
@@ -30,6 +32,7 @@
    "total_r": -79.61,
    "drawdown_max_r": -79.61,
    "esperance_brute_r": -0.007,
+   "reussite_brute": 0.333,
    "feu_vert": false
   },
   "sr": {
@@ -40,6 +43,7 @@
    "total_r": -1941.0,
    "drawdown_max_r": -1941.0,
    "esperance_brute_r": -0.542,
+   "reussite_brute": 0.218,
    "feu_vert": false
   }
  },
@@ -47,16 +51,16 @@
   "ict": {
    "pas de déplacement": 59969,
    "pas de biais 4h": 118,
-   "hors killzone": 239251,
+   "hors killzone": 239250,
    "pas de sweep": 466,
    "pas de MSS": 909,
    "pas de liquidité à 2R": 145
   },
   "perso_1h": {
-   "historique": 768,
+   "historique": 765,
    "OB hors OTE": 25806,
    "attente": 1200,
-   "zone pas touchée": 58965,
+   "zone pas touchée": 58968,
    "pas de MSS 3 min": 10672,
    "signal": 310,
    "MSS trop tardif": 10612,
@@ -65,8 +69,8 @@
    "pas de liquidité à 1R": 1
   },
   "perso_2h": {
-   "historique": 1436,
-   "zone pas touchée": 61576,
+   "historique": 1433,
+   "zone pas touchée": 61579,
    "attente": 578,
    "zone invalidée": 2136,
    "OB hors OTE": 26519,
@@ -394,6 +398,13 @@
    "r_prevu": 1.77,
    "jour": "2026-06-03",
    "debut": "2026-06-04 13:31:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    741.1778,
+    742.7384
+   ],
    "sortie": 741.3207142857143,
    "motif": "stop",
    "r": -1.026,
@@ -412,6 +423,13 @@
    "r_prevu": 1.77,
    "jour": "2026-06-03",
    "debut": "2026-06-04 13:31:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    741.1778,
+    742.7384
+   ],
    "sortie": 741.3207142857143,
    "motif": "stop",
    "r": -1.026,
@@ -772,6 +790,13 @@
    "r_prevu": 5.15,
    "jour": "2026-06-11",
    "debut": "2026-06-10 23:11:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    61166.9151,
+    61520.1084
+   ],
    "be": true,
    "sortie": 61735.455,
    "motif": "objectif",
@@ -944,6 +969,13 @@
    "r_prevu": 2.49,
    "jour": "2026-06-12",
    "debut": "2026-06-12 21:31:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    63095.5688,
+    63372.03
+   ],
    "be": true,
    "sortie": 63443.9163,
    "motif": "stop",
@@ -964,6 +996,13 @@
    "r_prevu": 1.91,
    "jour": "2026-06-13",
    "debut": "2026-06-12 22:34:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    63095.5688,
+    63372.03
+   ],
    "sortie": 63360.1007,
    "motif": "stop",
    "r": -4.281,
@@ -1286,6 +1325,13 @@
    "r_prevu": 1.78,
    "jour": "2026-06-17",
    "debut": "2026-06-18 13:31:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    732.26,
+    733.2273
+   ],
    "sortie": 735.124,
    "motif": "stop",
    "r": -1.013,
@@ -1494,6 +1540,13 @@
    "r_prevu": 1.24,
    "jour": "2026-06-21",
    "debut": "2026-06-21 07:03:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64196.7004,
+    64263.1294
+   ],
    "be": true,
    "sortie": 64145.4748,
    "motif": "stop",
@@ -1552,6 +1605,13 @@
    "r_prevu": 1.05,
    "jour": "2026-06-22",
    "debut": "2026-06-22 20:25:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64151.2937,
+    64278.3835
+   ],
    "sortie": 64217.4985,
    "motif": "stop",
    "r": -3.388,
@@ -1571,6 +1631,13 @@
    "r_prevu": 1.15,
    "jour": "2026-06-23",
    "debut": "2026-06-22 22:21:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64151.2937,
+    64278.3835
+   ],
    "sortie": 64080.1189,
    "motif": "stop",
    "r": -4.542,
@@ -1590,6 +1657,13 @@
    "r_prevu": 1.53,
    "jour": "2026-06-23",
    "debut": "2026-06-22 22:21:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    63698.8247,
+    64097.3887
+   ],
    "sortie": 64080.1189,
    "motif": "stop",
    "r": -4.542,
@@ -1874,6 +1948,13 @@
    "r_prevu": 1.26,
    "jour": "2026-06-26",
    "debut": "2026-06-29 13:31:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    713.4695,
+    716.3552
+   ],
    "sortie": 715.4858,
    "motif": "stop",
    "r": -1.014,
@@ -2273,6 +2354,13 @@
    "r_prevu": 1.04,
    "jour": "2026-07-06",
    "debut": "2026-07-06 08:35:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    62809.873,
+    62834.886
+   ],
    "sortie": 62830.6403,
    "motif": "stop",
    "r": -5.097,
@@ -2366,6 +2454,13 @@
    "r_prevu": 1.88,
    "jour": "2026-07-07",
    "debut": "2026-07-07 13:55:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    63118.5325,
+    63134.4635
+   ],
    "sortie": 62940.2533,
    "motif": "stop",
    "r": -3.293,
@@ -2613,6 +2708,13 @@
    "r_prevu": 1.67,
    "jour": "2026-07-11",
    "debut": "2026-07-11 16:38:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64133.3792,
+    64212.5337
+   ],
    "be": true,
    "sortie": 64093.0123,
    "motif": "stop",
@@ -2785,6 +2887,13 @@
    "r_prevu": 1.68,
    "jour": "2026-07-15",
    "debut": "2026-07-15 09:57:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64544.4366,
+    64692.0828
+   ],
    "be": true,
    "sortie": 64599.6955,
    "motif": "stop",
@@ -3242,6 +3351,13 @@
    "r_prevu": 1.15,
    "jour": "2026-07-24",
    "debut": "2026-07-24 12:43:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64928.5729,
+    65074.55
+   ],
    "sortie": 64821.9093,
    "motif": "stop",
    "r": -4.977,
@@ -3356,6 +3472,13 @@
    "r_prevu": 1.08,
    "jour": "2026-07-26",
    "debut": "2026-07-26 07:25:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64272.559,
+    64333.176
+   ],
    "sortie": 64368.14,
    "motif": "objectif",
    "r": -3.172,
@@ -3394,6 +3517,13 @@
    "r_prevu": 1.03,
    "jour": "2026-07-27",
    "debut": "2026-07-27 11:40:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64990.3675,
+    65007.3584
+   ],
    "sortie": 65007.6692,
    "motif": "stop",
    "r": -3.418,
@@ -3413,6 +3543,13 @@
    "r_prevu": 1.16,
    "jour": "2026-07-27",
    "debut": "2026-07-27 14:21:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64514.4172,
+    64768.5933
+   ],
    "sortie": 64769.2858,
    "motif": "stop",
    "r": -2.581,
@@ -3546,6 +3683,13 @@
    "r_prevu": 1.46,
    "jour": "2026-07-29",
    "debut": "2026-07-29 16:32:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    63722.1027,
+    63924.4693
+   ],
    "sortie": 63801.7411,
    "motif": "stop",
    "r": -4.525,
@@ -3565,6 +3709,13 @@
    "r_prevu": 1.08,
    "jour": "2026-07-29",
    "debut": "2026-07-29 18:33:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    63722.1027,
+    63924.4693
+   ],
    "sortie": 63940.6,
    "motif": "objectif",
    "r": -0.588,
@@ -3584,6 +3735,13 @@
    "r_prevu": 2.04,
    "jour": "2026-07-29",
    "debut": "2026-07-30 13:44:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    675.58,
+    675.9152
+   ],
    "sortie": 679.8338,
    "motif": "stop",
    "r": -1.011,
@@ -4040,6 +4198,13 @@
    "r_prevu": 1.01,
    "jour": "2026-08-05",
    "debut": "2026-08-05 04:23:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    63838.12,
+    63899.4386
+   ],
    "sortie": 64323.36,
    "motif": "objectif",
    "r": -0.544,
@@ -4306,6 +4471,13 @@
    "r_prevu": 1.33,
    "jour": "2026-08-08",
    "debut": "2026-08-08 16:13:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64953.465,
+    64997.07
+   ],
    "sortie": 65071.065,
    "motif": "objectif",
    "r": -8.463,
@@ -4325,6 +4497,13 @@
    "r_prevu": 1.99,
    "jour": "2026-08-08",
    "debut": "2026-08-08 17:43:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    64953.465,
+    64997.07
+   ],
    "be": true,
    "sortie": 65035.554,
    "motif": "stop",
@@ -4364,6 +4543,13 @@
    "r_prevu": 1.07,
    "jour": "2026-08-09",
    "debut": "2026-08-09 00:45:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64841.789,
+    64909.4256
+   ],
    "sortie": 64941.95,
    "motif": "objectif",
    "r": -7.117,
@@ -4383,6 +4569,13 @@
    "r_prevu": 1.14,
    "jour": "2026-08-09",
    "debut": "2026-08-09 01:07:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64841.789,
+    64909.4256
+   ],
    "sortie": 64941.95,
    "motif": "objectif",
    "r": -7.567,
@@ -4459,6 +4652,13 @@
    "r_prevu": 1.0,
    "jour": "2026-08-10",
    "debut": "2026-08-10 00:40:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64835.8564,
+    64954.6592
+   ],
    "sortie": 64772.1442,
    "motif": "stop",
    "r": -5.567,
@@ -4478,6 +4678,13 @@
    "r_prevu": 1.09,
    "jour": "2026-08-10",
    "debut": "2026-08-10 00:52:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64835.8564,
+    64954.6592
+   ],
    "sortie": 65156.1,
    "motif": "objectif",
    "r": -0.765,
@@ -4896,6 +5103,13 @@
    "r_prevu": 1.06,
    "jour": "2026-08-19",
    "debut": "2026-08-19 03:37:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64221.3962,
+    64333.6
+   ],
    "sortie": 64323.36,
    "motif": "objectif",
    "r": -4.348,
@@ -4934,6 +5148,13 @@
    "r_prevu": 1.65,
    "jour": "2026-08-19",
    "debut": "2026-08-19 05:24:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    64221.3962,
+    64333.6
+   ],
    "be": true,
    "sortie": 64261.4783,
    "motif": "stop",
@@ -5144,6 +5365,13 @@
    "r_prevu": 1.1,
    "jour": "2026-08-24",
    "debut": "2026-08-23 23:43:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    77300.4056,
+    77460.7768
+   ],
    "sortie": 77708.565,
    "motif": "objectif",
    "r": -0.956,
@@ -5181,6 +5409,13 @@
    "r_prevu": 1.1,
    "jour": "2026-08-24",
    "debut": "2026-08-24 00:21:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    77300.4056,
+    77460.7768
+   ],
    "sortie": 77297.8562,
    "motif": "stop",
    "r": -3.065,
@@ -6128,6 +6363,13 @@
    "r_prevu": 1.8,
    "jour": "2026-09-06",
    "debut": "2026-09-05 23:38:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    79697.7899,
+    79796.2
+   ],
    "be": true,
    "sortie": 79790.8379,
    "motif": "stop",
@@ -6148,6 +6390,13 @@
    "r_prevu": 1.8,
    "jour": "2026-09-06",
    "debut": "2026-09-05 23:38:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    79619.5345,
+    79746.9973
+   ],
    "be": true,
    "sortie": 79790.8379,
    "motif": "stop",
@@ -6244,6 +6493,13 @@
    "r_prevu": 2.98,
    "jour": "2026-09-07",
    "debut": "2026-09-07 04:29:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    79566.5261,
+    79779.9309
+   ],
    "sortie": 79560.3953,
    "motif": "stop",
    "r": -8.289,
@@ -6263,6 +6519,13 @@
    "r_prevu": 1.1,
    "jour": "2026-09-07",
    "debut": "2026-09-07 06:44:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    79566.5261,
+    79779.9309
+   ],
    "sortie": 79542.6566,
    "motif": "stop",
    "r": -4.034,
@@ -6415,6 +6678,13 @@
    "r_prevu": 1.13,
    "jour": "2026-09-09",
    "debut": "2026-09-09 14:07:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    78576.9332,
+    78829.028
+   ],
    "sortie": 78742.7722,
    "motif": "stop",
    "r": -2.207,
@@ -6548,6 +6818,13 @@
    "r_prevu": 2.41,
    "jour": "2026-09-11",
    "debut": "2026-09-11 14:20:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    716.1847,
+    718.7237
+   ],
    "sortie": 716.7536,
    "motif": "stop",
    "r": -1.05,
@@ -6567,6 +6844,13 @@
    "r_prevu": 2.22,
    "jour": "2026-09-11",
    "debut": "2026-09-11 15:07:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    716.1847,
+    718.7237
+   ],
    "be": true,
    "sortie": 715.9576,
    "motif": "stop",
@@ -6681,6 +6965,13 @@
    "r_prevu": 1.24,
    "jour": "2026-09-15",
    "debut": "2026-09-15 06:25:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    77141.1399,
+    77670.2324
+   ],
    "sortie": 77291.02,
    "motif": "stop",
    "r": -3.641,
@@ -6795,6 +7086,13 @@
    "r_prevu": 1.44,
    "jour": "2026-09-16",
    "debut": "2026-09-16 13:54:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    75477.7892,
+    75640.3976
+   ],
    "sortie": 75522.48,
    "motif": "stop",
    "r": -4.349,
@@ -6814,6 +7112,13 @@
    "r_prevu": 1.04,
    "jour": "2026-09-16",
    "debut": "2026-09-16 14:50:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    75477.7892,
+    75640.3976
+   ],
    "be": true,
    "sortie": 75482.7786,
    "motif": "stop",
@@ -6872,6 +7177,13 @@
    "r_prevu": 1.03,
    "jour": "2026-09-17",
    "debut": "2026-09-17 15:06:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    75658.5908,
+    75967.5624
+   ],
    "sortie": 76505.3,
    "motif": "objectif",
    "r": -0.432,
@@ -6929,6 +7241,13 @@
    "r_prevu": 1.18,
    "jour": "2026-09-21",
    "debut": "2026-09-21 02:34:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    80886.5307,
+    81141.8348
+   ],
    "sortie": 81384.87,
    "motif": "objectif",
    "r": -0.983,
@@ -7176,6 +7495,13 @@
    "r_prevu": 1.36,
    "jour": "2026-09-24",
    "debut": "2026-09-24 18:40:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    739.815,
+    740.0873
+   ],
    "sortie": 741.55,
    "motif": "cloture",
    "r": -0.443,
@@ -7290,6 +7616,13 @@
    "r_prevu": 1.34,
    "jour": "2026-09-28",
    "debut": "2026-09-28 00:40:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    84110.9202,
+    84207.851
+   ],
    "sortie": 84129.7474,
    "motif": "stop",
    "r": -2.39,
@@ -7517,6 +7850,13 @@
    "r_prevu": 2.09,
    "jour": "2026-10-02",
    "debut": "2026-10-02 18:22:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    84456.02,
+    84687.3732
+   ],
    "sortie": 84498.7399,
    "motif": "stop",
    "r": -4.679,
@@ -7687,6 +8027,13 @@
    "r_prevu": 1.74,
    "jour": "2026-10-06",
    "debut": "2026-10-06 18:36:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    85439.5438,
+    85707.9497
+   ],
    "sortie": 85479.0214,
    "motif": "stop",
    "r": -5.858,
@@ -7706,6 +8053,13 @@
    "r_prevu": 6.0,
    "jour": "2026-10-06",
    "debut": "2026-10-06 18:36:00+00:00",
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    85706.517,
+    85707.9497
+   ],
    "sortie": 85479.0214,
    "motif": "stop",
    "r": -5.858,
