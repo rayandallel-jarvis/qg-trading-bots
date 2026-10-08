@@ -20,7 +20,8 @@ from .commun import (RACINE, Garde, charger_config, ecrire_json, lire_json, noti
                      statistiques, taille)
 from .donnees import Donnees
 from .backtest import construire_marche
-from .strategies import NOMS, STRATEGIES
+from . import strategies as S
+from .strategies import NOMS, fonction
 
 PREFIXE = "qg"
 ARRET = False
@@ -157,7 +158,7 @@ class Bot:
                     seuil = t["entree_reelle"] + t["sens"] * t["be_r"] * abs(t["entree_reelle"] - t["stop_initial"])
                     if (b.high >= seuil) if t["sens"] == 1 else (b.low <= seuil):
                         t["stop"], t["be"] = t["entree_reelle"], True
-                        notifier(f"{NOMS[t['strategie']]} · {t['actif']} : +1R atteint, stop au prix d'entrée.",
+                        notifier(f"{NOMS.get(t['strategie'], t['strategie'])} · {t['actif']} : +1R atteint, stop au prix d'entrée.",
                                  tags="shield")
             if not nouv.empty:
                 t["verifie"] = str(nouv.index[-1] + pd.Timedelta(minutes=1))
@@ -172,7 +173,7 @@ class Bot:
                   "verifie": str(pd.Timestamp(maintenant()).floor("min"))})
         self.garde.ouvert(t["strategie"], t["actif"], t["jour"])
         sens = "Achat" if t["sens"] == 1 else "Vente"
-        notifier(f"{NOMS[t['strategie']]} · {sens} {t['actif']} à {prix:.2f}\n"
+        notifier(f"{NOMS.get(t['strategie'], t['strategie'])} · {sens} {t['actif']} à {prix:.2f}\n"
                  f"Stop {t['stop']:.2f} · Objectif {t['cible']:.2f} ({t['r_prevu']}R prévu)", tags="chart_with_upwards_trend")
         self.modifie = True
 
@@ -187,7 +188,7 @@ class Bot:
         self.garde.ferme(t["strategie"], t["jour"], r)
         self.etat["cycle"]["trades"] += 1
         icone = "white_check_mark" if r > 0 else "x"
-        notifier(f"{NOMS[t['strategie']]} · {t['actif']} fermé ({motif}) : {r:+.2f}R\n"
+        notifier(f"{NOMS.get(t['strategie'], t['strategie'])} · {t['actif']} fermé ({motif}) : {r:+.2f}R\n"
                  f"Cycle : {self.etat['cycle']['trades']}/{self.etat['cycle']['quota']} trades", tags=icone)
         if self.etat["cycle"]["trades"] >= self.etat["cycle"]["quota"]:
             notifier("Cycle terminé : le bilan part au Trésorier.", tags="trophy")
@@ -206,7 +207,8 @@ class Bot:
         for nom, p in self.cfg["strategies"].items():
             if not p.get("actif", True) or not self.garde.autorise(nom, s, jour):
                 continue
-            sig = STRATEGIES[nom](m, i, p)
+            S.COURANT = nom
+            sig = fonction(nom, p)(m, i, p)
             if not sig or (sig["sens"] == -1 and not a.get("vente_a_decouvert", True)):
                 continue
             capital = self.capital()

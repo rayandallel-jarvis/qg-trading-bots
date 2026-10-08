@@ -13,10 +13,11 @@ from .marche import Marche
 
 def construire_marche(df, a, cfg):
     st = cfg["strategies"]
-    return Marche(df, a["type"], cfg["swing_k"], st["vp"]["zone_valeur"], st["ict"]["k_h1"], st["ict"]["k_m5"])
+    return Marche(df, a["type"], cfg["swing_k"], st["vp"]["zone_valeur"])
 from collections import Counter
 
-from .strategies import DIAG, NOMS, STRATEGIES
+from . import strategies as S
+from .strategies import DIAG, NOMS, fonction
 
 REFUS = Counter()
 
@@ -28,7 +29,7 @@ def _minutes(hhmm):
 
 def simuler(m, nom, symbole, a, cfg, capital=100_000):
     p = cfg["strategies"][nom]
-    f = STRATEGIES[nom]
+    f = fonction(nom, p)
     garde = Garde(cfg)
     cloture = _minutes(cfg["risque"]["cloture_actions"])
     trades, pos, att = [], None, None
@@ -56,7 +57,8 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
                     pos["stop"], pos["be"] = pos["entree"], True
             if sortie is not None:
                 r = resultat_r(sens, pos["entree"], sortie, pos["stop_initial"], a)
-                trades.append({**pos, "sortie": round(float(sortie), 4), "motif": motif, "r": r,
+                brut = round(float((sortie - pos["entree"]) * sens / abs(pos["entree"] - pos["stop_initial"])), 3)
+                trades.append({**pos, "sortie": round(float(sortie), 4), "motif": motif, "r": r, "r_brut": brut,
                                "fin": str(m.fin1[i])})
                 garde.ferme(nom, pos["jour"], r)
                 pos = None
@@ -93,6 +95,7 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
             continue
         if not garde.autorise(nom, symbole, jour):
             continue
+        S.COURANT = nom
         s = f(m, i, p)
         if not s:
             continue
@@ -128,16 +131,19 @@ def main():
             print(nom, symbole, resultats[f"{nom}|{symbole}"])
 
     par_strat, lignes = {}, []
-    for nom in cfg["strategies"]:
+    for nom in [n for n, q in cfg["strategies"].items() if q.get("actif", True)]:
         rs = [t["r"] for t in sorted(tous, key=lambda t: t["fin"]) if t["strategie"] == nom]
         st = statistiques(rs)
+        brut = [t.get("r_brut", t["r"]) for t in tous if t["strategie"] == nom]
+        st["esperance_brute_r"] = round(sum(brut) / len(brut), 3) if brut else None
         st["feu_vert"] = bool(st["trades"] >= cfg["backtest"]["trades_min"] and st.get("esperance_r", 0) > 0)
         par_strat[nom] = st
         if st["trades"]:
-            lignes.append(f"{NOMS[nom]} : {st['trades']} trades, {st['esperance_r']:+.2f}R/trade"
+            lignes.append(f"{NOMS.get(nom, nom)} : {st['trades']} trades, {st['esperance_r']:+.2f}R/trade "
+                          f"({st['esperance_brute_r']:+.2f}R avant frais)"
                           f"{' ✅' if st['feu_vert'] else ''}")
         else:
-            lignes.append(f"{NOMS[nom]} : 0 trade")
+            lignes.append(f"{NOMS.get(nom, nom)} : 0 trade")
     ecrire_json("backtest.json", {
         "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "jours": jours, "par_strategie": par_strat, "entonnoir": {k: dict(v) for k, v in DIAG.items()},

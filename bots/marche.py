@@ -204,6 +204,43 @@ class Marche:
         self.debut_session = premier
         self._profils = {}
 
+
+    # ------------------------------------------------------------------ unités à la demande
+    def ut(self, regle, k=2):
+        """Bougies d'une unité de temps (ex. '3min', '1h', '2h', '4h', '1D') avec leur structure."""
+        cle = (regle, k)
+        if not hasattr(self, "_ut"):
+            self._ut = {}
+        if cle in self._ut:
+            return self._ut[cle]
+        agg = {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}
+        if regle == "1D":
+            g = self.df.groupby(self.session).agg(agg)
+            debut = pd.Series(self.t).groupby(self.session).min()
+            d = g.set_index(pd.DatetimeIndex(debut.reindex(g.index).to_numpy()))
+            if self.type == "action":
+                fin = pd.DatetimeIndex([pd.Timestamp(x, tz="America/New_York") + pd.Timedelta(hours=16)
+                                        for x in g.index]).tz_convert("UTC").to_numpy()
+            else:
+                fin = pd.DatetimeIndex([pd.Timestamp(x, tz="UTC") + pd.Timedelta(days=1)
+                                        for x in g.index]).to_numpy()
+        else:
+            decal = "30min" if self.type == "action" and regle.endswith("h") else None
+            d = self.df.resample(regle, label="left", closed="left", offset=decal).agg(agg).dropna()
+            fin = (d.index + pd.Timedelta(regle)).to_numpy()
+            if self.type == "action":     # une bougie ne dépasse pas la clôture de 16 h à New York
+                ny = d.index.tz_convert("America/New_York")
+                cl = pd.DatetimeIndex([pd.Timestamp(x.date(), tz="America/New_York") + pd.Timedelta(hours=16)
+                                       for x in ny]).tz_convert("UTC").to_numpy()
+                fin = np.minimum(fin, cl)
+        o, h, l, c = (d[x].to_numpy() for x in ("open", "high", "low", "close"))
+        res = {"d": d, "o": o, "h": h, "l": l, "c": c, "fin": fin, "atr": atr(d),
+               "n": np.searchsorted(fin, self.fin1.to_numpy(), side="right"),
+               "st": structure(h, l, c, k), "k": k}
+        res["bos_m"] = np.array([b[0] for b in res["st"]["bos"]], dtype=int)
+        self._ut[cle] = res
+        return res
+
     # ------------------------------------------------------------------ helpers
     def _biais(self, sh, sl):
         n = len(self.c15)

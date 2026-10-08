@@ -74,6 +74,7 @@ class Garde:
 
 
 def statistiques(rs):
+    rs = [float(r) for r in rs]
     n = len(rs)
     if n == 0:
         return {"trades": 0}

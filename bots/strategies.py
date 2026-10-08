@@ -11,8 +11,11 @@ from collections import Counter, defaultdict
 DIAG = defaultdict(Counter)   # entonnoir : où les setups s'arrêtent (backtest)
 
 
-def _non(raison, strat="ict"):
-    DIAG[strat][raison] += 1
+COURANT = "?"                 # stratégie en cours d'évaluation (pour l'entonnoir)
+
+
+def _non(raison):
+    DIAG[COURANT][raison] += 1
     return None
 
 NY_DEBUT, NY_FIN = 15 * 60 + 30, 17 * 60 + 30     # heure de Paris
@@ -30,116 +33,179 @@ def _signal(sens, entree, stop, cible, setup, r_min, ordre="marche", expiration=
             "setup": setup, "ordre": ordre, "expiration": expiration, "r_prevu": round(float(r), 2)}
 
 
-# ---------------------------------------------------------------- 1. ICT (modèle de Rayan, 8 oct.)
-# Tendance 1 h (structure) · jambe 1 h depuis le dernier swing opposé jusqu'à l'extrême
-# · zone = order block 1 h ∩ OTE (62–79 %) · le prix touche la zone · MSS 5 min
-# (clôture au-delà du dernier swing 5 min avant l'extrême de la correction) · entrée au marché
-# · stop sur l'extrême de la correction · objectif : liquidité 1 h (swing) à au moins 2R,
-# sinon la suivante · break-even à 1R.
+# ---------------------------------------------------------------- 1. ICT strict (règles canoniques)
+# Biais HTF (structure 4 h) · killzones Londres 8 h–11 h (crypto) et New York 15 h 30–17 h 30
+# · sweep d'une liquidité (plus haut/bas de la veille, session asiatique, swings 15 min)
+# · MSS 1 min avec bougie de déplacement ≥ 1,5 ATR · entrée limite au milieu du FVG
+# · stop au-delà de l'extrême du sweep · objectif : liquidité opposée à ≥ 2R.
 def ict(m, i, p):
-    if not m.fin_bougie5(i):
+    if i < p["fenetre_sweep"] + 5:
         return None
-    n60 = m.n60[i]
-    if n60 < 30:
+    pm = m.paris_min[i]
+    if not ((NY_DEBUT <= pm < NY_FIN) or (m.type == "crypto" and LONDRES_DEBUT <= pm < LONDRES_FIN)):
+        return _non("hors killzone")
+    d = i - 1
+    if m.h[d] - m.l[d] < p["deplacement_atr"] * m.atr1[d]:
+        return _non("pas de déplacement")
+    u = m.ut("4h", p.get("k_htf", 2))
+    n = u["n"][i]
+    biais = int(u["st"]["tendance"][n - 1]) if n > 0 else 0
+    if biais == 0:
+        return _non("pas de biais 4h")
+    hauts, bas = m.liquidite(i)
+    debut = max(0, d - p["fenetre_sweep"])
+    if biais == 1 and m.c[d] > m.o[d] and m.l[i] > m.h[i - 2]:
+        sh = m.dernier_sh1[d - 1]
+        if sh != sh or m.c[d] <= sh:
+            return _non("pas de MSS")
+        s = next((s for s in range(d - 1, debut - 1, -1) if any(m.l[s] < L < m.c[s] for L in bas)), None)
+        if s is None:
+            return _non("pas de sweep")
+        stop = m.l[s:i + 1].min() - p["marge_stop_atr"] * m.atr1[i]
+        entree = (m.l[i] + m.h[i - 2]) / 2
+        cibles = sorted(x for x in hauts if x > entree)
+        risque = entree - stop
+        cible = next((x for x in cibles if risque > 0 and (x - entree) / risque >= p["r_min"]), None)
+        if cible is None:
+            return _non("pas de liquidité à 2R")
+        return _signal(1, entree, stop, cible, "sweep_fvg", p["r_min"], "limite", p["expiration_bougies"])
+    if biais == -1 and m.c[d] < m.o[d] and m.h[i] < m.l[i - 2]:
+        sl = m.dernier_sl1[d - 1]
+        if sl != sl or m.c[d] >= sl:
+            return _non("pas de MSS")
+        s = next((s for s in range(d - 1, debut - 1, -1) if any(m.h[s] > L > m.c[s] for L in hauts)), None)
+        if s is None:
+            return _non("pas de sweep")
+        stop = m.h[s:i + 1].max() + p["marge_stop_atr"] * m.atr1[i]
+        entree = (m.h[i] + m.l[i - 2]) / 2
+        cibles = sorted((x for x in bas if x < entree), reverse=True)
+        risque = stop - entree
+        cible = next((x for x in cibles if risque > 0 and (entree - x) / risque >= p["r_min"]), None)
+        if cible is None:
+            return _non("pas de liquidité à 2R")
+        return _signal(-1, entree, stop, cible, "sweep_fvg", p["r_min"], "limite", p["expiration_bougies"])
+    return None
+
+
+# ---------------------------------------------------------------- 2. Perso (modèle de Rayan, 8 oct.)
+# Tendance et order blocks sur l'unité de structure (1 h ou 2 h) · zone = OB de la jambe ∩ OTE (62–79 %)
+# · invalidation : clôture de l'unité de structure au-delà de la zone OB
+# · après contact : MSS 3 min, puis ordre limite dans l'OTE 3 min (jambe extrême → plus bas du MSS)
+# · stop au-delà de l'extrême de la correction · objectif : liquidité la plus proche à ≥ 1R
+#   (interne = swings de l'unité de structure, externe = swings 4 h, ★★★★★ si confirmés en daily)
+# · break-even à 1R.
+def _liquidites(m, i, p, sens, entree):
+    niv = []
+    us = m.ut(p["ut"], p["k_structure"])
+    ns = us["n"][i]
+    lim = ns - 1 - us["k"]
+    for j in np.where(us["st"]["sh" if sens == 1 else "sl"])[0]:
+        if j <= lim:
+            niv.append(((us["h"] if sens == 1 else us["l"])[j], "interne", 0))
+    u4 = m.ut("4h", p["k_4h"])
+    n4 = u4["n"][i]
+    ud = m.ut("1D", 2)
+    nd = ud["n"][i]
+    tol = p["tolerance_5e_atr"] * (ud["atr"][nd - 1] if nd > 0 else 0)
+    sw_d = [(ud["h"] if sens == 1 else ud["l"])[j] for j in np.where(ud["st"]["sh" if sens == 1 else "sl"])[0]
+            if j <= nd - 1 - ud["k"]]
+    for j in np.where(u4["st"]["sh" if sens == 1 else "sl"])[0]:
+        if j <= n4 - 1 - u4["k"]:
+            x = (u4["h"] if sens == 1 else u4["l"])[j]
+            etoiles = 5 if any(abs(x - y) <= tol for y in sw_d) else 3
+            niv.append((x, "externe", etoiles))
+    niv = [n for n in niv if (n[0] - entree) * sens > 0]
+    return sorted(niv, key=lambda n: (n[0] - entree) * sens)
+
+
+def perso(m, i, p):
+    u3 = m.ut("3min", p["k_3m"])
+    if not (i > 0 and u3["n"][i] > u3["n"][i - 1]):
+        return None
+    b = u3["n"][i] - 1                                 # dernière bougie 3 min terminée
+    us = m.ut(p["ut"], p["k_structure"])
+    ns = us["n"][i]
+    if ns < 20:
         return _non("historique")
-    s = m.s60
-    sens = int(s["tendance"][n60 - 1])
+    st = us["st"]
+    sens = int(st["tendance"][ns - 1])
     if sens == 0:
-        return _non("pas de tendance 1h")
-    # dernière cassure (BOS) dans le sens de la tendance, sur les bougies 1 h terminées
-    k = int(np.searchsorted(m.bos60_m, n60 - 1, side="right")) - 1
-    while k >= 0 and s["bos"][k][1] != sens:
+        return _non("pas de tendance")
+    k = int(np.searchsorted(us["bos_m"], ns - 1, side="right")) - 1
+    while k >= 0 and st["bos"][k][1] != sens:
         k -= 1
     if k < 0:
         return _non("pas de BOS")
-    mb, _, _, i_origine = s["bos"][k]
-    if i_origine < 0 or n60 - 1 - mb > p["age_max_bos_h"]:
+    mb, _, _, i0 = st["bos"][k]
+    if i0 < 0 or (ns - 1 - mb) > p["age_max_bos"]:
         return _non("BOS trop ancien")
-    h60, l60, o60, c60 = m.h60, m.l60, m.o60, m.c60
+    H, L, O, C = us["h"], us["l"], us["o"], us["c"]
     if sens == -1:
-        haut = h60[i_origine]                         # départ de la jambe baissière
-        i_ext = i_origine + int(np.argmin(l60[i_origine:n60]))
-        bas = l60[i_ext]
-        # order blocks : bougies haussières de la jambe (du départ jusqu'au plus bas)
-        obs = [j for j in range(i_origine, i_ext + 1) if c60[j] > o60[j]]
-        ote_bas, ote_haut = bas + p["ote_min"] * (haut - bas), bas + p["ote_max"] * (haut - bas)
+        i_ext = i0 + int(np.argmin(L[i0:ns])); haut, bas = H[i0], L[i_ext]
+        obs = [j for j in range(i0, i_ext + 1) if C[j] > O[j]]
+        ote = (bas + p["ote_min"] * (haut - bas), bas + p["ote_max"] * (haut - bas))
     else:
-        bas = l60[i_origine]
-        i_ext = i_origine + int(np.argmax(h60[i_origine:n60]))
-        haut = h60[i_ext]
-        obs = [j for j in range(i_origine, i_ext + 1) if c60[j] < o60[j]]
-        ote_bas, ote_haut = haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas)
-    # zone = parties des order blocks de la jambe qui tombent dans l'OTE
-    zones = [(max(l60[j], ote_bas), min(h60[j], ote_haut)) for j in obs]
-    zones = [z for z in zones if z[0] < z[1]]
-    if not zones:
+        i_ext = i0 + int(np.argmax(H[i0:ns])); bas, haut = L[i0], H[i_ext]
+        obs = [j for j in range(i0, i_ext + 1) if C[j] < O[j]]
+        ote = (haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas))
+    obs = [j for j in obs if max(L[j], ote[0]) < min(H[j], ote[1])]
+    if not obs:
         return _non("OB hors OTE")
-    z_bas, z_haut = min(z[0] for z in zones), max(z[1] for z in zones)                                   # pas de chevauchement OB / OTE
+    z_bas = min(max(L[j], ote[0]) for j in obs)
+    z_haut = max(min(H[j], ote[1]) for j in obs)
+    # invalidation : une clôture de l'unité de structure au-delà de l'OB le plus lointain
+    limite = max(H[j] for j in obs) if sens == -1 else min(L[j] for j in obs)
+    apres = C[i_ext + 1:ns]
+    if len(apres) and ((apres > limite).any() if sens == -1 else (apres < limite).any()):
+        return _non("zone invalidée")
 
-    # bougies 5 min depuis la clôture de la bougie de cassure
-    b = m.n5[i] - 1
-    debut = int(np.searchsorted(m.fin5, m.fin60[mb], side="left"))
+    h3, l3, c3 = u3["h"], u3["l"], u3["c"]
+    debut = int(np.searchsorted(u3["fin"], us["fin"][i_ext], side="left"))
     if debut >= b:
         return _non("attente")
-    h5, l5, c5 = m.h5, m.l5, m.c5
     if sens == -1:
-        touche = next((x for x in range(debut, b) if h5[x] >= z_bas), None)
-        if touche is None:
-            return _non("zone pas touchée")
-        if h5[touche:b + 1].max() > haut:
-            return _non("jambe invalidée")                               # pas encore dans la zone, ou jambe invalidée
-        xi = touche + int(np.argmax(h5[touche:b]))    # extrême de la correction (avant la bougie b)
-        extreme = h5[xi]
-        swings5 = [j for j in m.idx_sl5 if j < xi and j + m.k5 <= b]
-        if not swings5:
-            return None
-        niveau = l5[swings5[-1]]
-        if not (c5[b] < niveau <= c5[b - 1]):
-            return _non("pas de MSS 5min")
+        touche = next((x for x in range(debut, b) if h3[x] >= z_bas), None)
     else:
-        touche = next((x for x in range(debut, b) if l5[x] <= z_haut), None)
-        if touche is None:
-            return _non("zone pas touchée")
-        if l5[touche:b + 1].min() < bas:
-            return _non("jambe invalidée")
-        xi = touche + int(np.argmin(l5[touche:b]))
-        extreme = l5[xi]
-        swings5 = [j for j in m.idx_sh5 if j < xi and j + m.k5 <= b]
-        if not swings5:
-            return None
-        niveau = h5[swings5[-1]]
-        if not (c5[b] > niveau >= c5[b - 1]):
-            return _non("pas de MSS 5min")
-    if b - touche > p["attente_mss_bougies5"]:
+        touche = next((x for x in range(debut, b) if l3[x] <= z_haut), None)
+    if touche is None:
+        return _non("zone pas touchée")
+    if b - touche > p["attente_mss_bougies3"]:
         return _non("MSS trop tardif")
-
-    entree = c5[b]
-    stop = extreme + sens * p["marge_stop_atr"] * m.atr5[b]
+    seg = slice(touche, b)
+    xi = touche + int(np.argmax(h3[seg]) if sens == -1 else np.argmin(l3[seg]))
+    extreme = h3[xi] if sens == -1 else l3[xi]
+    idx_sw = np.where(u3["st"]["sl" if sens == -1 else "sh"])[0]
+    sw = [j for j in idx_sw if j < xi and j + u3["k"] <= b]
+    if not sw:
+        return _non("pas de swing 3 min")
+    niveau = (l3 if sens == -1 else h3)[sw[-1]]
+    mss = c3[b] < niveau <= c3[b - 1] if sens == -1 else c3[b] > niveau >= c3[b - 1]
+    if not mss:
+        return _non("pas de MSS 3 min")
+    # OTE de la jambe 3 min (extrême → plus bas/haut atteint au MSS)
+    if sens == -1:
+        fond = l3[xi:b + 1].min()
+        entree = fond + p["entree_ote"] * (extreme - fond)
+    else:
+        fond = h3[xi:b + 1].max()
+        entree = fond - p["entree_ote"] * (fond - extreme)
+    stop = extreme + sens * p["marge_stop_atr"] * u3["atr"][b]
     risque = (entree - stop) * sens
     if risque <= 0:
-        return None
-    # liquidité 1 h : bas (ou hauts) des swings confirmés, du plus proche au plus lointain
-    lim = n60 - 1 - m.s60_k
-    if sens == -1:
-        niveaux = sorted({float(l60[j]) for j in np.where(s["sl"])[0] if j <= lim and l60[j] < entree}
-                         | {float(bas)}, reverse=True)
-        niveaux = [x for x in niveaux if x < entree]
-    else:
-        niveaux = sorted({float(h60[j]) for j in np.where(s["sh"])[0] if j <= lim and h60[j] > entree}
-                         | {float(haut)})
-        niveaux = [x for x in niveaux if x > entree]
-    cible = next((x for x in niveaux if (x - entree) * sens / risque >= p["r_min"]), None)
+        return _non("risque nul")
+    cible = next((n for n in _liquidites(m, i, p, sens, entree)
+                  if (n[0] - entree) * sens / risque >= p["r_min"]), None)
     if cible is None:
-        return _non("pas de liquidité à 2R")
-    DIAG["ict"]["signal"] += 1
-    sig = _signal(sens, entree, stop, cible, "ob_ote_mss", p["r_min"])
+        return _non("pas de liquidité à 1R")
+    DIAG[COURANT]["signal"] += 1
+    sig = _signal(sens, entree, stop, cible[0], "ob_ote_mss3", p["r_min"], "limite", p["expiration_minutes"])
     if sig:
-        sig["be_r"] = p.get("break_even_r")
-        sig["zone"] = [round(float(z_bas), 4), round(float(z_haut), 4)]
+        sig.update({"be_r": p.get("break_even_r"), "cible_type": cible[1], "etoiles": cible[2],
+                    "zone": [round(float(z_bas), 4), round(float(z_haut), 4)], "ut": p["ut"]})
     return sig
 
 
-# ---------------------------------------------------------------- 2. Support / résistance
+# ---------------------------------------------------------------- 3. Support / résistance
 def _zones(prix, tol, touches_min):
     zones, groupe = [], []
     for x in sorted(prix):
@@ -214,7 +280,7 @@ def sr(m, i, p):
     return None
 
 
-# ---------------------------------------------------------------- 3. Volume Profile
+# ---------------------------------------------------------------- 4. Volume Profile
 def vp(m, i, p):
     if not m.fin_bougie5(i):
         return None
@@ -271,5 +337,14 @@ def vp(m, i, p):
     return None
 
 
-STRATEGIES = {"ict": ict, "sr": sr, "vp": vp}
-NOMS = {"ict": "ICT", "sr": "Support / résistance", "vp": "Volume Profile"}
+FONCTIONS = {"ict": ict, "perso": perso, "sr": sr, "vp": vp}
+NOMS = {"ict": "ICT strict", "perso_1h": "Perso 1 h", "perso_2h": "Perso 2 h", "sr": "Support / résistance",
+        "vp": "Volume Profile"}
+
+
+def fonction(nom, p):
+    """Une stratégie de la config peut réutiliser une fonction (ex. perso_1h et perso_2h → perso)."""
+    return FONCTIONS[p.get("fonction", nom)]
+
+
+STRATEGIES = FONCTIONS

@@ -32,18 +32,51 @@ actifs:
     frais_max_part_risque: 10      # filtre de frais désactivé sur BTC (argent fictif, choix de Rayan) ; frais toujours déduits des résultats
 
 strategies:
-  ict:                             # modèle de Rayan (8 oct.)
+  ict:                             # ICT strict (règles canoniques)
     actif: true
     max_trades_jour: 2
-    k_h1: 2                        # swing 1 h : 2 bougies de chaque côté (fractale)
-    k_m5: 2                        # swing 5 min pour le changement de structure
-    ote_min: 0.62                  # OTE : 62–79 % de la dernière jambe 1 h
+    k_htf: 2                       # biais : structure 4 h
+    deplacement_atr: 1.5           # bougie de déplacement ≥ 1,5 ATR (1 min)
+    fenetre_sweep: 60              # le sweep doit dater de moins de 60 min
+    marge_stop_atr: 0.1
+    expiration_bougies: 15         # ordre limite au milieu du FVG, annulé après 15 min
+    r_min: 2.0
+  perso_1h:                        # modèle de Rayan, structure 1 h
+    fonction: perso
+    actif: true
+    ut: 1h
+    max_trades_jour: 2
+    k_structure: 2                 # swings fractals (2 bougies de chaque côté)
+    k_4h: 2
+    k_3m: 2
+    ote_min: 0.62
     ote_max: 0.79
-    r_min: 2.0                     # objectif mini 1 pour 2, sinon liquidité 1 h suivante
-    break_even_r: 1.0              # stop au prix d'entrée dès 1R
-    marge_stop_atr: 0.05           # petite marge au-delà de l'extrême de la correction
-    attente_mss_bougies5: 48       # le MSS doit venir dans les 4 h après le contact avec la zone
-    age_max_bos_h: 72              # une jambe 1 h de plus de 72 h n'est plus jouée
+    entree_ote: 0.62               # ordre limite au 61,8 % de la jambe 3 min
+    expiration_minutes: 60
+    r_min: 1.0                     # objectif : liquidité la plus proche à ≥ 1R
+    break_even_r: 1.0
+    marge_stop_atr: 0.1            # marge au-delà de la mèche (ATR 3 min)
+    attente_mss_bougies3: 80       # le MSS 3 min doit venir dans les 4 h après le contact
+    age_max_bos: 72                # en bougies de structure
+    tolerance_5e_atr: 0.25         # swing 4 h = ★★★★★ s'il est à moins de 0,25 ATR daily d'un swing daily
+  perso_2h:                        # même modèle, structure 2 h
+    fonction: perso
+    actif: true
+    ut: 2h
+    max_trades_jour: 2
+    k_structure: 2
+    k_4h: 2
+    k_3m: 2
+    ote_min: 0.62
+    ote_max: 0.79
+    entree_ote: 0.62
+    expiration_minutes: 60
+    r_min: 1.0
+    break_even_r: 1.0
+    marge_stop_atr: 0.1
+    attente_mss_bougies3: 80
+    age_max_bos: 36
+    tolerance_5e_atr: 0.25
   sr:
     actif: true
     max_trades_jour: 3
