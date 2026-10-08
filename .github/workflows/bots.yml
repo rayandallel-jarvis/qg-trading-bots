@@ -1,8 +1,12 @@
-name: Bots en direct
+name: Bots en direct (IG démo)
 on:
   schedule:
     - cron: "10 1,7,13,19 * * *"   # 4 relances par jour (UTC), chaque passage dure 5 h 40
   workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Durée du passage (minutes)"
+        default: "340"
   push:
     branches: [main]
     paths: ["bots/**", "config.yaml", "requirements.txt", ".github/workflows/bots.yml"]
@@ -22,11 +26,20 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Cache des données Dukascopy
+        uses: actions/cache@v4
+        with:
+          path: data/duka
+          key: duka-direct-${{ github.run_id }}
+          restore-keys: duka-
       - run: |
           git config user.name "qg-bots"
           git config user.email "qg-bots@users.noreply.github.com"
-      - run: python -m bots.direct --minutes 340
+      # direct.actif = false dans config.yaml → mode essai : bougies, signaux et tailles, aucun ordre
+      - run: python -m bots.direct_ig --minutes ${{ github.event.inputs.minutes || 340 }}
         env:
-          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
-          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          IG_API_KEY: ${{ secrets.IG_API_KEY }}
+          IG_USERNAME: ${{ secrets.IG_USERNAME }}
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          IG_ACC_TYPE: ${{ secrets.IG_ACC_TYPE }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}

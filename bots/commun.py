@@ -15,32 +15,54 @@ def charger_config():
         return yaml.safe_load(f)
 
 
-def cout_unitaire(prix, a):
-    """Frais + glissement aller-retour, par unité d'actif."""
+def _dans(pm, plage):
+    """pm (minutes, heure de Paris) dans une plage "HH:MM-HH:MM" (qui peut passer minuit)."""
+    d, f = (int(x[:2]) * 60 + int(x[3:]) for x in plage.split("-"))
+    return d <= pm < f if d <= f else (pm >= d or pm < f)
+
+
+def ecart(a, pm=None):
+    """Écart achat/vente (CFD IG) selon l'heure : serré pendant les heures de cotation principales."""
+    if "ecart_coeur" not in a:
+        return 0.0
+    if pm is not None and _dans(pm, a.get("heures_coeur", "00:00-24:00")):
+        return a["ecart_coeur"]
+    return a.get("ecart_hors", a["ecart_coeur"])
+
+
+def cout_unitaire(prix, a, pm=None):
+    """Frais + écart + glissement aller-retour, par unité d'actif (pm : minute de Paris à l'entrée)."""
     frais = 2 * prix * a.get("frais_pct", 0) / 100
     gliss = 2 * (a.get("glissement", 0) + prix * a.get("glissement_pct", 0) / 100)
-    return frais + gliss
+    return frais + gliss + ecart(a, pm)
 
 
-def taille(signal, capital, a, cfg):
+def stop_min(prix, a):
+    """Distance minimale du stop imposée par le broker (IG), en prix."""
+    return max(a.get("stop_min", 0), prix * a.get("stop_min_pct", 0) / 100)
+
+
+def taille(signal, capital, a, cfg, pm=None):
     """Quantité, risque monétaire et raison de refus éventuelle."""
     r = cfg["risque"]
     risque_u = abs(signal["entree"] - signal["stop"])
-    cout = cout_unitaire(signal["entree"], a)
+    if risque_u < stop_min(signal["entree"], a):
+        return 0, 0, "stop plus court que le minimum du broker"
+    cout = cout_unitaire(signal["entree"], a, pm)
     if cout > a.get("frais_max_part_risque", r["frais_max_part_risque"]) * risque_u:
         return 0, 0, "frais trop lourds"
     qte = capital * r["risque_par_trade_pct"] / 100 / risque_u
     qte = min(qte, capital * a.get("notionnel_max_pct", 100) / 100 / signal["entree"])
-    qte = int(qte) if a["type"] == "action" else round(qte, 4)
+    qte = int(qte) if a["type"] == "action" else round(qte, 2 if a["type"] == "cfd" else 4)
     if qte <= 0 or qte * signal["entree"] < 10:
         return 0, 0, "taille trop petite"
     return qte, qte * risque_u, None
 
 
-def resultat_r(sens, entree, sortie, stop_initial, a):
+def resultat_r(sens, entree, sortie, stop_initial, a, pm=None):
     risque_u = abs(entree - stop_initial)
     brut = (sortie - entree) * sens
-    net = brut - cout_unitaire(entree, a)
+    net = brut - cout_unitaire(entree, a, pm)
     return round(net / risque_u, 3) if risque_u > 0 else 0.0
 
 

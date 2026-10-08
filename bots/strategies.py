@@ -42,7 +42,7 @@ def ict(m, i, p):
     if i < p["fenetre_sweep"] + 5:
         return None
     pm = m.paris_min[i]
-    if not ((NY_DEBUT <= pm < NY_FIN) or (m.type == "crypto" and LONDRES_DEBUT <= pm < LONDRES_FIN)):
+    if not ((NY_DEBUT <= pm < NY_FIN) or (m.type != "action" and LONDRES_DEBUT <= pm < LONDRES_FIN)):
         return _non("hors killzone")
     d = i - 1
     if m.h[d] - m.l[d] < p["deplacement_atr"] * m.atr1[d]:

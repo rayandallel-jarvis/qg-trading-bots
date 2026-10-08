@@ -18,18 +18,80 @@ risque:
 swing_k: 3                         # un swing = 3 bougies plus basses/hautes de chaque côté
 
 actifs:
+  # --- IG démo (CFD) : marchés actifs depuis le 9 oct. ---------------------------------------------
+  # Coûts IG = écart achat/vente (pas de commission) ; écart serré pendant les heures principales
+  # (heure de Paris), plus large en dehors (relevé le 9 oct. à 1 h : Nasdaq 2,0 · or 1,0 · BTC 150).
+  NAS100:
+    actif: true
+    broker: ig
+    epic: IX.D.NASDAQ.IEN.IP       # US Tech 100 au comptant, contrat 1 $ par point
+    type: cfd
+    source: duka
+    instrument: USATECH.IDX-USD
+    ecart_coeur: 1.0
+    ecart_hors: 2.0
+    heures_coeur: "15:30-22:00"
+    glissement: 0.2
+    stop_min: 4.0                  # distance minimale du stop chez IG (points)
+    notionnel_max_pct: 500
+  OR:
+    actif: true
+    broker: ig
+    epic: CS.D.CFEGOLD.CEF.IP      # or au comptant, contrat 1 $
+    type: cfd
+    source: duka
+    instrument: XAU-USD
+    ecart_coeur: 0.4
+    ecart_hors: 1.0
+    heures_coeur: "09:00-22:00"
+    glissement: 0.05
+    stop_min: 1.0
+    notionnel_max_pct: 500
+  EURUSD:
+    actif: true
+    broker: ig
+    epic: CS.D.EURUSD.CEF.IP       # code trouvé le 9 oct. (recherche « EURUSD »)
+    type: cfd
+    source: duka
+    instrument: EUR-USD
+    ecart_coeur: 0.00007
+    ecart_hors: 0.00015
+    heures_coeur: "09:00-22:00"
+    glissement: 0.00001
+    stop_min: 0.0002
+    notionnel_max_pct: 1000
+  BTC:
+    actif: true
+    broker: ig
+    epic: CS.D.BITCOIN.CEF.IP      # Bitcoin, contrat 1 $
+    type: cfd
+    source: duka
+    instrument: BTC-USD
+    ferme_week_end: false          # le Bitcoin cote aussi le week-end chez IG
+    ecart_coeur: 100
+    ecart_hors: 150
+    heures_coeur: "15:30-22:00"
+    glissement: 10
+    stop_min_pct: 1.0              # IG impose un stop à au moins 1 % du prix
+    notionnel_max_pct: 180         # marge IG de 50 % sur le Bitcoin
+
+  # --- Alpaca paper : mis de côté le 9 oct. (frais crypto, pas de vente à découvert) ---------------
   QQQ:
+    actif: false
+    broker: alpaca
     type: action
-    frais_pct: 0.0                 # Alpaca : pas de commission sur les actions
-    glissement: 0.02               # $ par action et par côté
-    notionnel_max_pct: 200         # taille max de position en % du capital
+    frais_pct: 0.0
+    glissement: 0.02
+    notionnel_max_pct: 200
   BTC/USD:
+    actif: false
+    broker: alpaca
     type: crypto
-    frais_pct: 0.25                # Alpaca crypto : frais par côté (palier de départ)
+    frais_pct: 0.25
     glissement_pct: 0.01
     notionnel_max_pct: 90
-    vente_a_decouvert: false       # Alpaca n'autorise pas la vente à découvert de crypto
-    frais_max_part_risque: 10      # filtre de frais désactivé sur BTC (argent fictif, choix de Rayan) ; frais toujours déduits des résultats
+    vente_a_decouvert: false
+    frais_max_part_risque: 10
 
 strategies:
   ict:                             # ICT strict (règles canoniques)

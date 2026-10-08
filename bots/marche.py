@@ -191,7 +191,7 @@ class Marche:
         # Session asiatique (crypto) : 00 h – 07 h UTC du jour
         self.asie_h = np.full(self.n, np.nan)
         self.asie_l = np.full(self.n, np.nan)
-        if type_actif == "crypto":
+        if type_actif != "action":
             m = self.heure_utc < 7
             a = pd.DataFrame({"s": self.session[m], "h": self.h[m], "l": self.l[m]}).groupby("s").agg(
                 h=("h", "max"), l=("l", "min"))
@@ -270,7 +270,7 @@ class Marche:
 
     def liquidite(self, i):
         hauts, bas = [self.prec_h[i]], [self.prec_l[i]]
-        if self.type == "crypto":
+        if self.type != "action":
             hauts.append(self.asie_h[i])
             bas.append(self.asie_l[i])
         h15, b15 = self.swings15(i, self.t[i] - timedelta(days=1))
