@@ -1,6 +1,9 @@
 # Paramètres des bots — modifiables (à terme depuis le QG Jarvis).
 # Règle du cycle : un seul paramètre modifié par cycle.
 
+direct:
+  actif: false                     # false = bot en pause (aucun ordre passé)
+
 cycle:
   trades_par_cycle: 100
   duree_max_semaines: 6

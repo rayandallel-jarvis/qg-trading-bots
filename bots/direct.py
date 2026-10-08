@@ -306,6 +306,10 @@ def main():
     args = ap.parse_args()
     signal.signal(signal.SIGTERM, _arret)
     signal.signal(signal.SIGINT, _arret)
+    cfg = charger_config()
+    if not cfg.get("direct", {}).get("actif", True):
+        print("Bot en pause (direct.actif = false dans config.yaml)")
+        return
     Bot().lancer(args.minutes)
 
 
