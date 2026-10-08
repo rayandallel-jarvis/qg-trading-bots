@@ -1,0 +1,27 @@
+{
+ "cycle": {
+  "numero": 1,
+  "debut": "2026-10-08T19:18:42+00:00",
+  "quota": 100,
+  "trades": 0
+ },
+ "en_cours": [],
+ "historique": [],
+ "garde": {},
+ "stats_cycle": {
+  "ict": {
+   "trades": 0
+  },
+  "sr": {
+   "trades": 0
+  },
+  "vp": {
+   "trades": 0
+  },
+  "global": {
+   "trades": 0
+  }
+ },
+ "capital": 100000.0,
+ "maj": "2026-10-08T19:18:43+00:00"
+}
