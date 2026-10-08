@@ -6,7 +6,7 @@ visés (Nasdaq 100, or, EUR/USD, Bitcoin) pour noter leurs identifiants « epic 
 """
 import os, json, urllib.request, urllib.parse, urllib.error, datetime
 
-KEY, USER, PWD = os.environ.get("IG_API_KEY"), os.environ.get("IG_USERNAME"), os.environ.get("IG_PASSWORD")
+KEY, USER, PWD = [(os.environ.get(n) or "").strip() or None for n in ("IG_API_KEY", "IG_USERNAME", "IG_PASSWORD")]
 ACC_TYPE = (os.environ.get("IG_ACC_TYPE") or "DEMO").strip().upper()
 TOPIC = os.environ.get("NTFY_TOPIC")
 BASE = "https://demo-api.ig.com/gateway/deal" if ACC_TYPE != "LIVE" else None
