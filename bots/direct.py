@@ -64,7 +64,7 @@ class Bot:
         self.barres = {}
         self.derniere = {}
         self.modifie = True
-        self.dernier_push = time.time()
+        self.dernier_push = 0
 
     # -------------------------------------------------------------- utilitaires
     def actif(self, s):
@@ -271,10 +271,13 @@ class Bot:
             _, jour = heure_paris()
             self.garde.nettoyer(jour)
             self.tour()
-            if self.modifie:
-                self.sauver(pousser=time.time() - self.dernier_push > 600)
-                if time.time() - self.dernier_push > 600:
-                    self.dernier_push = time.time()
+            # sauvegarde à chaque changement, et envoi sur GitHub au moins toutes les 10 min
+            # (sert aussi de signe de vie pour le QG et le Trésorier)
+            if time.time() - self.dernier_push > 600:
+                self.sauver(pousser=True)
+                self.dernier_push = time.time()
+            elif self.modifie:
+                self.sauver()
             # attendre la minute suivante (+5 s pour laisser Alpaca publier la bougie)
             pause = 65 - (time.time() % 60)
             while pause > 0 and not ARRET:
