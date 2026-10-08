@@ -1,4 +1,4 @@
-"""Test de connexion : compte paper Alpaca + notification ntfy."""
+"""Test de connexion : compte paper Alpaca + notification ntfy (v2)."""
 import os, json, urllib.request
 
 def get(url, headers):
