@@ -1,5 +1,5 @@
 {
- "date": "2026-10-08T19:22:12+00:00",
+ "date": "2026-10-08T19:24:47+00:00",
  "jours": 28,
  "par_strategie": {
   "ict": {
@@ -21,12 +21,7 @@
    "feu_vert": false
   },
   "vp": {
-   "trades": 5,
-   "esperance_r": 0.14,
-   "taux_reussite": 0.2,
-   "profit_factor": 1.16,
-   "total_r": 0.7,
-   "drawdown_max_r": -3.27,
+   "trades": 0,
    "feu_vert": false
   }
  },
@@ -47,41 +42,14 @@
    "total_r": -5.99,
    "drawdown_max_r": -9.04
   },
-  "vp|QQQ": {
-   "trades": 5,
-   "esperance_r": 0.14,
-   "taux_reussite": 0.2,
-   "profit_factor": 1.16,
-   "total_r": 0.7,
-   "drawdown_max_r": -3.27
-  },
   "ict|BTC/USD": {
    "trades": 0
   },
   "sr|BTC/USD": {
    "trades": 0
-  },
-  "vp|BTC/USD": {
-   "trades": 0
   }
  },
  "trades": [
-  {
-   "strategie": "vp",
-   "actif": "QQQ",
-   "setup": "regle_80",
-   "sens": 1,
-   "entree": 718.215,
-   "stop": 717.6825,
-   "cible": 720.3075,
-   "r_prevu": 3.63,
-   "jour": "2026-09-09",
-   "debut": "2026-09-09 14:31:00+00:00",
-   "sortie": 717.6825,
-   "motif": "stop",
-   "r": -1.075,
-   "fin": "2026-09-09 14:33:00+00:00"
-  },
   {
    "strategie": "sr",
    "actif": "QQQ",
@@ -129,22 +97,6 @@
    "motif": "objectif",
    "r": 2.252,
    "fin": "2026-09-11 19:08:00+00:00"
-  },
-  {
-   "strategie": "vp",
-   "actif": "QQQ",
-   "setup": "rejet_val",
-   "sens": 1,
-   "entree": 706.54,
-   "stop": 706.1373571428571,
-   "cible": 709.3167708333333,
-   "r_prevu": 5.59,
-   "jour": "2026-09-15",
-   "debut": "2026-09-15 14:31:00+00:00",
-   "sortie": 706.1374,
-   "motif": "stop",
-   "r": -1.099,
-   "fin": "2026-09-15 14:35:00+00:00"
   },
   {
    "strategie": "sr",
@@ -227,22 +179,6 @@
    "fin": "2026-09-25 14:02:00+00:00"
   },
   {
-   "strategie": "vp",
-   "actif": "QQQ",
-   "setup": "regle_80",
-   "sens": -1,
-   "entree": 741.46,
-   "stop": 742.8711428571429,
-   "cible": 737.2502499999999,
-   "r_prevu": 3.0,
-   "jour": "2026-09-25",
-   "debut": "2026-09-25 14:46:00+00:00",
-   "sortie": 742.97,
-   "motif": "stop",
-   "r": -1.098,
-   "fin": "2026-09-25 15:00:00+00:00"
-  },
-  {
    "strategie": "ict",
    "actif": "QQQ",
    "setup": "sweep_fvg",
@@ -257,22 +193,6 @@
    "motif": "stop",
    "r": -1.041,
    "fin": "2026-09-29 14:19:00+00:00"
-  },
-  {
-   "strategie": "vp",
-   "actif": "QQQ",
-   "setup": "rejet_vah",
-   "sens": -1,
-   "entree": 739.55,
-   "stop": 740.1298571428572,
-   "cible": 736.5706666666666,
-   "r_prevu": 2.24,
-   "jour": "2026-09-29",
-   "debut": "2026-09-29 14:31:00+00:00",
-   "sortie": 736.5707,
-   "motif": "objectif",
-   "r": 5.069,
-   "fin": "2026-09-29 15:25:00+00:00"
   },
   {
    "strategie": "sr",
@@ -321,22 +241,6 @@
    "motif": "stop",
    "r": -1.07,
    "fin": "2026-10-01 16:34:00+00:00"
-  },
-  {
-   "strategie": "vp",
-   "actif": "QQQ",
-   "setup": "rejet_val",
-   "sens": 1,
-   "entree": 754.48,
-   "stop": 753.9968571428572,
-   "cible": 757.84225,
-   "r_prevu": 7.3,
-   "jour": "2026-10-08",
-   "debut": "2026-10-08 14:16:00+00:00",
-   "sortie": 753.99,
-   "motif": "stop",
-   "r": -1.097,
-   "fin": "2026-10-08 15:12:00+00:00"
   }
  ]
 }
