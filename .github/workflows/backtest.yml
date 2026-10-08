@@ -1,0 +1,36 @@
+name: Backtest 4 semaines
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["bots/strategies.py", "bots/marche.py", "bots/backtest.py", "bots/commun.py", "config.yaml",
+            ".github/workflows/backtest.yml"]
+concurrency:
+  group: backtest
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m bots.backtest
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      - name: Enregistrer le résultat
+        run: |
+          git config user.name "qg-bots"
+          git config user.email "qg-bots@users.noreply.github.com"
+          git add etat/backtest.json
+          git commit -q -m "Résultat du backtest" || exit 0
+          git pull -q --rebase -X theirs
+          git push -q

@@ -1,0 +1,59 @@
+# Paramètres des bots — modifiables (à terme depuis le QG Jarvis).
+# Règle du cycle : un seul paramètre modifié par cycle.
+
+cycle:
+  trades_par_cycle: 100
+  duree_max_semaines: 6
+
+risque:
+  risque_par_trade_pct: 0.5        # % du capital risqué par trade
+  frais_max_part_risque: 0.25      # on saute le trade si frais + glissement > 25 % du risque
+  pertes_consecutives_max: 3       # coupe-circuit : arrêt de la stratégie pour la journée
+  cloture_actions: "21:55"         # heure de Paris, toute position actions est clôturée
+  une_position_par_actif: true
+
+swing_k: 3                         # un swing = 3 bougies plus basses/hautes de chaque côté
+
+actifs:
+  QQQ:
+    type: action
+    frais_pct: 0.0                 # Alpaca : pas de commission sur les actions
+    glissement: 0.02               # $ par action et par côté
+    notionnel_max_pct: 200         # taille max de position en % du capital
+  BTC/USD:
+    type: crypto
+    frais_pct: 0.25                # Alpaca crypto : frais par côté (palier de départ)
+    glissement_pct: 0.01
+    notionnel_max_pct: 90
+    vente_a_decouvert: false       # Alpaca n'autorise pas la vente à découvert de crypto
+
+strategies:
+  ict:
+    actif: true
+    max_trades_jour: 2
+    r_min: 2.0
+    deplacement_atr: 1.5
+    marge_stop_atr: 0.1
+    expiration_bougies: 15
+    fenetre_sweep: 60
+  sr:
+    actif: true
+    max_trades_jour: 3
+    r_min: 1.5
+    jours_zones: 3
+    regroupement_atr: 0.25
+    touches_min: 2
+    meche_min: 0.5
+    marge_stop_atr: 0.2
+    fenetre_retest: 12
+  vp:
+    actif: true
+    max_trades_jour: 2
+    r_min: 1.5
+    zone_valeur: 0.70
+    marge_stop_atr: 0.2
+    meche_min: 0.5
+
+backtest:
+  jours: 28
+  trades_min: 30
