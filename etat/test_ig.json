@@ -1,5 +1,164 @@
 {
- "ts": "2026-10-08T22:42:34Z",
- "ok": false,
- "message": "Connexion IG refusée (HTTP 401) : {\"errorCode\":\"error.security.invalid-details\"}"
+ "ts": "2026-10-08T22:58:58Z",
+ "ok": true,
+ "compte_actif": "…F0CH",
+ "devise": "EUR",
+ "comptes": [
+  {
+   "type": "CFD",
+   "nom": "Barrières et Options",
+   "solde": 10000.0,
+   "disponible": 10000.0,
+   "devise": "EUR",
+   "prefere": false
+  },
+  {
+   "type": "CFD",
+   "nom": "CFD",
+   "solde": 100000.0,
+   "disponible": 95252.11,
+   "devise": "EUR",
+   "prefere": true
+  }
+ ],
+ "marches": {
+  "US Tech 100": [
+   {
+    "epic": "IX.D.NASDAQ.IFD.IP",
+    "nom": "US Tech 100 au comptant (100$)",
+    "type": "INDICES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.NASDAQ.IFM.IP",
+    "nom": "US Tech 100 au comptant (20$)",
+    "type": "INDICES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.NASDAQ.FWS1.IP",
+    "nom": "US Tech 100 (100$)",
+    "type": "INDICES",
+    "expiry": "DEC-26",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.NASDAQ.FWM1.IP",
+    "nom": "US Tech 100 (20$)",
+    "type": "INDICES",
+    "expiry": "DEC-26",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.NASDAQ.FWZ1.IP",
+    "nom": "US Tech 100 (R10) (NOT IN USE)",
+    "type": "INDICES",
+    "expiry": "DEC-26",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.NASDAQ.IEN.IP",
+    "nom": "US Tech 100 au comptant (1$)",
+    "type": "INDICES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   }
+  ],
+  "Gold": [
+   {
+    "epic": "CS.D.CFEGOLD.CFE.IP",
+    "nom": "Or au comptant (Contrat 1€)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "MT.D.GC.FWS3.IP",
+    "nom": "Or (100$)",
+    "type": "COMMODITIES",
+    "expiry": "DEC-26",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "MT.D.GC.FWM3.IP",
+    "nom": "Or (33.20$)",
+    "type": "COMMODITIES",
+    "expiry": "DEC-26",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "UA.D.AMRKUS.CASH.IP",
+    "nom": "Gold.com Inc",
+    "type": "SHARES",
+    "expiry": "-",
+    "statut": "EDITS_ONLY"
+   },
+   {
+    "epic": "CS.D.CFEGOLD.CEF.IP",
+    "nom": "Spot Gold ($1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "IX.D.SUNGOLD.CEF.IP",
+    "nom": "Weekend Spot Gold ($1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "EDITS_ONLY"
+   }
+  ],
+  "EUR/USD": [
+   {
+    "erreur": "HTTP Error 404: Not Found"
+   }
+  ],
+  "Bitcoin": [
+   {
+    "epic": "CS.D.BITCOIN.CEFM.IP",
+    "nom": "Bitcoin ($0.1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "CS.D.BITCOIN.CEF.IP",
+    "nom": "Bitcoin ($1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "CS.D.BITCOIN.CEM.IP",
+    "nom": "Bitcoin (E0.1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "CS.D.BITCOIN.CFE.IP",
+    "nom": "Bitcoin (E1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "CS.D.BCHXBT.CFD.IP",
+    "nom": "Bitcoin Cash/Bitcoin ($1)",
+    "type": "CURRENCIES",
+    "expiry": "-",
+    "statut": "TRADEABLE"
+   },
+   {
+    "epic": "CS.D.BCHUSD.OPTCALL.IP",
+    "nom": "Bitcoin Cash Barrières Achat",
+    "type": "KNOCKOUTS_CURRENCIES",
+    "expiry": "FEB-27",
+    "statut": "TRADEABLE"
+   }
+  ]
+ },
+ "message": "Connexion IG démo OK. Solde fictif : 100000.0 EUR"
 }
