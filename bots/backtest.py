@@ -14,7 +14,11 @@ from .marche import Marche
 def construire_marche(df, a, cfg):
     st = cfg["strategies"]
     return Marche(df, a["type"], cfg["swing_k"], st["vp"]["zone_valeur"], st["ict"]["k_h1"], st["ict"]["k_m5"])
-from .strategies import NOMS, STRATEGIES
+from collections import Counter
+
+from .strategies import DIAG, NOMS, STRATEGIES
+
+REFUS = Counter()
 
 
 def _minutes(hhmm):
@@ -93,9 +97,11 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
         if not s:
             continue
         if s["sens"] == -1 and not a.get("vente_a_decouvert", True):
+            REFUS[f"{nom}|{symbole}|vente interdite"] += 1
             continue
         qte, _, refus = taille(s, capital, a, cfg)
         if refus:
+            REFUS[f"{nom}|{symbole}|{refus}"] += 1
             continue
         att = {**s, "expire": i + s["expiration"], "jour": jour}
     return trades
@@ -134,7 +140,8 @@ def main():
             lignes.append(f"{NOMS[nom]} : 0 trade")
     ecrire_json("backtest.json", {
         "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "jours": jours, "par_strategie": par_strat, "par_strategie_actif": resultats,
+        "jours": jours, "par_strategie": par_strat, "entonnoir": {k: dict(v) for k, v in DIAG.items()},
+        "refus": dict(REFUS), "par_strategie_actif": resultats,
         "trades": sorted(tous, key=lambda t: t["fin"])[-400:],
     })
     notifier("Backtest 4 semaines\n" + "\n".join(lignes), titre="QG Trading - backtest", tags="bar_chart")

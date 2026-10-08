@@ -6,6 +6,14 @@ expiration (en bougies 1 min, pour un ordre limite).
 from datetime import timedelta
 
 import numpy as np
+from collections import Counter, defaultdict
+
+DIAG = defaultdict(Counter)   # entonnoir : où les setups s'arrêtent (backtest)
+
+
+def _non(raison, strat="ict"):
+    DIAG[strat][raison] += 1
+    return None
 
 NY_DEBUT, NY_FIN = 15 * 60 + 30, 17 * 60 + 30     # heure de Paris
 LONDRES_DEBUT, LONDRES_FIN = 8 * 60, 11 * 60
@@ -33,20 +41,20 @@ def ict(m, i, p):
         return None
     n60 = m.n60[i]
     if n60 < 30:
-        return None
+        return _non("historique")
     s = m.s60
     sens = int(s["tendance"][n60 - 1])
     if sens == 0:
-        return None
+        return _non("pas de tendance 1h")
     # dernière cassure (BOS) dans le sens de la tendance, sur les bougies 1 h terminées
     k = int(np.searchsorted(m.bos60_m, n60 - 1, side="right")) - 1
     while k >= 0 and s["bos"][k][1] != sens:
         k -= 1
     if k < 0:
-        return None
+        return _non("pas de BOS")
     mb, _, _, i_origine = s["bos"][k]
     if i_origine < 0 or n60 - 1 - mb > p["age_max_bos_h"]:
-        return None
+        return _non("BOS trop ancien")
     h60, l60, o60, c60 = m.h60, m.l60, m.o60, m.c60
     if sens == -1:
         haut = h60[i_origine]                         # départ de la jambe baissière
@@ -65,18 +73,20 @@ def ict(m, i, p):
         ote_bas, ote_haut = haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas)
     z_bas, z_haut = max(l60[ob], ote_bas), min(h60[ob], ote_haut)
     if z_bas >= z_haut:
-        return None                                   # pas de chevauchement OB / OTE
+        return _non("OB hors OTE")                                   # pas de chevauchement OB / OTE
 
     # bougies 5 min depuis la clôture de la bougie de cassure
     b = m.n5[i] - 1
     debut = int(np.searchsorted(m.fin5, m.fin60[mb], side="left"))
     if debut >= b:
-        return None
+        return _non("attente")
     h5, l5, c5 = m.h5, m.l5, m.c5
     if sens == -1:
         touche = next((x for x in range(debut, b) if h5[x] >= z_bas), None)
-        if touche is None or h5[touche:b + 1].max() > haut:
-            return None                               # pas encore dans la zone, ou jambe invalidée
+        if touche is None:
+            return _non("zone pas touchée")
+        if h5[touche:b + 1].max() > haut:
+            return _non("jambe invalidée")                               # pas encore dans la zone, ou jambe invalidée
         xi = touche + int(np.argmax(h5[touche:b]))    # extrême de la correction (avant la bougie b)
         extreme = h5[xi]
         swings5 = [j for j in m.idx_sl5 if j < xi and j + m.k5 <= b]
@@ -84,11 +94,13 @@ def ict(m, i, p):
             return None
         niveau = l5[swings5[-1]]
         if not (c5[b] < niveau <= c5[b - 1]):
-            return None
+            return _non("pas de MSS 5min")
     else:
         touche = next((x for x in range(debut, b) if l5[x] <= z_haut), None)
-        if touche is None or l5[touche:b + 1].min() < bas:
-            return None
+        if touche is None:
+            return _non("zone pas touchée")
+        if l5[touche:b + 1].min() < bas:
+            return _non("jambe invalidée")
         xi = touche + int(np.argmin(l5[touche:b]))
         extreme = l5[xi]
         swings5 = [j for j in m.idx_sh5 if j < xi and j + m.k5 <= b]
@@ -96,9 +108,9 @@ def ict(m, i, p):
             return None
         niveau = h5[swings5[-1]]
         if not (c5[b] > niveau >= c5[b - 1]):
-            return None
+            return _non("pas de MSS 5min")
     if b - touche > p["attente_mss_bougies5"]:
-        return None
+        return _non("MSS trop tardif")
 
     entree = c5[b]
     stop = extreme + sens * p["marge_stop_atr"] * m.atr5[b]
@@ -117,7 +129,8 @@ def ict(m, i, p):
         niveaux = [x for x in niveaux if x > entree]
     cible = next((x for x in niveaux if (x - entree) * sens / risque >= p["r_min"]), None)
     if cible is None:
-        return None
+        return _non("pas de liquidité à 2R")
+    DIAG["ict"]["signal"] += 1
     sig = _signal(sens, entree, stop, cible, "ob_ote_mss", p["r_min"])
     if sig:
         sig["be_r"] = p.get("break_even_r")
