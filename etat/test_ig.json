@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-08T22:11:45Z",
+ "ts": "2026-10-08T22:18:29Z",
  "ok": false,
  "message": "Connexion IG refusée (HTTP 401) : {\"errorCode\":\"error.security.invalid-details\"}"
 }
