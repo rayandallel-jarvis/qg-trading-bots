@@ -80,7 +80,8 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
                 pos = {"strategie": nom, "actif": symbole, "setup": att["setup"], "sens": sens,
                        "entree": round(float(entree), 4), "stop": att["stop"], "stop_initial": att["stop"],
                        "cible": att["cible"], "be_r": att.get("be_r"),
-                       "r_prevu": att["r_prevu"], "jour": str(att["jour"]), "debut": str(m.fin1[i])}
+                       "r_prevu": att["r_prevu"], "jour": str(att["jour"]), "debut": str(m.fin1[i]),
+                       **{k: att[k] for k in ("cible_type", "etoiles", "ut", "zone") if k in att}}
                 garde.ouvert(nom, symbole, att["jour"])
                 att = None
                 # un stop touché dans la bougie d'entrée d'un ordre limite compte comme perte
@@ -136,6 +137,7 @@ def main():
         st = statistiques(rs)
         brut = [t.get("r_brut", t["r"]) for t in tous if t["strategie"] == nom]
         st["esperance_brute_r"] = round(sum(brut) / len(brut), 3) if brut else None
+        st["reussite_brute"] = round(sum(1 for x in brut if x > 0) / len(brut), 3) if brut else None
         st["feu_vert"] = bool(st["trades"] >= cfg["backtest"]["trades_min"] and st.get("esperance_r", 0) > 0)
         par_strat[nom] = st
         if st["trades"]:
