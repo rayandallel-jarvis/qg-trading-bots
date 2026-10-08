@@ -1,0 +1,27 @@
+name: Test données Dukascopy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/test-dukascopy.yml"]
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: Télécharger 3 jours en 1 min
+        run: |
+          mkdir -p dl
+          for i in usatechidxusd xauusd eurusd btcusd; do
+            npx -y dukascopy-node -i $i -from 2026-09-29 -to 2026-10-02 -t m1 -f csv -v true -dir dl || true
+          done
+          mkdir -p etat
+          { for f in dl/*.csv; do echo "$(basename $f) $(wc -l < $f) lignes"; head -3 $f; done; } > etat/test_dukascopy.txt
+          cat etat/test_dukascopy.txt
+      - run: |
+          git config user.name "qg-bots"; git config user.email "qg-bots@users.noreply.github.com"
+          git add etat/test_dukascopy.txt && git commit -qm "Test Dukascopy" && git pull -q --rebase && git push -q
