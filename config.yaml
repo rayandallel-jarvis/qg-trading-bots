@@ -29,7 +29,7 @@ actifs:
     source: duka
     instrument: USATECH.IDX-USD
     ecart_coeur: 1.0
-    ecart_hors: 2.0
+    ecart_hors: 2.5
     heures_coeur: "15:30-22:00"
     glissement: 0.2
     stop_min: 4.0                  # distance minimale du stop chez IG (points)
