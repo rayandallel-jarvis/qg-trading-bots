@@ -1,5 +1,5 @@
 {
- "date": "2026-10-08T19:46:37+00:00",
+ "date": "2026-10-08T19:48:32+00:00",
  "jours": 28,
  "par_strategie": {
   "ict": {
@@ -24,6 +24,25 @@
    "trades": 0,
    "feu_vert": false
   }
+ },
+ "entonnoir": {
+  "ict": {
+   "historique": 657,
+   "OB hors OTE": 6791,
+   "attente": 64,
+   "zone pas touchée": 4030,
+   "jambe invalidée": 1108,
+   "pas de MSS 5min": 1919,
+   "signal": 18,
+   "pas de liquidité à 2R": 5,
+   "MSS trop tardif": 22
+  }
+ },
+ "refus": {
+  "ict|BTC/USD|vente interdite": 8,
+  "ict|BTC/USD|frais trop lourds": 9,
+  "sr|BTC/USD|vente interdite": 144,
+  "sr|BTC/USD|frais trop lourds": 134
  },
  "par_strategie_actif": {
   "ict|QQQ": {
