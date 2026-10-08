@@ -50,7 +50,7 @@ strategies:
     marge_stop_atr: 0.2
     fenetre_retest: 12
   vp:
-    actif: true
+    actif: false                   # laissé de côté pour l'instant (choix de Rayan, 8 oct.)
     max_trades_jour: 2
     r_min: 1.5
     zone_valeur: 0.70
