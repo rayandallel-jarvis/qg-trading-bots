@@ -75,6 +75,70 @@ actifs:
     stop_min_pct: 1.0              # IG impose un stop à au moins 1 % du prix
     notionnel_max_pct: 180         # marge IG de 50 % sur le Bitcoin
 
+  # --- Nouveaux actifs testés le 9 oct. (backtest seulement, pas encore branchés sur IG) -----------
+  # Écarts et stops minimum = estimations des conditions standard IG, à vérifier avec infos_ig.py
+  # avant toute mise en direct ; epic à confirmer.
+  US30:
+    actif: false
+    broker: ig
+    type: cfd
+    source: duka
+    instrument: USA30.IDX-USD
+    ecart_coeur: 2.4
+    ecart_hors: 5.0
+    heures_coeur: "15:30-22:00"
+    glissement: 0.5
+    stop_min: 8.0
+    notionnel_max_pct: 500
+  US500:
+    actif: false
+    broker: ig
+    type: cfd
+    source: duka
+    instrument: USA500.IDX-USD
+    ecart_coeur: 0.4
+    ecart_hors: 1.5
+    heures_coeur: "15:30-22:00"
+    glissement: 0.1
+    stop_min: 1.0
+    notionnel_max_pct: 500
+  DAX:
+    actif: false
+    broker: ig
+    type: cfd
+    source: duka
+    instrument: DEU.IDX-EUR
+    ecart_coeur: 1.2
+    ecart_hors: 4.0
+    heures_coeur: "09:00-17:30"
+    glissement: 0.3
+    stop_min: 5.0
+    notionnel_max_pct: 500
+  GBPUSD:
+    actif: false
+    broker: ig
+    type: cfd
+    source: duka
+    instrument: GBP-USD
+    ecart_coeur: 0.00009
+    ecart_hors: 0.0002
+    heures_coeur: "09:00-22:00"
+    glissement: 0.00001
+    stop_min: 0.0002
+    notionnel_max_pct: 1000
+  USDJPY:
+    actif: false
+    broker: ig
+    type: cfd
+    source: duka
+    instrument: USD-JPY
+    ecart_coeur: 0.007
+    ecart_hors: 0.015
+    heures_coeur: "02:00-22:00"
+    glissement: 0.001
+    stop_min: 0.02
+    notionnel_max_pct: 200000
+
   # --- Alpaca paper : mis de côté le 9 oct. (frais crypto, pas de vente à découvert) ---------------
   QQQ:
     actif: false
@@ -116,7 +180,7 @@ strategies:
     entree_ote: 0.62               # ordre limite au 61,8 % de la jambe 3 min
     expiration_minutes: 60
     r_cible: 2.0                   # objectif fixe : 2R (règle de Rayan, 9 oct.)
-    break_even_r: 1.0
+    break_even_r: null             # retiré le 9 oct. : coûte cher avec un objectif à 2R
     marge_stop_atr: 0.1            # marge au-delà de l'OB (ATR de l'unité de structure)
     attente_mss_bougies3: 80       # le MSS 3 min doit venir dans les 4 h après le contact
     age_max_bos: 72                # en bougies de structure
@@ -133,7 +197,7 @@ strategies:
     entree_ote: 0.62
     expiration_minutes: 60
     r_cible: 2.0
-    break_even_r: 1.0
+    break_even_r: null             # retiré le 9 oct. : coûte cher avec un objectif à 2R
     marge_stop_atr: 0.1
     attente_mss_bougies3: 80
     age_max_bos: 36

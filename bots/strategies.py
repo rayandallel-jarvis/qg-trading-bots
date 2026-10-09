@@ -157,6 +157,8 @@ def perso(m, i, p):
     sup = [r for r in ("2h", "4h", "1D") if r != p["ut"] and not (p["ut"] == "2h" and r == "2h")]
     htf = [r for r in sup if _visible(m, i, r, t_ob, sens)]
     score = 1 + int(fvg) + len(htf)
+    if score < p.get("score_min", 1):
+        return _non("score trop faible")
 
     h3, l3, c3 = u3["h"], u3["l"], u3["c"]
     debut = int(np.searchsorted(u3["fin"], us["fin"][max(i_ext, mb)], side="left"))
@@ -187,6 +189,10 @@ def perso(m, i, p):
         fond = h3[xi:b + 1].max(); entree = fond - p["entree_ote"] * (fond - extreme)
     # stop au-delà de l'OB de l'unité de structure (règle de Rayan, 9 oct. 3 h) ; marge en ATR de cette unité
     stop = (H[j] if sens == -1 else L[j]) + sens * p["marge_stop_atr"] * us["atr"][ns - 1]
+    if p.get("reentree"):
+        # réentrée après stop : si le prix a déjà dépassé l'OB, le stop passe au-delà du nouvel extrême 3 min
+        stop_3m = extreme + sens * p.get("marge_stop_3m_atr", 0.1) * u3["atr"][b]
+        stop = max(stop, stop_3m) if sens == -1 else min(stop, stop_3m)
     risque = (entree - stop) * sens
     if risque <= 0:
         return _non("risque nul")
