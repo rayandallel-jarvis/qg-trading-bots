@@ -95,26 +95,26 @@ def ict(m, i, p):
 #   (interne = swings de l'unité de structure, externe = swings 4 h, ★★★★★ si confirmés en daily)
 # · break-even à 1R.
 def _liquidites(m, i, p, sens, entree):
-    niv = []
+    """Cibles = swings (fractals) de l'unité de structure uniquement (règle de Rayan, 9 oct.).
+    Note : ★ = swing de structure seul · ★★★ = confirmé par un swing 4 h · ★★★★★ = confirmé 4 h ET daily
+    (confirmation = écart ≤ tolerance_5e_atr × ATR de l'unité supérieure)."""
+    cle = "sh" if sens == 1 else "sl"
+    def swings(u):
+        n = u["n"][i]
+        return [(u["h"] if sens == 1 else u["l"])[j] for j in np.where(u["st"][cle])[0] if j <= n - 1 - u["k"]], \
+               (u["atr"][n - 1] if n > 0 else 0)
     us = m.ut(p["ut"], p["k_structure"])
-    ns = us["n"][i]
-    lim = ns - 1 - us["k"]
-    for j in np.where(us["st"]["sh" if sens == 1 else "sl"])[0]:
-        if j <= lim:
-            niv.append(((us["h"] if sens == 1 else us["l"])[j], "interne", 0))
-    u4 = m.ut("4h", p["k_4h"])
-    n4 = u4["n"][i]
-    ud = m.ut("1D", 2)
-    nd = ud["n"][i]
-    tol = p["tolerance_5e_atr"] * (ud["atr"][nd - 1] if nd > 0 else 0)
-    sw_d = [(ud["h"] if sens == 1 else ud["l"])[j] for j in np.where(ud["st"]["sh" if sens == 1 else "sl"])[0]
-            if j <= nd - 1 - ud["k"]]
-    for j in np.where(u4["st"]["sh" if sens == 1 else "sl"])[0]:
-        if j <= n4 - 1 - u4["k"]:
-            x = (u4["h"] if sens == 1 else u4["l"])[j]
-            etoiles = 5 if any(abs(x - y) <= tol for y in sw_d) else 3
-            niv.append((x, "externe", etoiles))
-    niv = [n for n in niv if (n[0] - entree) * sens > 0]
+    s_us, _ = swings(us)
+    s_4h, a4 = swings(m.ut("4h", p["k_4h"]))
+    s_d, ad = swings(m.ut("1D", 2))
+    t4, td = p["tolerance_5e_atr"] * a4, p["tolerance_5e_atr"] * ad
+    niv = []
+    for x in s_us:
+        if (x - entree) * sens <= 0:
+            continue
+        en_4h = any(abs(x - y) <= t4 for y in s_4h)
+        en_d = any(abs(x - y) <= td for y in s_d)
+        niv.append((x, "interne", 5 if (en_4h and en_d) else 3 if en_4h else 1))
     return sorted(niv, key=lambda n: (n[0] - entree) * sens)
 
 
