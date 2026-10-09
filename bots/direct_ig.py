@@ -261,7 +261,10 @@ class Bot:
         if self.cfg["risque"]["une_position_par_actif"] and any(t["actif"] == n for t in self.etat["en_cours"]):
             return
         for nom, p in self.cfg["strategies"].items():
-            if not p.get("actif", True) or not self.garde.autorise(nom, n, jour):
+            # en direct : seulement les stratégies marquées direct: true, sur leurs marchés
+            if not p.get("actif", True) or not p.get("direct", False) or n not in p.get("marches", [n]):
+                continue
+            if not self.garde.autorise(nom, n, jour):
                 continue
             S.COURANT = nom
             sig = fonction(nom, p)(m, i, p)
