@@ -6,6 +6,7 @@ expiration (en bougies 1 min, pour un ordre limite).
 from datetime import timedelta
 
 import numpy as np
+import pandas as pd
 from collections import Counter, defaultdict
 
 DIAG = defaultdict(Counter)   # entonnoir : où les setups s'arrêtent (backtest)
@@ -109,12 +110,19 @@ def _visible(m, i, regle, t_ob, sens):
     return bool((suite < L[q]).any() if sens == -1 else (suite > H[q]).any())
 
 
+OB_UTILISES = set()            # piste 5 « OB frais » : un OB ne sert qu'une fois
+
+
 def perso(m, i, p):
     u3 = m.ut("3min", p["k_3m"])
-    if not (i > 0 and u3["n"][i] > u3["n"][i - 1]):
+    us = m.ut(p["ut"], p["k_structure"])
+    limite_ob = p.get("entree") == "limite"
+    if limite_ob:
+        if not (i > 0 and us["n"][i] > us["n"][i - 1]):
+            return None
+    elif not (i > 0 and u3["n"][i] > u3["n"][i - 1]):
         return None
     b = u3["n"][i] - 1
-    us = m.ut(p["ut"], p["k_structure"])
     ns = us["n"][i]
     if ns < 20:
         return _non("historique")
@@ -124,8 +132,9 @@ def perso(m, i, p):
         return _non("pas de tendance")
     if p.get("sens_autorise") and sens != p["sens_autorise"]:
         return _non("sens non autorisé")
-    if p.get("filtre_tendance"):
-        ut_f = m.ut(p["filtre_tendance"], p.get("k_filtre", 2))
+    ft = p.get("filtre_tendance")
+    for regle in ([ft] if isinstance(ft, str) else (ft or [])):      # piste 2 : alignement 4 h / daily
+        ut_f = m.ut(regle, p.get("k_filtre", 2))
         nf = ut_f["n"][i]
         if nf < 5 or int(ut_f["st"]["tendance"][nf - 1]) != sens:
             return _non("contre la tendance supérieure")
@@ -135,9 +144,17 @@ def perso(m, i, p):
     if k < 0:
         return _non("pas de BOS")
     mb, _, _, i0 = st["bos"][k]
-    if (ns - 1 - mb) > p["age_max_bos"]:
+    age_max = p["age_max_bos"]
+    if p.get("age_max_h"):
+        age_max = int(p["age_max_h"] * 60 / (pd.Timedelta(p["ut"]).total_seconds() / 60))
+    if (ns - 1 - mb) > age_max:
         return _non("BOS trop ancien")
     H, L, O, C = us["h"], us["l"], us["o"], us["c"]
+    if p.get("deplacement_min"):                                     # piste 4 : vraie bougie de déplacement
+        corps, rng = abs(C[mb] - O[mb]), H[mb] - L[mb]
+        pos_cl = (C[mb] - L[mb]) / rng if rng > 0 else 0.5
+        if corps < p["deplacement_min"] * us["atr"][max(mb - 1, 0)] or (pos_cl < 0.75 if sens == 1 else pos_cl > 0.25):
+            return _non("cassure sans déplacement")
     # OB = dernier order block de la jambe : dernière bougie opposée entre le départ de la jambe et la cassure
     opp = (C > O) if sens == -1 else (C < O)
     j = next((x for x in range(mb, max(i0, 0) - 1, -1) if opp[x]), None) if i0 >= 0 else None
@@ -156,6 +173,20 @@ def perso(m, i, p):
     apres = C[mb + 1:ns]
     if len(apres) and ((apres > limite).any() if sens == -1 else (apres < limite).any()):
         return _non("zone invalidée")
+    if p.get("premium_discount"):                                    # piste 3 : achat en discount, vente en premium
+        ud = m.ut("1D", 2)
+        nd = ud["n"][i]
+        if nd < 5:
+            return _non("historique daily")
+        dh, dl = ud["st"]["dsh"][nd - 1], ud["st"]["dsl"][nd - 1]
+        if not (dh == dh and dl == dl) or dh <= dl:
+            return _non("pas de range daily")
+        milieu, z_mil = (dh + dl) / 2, (z_bas + z_haut) / 2
+        if (sens == 1 and z_mil > milieu) or (sens == -1 and z_mil < milieu):
+            return _non("hors discount/premium")
+    cle_ob = (COURANT, p["ut"], int(j), str(us["d"].index[j]))
+    if p.get("ob_frais") and cle_ob in OB_UTILISES:
+        return _non("OB déjà utilisé")
 
     # score de l'OB
     fvg = any((L[x - 1] > H[x + 1]) if sens == -1 else (H[x - 1] < L[x + 1])
@@ -166,6 +197,35 @@ def perso(m, i, p):
     score = 1 + int(fvg) + len(htf)
     if score < p.get("score_min", 1):
         return _non("score trop faible")
+
+    if limite_ob:                                                    # piste 6 : ordre limite au milieu de la zone
+        apres_ext = slice(max(i_ext, mb) + 1, ns)
+        deja = (H[apres_ext] >= z_bas).any() if sens == -1 else (L[apres_ext] <= z_haut).any()
+        if deja:
+            OB_UTILISES.add(cle_ob)
+            return _non("OB déjà touché")
+        entree = (z_bas + z_haut) / 2
+        stop = (H[j] if sens == -1 else L[j]) + sens * p["marge_stop_atr"] * us["atr"][ns - 1]
+        risque = (entree - stop) * sens
+        if risque <= 0:
+            return _non("risque nul")
+        cible = entree + sens * p["r_cible"] * risque
+        if p.get("objectif") == "swing":                             # piste 7 : viser l'extrême de la jambe si ≥ 2R
+            ext_jambe = haut if sens == 1 else bas
+            if (ext_jambe - cible) * sens > 0:
+                cible = ext_jambe
+        DIAG[COURANT]["signal"] += 1
+        duree = int(pd.Timedelta(p["ut"]).total_seconds() // 60)
+        sig = _signal(sens, entree, stop, cible, "ob_limite", p["r_cible"] - 1e-9, "limite", duree)
+        if sig:
+            if p.get("ob_frais"):
+                OB_UTILISES.add(cle_ob)
+            sig["dessin"] = {"ob_t": str(t_ob), "ob_h": float(H[j]), "ob_l": float(L[j]),
+                             "bos_t": str(us["d"].index[mb]), "bos_niv": float(st["bos"][k][2]),
+                             "jambe_haut": float(haut), "jambe_bas": float(bas), "ote": [float(ote[0]), float(ote[1])]}
+            sig.update({"be_r": p.get("break_even_r"), "etoiles": score, "fvg": fvg, "htf": htf,
+                        "zone": [round(float(z_bas), 4), round(float(z_haut), 4)], "ut": p["ut"]})
+        return sig
 
     h3, l3, c3 = u3["h"], u3["l"], u3["c"]
     debut = int(np.searchsorted(u3["fin"], us["fin"][max(i_ext, mb)], side="left"))
@@ -204,6 +264,12 @@ def perso(m, i, p):
     if risque <= 0:
         return _non("risque nul")
     cible = entree + sens * p["r_cible"] * risque
+    if p.get("objectif") == "swing":
+        ext_jambe = haut if sens == 1 else bas
+        if (ext_jambe - cible) * sens > 0:
+            cible = ext_jambe
+    if p.get("ob_frais"):
+        OB_UTILISES.add(cle_ob)
     DIAG[COURANT]["signal"] += 1
     sig = _signal(sens, entree, stop, cible, "ob_ote_mss3", p["r_cible"] - 1e-9, "limite", p["expiration_minutes"])
     if sig:

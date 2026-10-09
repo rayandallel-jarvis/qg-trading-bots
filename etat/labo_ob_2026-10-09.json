@@ -1,0 +1,1347 @@
+{
+ "periode": "2025-04-01 → 2026-10-08, compte 10 000 $, 0,5 %/trade, frais IG",
+ "variantes": {
+  "NAS100": {
+   "15min|base": {
+    "trades": 280,
+    "gain": -1269,
+    "brut_r": 0.016
+   },
+   "15min|p1_swings_majeurs": {
+    "trades": 195,
+    "gain": -1620,
+    "brut_r": -0.07
+   },
+   "15min|p2_aligne_4h_daily": {
+    "trades": 82,
+    "gain": -920,
+    "brut_r": -0.122
+   },
+   "15min|p3_premium_discount": {
+    "trades": 137,
+    "gain": -1445,
+    "brut_r": -0.102
+   },
+   "15min|p4_deplacement": {
+    "trades": 48,
+    "gain": -840,
+    "brut_r": -0.25
+   },
+   "15min|p5_ob_frais": {
+    "trades": 252,
+    "gain": -1163,
+    "brut_r": 0.012
+   },
+   "15min|p6_entree_limite": {
+    "trades": 473,
+    "gain": -6801,
+    "brut_r": -0.154
+   },
+   "15min|p7_objectif_swing": {
+    "trades": 276,
+    "gain": -1390,
+    "brut_r": 0.006
+   },
+   "30min|base": {
+    "trades": 205,
+    "gain": -625,
+    "brut_r": 0.03
+   },
+   "30min|p1_swings_majeurs": {
+    "trades": 124,
+    "gain": -896,
+    "brut_r": -0.058
+   },
+   "30min|p2_aligne_4h_daily": {
+    "trades": 67,
+    "gain": -230,
+    "brut_r": 0.03
+   },
+   "30min|p3_premium_discount": {
+    "trades": 111,
+    "gain": -873,
+    "brut_r": -0.07
+   },
+   "30min|p4_deplacement": {
+    "trades": 46,
+    "gain": -648,
+    "brut_r": -0.217
+   },
+   "30min|p5_ob_frais": {
+    "trades": 176,
+    "gain": -341,
+    "brut_r": 0.047
+   },
+   "30min|p6_entree_limite": {
+    "trades": 325,
+    "gain": -2745,
+    "brut_r": -0.053
+   },
+   "30min|p7_objectif_swing": {
+    "trades": 201,
+    "gain": 625,
+    "brut_r": 0.154
+   },
+   "1h|base": {
+    "trades": 129,
+    "gain": -328,
+    "brut_r": 0.022
+   },
+   "1h|p1_swings_majeurs": {
+    "trades": 83,
+    "gain": 414,
+    "brut_r": 0.156
+   },
+   "1h|p2_aligne_4h_daily": {
+    "trades": 54,
+    "gain": 108,
+    "brut_r": 0.109
+   },
+   "1h|p3_premium_discount": {
+    "trades": 57,
+    "gain": -801,
+    "brut_r": -0.211
+   },
+   "1h|p4_deplacement": {
+    "trades": 22,
+    "gain": -427,
+    "brut_r": -0.318
+   },
+   "1h|p5_ob_frais": {
+    "trades": 99,
+    "gain": -348,
+    "brut_r": -0.001
+   },
+   "1h|p6_entree_limite": {
+    "trades": 197,
+    "gain": -287,
+    "brut_r": 0.055
+   },
+   "1h|p7_objectif_swing": {
+    "trades": 128,
+    "gain": -1502,
+    "brut_r": -0.162
+   },
+   "30min|p2+p5": {
+    "trades": 55,
+    "gain": -156,
+    "brut_r": 0.036
+   },
+   "30min|p1+p2": {
+    "trades": 46,
+    "gain": -555,
+    "brut_r": -0.157
+   },
+   "30min|p1+p2+p5": {
+    "trades": 37,
+    "gain": -225,
+    "brut_r": -0.033
+   },
+   "30min|p1+p5": {
+    "trades": 98,
+    "gain": -203,
+    "brut_r": 0.038
+   },
+   "30min|p2+p5+p7": {
+    "trades": 55,
+    "gain": 768,
+    "brut_r": 0.372
+   },
+   "30min|p1+p2+p5+p7": {
+    "trades": 37,
+    "gain": 225,
+    "brut_r": 0.21
+   },
+   "30min|p2_4h_seul+p5": {
+    "trades": 97,
+    "gain": -167,
+    "brut_r": 0.052
+   },
+   "1h|p2+p5": {
+    "trades": 41,
+    "gain": -98,
+    "brut_r": 0.021
+   },
+   "1h|p1+p2": {
+    "trades": 41,
+    "gain": 523,
+    "brut_r": 0.315
+   },
+   "1h|p1+p2+p5": {
+    "trades": 28,
+    "gain": 167,
+    "brut_r": 0.176
+   },
+   "1h|p1+p5": {
+    "trades": 61,
+    "gain": 391,
+    "brut_r": 0.179
+   },
+   "1h|p2+p5+p7": {
+    "trades": 41,
+    "gain": -1099,
+    "brut_r": -0.467
+   },
+   "1h|p1+p2+p5+p7": {
+    "trades": 28,
+    "gain": -697,
+    "brut_r": -0.442
+   },
+   "1h|p2_4h_seul+p5": {
+    "trades": 65,
+    "gain": 269,
+    "brut_r": 0.152
+   },
+   "30min|p5+p7": {
+    "trades": 175,
+    "gain": 1180,
+    "brut_r": 0.22
+   },
+   "30min|p1+p7": {
+    "trades": 122,
+    "gain": -386,
+    "brut_r": 0.023
+   },
+   "30min|p1+p5+p7": {
+    "trades": 98,
+    "gain": 579,
+    "brut_r": 0.198
+   },
+   "1h|p5+p7": {
+    "trades": 99,
+    "gain": -1365,
+    "brut_r": -0.207
+   },
+   "1h|p1+p7": {
+    "trades": 83,
+    "gain": -119,
+    "brut_r": 0.027
+   },
+   "1h|p1+p5+p7": {
+    "trades": 61,
+    "gain": -267,
+    "brut_r": -0.037
+   }
+  },
+  "US500": {
+   "15min|base": {
+    "trades": 176,
+    "gain": -1168,
+    "brut_r": 0.006
+   },
+   "15min|p1_swings_majeurs": {
+    "trades": 114,
+    "gain": -745,
+    "brut_r": 0.0
+   },
+   "15min|p2_aligne_4h_daily": {
+    "trades": 71,
+    "gain": 296,
+    "brut_r": 0.225
+   },
+   "15min|p3_premium_discount": {
+    "trades": 80,
+    "gain": -1559,
+    "brut_r": -0.25
+   },
+   "15min|p4_deplacement": {
+    "trades": 29,
+    "gain": -261,
+    "brut_r": -0.069
+   },
+   "15min|p5_ob_frais": {
+    "trades": 146,
+    "gain": -1368,
+    "brut_r": -0.055
+   },
+   "15min|p6_entree_limite": {
+    "trades": 230,
+    "gain": -2271,
+    "brut_r": -0.05
+   },
+   "15min|p7_objectif_swing": {
+    "trades": 175,
+    "gain": -741,
+    "brut_r": 0.054
+   },
+   "30min|base": {
+    "trades": 111,
+    "gain": -236,
+    "brut_r": 0.08
+   },
+   "30min|p1_swings_majeurs": {
+    "trades": 90,
+    "gain": -1474,
+    "brut_r": -0.216
+   },
+   "30min|p2_aligne_4h_daily": {
+    "trades": 47,
+    "gain": 51,
+    "brut_r": 0.149
+   },
+   "30min|p3_premium_discount": {
+    "trades": 42,
+    "gain": -399,
+    "brut_r": -0.074
+   },
+   "30min|p4_deplacement": {
+    "trades": 31,
+    "gain": -202,
+    "brut_r": -0.035
+   },
+   "30min|p5_ob_frais": {
+    "trades": 88,
+    "gain": 22,
+    "brut_r": 0.124
+   },
+   "30min|p6_entree_limite": {
+    "trades": 176,
+    "gain": -3581,
+    "brut_r": -0.257
+   },
+   "30min|p7_objectif_swing": {
+    "trades": 110,
+    "gain": -271,
+    "brut_r": 0.074
+   },
+   "1h|base": {
+    "trades": 104,
+    "gain": 661,
+    "brut_r": 0.23
+   },
+   "1h|p1_swings_majeurs": {
+    "trades": 74,
+    "gain": 102,
+    "brut_r": 0.125
+   },
+   "1h|p2_aligne_4h_daily": {
+    "trades": 39,
+    "gain": 88,
+    "brut_r": 0.145
+   },
+   "1h|p3_premium_discount": {
+    "trades": 46,
+    "gain": 15,
+    "brut_r": 0.109
+   },
+   "1h|p4_deplacement": {
+    "trades": 14,
+    "gain": 158,
+    "brut_r": 0.286
+   },
+   "1h|p5_ob_frais": {
+    "trades": 68,
+    "gain": 229,
+    "brut_r": 0.18
+   },
+   "1h|p6_entree_limite": {
+    "trades": 139,
+    "gain": -374,
+    "brut_r": 0.065
+   },
+   "1h|p7_objectif_swing": {
+    "trades": 102,
+    "gain": 1774,
+    "brut_r": 0.45
+   },
+   "30min|p2+p5": {
+    "trades": 35,
+    "gain": 284,
+    "brut_r": 0.286
+   },
+   "30min|p1+p2": {
+    "trades": 31,
+    "gain": -389,
+    "brut_r": -0.129
+   },
+   "30min|p1+p2+p5": {
+    "trades": 20,
+    "gain": -212,
+    "brut_r": -0.1
+   },
+   "30min|p1+p5": {
+    "trades": 63,
+    "gain": -729,
+    "brut_r": -0.119
+   },
+   "30min|p2+p5+p7": {
+    "trades": 35,
+    "gain": -50,
+    "brut_r": 0.095
+   },
+   "30min|p1+p2+p5+p7": {
+    "trades": 20,
+    "gain": -503,
+    "brut_r": -0.391
+   },
+   "30min|p2_4h_seul+p5": {
+    "trades": 58,
+    "gain": 198,
+    "brut_r": 0.19
+   },
+   "1h|p2+p5": {
+    "trades": 25,
+    "gain": 124,
+    "brut_r": 0.2
+   },
+   "1h|p1+p2": {
+    "trades": 29,
+    "gain": -94,
+    "brut_r": 0.034
+   },
+   "1h|p1+p2+p5": {
+    "trades": 20,
+    "gain": 247,
+    "brut_r": 0.35
+   },
+   "1h|p1+p5": {
+    "trades": 44,
+    "gain": -77,
+    "brut_r": 0.074
+   },
+   "1h|p2+p5+p7": {
+    "trades": 25,
+    "gain": 308,
+    "brut_r": 0.347
+   },
+   "1h|p1+p2+p5+p7": {
+    "trades": 20,
+    "gain": 678,
+    "brut_r": 0.781
+   },
+   "1h|p2_4h_seul+p5": {
+    "trades": 39,
+    "gain": 51,
+    "brut_r": 0.135
+   },
+   "30min|p5+p7": {
+    "trades": 88,
+    "gain": -246,
+    "brut_r": 0.063
+   },
+   "30min|p1+p7": {
+    "trades": 89,
+    "gain": -1862,
+    "brut_r": -0.307
+   },
+   "30min|p1+p5+p7": {
+    "trades": 63,
+    "gain": -1004,
+    "brut_r": -0.206
+   },
+   "1h|p5+p7": {
+    "trades": 68,
+    "gain": 1102,
+    "brut_r": 0.437
+   },
+   "1h|p1+p7": {
+    "trades": 74,
+    "gain": 1272,
+    "brut_r": 0.441
+   },
+   "1h|p1+p5+p7": {
+    "trades": 44,
+    "gain": 1108,
+    "brut_r": 0.613
+   }
+  },
+  "OR": {
+   "15min|base": {
+    "trades": 261,
+    "gain": -2616,
+    "brut_r": -0.08
+   },
+   "15min|p1_swings_majeurs": {
+    "trades": 188,
+    "gain": -2222,
+    "brut_r": -0.122
+   },
+   "15min|p2_aligne_4h_daily": {
+    "trades": 100,
+    "gain": -759,
+    "brut_r": -0.04
+   },
+   "15min|p3_premium_discount": {
+    "trades": 129,
+    "gain": -2169,
+    "brut_r": -0.209
+   },
+   "15min|p4_deplacement": {
+    "trades": 29,
+    "gain": -420,
+    "brut_r": -0.172
+   },
+   "15min|p5_ob_frais": {
+    "trades": 240,
+    "gain": -2046,
+    "brut_r": -0.05
+   },
+   "15min|p6_entree_limite": {
+    "trades": 385,
+    "gain": -2899,
+    "brut_r": -0.003
+   },
+   "15min|p7_objectif_swing": {
+    "trades": 259,
+    "gain": -3074,
+    "brut_r": -0.118
+   },
+   "30min|base": {
+    "trades": 226,
+    "gain": -115,
+    "brut_r": 0.096
+   },
+   "30min|p1_swings_majeurs": {
+    "trades": 117,
+    "gain": -708,
+    "brut_r": -0.032
+   },
+   "30min|p2_aligne_4h_daily": {
+    "trades": 75,
+    "gain": -621,
+    "brut_r": -0.049
+   },
+   "30min|p3_premium_discount": {
+    "trades": 123,
+    "gain": -209,
+    "brut_r": 0.068
+   },
+   "30min|p4_deplacement": {
+    "trades": 39,
+    "gain": -528,
+    "brut_r": -0.169
+   },
+   "30min|p5_ob_frais": {
+    "trades": 175,
+    "gain": -388,
+    "brut_r": 0.059
+   },
+   "30min|p6_entree_limite": {
+    "trades": 273,
+    "gain": -1617,
+    "brut_r": 0.011
+   },
+   "30min|p7_objectif_swing": {
+    "trades": 221,
+    "gain": 1862,
+    "brut_r": 0.275
+   },
+   "1h|base": {
+    "trades": 124,
+    "gain": -1262,
+    "brut_r": -0.111
+   },
+   "1h|p1_swings_majeurs": {
+    "trades": 67,
+    "gain": -53,
+    "brut_r": 0.062
+   },
+   "1h|p2_aligne_4h_daily": {
+    "trades": 35,
+    "gain": -851,
+    "brut_r": -0.4
+   },
+   "1h|p3_premium_discount": {
+    "trades": 63,
+    "gain": -31,
+    "brut_r": 0.083
+   },
+   "1h|p4_deplacement": {
+    "trades": 15,
+    "gain": -78,
+    "brut_r": 0.0
+   },
+   "1h|p5_ob_frais": {
+    "trades": 86,
+    "gain": -1117,
+    "brut_r": -0.166
+   },
+   "1h|p6_entree_limite": {
+    "trades": 177,
+    "gain": -2306,
+    "brut_r": -0.154
+   },
+   "1h|p7_objectif_swing": {
+    "trades": 119,
+    "gain": -1391,
+    "brut_r": -0.14
+   },
+   "30min|p2+p5": {
+    "trades": 53,
+    "gain": -419,
+    "brut_r": -0.051
+   },
+   "30min|p1+p2": {
+    "trades": 35,
+    "gain": -727,
+    "brut_r": -0.334
+   },
+   "30min|p1+p2+p5": {
+    "trades": 24,
+    "gain": -581,
+    "brut_r": -0.404
+   },
+   "30min|p1+p5": {
+    "trades": 86,
+    "gain": -674,
+    "brut_r": -0.066
+   },
+   "30min|p2+p5+p7": {
+    "trades": 53,
+    "gain": 298,
+    "brut_r": 0.22
+   },
+   "30min|p1+p2+p5+p7": {
+    "trades": 24,
+    "gain": -73,
+    "brut_r": 0.019
+   },
+   "30min|p2_4h_seul+p5": {
+    "trades": 91,
+    "gain": -581,
+    "brut_r": -0.019
+   },
+   "1h|p2+p5": {
+    "trades": 26,
+    "gain": -816,
+    "brut_r": -0.541
+   },
+   "1h|p1+p2": {
+    "trades": 17,
+    "gain": -618,
+    "brut_r": -0.652
+   },
+   "1h|p1+p2+p5": {
+    "trades": 14,
+    "gain": -604,
+    "brut_r": -0.791
+   },
+   "1h|p1+p5": {
+    "trades": 46,
+    "gain": -237,
+    "brut_r": -0.027
+   },
+   "1h|p2+p5+p7": {
+    "trades": 26,
+    "gain": -448,
+    "brut_r": -0.259
+   },
+   "1h|p1+p2+p5+p7": {
+    "trades": 14,
+    "gain": -604,
+    "brut_r": -0.791
+   },
+   "1h|p2_4h_seul+p5": {
+    "trades": 45,
+    "gain": -961,
+    "brut_r": -0.335
+   },
+   "30min|p5+p7": {
+    "trades": 175,
+    "gain": 593,
+    "brut_r": 0.171
+   },
+   "30min|p1+p7": {
+    "trades": 112,
+    "gain": -420,
+    "brut_r": 0.015
+   },
+   "30min|p1+p5+p7": {
+    "trades": 86,
+    "gain": -187,
+    "brut_r": 0.047
+   },
+   "1h|p5+p7": {
+    "trades": 86,
+    "gain": -361,
+    "brut_r": 0.01
+   },
+   "1h|p1+p7": {
+    "trades": 64,
+    "gain": -583,
+    "brut_r": -0.104
+   },
+   "1h|p1+p5+p7": {
+    "trades": 46,
+    "gain": -188,
+    "brut_r": -0.006
+   }
+  }
+ },
+ "glissant_6_mois": {
+  "bilan": {
+   "gain": 2488,
+   "trades": 268,
+   "pire_baisse": -1363,
+   "mois": {
+    "2025-10": 384,
+    "2025-11": 126,
+    "2025-12": -711,
+    "2026-01": -29,
+    "2026-02": 2438,
+    "2026-03": 442,
+    "2026-04": -425,
+    "2026-05": 604,
+    "2026-06": 692,
+    "2026-07": -132,
+    "2026-08": -392,
+    "2026-09": -700,
+    "2026-10": 190
+   },
+   "mois_pos": "7/13",
+   "reussite": 0.33
+  },
+  "journal": [
+   {
+    "mois": "2025-10",
+    "actif": "NAS100",
+    "choix": "30min|base",
+    "gain_fenetre": 555,
+    "trades": 11,
+    "gain": 282
+   },
+   {
+    "mois": "2025-10",
+    "actif": "US500",
+    "choix": "1h|p1+p7",
+    "gain_fenetre": 886,
+    "trades": 1,
+    "gain": -62
+   },
+   {
+    "mois": "2025-10",
+    "actif": "OR",
+    "choix": "15min|p2_aligne_4h_daily",
+    "gain_fenetre": 101,
+    "trades": 8,
+    "gain": 164
+   },
+   {
+    "mois": "2025-11",
+    "actif": "NAS100",
+    "choix": "30min|p1+p5+p7",
+    "gain_fenetre": 821,
+    "trades": 2,
+    "gain": -102
+   },
+   {
+    "mois": "2025-11",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 814,
+    "trades": 5,
+    "gain": 34
+   },
+   {
+    "mois": "2025-11",
+    "actif": "OR",
+    "choix": "15min|p2_aligne_4h_daily",
+    "gain_fenetre": 454,
+    "trades": 2,
+    "gain": 194
+   },
+   {
+    "mois": "2025-12",
+    "actif": "NAS100",
+    "choix": "30min|p1+p5+p7",
+    "gain_fenetre": 429,
+    "trades": 6,
+    "gain": -312
+   },
+   {
+    "mois": "2025-12",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 665,
+    "trades": 5,
+    "gain": 28
+   },
+   {
+    "mois": "2025-12",
+    "actif": "OR",
+    "choix": "15min|p2_aligne_4h_daily",
+    "gain_fenetre": 754,
+    "trades": 10,
+    "gain": -427
+   },
+   {
+    "mois": "2026-01",
+    "actif": "NAS100",
+    "choix": "30min|p1+p2+p5+p7",
+    "gain_fenetre": 137,
+    "trades": 0,
+    "gain": 0
+   },
+   {
+    "mois": "2026-01",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 1023,
+    "trades": 2,
+    "gain": 47
+   },
+   {
+    "mois": "2026-01",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 834,
+    "trades": 8,
+    "gain": -76
+   },
+   {
+    "mois": "2026-02",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 77,
+    "trades": 6,
+    "gain": 629
+   },
+   {
+    "mois": "2026-02",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 464,
+    "trades": 8,
+    "gain": 46
+   },
+   {
+    "mois": "2026-02",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 719,
+    "trades": 18,
+    "gain": 1763
+   },
+   {
+    "mois": "2026-03",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 609,
+    "trades": 2,
+    "gain": 39
+   },
+   {
+    "mois": "2026-03",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 301,
+    "trades": 8,
+    "gain": 227
+   },
+   {
+    "mois": "2026-03",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 2259,
+    "trades": 8,
+    "gain": 177
+   },
+   {
+    "mois": "2026-04",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 704,
+    "trades": 4,
+    "gain": 131
+   },
+   {
+    "mois": "2026-04",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 686,
+    "trades": 11,
+    "gain": -150
+   },
+   {
+    "mois": "2026-04",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 2366,
+    "trades": 14,
+    "gain": -407
+   },
+   {
+    "mois": "2026-05",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 564,
+    "trades": 2,
+    "gain": 352
+   },
+   {
+    "mois": "2026-05",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 570,
+    "trades": 3,
+    "gain": -23
+   },
+   {
+    "mois": "2026-05",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1678,
+    "trades": 15,
+    "gain": 276
+   },
+   {
+    "mois": "2026-06",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 975,
+    "trades": 1,
+    "gain": -56
+   },
+   {
+    "mois": "2026-06",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 555,
+    "trades": 4,
+    "gain": 598
+   },
+   {
+    "mois": "2026-06",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1557,
+    "trades": 13,
+    "gain": 150
+   },
+   {
+    "mois": "2026-07",
+    "actif": "NAS100",
+    "choix": "30min|p5+p7",
+    "gain_fenetre": 1789,
+    "trades": 13,
+    "gain": -235
+   },
+   {
+    "mois": "2026-07",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 1070,
+    "trades": 4,
+    "gain": -239
+   },
+   {
+    "mois": "2026-07",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1883,
+    "trades": 15,
+    "gain": 343
+   },
+   {
+    "mois": "2026-08",
+    "actif": "NAS100",
+    "choix": "30min|p5+p7",
+    "gain_fenetre": 1703,
+    "trades": 13,
+    "gain": -246
+   },
+   {
+    "mois": "2026-08",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 1036,
+    "trades": 5,
+    "gain": -132
+   },
+   {
+    "mois": "2026-08",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 2302,
+    "trades": 18,
+    "gain": -14
+   },
+   {
+    "mois": "2026-09",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 1807,
+    "trades": 8,
+    "gain": -437
+   },
+   {
+    "mois": "2026-09",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 857,
+    "trades": 2,
+    "gain": 36
+   },
+   {
+    "mois": "2026-09",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 525,
+    "trades": 11,
+    "gain": -299
+   },
+   {
+    "mois": "2026-10",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 1319,
+    "trades": 1,
+    "gain": 99
+   },
+   {
+    "mois": "2026-10",
+    "actif": "US500",
+    "choix": "1h|p1+p7",
+    "gain_fenetre": 883,
+    "trades": 0,
+    "gain": 0
+   },
+   {
+    "mois": "2026-10",
+    "actif": "OR",
+    "choix": "1h|p3_premium_discount",
+    "gain_fenetre": 504,
+    "trades": 1,
+    "gain": 91
+   }
+  ]
+ },
+ "glissant_3_mois": {
+  "bilan": {
+   "gain": -732,
+   "trades": 335,
+   "pire_baisse": -1405,
+   "mois": {
+    "2025-10": -501,
+    "2025-11": 330,
+    "2025-12": -697,
+    "2026-01": -29,
+    "2026-02": 379,
+    "2026-03": -61,
+    "2026-04": -765,
+    "2026-05": 498,
+    "2026-06": 580,
+    "2026-07": -486,
+    "2026-08": 387,
+    "2026-09": -557,
+    "2026-10": 190
+   },
+   "mois_pos": "6/13",
+   "reussite": 0.3
+  },
+  "journal": [
+   {
+    "mois": "2025-10",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 472,
+    "trades": 11,
+    "gain": -667
+   },
+   {
+    "mois": "2025-10",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 885,
+    "trades": 6,
+    "gain": 76
+   },
+   {
+    "mois": "2025-10",
+    "actif": "OR",
+    "choix": "30min|p5+p7",
+    "gain_fenetre": 453,
+    "trades": 13,
+    "gain": 90
+   },
+   {
+    "mois": "2025-11",
+    "actif": "NAS100",
+    "choix": "30min|p1+p5+p7",
+    "gain_fenetre": 233,
+    "trades": 2,
+    "gain": -102
+   },
+   {
+    "mois": "2025-11",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 355,
+    "trades": 5,
+    "gain": 34
+   },
+   {
+    "mois": "2025-11",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 574,
+    "trades": 13,
+    "gain": 397
+   },
+   {
+    "mois": "2025-12",
+    "actif": "NAS100",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 339,
+    "trades": 11,
+    "gain": -604
+   },
+   {
+    "mois": "2025-12",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 70,
+    "trades": 4,
+    "gain": 83
+   },
+   {
+    "mois": "2025-12",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 748,
+    "trades": 15,
+    "gain": -176
+   },
+   {
+    "mois": "2026-01",
+    "actif": "NAS100",
+    "choix": null,
+    "gain_fenetre": 0,
+    "trades": 0,
+    "gain": 0
+   },
+   {
+    "mois": "2026-01",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 150,
+    "trades": 2,
+    "gain": 47
+   },
+   {
+    "mois": "2026-01",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 502,
+    "trades": 8,
+    "gain": -76
+   },
+   {
+    "mois": "2026-02",
+    "actif": "NAS100",
+    "choix": "15min|p6_entree_limite",
+    "gain_fenetre": 295,
+    "trades": 23,
+    "gain": -113
+   },
+   {
+    "mois": "2026-02",
+    "actif": "US500",
+    "choix": "30min|p6_entree_limite",
+    "gain_fenetre": 182,
+    "trades": 5,
+    "gain": -147
+   },
+   {
+    "mois": "2026-02",
+    "actif": "OR",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 559,
+    "trades": 6,
+    "gain": 639
+   },
+   {
+    "mois": "2026-03",
+    "actif": "NAS100",
+    "choix": "30min|p2+p5+p7",
+    "gain_fenetre": 453,
+    "trades": 2,
+    "gain": 39
+   },
+   {
+    "mois": "2026-03",
+    "actif": "US500",
+    "choix": "1h|p1_swings_majeurs",
+    "gain_fenetre": 288,
+    "trades": 8,
+    "gain": -276
+   },
+   {
+    "mois": "2026-03",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1511,
+    "trades": 8,
+    "gain": 177
+   },
+   {
+    "mois": "2026-04",
+    "actif": "NAS100",
+    "choix": "15min|p5_ob_frais",
+    "gain_fenetre": 733,
+    "trades": 12,
+    "gain": -209
+   },
+   {
+    "mois": "2026-04",
+    "actif": "US500",
+    "choix": "1h|p7_objectif_swing",
+    "gain_fenetre": 548,
+    "trades": 11,
+    "gain": -150
+   },
+   {
+    "mois": "2026-04",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1864,
+    "trades": 14,
+    "gain": -407
+   },
+   {
+    "mois": "2026-05",
+    "actif": "NAS100",
+    "choix": "30min|p5+p7",
+    "gain_fenetre": 1022,
+    "trades": 4,
+    "gain": 245
+   },
+   {
+    "mois": "2026-05",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 448,
+    "trades": 3,
+    "gain": -23
+   },
+   {
+    "mois": "2026-05",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 1533,
+    "trades": 15,
+    "gain": 276
+   },
+   {
+    "mois": "2026-06",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 596,
+    "trades": 11,
+    "gain": 295
+   },
+   {
+    "mois": "2026-06",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 324,
+    "trades": 4,
+    "gain": 598
+   },
+   {
+    "mois": "2026-06",
+    "actif": "OR",
+    "choix": "15min|p6_entree_limite",
+    "gain_fenetre": 99,
+    "trades": 29,
+    "gain": -313
+   },
+   {
+    "mois": "2026-07",
+    "actif": "NAS100",
+    "choix": "30min|p5+p7",
+    "gain_fenetre": 1168,
+    "trades": 13,
+    "gain": -235
+   },
+   {
+    "mois": "2026-07",
+    "actif": "US500",
+    "choix": "1h|p5+p7",
+    "gain_fenetre": 695,
+    "trades": 4,
+    "gain": -239
+   },
+   {
+    "mois": "2026-07",
+    "actif": "OR",
+    "choix": "30min|p1+p7",
+    "gain_fenetre": 254,
+    "trades": 8,
+    "gain": -12
+   },
+   {
+    "mois": "2026-08",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 1208,
+    "trades": 16,
+    "gain": 482
+   },
+   {
+    "mois": "2026-08",
+    "actif": "US500",
+    "choix": "1h|p1+p7",
+    "gain_fenetre": 819,
+    "trades": 5,
+    "gain": -81
+   },
+   {
+    "mois": "2026-08",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 769,
+    "trades": 18,
+    "gain": -14
+   },
+   {
+    "mois": "2026-09",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 1212,
+    "trades": 8,
+    "gain": -437
+   },
+   {
+    "mois": "2026-09",
+    "actif": "US500",
+    "choix": "1h|p1+p7",
+    "gain_fenetre": 1022,
+    "trades": 5,
+    "gain": 180
+   },
+   {
+    "mois": "2026-09",
+    "actif": "OR",
+    "choix": "30min|p7_objectif_swing",
+    "gain_fenetre": 479,
+    "trades": 11,
+    "gain": -299
+   },
+   {
+    "mois": "2026-10",
+    "actif": "NAS100",
+    "choix": "1h|p6_entree_limite",
+    "gain_fenetre": 480,
+    "trades": 1,
+    "gain": 99
+   },
+   {
+    "mois": "2026-10",
+    "actif": "US500",
+    "choix": "1h|p1+p7",
+    "gain_fenetre": 307,
+    "trades": 0,
+    "gain": 0
+   },
+   {
+    "mois": "2026-10",
+    "actif": "OR",
+    "choix": "1h|p3_premium_discount",
+    "gain_fenetre": 669,
+    "trades": 1,
+    "gain": 91
+   }
+  ]
+ }
+}
