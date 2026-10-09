@@ -96,7 +96,7 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
                        "cible": att["cible"], "be_r": att.get("be_r"),
                        "r_prevu": att["r_prevu"], "jour": str(att["jour"]), "debut": str(m.fin1[i]),
                        "pm": int(m.paris_min[i]),
-                       **{k: att[k] for k in ("cible_type", "etoiles", "fvg", "htf", "ut", "zone") if k in att}}
+                       **{k: att[k] for k in ("cible_type", "etoiles", "fvg", "htf", "ut", "zone", "dessin") if k in att}}
                 garde.ouvert(nom, symbole, att["jour"])
                 att = None
                 # un stop touché dans la bougie d'entrée d'un ordre limite compte comme perte

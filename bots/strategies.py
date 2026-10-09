@@ -200,6 +200,12 @@ def perso(m, i, p):
     DIAG[COURANT]["signal"] += 1
     sig = _signal(sens, entree, stop, cible, "ob_ote_mss3", p["r_cible"] - 1e-9, "limite", p["expiration_minutes"])
     if sig:
+        D3 = u3["d"].index
+        sig["dessin"] = {"ob_t": str(t_ob), "ob_h": float(H[j]), "ob_l": float(L[j]),
+                         "bos_t": str(us["d"].index[mb]), "bos_niv": float(st["bos"][k][2]),
+                         "jambe_haut": float(haut), "jambe_bas": float(bas), "ote": [float(ote[0]), float(ote[1])],
+                         "touche_t": str(D3[touche]), "ext_t": str(D3[xi]), "ext": float(extreme),
+                         "mss_t": str(D3[b]), "mss_niv": float(niveau)}
         sig.update({"be_r": p.get("break_even_r"), "etoiles": score, "fvg": fvg, "htf": htf,
                     "zone": [round(float(z_bas), 4), round(float(z_haut), 4)], "ut": p["ut"]})
     return sig
