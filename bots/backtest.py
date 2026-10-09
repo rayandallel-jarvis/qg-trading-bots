@@ -129,6 +129,18 @@ def simuler(m, nom, symbole, a, cfg, capital=100_000):
     return trades
 
 
+def en_valeur(rs, depart=10_000, risque_pct=0.5):
+    """Résultat en dollars sur un compte de départ, en risquant risque_pct % du solde par trade."""
+    solde, pic, dd = depart, depart, 0.0
+    for r in rs:
+        solde *= 1 + r * risque_pct / 100
+        pic = max(pic, solde)
+        dd = min(dd, solde - pic)
+    return {"compte_depart": depart, "risque_pct": risque_pct, "valeur_1r": round(depart * risque_pct / 100, 2),
+            "solde_final": round(solde, 2), "gain": round(solde - depart, 2),
+            "gain_pct": round((solde / depart - 1) * 100, 2), "pire_baisse": round(dd, 2)}
+
+
 def main():
     cfg = charger_config()
     jours = cfg["backtest"]["jours"]
@@ -154,6 +166,7 @@ def main():
                 continue
             tr = simuler(m, nom, symbole, a, cfg)
             resultats[f"{nom}|{symbole}"] = statistiques([t["r"] for t in tr])
+            resultats[f"{nom}|{symbole}"]["valeur"] = en_valeur([t["r"] for t in sorted(tr, key=lambda t: t["fin"])])
             tous += tr
             print(nom, symbole, resultats[f"{nom}|{symbole}"])
 
@@ -164,17 +177,20 @@ def main():
         brut = [t.get("r_brut", t["r"]) for t in tous if t["strategie"] == nom]
         st["esperance_brute_r"] = round(sum(brut) / len(brut), 3) if brut else None
         st["reussite_brute"] = round(sum(1 for x in brut if x > 0) / len(brut), 3) if brut else None
+        st["valeur"] = en_valeur(rs)
         st["feu_vert"] = bool(st["trades"] >= cfg["backtest"]["trades_min"] and st.get("esperance_r", 0) > 0)
         par_strat[nom] = st
         if st["trades"]:
-            lignes.append(f"{NOMS.get(nom, nom)} : {st['trades']} trades, {st['esperance_r']:+.2f}R/trade "
-                          f"({st['esperance_brute_r']:+.2f}R avant frais)"
-                          f"{' ✅' if st['feu_vert'] else ''}")
+            v = st["valeur"]
+            lignes.append(f"{NOMS.get(nom, nom)} : {st['trades']} trades, {v['gain']:+,.0f} $ sur 10 000 $ "
+                          f"({v['gain_pct']:+.1f} %), {st['esperance_r']:+.2f}R/trade"
+                          f"{' ✅' if st['feu_vert'] else ''}".replace(",", " "))
         else:
             lignes.append(f"{NOMS.get(nom, nom)} : 0 trade")
     ecrire_json("backtest.json", {
         "date": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "jours": jours, "par_strategie": par_strat, "entonnoir": {k: dict(v) for k, v in DIAG.items()},
+        "jours": jours, "compte": "10 000 $ au départ, 0,5 % du solde risqué par trade (1R ≈ 50 $)",
+        "par_strategie": par_strat, "entonnoir": {k: dict(v) for k, v in DIAG.items()},
         "refus": dict(REFUS), "par_strategie_actif": resultats,
         "trades": sorted(tous, key=lambda t: t["fin"])[-400:],
     })
