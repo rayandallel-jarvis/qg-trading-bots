@@ -115,12 +115,11 @@ strategies:
     ote_max: 0.79
     entree_ote: 0.62               # ordre limite au 61,8 % de la jambe 3 min
     expiration_minutes: 60
-    r_min: 1.0                     # objectif : liquidité la plus proche à ≥ 1R
+    r_cible: 2.0                   # objectif fixe : 2R (règle de Rayan, 9 oct.)
     break_even_r: 1.0
     marge_stop_atr: 0.1            # marge au-delà de la mèche (ATR 3 min)
     attente_mss_bougies3: 80       # le MSS 3 min doit venir dans les 4 h après le contact
     age_max_bos: 72                # en bougies de structure
-    tolerance_5e_atr: 0.25         # swing 4 h = ★★★★★ s'il est à moins de 0,25 ATR daily d'un swing daily
   perso_2h:                        # même modèle, structure 2 h
     fonction: perso
     actif: true
@@ -133,12 +132,11 @@ strategies:
     ote_max: 0.79
     entree_ote: 0.62
     expiration_minutes: 60
-    r_min: 1.0
+    r_cible: 2.0
     break_even_r: 1.0
     marge_stop_atr: 0.1
     attente_mss_bougies3: 80
     age_max_bos: 36
-    tolerance_5e_atr: 0.25
   sr:
     actif: true
     max_trades_jour: 3

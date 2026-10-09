@@ -87,42 +87,33 @@ def ict(m, i, p):
     return None
 
 
-# ---------------------------------------------------------------- 2. Perso (modèle de Rayan, 8 oct.)
-# Tendance et order blocks sur l'unité de structure (1 h ou 2 h) · zone = OB de la jambe ∩ OTE (62–79 %)
-# · invalidation : clôture de l'unité de structure au-delà de la zone OB
-# · après contact : MSS 3 min, puis ordre limite dans l'OTE 3 min (jambe extrême → plus bas du MSS)
-# · stop au-delà de l'extrême de la correction · objectif : liquidité la plus proche à ≥ 1R
-#   (interne = swings de l'unité de structure, externe = swings 4 h, ★★★★★ si confirmés en daily)
-# · break-even à 1R.
-def _liquidites(m, i, p, sens, entree):
-    """Cibles = swings (fractals) de l'unité de structure uniquement (règle de Rayan, 9 oct.).
-    Note : ★ = swing de structure seul · ★★★ = confirmé par un swing 4 h · ★★★★★ = confirmé 4 h ET daily
-    (confirmation = écart ≤ tolerance_5e_atr × ATR de l'unité supérieure)."""
-    cle = "sh" if sens == 1 else "sl"
-    def swings(u):
-        n = u["n"][i]
-        return [(u["h"] if sens == 1 else u["l"])[j] for j in np.where(u["st"][cle])[0] if j <= n - 1 - u["k"]], \
-               (u["atr"][n - 1] if n > 0 else 0)
-    us = m.ut(p["ut"], p["k_structure"])
-    s_us, _ = swings(us)
-    s_4h, a4 = swings(m.ut("4h", p["k_4h"]))
-    s_d, ad = swings(m.ut("1D", 2))
-    t4, td = p["tolerance_5e_atr"] * a4, p["tolerance_5e_atr"] * ad
-    niv = []
-    for x in s_us:
-        if (x - entree) * sens <= 0:
-            continue
-        en_4h = any(abs(x - y) <= t4 for y in s_4h)
-        en_d = any(abs(x - y) <= td for y in s_d)
-        niv.append((x, "interne", 5 if (en_4h and en_d) else 3 if en_4h else 1))
-    return sorted(niv, key=lambda n: (n[0] - entree) * sens)
+# ---------------------------------------------------------------- 2. Perso (modèle de Rayan, revu le 9 oct.)
+# OB sur l'unité de structure (1 h ou 2 h) = dernière bougie opposée avant la clôture qui casse le dernier
+# plus bas (vente) / plus haut (achat) : critère n° 1, obligatoire.
+# Score de l'OB (1 à 5) : 1 de base, +1 s'il libère un FVG, +1 par unité supérieure où il est aussi
+# visible (2 h, 4 h, daily ; « visible » = la bougie de cette unité qui contient l'OB est de la même
+# couleur et une des 3 bougies suivantes clôture au-delà de son extrême). Le score ne filtre pas : il classe.
+# Zone = OB ∩ OTE (62–79 % de la jambe) · invalidation : clôture de l'unité de structure au-delà de l'OB.
+# Après contact : MSS 3 min, ordre limite à 61,8 % de la jambe 3 min · stop au-delà de l'extrême 3 min.
+# Objectif : R fixe (2R), plus de visée de liquidité · break-even optionnel.
+def _visible(m, i, regle, t_ob, sens):
+    u = m.ut(regle, 2)
+    q = int(np.searchsorted(u["d"].index, t_ob, side="right")) - 1
+    n = u["n"][i]
+    if q < 0 or q >= n:
+        return False
+    O, C, H, L = u["o"], u["c"], u["h"], u["l"]
+    if (C[q] > O[q]) != (sens == -1):          # OB de vente = bougie haussière, et inversement
+        return False
+    suite = C[q + 1:min(q + 4, n)]
+    return bool((suite < L[q]).any() if sens == -1 else (suite > H[q]).any())
 
 
 def perso(m, i, p):
     u3 = m.ut("3min", p["k_3m"])
     if not (i > 0 and u3["n"][i] > u3["n"][i - 1]):
         return None
-    b = u3["n"][i] - 1                                 # dernière bougie 3 min terminée
+    b = u3["n"][i] - 1
     us = m.ut(p["ut"], p["k_structure"])
     ns = us["n"][i]
     if ns < 20:
@@ -136,31 +127,39 @@ def perso(m, i, p):
         k -= 1
     if k < 0:
         return _non("pas de BOS")
-    mb, _, _, i0 = st["bos"][k]
-    if i0 < 0 or (ns - 1 - mb) > p["age_max_bos"]:
+    mb = st["bos"][k][0]
+    if (ns - 1 - mb) > p["age_max_bos"]:
         return _non("BOS trop ancien")
     H, L, O, C = us["h"], us["l"], us["o"], us["c"]
+    # OB = dernière bougie opposée avant (ou égale à) la bougie de cassure
+    opp = (C > O) if sens == -1 else (C < O)
+    j = next((x for x in range(mb, max(mb - 30, -1), -1) if opp[x]), None)
+    if j is None:
+        return _non("pas d'OB")
     if sens == -1:
-        i_ext = i0 + int(np.argmin(L[i0:ns])); haut, bas = H[i0], L[i_ext]
-        obs = [j for j in range(i0, i_ext + 1) if C[j] > O[j]]
+        haut = H[j:mb + 1].max(); bas = L[j:ns].min(); i_ext = j + int(np.argmin(L[j:ns]))
         ote = (bas + p["ote_min"] * (haut - bas), bas + p["ote_max"] * (haut - bas))
     else:
-        i_ext = i0 + int(np.argmax(H[i0:ns])); bas, haut = L[i0], H[i_ext]
-        obs = [j for j in range(i0, i_ext + 1) if C[j] < O[j]]
+        bas = L[j:mb + 1].min(); haut = H[j:ns].max(); i_ext = j + int(np.argmax(H[j:ns]))
         ote = (haut - p["ote_max"] * (haut - bas), haut - p["ote_min"] * (haut - bas))
-    obs = [j for j in obs if max(L[j], ote[0]) < min(H[j], ote[1])]
-    if not obs:
+    z_bas, z_haut = max(L[j], ote[0]), min(H[j], ote[1])
+    if z_bas >= z_haut:
         return _non("OB hors OTE")
-    z_bas = min(max(L[j], ote[0]) for j in obs)
-    z_haut = max(min(H[j], ote[1]) for j in obs)
-    # invalidation : une clôture de l'unité de structure au-delà de l'OB le plus lointain
-    limite = max(H[j] for j in obs) if sens == -1 else min(L[j] for j in obs)
-    apres = C[i_ext + 1:ns]
+    limite = H[j] if sens == -1 else L[j]
+    apres = C[mb + 1:ns]
     if len(apres) and ((apres > limite).any() if sens == -1 else (apres < limite).any()):
         return _non("zone invalidée")
 
+    # score de l'OB
+    fvg = any((L[x - 1] > H[x + 1]) if sens == -1 else (H[x - 1] < L[x + 1])
+              for x in range(j + 1, min(mb + 2, ns - 1)))
+    t_ob = us["d"].index[j]
+    sup = [r for r in ("2h", "4h", "1D") if r != p["ut"] and not (p["ut"] == "2h" and r == "2h")]
+    htf = [r for r in sup if _visible(m, i, r, t_ob, sens)]
+    score = 1 + int(fvg) + len(htf)
+
     h3, l3, c3 = u3["h"], u3["l"], u3["c"]
-    debut = int(np.searchsorted(u3["fin"], us["fin"][i_ext], side="left"))
+    debut = int(np.searchsorted(u3["fin"], us["fin"][max(i_ext, mb)], side="left"))
     if debut >= b:
         return _non("attente")
     if sens == -1:
@@ -175,32 +174,26 @@ def perso(m, i, p):
     xi = touche + int(np.argmax(h3[seg]) if sens == -1 else np.argmin(l3[seg]))
     extreme = h3[xi] if sens == -1 else l3[xi]
     idx_sw = np.where(u3["st"]["sl" if sens == -1 else "sh"])[0]
-    sw = [j for j in idx_sw if j < xi and j + u3["k"] <= b]
+    sw = [x for x in idx_sw if x < xi and x + u3["k"] <= b]
     if not sw:
         return _non("pas de swing 3 min")
     niveau = (l3 if sens == -1 else h3)[sw[-1]]
     mss = c3[b] < niveau <= c3[b - 1] if sens == -1 else c3[b] > niveau >= c3[b - 1]
     if not mss:
         return _non("pas de MSS 3 min")
-    # OTE de la jambe 3 min (extrême → plus bas/haut atteint au MSS)
     if sens == -1:
-        fond = l3[xi:b + 1].min()
-        entree = fond + p["entree_ote"] * (extreme - fond)
+        fond = l3[xi:b + 1].min(); entree = fond + p["entree_ote"] * (extreme - fond)
     else:
-        fond = h3[xi:b + 1].max()
-        entree = fond - p["entree_ote"] * (fond - extreme)
+        fond = h3[xi:b + 1].max(); entree = fond - p["entree_ote"] * (fond - extreme)
     stop = extreme + sens * p["marge_stop_atr"] * u3["atr"][b]
     risque = (entree - stop) * sens
     if risque <= 0:
         return _non("risque nul")
-    cible = next((n for n in _liquidites(m, i, p, sens, entree)
-                  if (n[0] - entree) * sens / risque >= p["r_min"]), None)
-    if cible is None:
-        return _non("pas de liquidité à 1R")
+    cible = entree + sens * p["r_cible"] * risque
     DIAG[COURANT]["signal"] += 1
-    sig = _signal(sens, entree, stop, cible[0], "ob_ote_mss3", p["r_min"], "limite", p["expiration_minutes"])
+    sig = _signal(sens, entree, stop, cible, "ob_ote_mss3", p["r_cible"] - 1e-9, "limite", p["expiration_minutes"])
     if sig:
-        sig.update({"be_r": p.get("break_even_r"), "cible_type": cible[1], "etoiles": cible[2],
+        sig.update({"be_r": p.get("break_even_r"), "etoiles": score, "fvg": fvg, "htf": htf,
                     "zone": [round(float(z_bas), 4), round(float(z_haut), 4)], "ut": p["ut"]})
     return sig
 
