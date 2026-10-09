@@ -1,0 +1,3183 @@
+{
+ "methode": "réglage 2025-10 → 2026-06-08 (8 mois), examen 2026-06-08 → 2026-10-08 (4 mois, une seule passe) ; compte 10 000 $, 0,5 % par trade (50 $ = 1R), frais IG inclus (estimés pour US30, US500, DAX, GBPUSD, USDJPY)",
+ "candidat": {
+  "reglages": {
+   "reentree": true,
+   "score_min": 2,
+   "max_trades_jour": 3,
+   "break_even_r": null
+  },
+  "exclus": [
+   "perso_1h|US30",
+   "perso_2h|US30",
+   "perso_1h|DAX"
+  ]
+ },
+ "reglage": {
+  "base": {
+   "ensemble": {
+    "trades": 657,
+    "trades_mois": 73.0,
+    "gain": -501,
+    "r_trade": -0.015,
+    "brut_trade": 0.078,
+    "reussite": 0.37,
+    "pire_baisse": -2209,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -28,
+     "2025-11": 1030,
+     "2025-12": -820,
+     "2026-01": 157,
+     "2026-02": 372,
+     "2026-03": -988,
+     "2026-04": 42,
+     "2026-05": -248,
+     "2026-06": -18
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 47,
+     "trades_mois": 5.2,
+     "gain": -501,
+     "r_trade": -0.213,
+     "brut_trade": -0.107,
+     "reussite": 0.3,
+     "pire_baisse": -610,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": 426,
+     "r_trade": 0.19,
+     "brut_trade": 0.312,
+     "reussite": 0.44,
+     "pire_baisse": -295,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 34,
+     "trades_mois": 3.8,
+     "gain": 224,
+     "r_trade": 0.132,
+     "brut_trade": 0.261,
+     "reussite": 0.41,
+     "pire_baisse": -243,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 54,
+     "trades_mois": 6.0,
+     "gain": -53,
+     "r_trade": -0.02,
+     "brut_trade": 0.056,
+     "reussite": 0.35,
+     "pire_baisse": -591,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|OR": {
+     "trades": 61,
+     "trades_mois": 6.8,
+     "gain": -480,
+     "r_trade": -0.157,
+     "brut_trade": -0.076,
+     "reussite": 0.31,
+     "pire_baisse": -827,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US30": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": -1109,
+     "r_trade": -0.493,
+     "brut_trade": -0.4,
+     "reussite": 0.22,
+     "pire_baisse": -1243,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 57,
+     "trades_mois": 7.1,
+     "gain": 286,
+     "r_trade": 0.1,
+     "brut_trade": 0.204,
+     "reussite": 0.4,
+     "pire_baisse": -360,
+     "mois_pos": "7/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 55,
+     "trades_mois": 6.9,
+     "gain": 860,
+     "r_trade": 0.313,
+     "brut_trade": 0.418,
+     "reussite": 0.47,
+     "pire_baisse": -400,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 24,
+     "trades_mois": 3.0,
+     "gain": -101,
+     "r_trade": -0.084,
+     "brut_trade": 0.0,
+     "reussite": 0.33,
+     "pire_baisse": -349,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 25,
+     "trades_mois": 3.1,
+     "gain": -40,
+     "r_trade": -0.032,
+     "brut_trade": 0.087,
+     "reussite": 0.36,
+     "pire_baisse": -459,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 36,
+     "trades_mois": 4.0,
+     "gain": -348,
+     "r_trade": -0.193,
+     "brut_trade": -0.09,
+     "reussite": 0.31,
+     "pire_baisse": -619,
+     "mois_pos": "3/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 315,
+     "r_trade": 0.146,
+     "brut_trade": 0.197,
+     "reussite": 0.47,
+     "pire_baisse": -685,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|OR": {
+     "trades": 32,
+     "trades_mois": 4.0,
+     "gain": -206,
+     "r_trade": -0.129,
+     "brut_trade": -0.079,
+     "reussite": 0.31,
+     "pire_baisse": -527,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US30": {
+     "trades": 25,
+     "trades_mois": 3.6,
+     "gain": -492,
+     "r_trade": -0.393,
+     "brut_trade": -0.291,
+     "reussite": 0.24,
+     "pire_baisse": -772,
+     "mois_pos": "2/7"
+    },
+    "perso_2h|US500": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": 53,
+     "r_trade": 0.029,
+     "brut_trade": 0.123,
+     "reussite": 0.38,
+     "pire_baisse": -472,
+     "mois_pos": "2/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 37,
+     "trades_mois": 4.6,
+     "gain": 664,
+     "r_trade": 0.359,
+     "brut_trade": 0.441,
+     "reussite": 0.49,
+     "pire_baisse": -263,
+     "mois_pos": "6/8"
+    }
+   }
+  },
+  "reentree": {
+   "ensemble": {
+    "trades": 764,
+    "trades_mois": 84.9,
+    "gain": 1275,
+    "r_trade": 0.033,
+    "brut_trade": 0.129,
+    "reussite": 0.38,
+    "pire_baisse": -1860,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -14,
+     "2025-11": 1525,
+     "2025-12": -627,
+     "2026-01": 409,
+     "2026-02": 419,
+     "2026-03": -206,
+     "2026-04": -429,
+     "2026-05": 212,
+     "2026-06": -13
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 54,
+     "trades_mois": 6.0,
+     "gain": -135,
+     "r_trade": -0.05,
+     "brut_trade": 0.055,
+     "reussite": 0.35,
+     "pire_baisse": -566,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 54,
+     "trades_mois": 6.0,
+     "gain": 230,
+     "r_trade": 0.085,
+     "brut_trade": 0.219,
+     "reussite": 0.41,
+     "pire_baisse": -412,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 41,
+     "trades_mois": 4.6,
+     "gain": -36,
+     "r_trade": -0.018,
+     "brut_trade": 0.121,
+     "reussite": 0.37,
+     "pire_baisse": -298,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 71,
+     "trades_mois": 7.9,
+     "gain": -215,
+     "r_trade": -0.061,
+     "brut_trade": 0.014,
+     "reussite": 0.34,
+     "pire_baisse": -536,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|OR": {
+     "trades": 68,
+     "trades_mois": 7.6,
+     "gain": -418,
+     "r_trade": -0.123,
+     "brut_trade": -0.04,
+     "reussite": 0.32,
+     "pire_baisse": -903,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 52,
+     "trades_mois": 5.8,
+     "gain": -153,
+     "r_trade": -0.059,
+     "brut_trade": 0.039,
+     "reussite": 0.37,
+     "pire_baisse": -497,
+     "mois_pos": "3/9"
+    },
+    "perso_1h|US500": {
+     "trades": 64,
+     "trades_mois": 8.0,
+     "gain": 668,
+     "r_trade": 0.209,
+     "brut_trade": 0.307,
+     "reussite": 0.44,
+     "pire_baisse": -223,
+     "mois_pos": "7/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 63,
+     "trades_mois": 7.9,
+     "gain": 997,
+     "r_trade": 0.317,
+     "brut_trade": 0.428,
+     "reussite": 0.48,
+     "pire_baisse": -515,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 33,
+     "trades_mois": 4.1,
+     "gain": 151,
+     "r_trade": 0.092,
+     "brut_trade": 0.182,
+     "reussite": 0.39,
+     "pire_baisse": -320,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 28,
+     "trades_mois": 3.5,
+     "gain": -352,
+     "r_trade": -0.251,
+     "brut_trade": -0.133,
+     "reussite": 0.29,
+     "pire_baisse": -670,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 39,
+     "trades_mois": 4.3,
+     "gain": -358,
+     "r_trade": -0.184,
+     "brut_trade": -0.084,
+     "reussite": 0.31,
+     "pire_baisse": -575,
+     "mois_pos": "3/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 48,
+     "trades_mois": 5.3,
+     "gain": 52,
+     "r_trade": 0.022,
+     "brut_trade": 0.072,
+     "reussite": 0.42,
+     "pire_baisse": -685,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|OR": {
+     "trades": 36,
+     "trades_mois": 4.5,
+     "gain": -133,
+     "r_trade": -0.074,
+     "brut_trade": -0.015,
+     "reussite": 0.33,
+     "pire_baisse": -393,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US30": {
+     "trades": 31,
+     "trades_mois": 3.9,
+     "gain": -202,
+     "r_trade": -0.13,
+     "brut_trade": -0.041,
+     "reussite": 0.32,
+     "pire_baisse": -391,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|US500": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 476,
+     "r_trade": 0.221,
+     "brut_trade": 0.315,
+     "reussite": 0.44,
+     "pire_baisse": -431,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 39,
+     "trades_mois": 4.9,
+     "gain": 702,
+     "r_trade": 0.36,
+     "brut_trade": 0.444,
+     "reussite": 0.49,
+     "pire_baisse": -318,
+     "mois_pos": "6/8"
+    }
+   }
+  },
+  "score2": {
+   "ensemble": {
+    "trades": 521,
+    "trades_mois": 57.9,
+    "gain": 2121,
+    "r_trade": 0.081,
+    "brut_trade": 0.17,
+    "reussite": 0.39,
+    "pire_baisse": -1232,
+    "mois_pos": "5/9",
+    "mois": {
+     "2025-10": -470,
+     "2025-11": 1483,
+     "2025-12": -294,
+     "2026-01": 787,
+     "2026-02": 699,
+     "2026-03": 67,
+     "2026-04": 71,
+     "2026-05": -173,
+     "2026-06": -49
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -117,
+     "r_trade": -0.054,
+     "brut_trade": 0.046,
+     "reussite": 0.35,
+     "pire_baisse": -392,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 408,
+     "r_trade": 0.19,
+     "brut_trade": 0.324,
+     "reussite": 0.44,
+     "pire_baisse": -354,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 29,
+     "trades_mois": 3.2,
+     "gain": 36,
+     "r_trade": 0.025,
+     "brut_trade": 0.157,
+     "reussite": 0.38,
+     "pire_baisse": -292,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 47,
+     "trades_mois": 5.9,
+     "gain": 191,
+     "r_trade": 0.081,
+     "brut_trade": 0.149,
+     "reussite": 0.38,
+     "pire_baisse": -363,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 39,
+     "trades_mois": 4.3,
+     "gain": -161,
+     "r_trade": -0.082,
+     "brut_trade": -0.002,
+     "reussite": 0.33,
+     "pire_baisse": -566,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": -204,
+     "r_trade": -0.11,
+     "brut_trade": -0.027,
+     "reussite": 0.35,
+     "pire_baisse": -339,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 124,
+     "r_trade": 0.056,
+     "brut_trade": 0.151,
+     "reussite": 0.39,
+     "pire_baisse": -333,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 867,
+     "r_trade": 0.394,
+     "brut_trade": 0.5,
+     "reussite": 0.5,
+     "pire_baisse": -504,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 22,
+     "trades_mois": 2.8,
+     "gain": 3,
+     "r_trade": 0.003,
+     "brut_trade": 0.091,
+     "reussite": 0.36,
+     "pire_baisse": -233,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 18,
+     "trades_mois": 2.6,
+     "gain": 67,
+     "r_trade": 0.075,
+     "brut_trade": 0.177,
+     "reussite": 0.39,
+     "pire_baisse": -233,
+     "mois_pos": "5/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 22,
+     "trades_mois": 2.4,
+     "gain": 140,
+     "r_trade": 0.127,
+     "brut_trade": 0.216,
+     "reussite": 0.41,
+     "pire_baisse": -171,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 33,
+     "trades_mois": 4.1,
+     "gain": 209,
+     "r_trade": 0.126,
+     "brut_trade": 0.162,
+     "reussite": 0.39,
+     "pire_baisse": -366,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|OR": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 47,
+     "r_trade": 0.035,
+     "brut_trade": 0.092,
+     "reussite": 0.37,
+     "pire_baisse": -317,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US30": {
+     "trades": 14,
+     "trades_mois": 2.3,
+     "gain": 1,
+     "r_trade": 0.002,
+     "brut_trade": 0.071,
+     "reussite": 0.36,
+     "pire_baisse": -223,
+     "mois_pos": "1/6"
+    },
+    "perso_2h|US500": {
+     "trades": 32,
+     "trades_mois": 3.6,
+     "gain": 333,
+     "r_trade": 0.208,
+     "brut_trade": 0.298,
+     "reussite": 0.44,
+     "pire_baisse": -276,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 176,
+     "r_trade": 0.13,
+     "brut_trade": 0.197,
+     "reussite": 0.41,
+     "pire_baisse": -288,
+     "mois_pos": "4/8"
+    }
+   }
+  },
+  "score3": {
+   "ensemble": {
+    "trades": 210,
+    "trades_mois": 23.3,
+    "gain": 704,
+    "r_trade": 0.067,
+    "brut_trade": 0.152,
+    "reussite": 0.39,
+    "pire_baisse": -1060,
+    "mois_pos": "2/9",
+    "mois": {
+     "2025-10": -93,
+     "2025-11": 719,
+     "2025-12": -49,
+     "2026-01": -138,
+     "2026-02": 1007,
+     "2026-03": -231,
+     "2026-04": -160,
+     "2026-05": -261,
+     "2026-06": -88
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 19,
+     "trades_mois": 2.7,
+     "gain": -299,
+     "r_trade": -0.314,
+     "brut_trade": -0.213,
+     "reussite": 0.26,
+     "pire_baisse": -358,
+     "mois_pos": "2/7"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 17,
+     "trades_mois": 2.1,
+     "gain": 250,
+     "r_trade": 0.294,
+     "brut_trade": 0.437,
+     "reussite": 0.47,
+     "pire_baisse": -280,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 15,
+     "trades_mois": 2.5,
+     "gain": -90,
+     "r_trade": -0.121,
+     "brut_trade": 0.014,
+     "reussite": 0.33,
+     "pire_baisse": -285,
+     "mois_pos": "3/6"
+    },
+    "perso_1h|NAS100": {
+     "trades": 19,
+     "trades_mois": 2.7,
+     "gain": 494,
+     "r_trade": 0.52,
+     "brut_trade": 0.579,
+     "reussite": 0.53,
+     "pire_baisse": -108,
+     "mois_pos": "5/7"
+    },
+    "perso_1h|OR": {
+     "trades": 14,
+     "trades_mois": 2.0,
+     "gain": -157,
+     "r_trade": -0.224,
+     "brut_trade": -0.143,
+     "reussite": 0.29,
+     "pire_baisse": -274,
+     "mois_pos": "3/7"
+    },
+    "perso_1h|US30": {
+     "trades": 15,
+     "trades_mois": 2.1,
+     "gain": 104,
+     "r_trade": 0.139,
+     "brut_trade": 0.2,
+     "reussite": 0.4,
+     "pire_baisse": -321,
+     "mois_pos": "4/7"
+    },
+    "perso_1h|US500": {
+     "trades": 16,
+     "trades_mois": 2.7,
+     "gain": 16,
+     "r_trade": 0.02,
+     "brut_trade": 0.103,
+     "reussite": 0.38,
+     "pire_baisse": -198,
+     "mois_pos": "4/6"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 21,
+     "trades_mois": 2.6,
+     "gain": 334,
+     "r_trade": 0.318,
+     "brut_trade": 0.428,
+     "reussite": 0.48,
+     "pire_baisse": -398,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 13,
+     "trades_mois": 1.9,
+     "gain": -99,
+     "r_trade": -0.152,
+     "brut_trade": -0.077,
+     "reussite": 0.31,
+     "pire_baisse": -269,
+     "mois_pos": "2/7"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 4,
+     "trades_mois": 1.0,
+     "gain": 81,
+     "r_trade": 0.406,
+     "brut_trade": 0.479,
+     "reussite": 0.5,
+     "pire_baisse": -52,
+     "mois_pos": "2/4"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 10,
+     "trades_mois": 1.4,
+     "gain": -92,
+     "r_trade": -0.183,
+     "brut_trade": -0.104,
+     "reussite": 0.3,
+     "pire_baisse": -281,
+     "mois_pos": "2/7"
+    },
+    "perso_2h|NAS100": {
+     "trades": 9,
+     "trades_mois": 1.5,
+     "gain": -11,
+     "r_trade": -0.025,
+     "brut_trade": 0.0,
+     "reussite": 0.33,
+     "pire_baisse": -205,
+     "mois_pos": "2/6"
+    },
+    "perso_2h|OR": {
+     "trades": 7,
+     "trades_mois": 1.8,
+     "gain": 84,
+     "r_trade": 0.239,
+     "brut_trade": 0.286,
+     "reussite": 0.43,
+     "pire_baisse": -156,
+     "mois_pos": "2/4"
+    },
+    "perso_2h|US30": {
+     "trades": 8,
+     "trades_mois": 2.0,
+     "gain": -125,
+     "r_trade": -0.312,
+     "brut_trade": -0.251,
+     "reussite": 0.25,
+     "pire_baisse": -224,
+     "mois_pos": "1/4"
+    },
+    "perso_2h|US500": {
+     "trades": 10,
+     "trades_mois": 1.7,
+     "gain": 39,
+     "r_trade": 0.078,
+     "brut_trade": 0.155,
+     "reussite": 0.4,
+     "pire_baisse": -183,
+     "mois_pos": "2/6"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 13,
+     "trades_mois": 1.9,
+     "gain": 174,
+     "r_trade": 0.268,
+     "brut_trade": 0.332,
+     "reussite": 0.46,
+     "pire_baisse": -162,
+     "mois_pos": "3/7"
+    }
+   }
+  },
+  "entree70": {
+   "ensemble": {
+    "trades": 635,
+    "trades_mois": 70.6,
+    "gain": -2776,
+    "r_trade": -0.087,
+    "brut_trade": 0.015,
+    "reussite": 0.35,
+    "pire_baisse": -4152,
+    "mois_pos": "3/9",
+    "mois": {
+     "2025-10": -613,
+     "2025-11": 1406,
+     "2025-12": -1334,
+     "2026-01": 722,
+     "2026-02": -400,
+     "2026-03": -932,
+     "2026-04": -1573,
+     "2026-05": -249,
+     "2026-06": 198
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 47,
+     "trades_mois": 5.2,
+     "gain": -676,
+     "r_trade": -0.288,
+     "brut_trade": -0.17,
+     "reussite": 0.28,
+     "pire_baisse": -688,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 40,
+     "trades_mois": 4.4,
+     "gain": 251,
+     "r_trade": 0.125,
+     "brut_trade": 0.262,
+     "reussite": 0.42,
+     "pire_baisse": -306,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 30,
+     "trades_mois": 3.3,
+     "gain": 100,
+     "r_trade": 0.067,
+     "brut_trade": 0.208,
+     "reussite": 0.4,
+     "pire_baisse": -264,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 63,
+     "trades_mois": 7.0,
+     "gain": -260,
+     "r_trade": -0.083,
+     "brut_trade": 0.0,
+     "reussite": 0.33,
+     "pire_baisse": -677,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|OR": {
+     "trades": 59,
+     "trades_mois": 6.6,
+     "gain": -208,
+     "r_trade": -0.071,
+     "brut_trade": 0.017,
+     "reussite": 0.34,
+     "pire_baisse": -758,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|US30": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": -279,
+     "r_trade": -0.124,
+     "brut_trade": -0.011,
+     "reussite": 0.36,
+     "pire_baisse": -581,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 49,
+     "trades_mois": 6.1,
+     "gain": -472,
+     "r_trade": -0.193,
+     "brut_trade": -0.091,
+     "reussite": 0.31,
+     "pire_baisse": -629,
+     "mois_pos": "1/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 52,
+     "trades_mois": 6.5,
+     "gain": 411,
+     "r_trade": 0.158,
+     "brut_trade": 0.269,
+     "reussite": 0.42,
+     "pire_baisse": -501,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 29,
+     "trades_mois": 3.6,
+     "gain": -409,
+     "r_trade": -0.282,
+     "brut_trade": -0.172,
+     "reussite": 0.28,
+     "pire_baisse": -511,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 24,
+     "trades_mois": 3.0,
+     "gain": -168,
+     "r_trade": -0.14,
+     "brut_trade": -0.012,
+     "reussite": 0.33,
+     "pire_baisse": -396,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 36,
+     "trades_mois": 4.5,
+     "gain": -48,
+     "r_trade": -0.027,
+     "brut_trade": 0.082,
+     "reussite": 0.36,
+     "pire_baisse": -565,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|NAS100": {
+     "trades": 38,
+     "trades_mois": 4.2,
+     "gain": -669,
+     "r_trade": -0.352,
+     "brut_trade": -0.291,
+     "reussite": 0.32,
+     "pire_baisse": -680,
+     "mois_pos": "3/9"
+    },
+    "perso_2h|OR": {
+     "trades": 30,
+     "trades_mois": 3.8,
+     "gain": -433,
+     "r_trade": -0.288,
+     "brut_trade": -0.219,
+     "reussite": 0.27,
+     "pire_baisse": -704,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|US30": {
+     "trades": 28,
+     "trades_mois": 3.5,
+     "gain": -65,
+     "r_trade": -0.047,
+     "brut_trade": 0.061,
+     "reussite": 0.36,
+     "pire_baisse": -320,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US500": {
+     "trades": 37,
+     "trades_mois": 4.6,
+     "gain": 362,
+     "r_trade": 0.196,
+     "brut_trade": 0.297,
+     "reussite": 0.43,
+     "pire_baisse": -362,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 28,
+     "trades_mois": 3.5,
+     "gain": -213,
+     "r_trade": -0.152,
+     "brut_trade": -0.062,
+     "reussite": 0.32,
+     "pire_baisse": -527,
+     "mois_pos": "2/8"
+    }
+   }
+  },
+  "entree50": {
+   "ensemble": {
+    "trades": 924,
+    "trades_mois": 102.7,
+    "gain": -919,
+    "r_trade": -0.02,
+    "brut_trade": 0.07,
+    "reussite": 0.36,
+    "pire_baisse": -3030,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -861,
+     "2025-11": 866,
+     "2025-12": -613,
+     "2026-01": 770,
+     "2026-02": 1059,
+     "2026-03": -1098,
+     "2026-04": -1089,
+     "2026-05": -68,
+     "2026-06": 115
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 64,
+     "trades_mois": 7.1,
+     "gain": -778,
+     "r_trade": -0.243,
+     "brut_trade": -0.157,
+     "reussite": 0.28,
+     "pire_baisse": -812,
+     "mois_pos": "1/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 73,
+     "trades_mois": 8.1,
+     "gain": -1103,
+     "r_trade": -0.302,
+     "brut_trade": -0.172,
+     "reussite": 0.27,
+     "pire_baisse": -1234,
+     "mois_pos": "3/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 56,
+     "trades_mois": 6.2,
+     "gain": -135,
+     "r_trade": -0.048,
+     "brut_trade": 0.077,
+     "reussite": 0.36,
+     "pire_baisse": -449,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 85,
+     "trades_mois": 9.4,
+     "gain": 183,
+     "r_trade": 0.043,
+     "brut_trade": 0.108,
+     "reussite": 0.41,
+     "pire_baisse": -875,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|OR": {
+     "trades": 74,
+     "trades_mois": 8.2,
+     "gain": -698,
+     "r_trade": -0.189,
+     "brut_trade": -0.118,
+     "reussite": 0.3,
+     "pire_baisse": -893,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US30": {
+     "trades": 67,
+     "trades_mois": 7.4,
+     "gain": 233,
+     "r_trade": 0.07,
+     "brut_trade": 0.172,
+     "reussite": 0.4,
+     "pire_baisse": -345,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US500": {
+     "trades": 74,
+     "trades_mois": 8.2,
+     "gain": 736,
+     "r_trade": 0.199,
+     "brut_trade": 0.297,
+     "reussite": 0.43,
+     "pire_baisse": -228,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 77,
+     "trades_mois": 9.6,
+     "gain": 208,
+     "r_trade": 0.054,
+     "brut_trade": 0.154,
+     "reussite": 0.39,
+     "pire_baisse": -844,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 42,
+     "trades_mois": 5.2,
+     "gain": -4,
+     "r_trade": -0.002,
+     "brut_trade": 0.071,
+     "reussite": 0.36,
+     "pire_baisse": -528,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 36,
+     "trades_mois": 4.5,
+     "gain": -315,
+     "r_trade": -0.175,
+     "brut_trade": -0.062,
+     "reussite": 0.31,
+     "pire_baisse": -586,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 50,
+     "trades_mois": 5.6,
+     "gain": -225,
+     "r_trade": -0.09,
+     "brut_trade": 0.025,
+     "reussite": 0.34,
+     "pire_baisse": -692,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 52,
+     "trades_mois": 5.8,
+     "gain": -261,
+     "r_trade": -0.101,
+     "brut_trade": -0.056,
+     "reussite": 0.37,
+     "pire_baisse": -756,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|OR": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -40,
+     "r_trade": -0.019,
+     "brut_trade": 0.033,
+     "reussite": 0.35,
+     "pire_baisse": -278,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|US30": {
+     "trades": 41,
+     "trades_mois": 5.1,
+     "gain": 333,
+     "r_trade": 0.162,
+     "brut_trade": 0.238,
+     "reussite": 0.41,
+     "pire_baisse": -377,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|US500": {
+     "trades": 47,
+     "trades_mois": 5.2,
+     "gain": 440,
+     "r_trade": 0.187,
+     "brut_trade": 0.277,
+     "reussite": 0.43,
+     "pire_baisse": -336,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 43,
+     "trades_mois": 5.4,
+     "gain": 509,
+     "r_trade": 0.237,
+     "brut_trade": 0.311,
+     "reussite": 0.44,
+     "pire_baisse": -450,
+     "mois_pos": "5/8"
+    }
+   }
+  },
+  "jour3": {
+   "ensemble": {
+    "trades": 787,
+    "trades_mois": 87.4,
+    "gain": 1984,
+    "r_trade": 0.05,
+    "brut_trade": 0.145,
+    "reussite": 0.39,
+    "pire_baisse": -1653,
+    "mois_pos": "5/9",
+    "mois": {
+     "2025-10": 183,
+     "2025-11": 1802,
+     "2025-12": -631,
+     "2026-01": 548,
+     "2026-02": 310,
+     "2026-03": -177,
+     "2026-04": -241,
+     "2026-05": 201,
+     "2026-06": -13
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 55,
+     "trades_mois": 6.1,
+     "gain": -189,
+     "r_trade": -0.069,
+     "brut_trade": 0.036,
+     "reussite": 0.35,
+     "pire_baisse": -620,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 55,
+     "trades_mois": 6.1,
+     "gain": 321,
+     "r_trade": 0.117,
+     "brut_trade": 0.25,
+     "reussite": 0.42,
+     "pire_baisse": -354,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 41,
+     "trades_mois": 4.6,
+     "gain": -36,
+     "r_trade": -0.018,
+     "brut_trade": 0.121,
+     "reussite": 0.37,
+     "pire_baisse": -298,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 73,
+     "trades_mois": 8.1,
+     "gain": -18,
+     "r_trade": -0.005,
+     "brut_trade": 0.068,
+     "reussite": 0.36,
+     "pire_baisse": -536,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|OR": {
+     "trades": 72,
+     "trades_mois": 8.0,
+     "gain": -33,
+     "r_trade": -0.009,
+     "brut_trade": 0.074,
+     "reussite": 0.36,
+     "pire_baisse": -802,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 57,
+     "trades_mois": 6.3,
+     "gain": -116,
+     "r_trade": -0.041,
+     "brut_trade": 0.053,
+     "reussite": 0.37,
+     "pire_baisse": -529,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US500": {
+     "trades": 64,
+     "trades_mois": 8.0,
+     "gain": 668,
+     "r_trade": 0.209,
+     "brut_trade": 0.307,
+     "reussite": 0.44,
+     "pire_baisse": -223,
+     "mois_pos": "7/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 65,
+     "trades_mois": 8.1,
+     "gain": 891,
+     "r_trade": 0.274,
+     "brut_trade": 0.385,
+     "reussite": 0.46,
+     "pire_baisse": -515,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 34,
+     "trades_mois": 4.2,
+     "gain": 249,
+     "r_trade": 0.147,
+     "brut_trade": 0.235,
+     "reussite": 0.41,
+     "pire_baisse": -273,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 28,
+     "trades_mois": 3.5,
+     "gain": -352,
+     "r_trade": -0.251,
+     "brut_trade": -0.133,
+     "reussite": 0.29,
+     "pire_baisse": -670,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 39,
+     "trades_mois": 4.3,
+     "gain": -358,
+     "r_trade": -0.184,
+     "brut_trade": -0.084,
+     "reussite": 0.31,
+     "pire_baisse": -575,
+     "mois_pos": "3/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 50,
+     "trades_mois": 5.6,
+     "gain": 99,
+     "r_trade": 0.04,
+     "brut_trade": 0.089,
+     "reussite": 0.42,
+     "pire_baisse": -685,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|OR": {
+     "trades": 37,
+     "trades_mois": 4.6,
+     "gain": -34,
+     "r_trade": -0.018,
+     "brut_trade": 0.04,
+     "reussite": 0.35,
+     "pire_baisse": -393,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US30": {
+     "trades": 33,
+     "trades_mois": 4.1,
+     "gain": -329,
+     "r_trade": -0.199,
+     "brut_trade": -0.11,
+     "reussite": 0.3,
+     "pire_baisse": -518,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US500": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": 518,
+     "r_trade": 0.23,
+     "brut_trade": 0.323,
+     "reussite": 0.44,
+     "pire_baisse": -431,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 39,
+     "trades_mois": 4.9,
+     "gain": 702,
+     "r_trade": 0.36,
+     "brut_trade": 0.444,
+     "reussite": 0.49,
+     "pire_baisse": -318,
+     "mois_pos": "6/8"
+    }
+   }
+  },
+  "jour1": {
+   "ensemble": {
+    "trades": 649,
+    "trades_mois": 72.1,
+    "gain": 964,
+    "r_trade": 0.03,
+    "brut_trade": 0.127,
+    "reussite": 0.38,
+    "pire_baisse": -1581,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -280,
+     "2025-11": 1031,
+     "2025-12": -477,
+     "2026-01": 489,
+     "2026-02": 457,
+     "2026-03": -50,
+     "2026-04": -562,
+     "2026-05": 413,
+     "2026-06": -57
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": 51,
+     "r_trade": 0.023,
+     "brut_trade": 0.132,
+     "reussite": 0.38,
+     "pire_baisse": -497,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 48,
+     "trades_mois": 5.3,
+     "gain": 258,
+     "r_trade": 0.107,
+     "brut_trade": 0.239,
+     "reussite": 0.42,
+     "pire_baisse": -354,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": -270,
+     "r_trade": -0.146,
+     "brut_trade": -0.001,
+     "reussite": 0.32,
+     "pire_baisse": -438,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 55,
+     "trades_mois": 6.1,
+     "gain": 174,
+     "r_trade": 0.063,
+     "brut_trade": 0.145,
+     "reussite": 0.38,
+     "pire_baisse": -422,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|OR": {
+     "trades": 56,
+     "trades_mois": 6.2,
+     "gain": -340,
+     "r_trade": -0.122,
+     "brut_trade": -0.036,
+     "reussite": 0.32,
+     "pire_baisse": -712,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 44,
+     "trades_mois": 4.9,
+     "gain": -167,
+     "r_trade": -0.076,
+     "brut_trade": 0.023,
+     "reussite": 0.36,
+     "pire_baisse": -524,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US500": {
+     "trades": 49,
+     "trades_mois": 6.1,
+     "gain": 145,
+     "r_trade": 0.059,
+     "brut_trade": 0.163,
+     "reussite": 0.39,
+     "pire_baisse": -340,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 52,
+     "trades_mois": 6.5,
+     "gain": 1015,
+     "r_trade": 0.39,
+     "brut_trade": 0.5,
+     "reussite": 0.5,
+     "pire_baisse": -447,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 31,
+     "trades_mois": 3.9,
+     "gain": 259,
+     "r_trade": 0.167,
+     "brut_trade": 0.258,
+     "reussite": 0.42,
+     "pire_baisse": -273,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 25,
+     "trades_mois": 3.1,
+     "gain": -182,
+     "r_trade": -0.146,
+     "brut_trade": -0.028,
+     "reussite": 0.32,
+     "pire_baisse": -556,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 36,
+     "trades_mois": 4.0,
+     "gain": -194,
+     "r_trade": -0.108,
+     "brut_trade": -0.008,
+     "reussite": 0.33,
+     "pire_baisse": -466,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 41,
+     "trades_mois": 4.6,
+     "gain": -180,
+     "r_trade": -0.088,
+     "brut_trade": -0.038,
+     "reussite": 0.39,
+     "pire_baisse": -709,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|OR": {
+     "trades": 30,
+     "trades_mois": 3.8,
+     "gain": -256,
+     "r_trade": -0.171,
+     "brut_trade": -0.118,
+     "reussite": 0.3,
+     "pire_baisse": -495,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US30": {
+     "trades": 28,
+     "trades_mois": 3.5,
+     "gain": -338,
+     "r_trade": -0.242,
+     "brut_trade": -0.152,
+     "reussite": 0.29,
+     "pire_baisse": -574,
+     "mois_pos": "2/8"
+    },
+    "perso_2h|US500": {
+     "trades": 36,
+     "trades_mois": 4.0,
+     "gain": 423,
+     "r_trade": 0.235,
+     "brut_trade": 0.333,
+     "reussite": 0.44,
+     "pire_baisse": -301,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 36,
+     "trades_mois": 4.5,
+     "gain": 569,
+     "r_trade": 0.316,
+     "brut_trade": 0.398,
+     "reussite": 0.47,
+     "pire_baisse": -355,
+     "mois_pos": "5/8"
+    }
+   }
+  },
+  "s2_jour3": {
+   "ensemble": {
+    "trades": 534,
+    "trades_mois": 59.3,
+    "gain": 2766,
+    "r_trade": 0.104,
+    "brut_trade": 0.191,
+    "reussite": 0.4,
+    "pire_baisse": -1104,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -273,
+     "2025-11": 1816,
+     "2025-12": -298,
+     "2026-01": 831,
+     "2026-02": 645,
+     "2026-03": -2,
+     "2026-04": 170,
+     "2026-05": -75,
+     "2026-06": -49
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 44,
+     "trades_mois": 4.9,
+     "gain": -171,
+     "r_trade": -0.078,
+     "brut_trade": 0.022,
+     "reussite": 0.34,
+     "pire_baisse": -446,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 404,
+     "r_trade": 0.188,
+     "brut_trade": 0.322,
+     "reussite": 0.44,
+     "pire_baisse": -354,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 29,
+     "trades_mois": 3.2,
+     "gain": 36,
+     "r_trade": 0.025,
+     "brut_trade": 0.157,
+     "reussite": 0.38,
+     "pire_baisse": -292,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 49,
+     "trades_mois": 6.1,
+     "gain": 388,
+     "r_trade": 0.158,
+     "brut_trade": 0.224,
+     "reussite": 0.41,
+     "pire_baisse": -273,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 76,
+     "r_trade": 0.035,
+     "brut_trade": 0.115,
+     "reussite": 0.37,
+     "pire_baisse": -493,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 38,
+     "trades_mois": 4.2,
+     "gain": -106,
+     "r_trade": -0.056,
+     "brut_trade": 0.027,
+     "reussite": 0.37,
+     "pire_baisse": -336,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 124,
+     "r_trade": 0.056,
+     "brut_trade": 0.151,
+     "reussite": 0.39,
+     "pire_baisse": -333,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 45,
+     "trades_mois": 5.6,
+     "gain": 814,
+     "r_trade": 0.362,
+     "brut_trade": 0.467,
+     "reussite": 0.49,
+     "pire_baisse": -504,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 23,
+     "trades_mois": 2.9,
+     "gain": 101,
+     "r_trade": 0.088,
+     "brut_trade": 0.174,
+     "reussite": 0.39,
+     "pire_baisse": -213,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 18,
+     "trades_mois": 2.6,
+     "gain": 67,
+     "r_trade": 0.075,
+     "brut_trade": 0.177,
+     "reussite": 0.39,
+     "pire_baisse": -233,
+     "mois_pos": "5/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 22,
+     "trades_mois": 2.4,
+     "gain": 140,
+     "r_trade": 0.127,
+     "brut_trade": 0.216,
+     "reussite": 0.41,
+     "pire_baisse": -171,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 34,
+     "trades_mois": 4.2,
+     "gain": 307,
+     "r_trade": 0.181,
+     "brut_trade": 0.217,
+     "reussite": 0.41,
+     "pire_baisse": -267,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|OR": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 47,
+     "r_trade": 0.035,
+     "brut_trade": 0.092,
+     "reussite": 0.37,
+     "pire_baisse": -317,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US30": {
+     "trades": 15,
+     "trades_mois": 2.5,
+     "gain": -68,
+     "r_trade": -0.09,
+     "brut_trade": -0.024,
+     "reussite": 0.33,
+     "pire_baisse": -262,
+     "mois_pos": "1/6"
+    },
+    "perso_2h|US500": {
+     "trades": 33,
+     "trades_mois": 3.7,
+     "gain": 429,
+     "r_trade": 0.26,
+     "brut_trade": 0.35,
+     "reussite": 0.45,
+     "pire_baisse": -276,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 176,
+     "r_trade": 0.13,
+     "brut_trade": 0.197,
+     "reussite": 0.41,
+     "pire_baisse": -288,
+     "mois_pos": "4/8"
+    }
+   }
+  },
+  "s2_bos_court": {
+   "ensemble": {
+    "trades": 520,
+    "trades_mois": 57.8,
+    "gain": 2172,
+    "r_trade": 0.084,
+    "brut_trade": 0.172,
+    "reussite": 0.39,
+    "pire_baisse": -1232,
+    "mois_pos": "5/9",
+    "mois": {
+     "2025-10": -470,
+     "2025-11": 1483,
+     "2025-12": -294,
+     "2026-01": 787,
+     "2026-02": 750,
+     "2026-03": 67,
+     "2026-04": 71,
+     "2026-05": -173,
+     "2026-06": -49
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -117,
+     "r_trade": -0.054,
+     "brut_trade": 0.046,
+     "reussite": 0.35,
+     "pire_baisse": -392,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 408,
+     "r_trade": 0.19,
+     "brut_trade": 0.324,
+     "reussite": 0.44,
+     "pire_baisse": -354,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 29,
+     "trades_mois": 3.2,
+     "gain": 36,
+     "r_trade": 0.025,
+     "brut_trade": 0.157,
+     "reussite": 0.38,
+     "pire_baisse": -292,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 47,
+     "trades_mois": 5.9,
+     "gain": 191,
+     "r_trade": 0.081,
+     "brut_trade": 0.149,
+     "reussite": 0.38,
+     "pire_baisse": -363,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 39,
+     "trades_mois": 4.3,
+     "gain": -161,
+     "r_trade": -0.082,
+     "brut_trade": -0.002,
+     "reussite": 0.33,
+     "pire_baisse": -566,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": -204,
+     "r_trade": -0.11,
+     "brut_trade": -0.027,
+     "reussite": 0.35,
+     "pire_baisse": -339,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 124,
+     "r_trade": 0.056,
+     "brut_trade": 0.151,
+     "reussite": 0.39,
+     "pire_baisse": -333,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 867,
+     "r_trade": 0.394,
+     "brut_trade": 0.5,
+     "reussite": 0.5,
+     "pire_baisse": -504,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 21,
+     "trades_mois": 2.6,
+     "gain": 54,
+     "r_trade": 0.051,
+     "brut_trade": 0.143,
+     "reussite": 0.38,
+     "pire_baisse": -233,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 18,
+     "trades_mois": 2.6,
+     "gain": 67,
+     "r_trade": 0.075,
+     "brut_trade": 0.177,
+     "reussite": 0.39,
+     "pire_baisse": -233,
+     "mois_pos": "5/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 22,
+     "trades_mois": 2.4,
+     "gain": 140,
+     "r_trade": 0.127,
+     "brut_trade": 0.216,
+     "reussite": 0.41,
+     "pire_baisse": -171,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 33,
+     "trades_mois": 4.1,
+     "gain": 209,
+     "r_trade": 0.126,
+     "brut_trade": 0.162,
+     "reussite": 0.39,
+     "pire_baisse": -366,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|OR": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 47,
+     "r_trade": 0.035,
+     "brut_trade": 0.092,
+     "reussite": 0.37,
+     "pire_baisse": -317,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US30": {
+     "trades": 14,
+     "trades_mois": 2.3,
+     "gain": 1,
+     "r_trade": 0.002,
+     "brut_trade": 0.071,
+     "reussite": 0.36,
+     "pire_baisse": -223,
+     "mois_pos": "1/6"
+    },
+    "perso_2h|US500": {
+     "trades": 32,
+     "trades_mois": 3.6,
+     "gain": 333,
+     "r_trade": 0.208,
+     "brut_trade": 0.298,
+     "reussite": 0.44,
+     "pire_baisse": -276,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 176,
+     "r_trade": 0.13,
+     "brut_trade": 0.197,
+     "reussite": 0.41,
+     "pire_baisse": -288,
+     "mois_pos": "4/8"
+    }
+   }
+  },
+  "s2_bos_long": {
+   "ensemble": {
+    "trades": 521,
+    "trades_mois": 57.9,
+    "gain": 2121,
+    "r_trade": 0.081,
+    "brut_trade": 0.17,
+    "reussite": 0.39,
+    "pire_baisse": -1232,
+    "mois_pos": "5/9",
+    "mois": {
+     "2025-10": -470,
+     "2025-11": 1483,
+     "2025-12": -294,
+     "2026-01": 787,
+     "2026-02": 699,
+     "2026-03": 67,
+     "2026-04": 71,
+     "2026-05": -173,
+     "2026-06": -49
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -117,
+     "r_trade": -0.054,
+     "brut_trade": 0.046,
+     "reussite": 0.35,
+     "pire_baisse": -392,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": 408,
+     "r_trade": 0.19,
+     "brut_trade": 0.324,
+     "reussite": 0.44,
+     "pire_baisse": -354,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 29,
+     "trades_mois": 3.2,
+     "gain": 36,
+     "r_trade": 0.025,
+     "brut_trade": 0.157,
+     "reussite": 0.38,
+     "pire_baisse": -292,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 47,
+     "trades_mois": 5.9,
+     "gain": 191,
+     "r_trade": 0.081,
+     "brut_trade": 0.149,
+     "reussite": 0.38,
+     "pire_baisse": -363,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 39,
+     "trades_mois": 4.3,
+     "gain": -161,
+     "r_trade": -0.082,
+     "brut_trade": -0.002,
+     "reussite": 0.33,
+     "pire_baisse": -566,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": -204,
+     "r_trade": -0.11,
+     "brut_trade": -0.027,
+     "reussite": 0.35,
+     "pire_baisse": -339,
+     "mois_pos": "2/9"
+    },
+    "perso_1h|US500": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 124,
+     "r_trade": 0.056,
+     "brut_trade": 0.151,
+     "reussite": 0.39,
+     "pire_baisse": -333,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 44,
+     "trades_mois": 5.5,
+     "gain": 867,
+     "r_trade": 0.394,
+     "brut_trade": 0.5,
+     "reussite": 0.5,
+     "pire_baisse": -504,
+     "mois_pos": "6/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 22,
+     "trades_mois": 2.8,
+     "gain": 3,
+     "r_trade": 0.003,
+     "brut_trade": 0.091,
+     "reussite": 0.36,
+     "pire_baisse": -233,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 18,
+     "trades_mois": 2.6,
+     "gain": 67,
+     "r_trade": 0.075,
+     "brut_trade": 0.177,
+     "reussite": 0.39,
+     "pire_baisse": -233,
+     "mois_pos": "5/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 22,
+     "trades_mois": 2.4,
+     "gain": 140,
+     "r_trade": 0.127,
+     "brut_trade": 0.216,
+     "reussite": 0.41,
+     "pire_baisse": -171,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 33,
+     "trades_mois": 4.1,
+     "gain": 209,
+     "r_trade": 0.126,
+     "brut_trade": 0.162,
+     "reussite": 0.39,
+     "pire_baisse": -366,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|OR": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 47,
+     "r_trade": 0.035,
+     "brut_trade": 0.092,
+     "reussite": 0.37,
+     "pire_baisse": -317,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US30": {
+     "trades": 14,
+     "trades_mois": 2.3,
+     "gain": 1,
+     "r_trade": 0.002,
+     "brut_trade": 0.071,
+     "reussite": 0.36,
+     "pire_baisse": -223,
+     "mois_pos": "1/6"
+    },
+    "perso_2h|US500": {
+     "trades": 32,
+     "trades_mois": 3.6,
+     "gain": 333,
+     "r_trade": 0.208,
+     "brut_trade": 0.298,
+     "reussite": 0.44,
+     "pire_baisse": -276,
+     "mois_pos": "4/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 27,
+     "trades_mois": 3.4,
+     "gain": 176,
+     "r_trade": 0.13,
+     "brut_trade": 0.197,
+     "reussite": 0.41,
+     "pire_baisse": -288,
+     "mois_pos": "4/8"
+    }
+   }
+  },
+  "s2_mss40": {
+   "ensemble": {
+    "trades": 388,
+    "trades_mois": 43.1,
+    "gain": 1421,
+    "r_trade": 0.073,
+    "brut_trade": 0.164,
+    "reussite": 0.39,
+    "pire_baisse": -1086,
+    "mois_pos": "6/9",
+    "mois": {
+     "2025-10": -146,
+     "2025-11": 1047,
+     "2025-12": -365,
+     "2026-01": 437,
+     "2026-02": 596,
+     "2026-03": 172,
+     "2026-04": -378,
+     "2026-05": 51,
+     "2026-06": 7
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 32,
+     "trades_mois": 4.0,
+     "gain": 184,
+     "r_trade": 0.115,
+     "brut_trade": 0.219,
+     "reussite": 0.41,
+     "pire_baisse": -325,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 33,
+     "trades_mois": 3.7,
+     "gain": -226,
+     "r_trade": -0.137,
+     "brut_trade": -0.007,
+     "reussite": 0.33,
+     "pire_baisse": -564,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 25,
+     "trades_mois": 2.8,
+     "gain": 106,
+     "r_trade": 0.085,
+     "brut_trade": 0.214,
+     "reussite": 0.4,
+     "pire_baisse": -292,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 38,
+     "trades_mois": 4.8,
+     "gain": 383,
+     "r_trade": 0.201,
+     "brut_trade": 0.263,
+     "reussite": 0.42,
+     "pire_baisse": -400,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 24,
+     "trades_mois": 3.0,
+     "gain": -259,
+     "r_trade": -0.216,
+     "brut_trade": -0.128,
+     "reussite": 0.29,
+     "pire_baisse": -381,
+     "mois_pos": "3/8"
+    },
+    "perso_1h|US30": {
+     "trades": 27,
+     "trades_mois": 3.0,
+     "gain": 36,
+     "r_trade": 0.027,
+     "brut_trade": 0.112,
+     "reussite": 0.41,
+     "pire_baisse": -307,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US500": {
+     "trades": 31,
+     "trades_mois": 3.9,
+     "gain": -216,
+     "r_trade": -0.139,
+     "brut_trade": -0.032,
+     "reussite": 0.32,
+     "pire_baisse": -488,
+     "mois_pos": "3/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 31,
+     "trades_mois": 3.9,
+     "gain": 830,
+     "r_trade": 0.535,
+     "brut_trade": 0.645,
+     "reussite": 0.55,
+     "pire_baisse": -395,
+     "mois_pos": "5/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 19,
+     "trades_mois": 2.4,
+     "gain": 13,
+     "r_trade": 0.014,
+     "brut_trade": 0.105,
+     "reussite": 0.37,
+     "pire_baisse": -213,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 14,
+     "trades_mois": 2.0,
+     "gain": 132,
+     "r_trade": 0.189,
+     "brut_trade": 0.298,
+     "reussite": 0.43,
+     "pire_baisse": -156,
+     "mois_pos": "5/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 20,
+     "trades_mois": 2.5,
+     "gain": 100,
+     "r_trade": 0.1,
+     "brut_trade": 0.189,
+     "reussite": 0.4,
+     "pire_baisse": -255,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|NAS100": {
+     "trades": 23,
+     "trades_mois": 2.9,
+     "gain": 282,
+     "r_trade": 0.245,
+     "brut_trade": 0.277,
+     "reussite": 0.43,
+     "pire_baisse": -309,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|OR": {
+     "trades": 17,
+     "trades_mois": 2.4,
+     "gain": -154,
+     "r_trade": -0.181,
+     "brut_trade": -0.118,
+     "reussite": 0.29,
+     "pire_baisse": -253,
+     "mois_pos": "2/7"
+    },
+    "perso_2h|US30": {
+     "trades": 11,
+     "trades_mois": 1.8,
+     "gain": 12,
+     "r_trade": 0.022,
+     "brut_trade": 0.09,
+     "reussite": 0.36,
+     "pire_baisse": -280,
+     "mois_pos": "2/6"
+    },
+    "perso_2h|US500": {
+     "trades": 22,
+     "trades_mois": 2.8,
+     "gain": 159,
+     "r_trade": 0.144,
+     "brut_trade": 0.227,
+     "reussite": 0.41,
+     "pire_baisse": -226,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 21,
+     "trades_mois": 2.6,
+     "gain": 39,
+     "r_trade": 0.038,
+     "brut_trade": 0.104,
+     "reussite": 0.38,
+     "pire_baisse": -217,
+     "mois_pos": "2/8"
+    }
+   }
+  },
+  "s2_mss160": {
+   "ensemble": {
+    "trades": 615,
+    "trades_mois": 68.3,
+    "gain": 293,
+    "r_trade": 0.01,
+    "brut_trade": 0.098,
+    "reussite": 0.37,
+    "pire_baisse": -1940,
+    "mois_pos": "4/9",
+    "mois": {
+     "2025-10": -771,
+     "2025-11": 989,
+     "2025-12": -329,
+     "2026-01": 665,
+     "2026-02": 909,
+     "2026-03": -302,
+     "2026-04": 25,
+     "2026-05": -890,
+     "2026-06": -3
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 48,
+     "trades_mois": 5.3,
+     "gain": -234,
+     "r_trade": -0.097,
+     "brut_trade": -0.001,
+     "reussite": 0.33,
+     "pire_baisse": -454,
+     "mois_pos": "3/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 48,
+     "trades_mois": 5.3,
+     "gain": 276,
+     "r_trade": 0.115,
+     "brut_trade": 0.249,
+     "reussite": 0.42,
+     "pire_baisse": -359,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": -269,
+     "r_trade": -0.146,
+     "brut_trade": -0.016,
+     "reussite": 0.32,
+     "pire_baisse": -405,
+     "mois_pos": "1/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 50,
+     "trades_mois": 6.2,
+     "gain": 176,
+     "r_trade": 0.07,
+     "brut_trade": 0.14,
+     "reussite": 0.38,
+     "pire_baisse": -363,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|OR": {
+     "trades": 42,
+     "trades_mois": 4.7,
+     "gain": -168,
+     "r_trade": -0.08,
+     "brut_trade": -0.002,
+     "reussite": 0.33,
+     "pire_baisse": -618,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -234,
+     "r_trade": -0.109,
+     "brut_trade": -0.023,
+     "reussite": 0.35,
+     "pire_baisse": -444,
+     "mois_pos": "1/9"
+    },
+    "perso_1h|US500": {
+     "trades": 49,
+     "trades_mois": 6.1,
+     "gain": 156,
+     "r_trade": 0.064,
+     "brut_trade": 0.156,
+     "reussite": 0.39,
+     "pire_baisse": -440,
+     "mois_pos": "4/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 53,
+     "trades_mois": 6.6,
+     "gain": 227,
+     "r_trade": 0.086,
+     "brut_trade": 0.189,
+     "reussite": 0.4,
+     "pire_baisse": -615,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 29,
+     "trades_mois": 3.6,
+     "gain": -228,
+     "r_trade": -0.157,
+     "brut_trade": -0.069,
+     "reussite": 0.31,
+     "pire_baisse": -359,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 26,
+     "trades_mois": 3.7,
+     "gain": -227,
+     "r_trade": -0.174,
+     "brut_trade": -0.072,
+     "reussite": 0.31,
+     "pire_baisse": -389,
+     "mois_pos": "3/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 27,
+     "trades_mois": 3.0,
+     "gain": 8,
+     "r_trade": 0.006,
+     "brut_trade": 0.102,
+     "reussite": 0.37,
+     "pire_baisse": -340,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 42,
+     "trades_mois": 4.7,
+     "gain": 341,
+     "r_trade": 0.162,
+     "brut_trade": 0.199,
+     "reussite": 0.4,
+     "pire_baisse": -408,
+     "mois_pos": "6/9"
+    },
+    "perso_2h|OR": {
+     "trades": 36,
+     "trades_mois": 4.5,
+     "gain": 26,
+     "r_trade": 0.014,
+     "brut_trade": 0.069,
+     "reussite": 0.36,
+     "pire_baisse": -434,
+     "mois_pos": "3/8"
+    },
+    "perso_2h|US30": {
+     "trades": 16,
+     "trades_mois": 2.7,
+     "gain": 197,
+     "r_trade": 0.247,
+     "brut_trade": 0.312,
+     "reussite": 0.44,
+     "pire_baisse": -161,
+     "mois_pos": "3/6"
+    },
+    "perso_2h|US500": {
+     "trades": 37,
+     "trades_mois": 4.1,
+     "gain": 208,
+     "r_trade": 0.112,
+     "brut_trade": 0.204,
+     "reussite": 0.41,
+     "pire_baisse": -282,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 32,
+     "trades_mois": 4.0,
+     "gain": 38,
+     "r_trade": 0.023,
+     "brut_trade": 0.104,
+     "reussite": 0.38,
+     "pire_baisse": -315,
+     "mois_pos": "4/8"
+    }
+   }
+  },
+  "s2_ote50": {
+   "ensemble": {
+    "trades": 578,
+    "trades_mois": 64.2,
+    "gain": 700,
+    "r_trade": 0.024,
+    "brut_trade": 0.109,
+    "reussite": 0.37,
+    "pire_baisse": -1867,
+    "mois_pos": "5/9",
+    "mois": {
+     "2025-10": -436,
+     "2025-11": 1385,
+     "2025-12": -452,
+     "2026-01": 685,
+     "2026-02": 62,
+     "2026-03": 210,
+     "2026-04": -574,
+     "2026-05": -231,
+     "2026-06": 50
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 47,
+     "trades_mois": 5.2,
+     "gain": -179,
+     "r_trade": -0.076,
+     "brut_trade": 0.02,
+     "reussite": 0.34,
+     "pire_baisse": -407,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|EURUSD": {
+     "trades": 45,
+     "trades_mois": 5.0,
+     "gain": 4,
+     "r_trade": 0.002,
+     "brut_trade": 0.131,
+     "reussite": 0.38,
+     "pire_baisse": -498,
+     "mois_pos": "6/9"
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 32,
+     "trades_mois": 3.6,
+     "gain": 330,
+     "r_trade": 0.207,
+     "brut_trade": 0.334,
+     "reussite": 0.44,
+     "pire_baisse": -230,
+     "mois_pos": "7/9"
+    },
+    "perso_1h|NAS100": {
+     "trades": 52,
+     "trades_mois": 6.5,
+     "gain": 388,
+     "r_trade": 0.149,
+     "brut_trade": 0.212,
+     "reussite": 0.4,
+     "pire_baisse": -376,
+     "mois_pos": "5/8"
+    },
+    "perso_1h|OR": {
+     "trades": 43,
+     "trades_mois": 4.8,
+     "gain": -216,
+     "r_trade": -0.1,
+     "brut_trade": -0.025,
+     "reussite": 0.33,
+     "pire_baisse": -719,
+     "mois_pos": "5/9"
+    },
+    "perso_1h|US30": {
+     "trades": 40,
+     "trades_mois": 4.4,
+     "gain": -69,
+     "r_trade": -0.035,
+     "brut_trade": 0.05,
+     "reussite": 0.38,
+     "pire_baisse": -336,
+     "mois_pos": "4/9"
+    },
+    "perso_1h|US500": {
+     "trades": 47,
+     "trades_mois": 5.9,
+     "gain": 104,
+     "r_trade": 0.044,
+     "brut_trade": 0.141,
+     "reussite": 0.38,
+     "pire_baisse": -504,
+     "mois_pos": "6/8"
+    },
+    "perso_1h|USDJPY": {
+     "trades": 52,
+     "trades_mois": 6.5,
+     "gain": -23,
+     "r_trade": -0.009,
+     "brut_trade": 0.086,
+     "reussite": 0.37,
+     "pire_baisse": -708,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|DAX": {
+     "trades": 25,
+     "trades_mois": 3.1,
+     "gain": 0,
+     "r_trade": -0.0,
+     "brut_trade": 0.08,
+     "reussite": 0.36,
+     "pire_baisse": -316,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|EURUSD": {
+     "trades": 25,
+     "trades_mois": 3.6,
+     "gain": -22,
+     "r_trade": -0.018,
+     "brut_trade": 0.088,
+     "reussite": 0.36,
+     "pire_baisse": -285,
+     "mois_pos": "3/7"
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 23,
+     "trades_mois": 2.6,
+     "gain": 241,
+     "r_trade": 0.209,
+     "brut_trade": 0.298,
+     "reussite": 0.43,
+     "pire_baisse": -229,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|NAS100": {
+     "trades": 36,
+     "trades_mois": 4.0,
+     "gain": -13,
+     "r_trade": -0.007,
+     "brut_trade": 0.026,
+     "reussite": 0.36,
+     "pire_baisse": -380,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|OR": {
+     "trades": 30,
+     "trades_mois": 3.8,
+     "gain": -102,
+     "r_trade": -0.068,
+     "brut_trade": -0.018,
+     "reussite": 0.33,
+     "pire_baisse": -377,
+     "mois_pos": "4/8"
+    },
+    "perso_2h|US30": {
+     "trades": 16,
+     "trades_mois": 2.3,
+     "gain": -99,
+     "r_trade": -0.124,
+     "brut_trade": -0.063,
+     "reussite": 0.31,
+     "pire_baisse": -367,
+     "mois_pos": "2/7"
+    },
+    "perso_2h|US500": {
+     "trades": 33,
+     "trades_mois": 3.7,
+     "gain": 580,
+     "r_trade": 0.352,
+     "brut_trade": 0.441,
+     "reussite": 0.48,
+     "pire_baisse": -276,
+     "mois_pos": "5/9"
+    },
+    "perso_2h|USDJPY": {
+     "trades": 32,
+     "trades_mois": 4.6,
+     "gain": -224,
+     "r_trade": -0.14,
+     "brut_trade": -0.08,
+     "reussite": 0.31,
+     "pire_baisse": -494,
+     "mois_pos": "3/7"
+    }
+   }
+  }
+ },
+ "examen": {
+  "candidat": {
+   "ensemble": {
+    "trades": 249,
+    "trades_mois": 49.8,
+    "gain": -1804,
+    "r_trade": -0.145,
+    "brut_trade": -0.048,
+    "reussite": 0.32,
+    "pire_baisse": -2581,
+    "mois_pos": "1/5",
+    "mois": {
+     "2026-06": -299,
+     "2026-07": -634,
+     "2026-08": -272,
+     "2026-09": -862,
+     "2026-10": 264
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 12,
+     "trades_mois": 2.4,
+     "gain": -799,
+     "r_trade": -1.332,
+     "brut_trade": -1.24,
+     "reussite": 0.0,
+     "pire_baisse": -799,
+     "mois_pos": "0/5",
+     "mois": {
+      "2026-06": -358,
+      "2026-07": -113,
+      "2026-08": -54,
+      "2026-09": -222,
+      "2026-10": -52
+     }
+    },
+    "perso_1h|EURUSD": {
+     "trades": 14,
+     "trades_mois": 3.5,
+     "gain": -31,
+     "r_trade": -0.044,
+     "brut_trade": 0.097,
+     "reussite": 0.36,
+     "pire_baisse": -263,
+     "mois_pos": "1/4",
+     "mois": {
+      "2026-06": 184,
+      "2026-07": -66,
+      "2026-08": -139,
+      "2026-09": -10
+     }
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 19,
+     "trades_mois": 3.8,
+     "gain": -158,
+     "r_trade": -0.167,
+     "brut_trade": -0.043,
+     "reussite": 0.32,
+     "pire_baisse": -449,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -55,
+      "2026-07": -254,
+      "2026-08": 282,
+      "2026-09": -226,
+      "2026-10": 95
+     }
+    },
+    "perso_1h|NAS100": {
+     "trades": 27,
+     "trades_mois": 5.4,
+     "gain": -384,
+     "r_trade": -0.285,
+     "brut_trade": -0.223,
+     "reussite": 0.26,
+     "pire_baisse": -480,
+     "mois_pos": "0/5",
+     "mois": {
+      "2026-06": -7,
+      "2026-07": -109,
+      "2026-08": -24,
+      "2026-09": -91,
+      "2026-10": -154
+     }
+    },
+    "perso_1h|OR": {
+     "trades": 25,
+     "trades_mois": 5.0,
+     "gain": 415,
+     "r_trade": 0.332,
+     "brut_trade": 0.434,
+     "reussite": 0.48,
+     "pire_baisse": -207,
+     "mois_pos": "4/5",
+     "mois": {
+      "2026-06": 141,
+      "2026-07": 149,
+      "2026-08": 71,
+      "2026-09": -36,
+      "2026-10": 91
+     }
+    },
+    "perso_1h|US30": {
+     "trades": 20,
+     "trades_mois": 5.0,
+     "gain": -58,
+     "r_trade": -0.058,
+     "brut_trade": 0.05,
+     "reussite": 0.35,
+     "pire_baisse": -282,
+     "mois_pos": "2/4",
+     "mois": {
+      "2026-06": 190,
+      "2026-07": -182,
+      "2026-08": 13,
+      "2026-09": -80
+     }
+    },
+    "perso_1h|US500": {
+     "trades": 15,
+     "trades_mois": 5.0,
+     "gain": 232,
+     "r_trade": 0.309,
+     "brut_trade": 0.4,
+     "reussite": 0.47,
+     "pire_baisse": -175,
+     "mois_pos": "2/3",
+     "mois": {
+      "2026-06": 135,
+      "2026-07": 211,
+      "2026-08": -114
+     }
+    },
+    "perso_1h|USDJPY": {
+     "trades": 10,
+     "trades_mois": 2.0,
+     "gain": -104,
+     "r_trade": -0.208,
+     "brut_trade": -0.1,
+     "reussite": 0.3,
+     "pire_baisse": -317,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": 28,
+      "2026-07": 88,
+      "2026-08": -10,
+      "2026-09": -157,
+      "2026-10": -53
+     }
+    },
+    "perso_2h|DAX": {
+     "trades": 14,
+     "trades_mois": 2.8,
+     "gain": -145,
+     "r_trade": -0.207,
+     "brut_trade": -0.143,
+     "reussite": 0.29,
+     "pire_baisse": -242,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -227,
+      "2026-07": 44,
+      "2026-08": -6,
+      "2026-09": -53,
+      "2026-10": 97
+     }
+    },
+    "perso_2h|EURUSD": {
+     "trades": 14,
+     "trades_mois": 3.5,
+     "gain": -49,
+     "r_trade": -0.071,
+     "brut_trade": 0.063,
+     "reussite": 0.36,
+     "pire_baisse": -222,
+     "mois_pos": "2/4",
+     "mois": {
+      "2026-06": -53,
+      "2026-07": -92,
+      "2026-08": 41,
+      "2026-09": 54
+     }
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 17,
+     "trades_mois": 3.4,
+     "gain": -178,
+     "r_trade": -0.209,
+     "brut_trade": -0.106,
+     "reussite": 0.29,
+     "pire_baisse": -388,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -169,
+      "2026-07": -122,
+      "2026-08": -7,
+      "2026-09": 26,
+      "2026-10": 95
+     }
+    },
+    "perso_2h|NAS100": {
+     "trades": 11,
+     "trades_mois": 2.2,
+     "gain": -429,
+     "r_trade": -0.779,
+     "brut_trade": -0.727,
+     "reussite": 0.09,
+     "pire_baisse": -429,
+     "mois_pos": "0/5",
+     "mois": {
+      "2026-06": -52,
+      "2026-07": -159,
+      "2026-08": -115,
+      "2026-09": -52,
+      "2026-10": -51
+     }
+    },
+    "perso_2h|OR": {
+     "trades": 13,
+     "trades_mois": 2.6,
+     "gain": -404,
+     "r_trade": -0.621,
+     "brut_trade": -0.538,
+     "reussite": 0.15,
+     "pire_baisse": -502,
+     "mois_pos": "1/5",
+     "mois": {
+      "2026-06": -104,
+      "2026-07": -112,
+      "2026-08": -66,
+      "2026-09": -220,
+      "2026-10": 98
+     }
+    },
+    "perso_2h|US30": {
+     "trades": 19,
+     "trades_mois": 3.8,
+     "gain": 167,
+     "r_trade": 0.176,
+     "brut_trade": 0.263,
+     "reussite": 0.42,
+     "pire_baisse": -281,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": 297,
+      "2026-07": -58,
+      "2026-08": -62,
+      "2026-09": -106,
+      "2026-10": 97
+     }
+    },
+    "perso_2h|US500": {
+     "trades": 15,
+     "trades_mois": 3.8,
+     "gain": 370,
+     "r_trade": 0.493,
+     "brut_trade": 0.6,
+     "reussite": 0.53,
+     "pire_baisse": -159,
+     "mois_pos": "2/4",
+     "mois": {
+      "2026-06": -107,
+      "2026-07": 143,
+      "2026-08": -28,
+      "2026-09": 362
+     }
+    },
+    "perso_2h|USDJPY": {
+     "trades": 4,
+     "trades_mois": 1.3,
+     "gain": -248,
+     "r_trade": -1.242,
+     "brut_trade": -1.131,
+     "reussite": 0.0,
+     "pire_baisse": -248,
+     "mois_pos": "0/3",
+     "mois": {
+      "2026-06": -144,
+      "2026-08": -53,
+      "2026-09": -52
+     }
+    }
+   }
+  },
+  "regles_de_depart": {
+   "ensemble": {
+    "trades": 325,
+    "trades_mois": 65.0,
+    "gain": -1069,
+    "r_trade": -0.066,
+    "brut_trade": 0.035,
+    "reussite": 0.35,
+    "pire_baisse": -1582,
+    "mois_pos": "1/5",
+    "mois": {
+     "2026-06": -239,
+     "2026-07": -11,
+     "2026-08": -399,
+     "2026-09": -642,
+     "2026-10": 222
+    }
+   },
+   "combos": {
+    "perso_1h|DAX": {
+     "trades": 28,
+     "trades_mois": 5.6,
+     "gain": -488,
+     "r_trade": -0.348,
+     "brut_trade": -0.246,
+     "reussite": 0.29,
+     "pire_baisse": -533,
+     "mois_pos": "1/5",
+     "mois": {
+      "2026-06": -358,
+      "2026-07": 203,
+      "2026-08": -37,
+      "2026-09": -290,
+      "2026-10": -7
+     }
+    },
+    "perso_1h|EURUSD": {
+     "trades": 26,
+     "trades_mois": 6.5,
+     "gain": -602,
+     "r_trade": -0.463,
+     "brut_trade": -0.312,
+     "reussite": 0.23,
+     "pire_baisse": -875,
+     "mois_pos": "1/4",
+     "mois": {
+      "2026-06": 273,
+      "2026-07": -239,
+      "2026-08": -356,
+      "2026-09": -281
+     }
+    },
+    "perso_1h|GBPUSD": {
+     "trades": 20,
+     "trades_mois": 4.0,
+     "gain": -215,
+     "r_trade": -0.215,
+     "brut_trade": -0.091,
+     "reussite": 0.3,
+     "pire_baisse": -447,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -55,
+      "2026-07": -252,
+      "2026-08": 282,
+      "2026-09": -226,
+      "2026-10": 36
+     }
+    },
+    "perso_1h|NAS100": {
+     "trades": 31,
+     "trades_mois": 6.2,
+     "gain": 14,
+     "r_trade": 0.009,
+     "brut_trade": 0.065,
+     "reussite": 0.35,
+     "pire_baisse": -389,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": 192,
+      "2026-07": -61,
+      "2026-08": -119,
+      "2026-09": 60,
+      "2026-10": -59
+     }
+    },
+    "perso_1h|OR": {
+     "trades": 34,
+     "trades_mois": 6.8,
+     "gain": 207,
+     "r_trade": 0.122,
+     "brut_trade": 0.231,
+     "reussite": 0.41,
+     "pire_baisse": -277,
+     "mois_pos": "3/5",
+     "mois": {
+      "2026-06": -136,
+      "2026-07": 331,
+      "2026-08": 18,
+      "2026-09": -40,
+      "2026-10": 34
+     }
+    },
+    "perso_1h|US30": {
+     "trades": 24,
+     "trades_mois": 4.8,
+     "gain": -122,
+     "r_trade": -0.102,
+     "brut_trade": 0.0,
+     "reussite": 0.33,
+     "pire_baisse": -358,
+     "mois_pos": "3/5",
+     "mois": {
+      "2026-06": 195,
+      "2026-07": -282,
+      "2026-08": 67,
+      "2026-09": -142,
+      "2026-10": 41
+     }
+    },
+    "perso_1h|US500": {
+     "trades": 20,
+     "trades_mois": 5.0,
+     "gain": 245,
+     "r_trade": 0.245,
+     "brut_trade": 0.35,
+     "reussite": 0.45,
+     "pire_baisse": -224,
+     "mois_pos": "4/4",
+     "mois": {
+      "2026-06": 127,
+      "2026-07": 64,
+      "2026-08": 18,
+      "2026-09": 36
+     }
+    },
+    "perso_1h|USDJPY": {
+     "trades": 18,
+     "trades_mois": 3.6,
+     "gain": 175,
+     "r_trade": 0.195,
+     "brut_trade": 0.333,
+     "reussite": 0.44,
+     "pire_baisse": -180,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -91,
+      "2026-07": 177,
+      "2026-08": -28,
+      "2026-09": 170,
+      "2026-10": -53
+     }
+    },
+    "perso_2h|DAX": {
+     "trades": 22,
+     "trades_mois": 4.4,
+     "gain": -273,
+     "r_trade": -0.248,
+     "brut_trade": -0.182,
+     "reussite": 0.27,
+     "pire_baisse": -370,
+     "mois_pos": "2/5",
+     "mois": {
+      "2026-06": -227,
+      "2026-07": 140,
+      "2026-08": -58,
+      "2026-09": -173,
+      "2026-10": 46
+     }
+    },
+    "perso_2h|EURUSD": {
+     "trades": 18,
+     "trades_mois": 3.6,
+     "gain": -116,
+     "r_trade": -0.129,
+     "brut_trade": -0.009,
+     "reussite": 0.33,
+     "pire_baisse": -333,
+     "mois_pos": "1/5",
+     "mois": {
+      "2026-06": -16,
+      "2026-07": -83,
+      "2026-08": -22,
+      "2026-09": -85,
+      "2026-10": 90
+     }
+    },
+    "perso_2h|GBPUSD": {
+     "trades": 21,
+     "trades_mois": 4.2,
+     "gain": -330,
+     "r_trade": -0.315,
+     "brut_trade": -0.212,
+     "reussite": 0.29,
+     "pire_baisse": -421,
+     "mois_pos": "1/5",
+     "mois": {
+      "2026-06": -108,
+      "2026-07": -177,
+      "2026-08": -64,
+      "2026-09": -28,
+      "2026-10": 47
+     }
+    },
+    "perso_2h|NAS100": {
+     "trades": 14,
+     "trades_mois": 2.8,
+     "gain": 279,
+     "r_trade": 0.399,
+     "brut_trade": 0.461,
+     "reussite": 0.5,
+     "pire_baisse": -136,
+     "mois_pos": "3/5",
+     "mois": {
+      "2026-06": 42,
+      "2026-07": 94,
+      "2026-08": -9,
+      "2026-09": 203,
+      "2026-10": -51
+     }
+    },
+    "perso_2h|OR": {
+     "trades": 9,
+     "trades_mois": 1.8,
+     "gain": -179,
+     "r_trade": -0.397,
+     "brut_trade": -0.333,
+     "reussite": 0.22,
+     "pire_baisse": -277,
+     "mois_pos": "1/5",
+     "mois": {
+      "2026-06": -52,
+      "2026-07": -53,
+      "2026-08": -121,
+      "2026-09": -51,
+      "2026-10": 98
+     }
+    },
+    "perso_2h|US30": {
+     "trades": 15,
+     "trades_mois": 3.8,
+     "gain": 243,
+     "r_trade": 0.323,
+     "brut_trade": 0.4,
+     "reussite": 0.47,
+     "pire_baisse": -322,
+     "mois_pos": "2/4",
+     "mois": {
+      "2026-06": 340,
+      "2026-07": -156,
+      "2026-08": 111,
+      "2026-09": -52
+     }
+    },
+    "perso_2h|US500": {
+     "trades": 19,
+     "trades_mois": 4.8,
+     "gain": 305,
+     "r_trade": 0.321,
+     "brut_trade": 0.421,
+     "reussite": 0.47,
+     "pire_baisse": -271,
+     "mois_pos": "2/4",
+     "mois": {
+      "2026-06": -218,
+      "2026-07": 190,
+      "2026-08": -28,
+      "2026-09": 362
+     }
+    },
+    "perso_2h|USDJPY": {
+     "trades": 6,
+     "trades_mois": 1.5,
+     "gain": -212,
+     "r_trade": -0.707,
+     "brut_trade": -0.588,
+     "reussite": 0.17,
+     "pire_baisse": -212,
+     "mois_pos": "1/4",
+     "mois": {
+      "2026-06": -146,
+      "2026-07": 92,
+      "2026-08": -53,
+      "2026-09": -104
+     }
+    }
+   }
+  }
+ }
+}
