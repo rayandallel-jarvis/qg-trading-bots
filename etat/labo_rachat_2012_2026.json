@@ -1,0 +1,4231 @@
+{
+ "NAS100": {
+  "trades": 121,
+  "trades_mois": 0.72,
+  "gain": 5222,
+  "reussite": 0.72,
+  "gain_moyen_pct": 0.432,
+  "duree_moy_jours": 5.3,
+  "pire_baisse": -948,
+  "mois_pos": "64/169 (mois sans trade = 0)",
+  "par_an": {
+   "2012": -75,
+   "2013": 721,
+   "2014": 841,
+   "2015": 928,
+   "2016": -717,
+   "2017": 497,
+   "2018": -169,
+   "2019": -46,
+   "2020": 53,
+   "2021": 1220,
+   "2022": -527,
+   "2023": 55,
+   "2024": 925,
+   "2025": -70,
+   "2026": 1586
+  },
+  "acheter_garder": 100676,
+  "acheter_garder_par_an": {
+   "2012": -423,
+   "2013": 3495,
+   "2014": 1991,
+   "2015": 978,
+   "2016": 827,
+   "2017": 3034,
+   "2018": -267,
+   "2019": 3753,
+   "2020": 4720,
+   "2021": 2886,
+   "2022": -3353,
+   "2023": 5342,
+   "2024": 2489,
+   "2025": 1989,
+   "2026": 2155
+  },
+  "mois": {
+   "2012-10": -75,
+   "2013-02": 85,
+   "2013-06": 323,
+   "2013-08": 9,
+   "2013-10": 202,
+   "2013-11": 101,
+   "2013-12": 1,
+   "2014-01": 79,
+   "2014-04": 377,
+   "2014-05": 202,
+   "2014-07": 81,
+   "2014-08": 17,
+   "2014-09": 85,
+   "2014-10": 56,
+   "2014-12": -58,
+   "2015-01": 164,
+   "2015-02": 107,
+   "2015-03": 119,
+   "2015-05": 286,
+   "2015-06": 103,
+   "2015-07": 26,
+   "2015-11": 3,
+   "2015-12": 122,
+   "2016-01": -380,
+   "2016-05": -328,
+   "2016-06": -135,
+   "2016-09": 120,
+   "2016-11": -97,
+   "2016-12": 103,
+   "2017-01": 128,
+   "2017-03": 62,
+   "2017-04": -14,
+   "2017-06": 36,
+   "2017-07": -62,
+   "2017-08": 237,
+   "2017-09": -11,
+   "2017-11": 121,
+   "2018-01": 95,
+   "2018-02": -379,
+   "2018-03": -182,
+   "2018-04": 324,
+   "2018-06": 5,
+   "2018-08": 241,
+   "2018-09": -23,
+   "2018-10": -250,
+   "2019-05": -121,
+   "2019-06": -127,
+   "2019-08": -169,
+   "2019-10": 264,
+   "2019-12": 107,
+   "2020-01": 155,
+   "2020-03": -315,
+   "2020-07": 219,
+   "2020-09": 362,
+   "2020-11": -368,
+   "2021-03": -239,
+   "2021-05": 235,
+   "2021-07": 103,
+   "2021-08": 160,
+   "2021-09": 201,
+   "2021-10": -11,
+   "2021-11": 360,
+   "2021-12": 411,
+   "2022-01": -527,
+   "2023-03": -71,
+   "2023-04": 326,
+   "2023-06": 122,
+   "2023-08": 78,
+   "2023-09": -129,
+   "2023-10": -270,
+   "2024-01": 37,
+   "2024-03": 99,
+   "2024-04": 180,
+   "2024-06": 263,
+   "2024-07": -193,
+   "2024-08": 517,
+   "2024-09": -52,
+   "2024-11": -96,
+   "2024-12": 170,
+   "2025-01": 402,
+   "2025-03": -948,
+   "2025-05": 133,
+   "2025-08": 64,
+   "2025-10": 199,
+   "2025-11": 163,
+   "2025-12": -82,
+   "2026-01": 216,
+   "2026-02": 411,
+   "2026-03": 188,
+   "2026-06": 351,
+   "2026-07": 238,
+   "2026-08": 34,
+   "2026-09": 148
+  },
+  "debut": "2012-10-16",
+  "trades_detail": [
+   {
+    "entree_jour": "2012-10-19",
+    "sortie_jour": "2012-10-30",
+    "jours": 11,
+    "brut_pct": -0.465,
+    "net_pct": -0.754,
+    "gain": -75.43
+   },
+   {
+    "entree_jour": "2013-02-21",
+    "sortie_jour": "2013-02-28",
+    "jours": 7,
+    "brut_pct": 1.075,
+    "net_pct": 0.853,
+    "gain": 85.32
+   },
+   {
+    "entree_jour": "2013-06-05",
+    "sortie_jour": "2013-06-07",
+    "jours": 2,
+    "brut_pct": 1.493,
+    "net_pct": 1.361,
+    "gain": 136.1
+   },
+   {
+    "entree_jour": "2013-06-12",
+    "sortie_jour": "2013-06-13",
+    "jours": 1,
+    "brut_pct": 1.55,
+    "net_pct": 1.434,
+    "gain": 143.4
+   },
+   {
+    "entree_jour": "2013-06-21",
+    "sortie_jour": "2013-06-26",
+    "jours": 5,
+    "brut_pct": 0.615,
+    "net_pct": 0.432,
+    "gain": 43.22
+   },
+   {
+    "entree_jour": "2013-08-15",
+    "sortie_jour": "2013-08-20",
+    "jours": 5,
+    "brut_pct": 0.263,
+    "net_pct": 0.086,
+    "gain": 8.6
+   },
+   {
+    "entree_jour": "2013-10-09",
+    "sortie_jour": "2013-10-10",
+    "jours": 1,
+    "brut_pct": 2.128,
+    "net_pct": 2.019,
+    "gain": 201.9
+   },
+   {
+    "entree_jour": "2013-11-07",
+    "sortie_jour": "2013-11-12",
+    "jours": 5,
+    "brut_pct": 1.18,
+    "net_pct": 1.01,
+    "gain": 101.04
+   },
+   {
+    "entree_jour": "2013-12-12",
+    "sortie_jour": "2013-12-17",
+    "jours": 5,
+    "brut_pct": 0.175,
+    "net_pct": 0.009,
+    "gain": 0.94
+   },
+   {
+    "entree_jour": "2014-01-06",
+    "sortie_jour": "2014-01-08",
+    "jours": 2,
+    "brut_pct": 1.161,
+    "net_pct": 1.046,
+    "gain": 104.59
+   },
+   {
+    "entree_jour": "2014-01-24",
+    "sortie_jour": "2014-01-30",
+    "jours": 6,
+    "brut_pct": -0.071,
+    "net_pct": -0.251,
+    "gain": -25.14
+   },
+   {
+    "entree_jour": "2014-03-27",
+    "sortie_jour": "2014-04-01",
+    "jours": 5,
+    "brut_pct": 2.544,
+    "net_pct": 2.38,
+    "gain": 238.04
+   },
+   {
+    "entree_jour": "2014-04-04",
+    "sortie_jour": "2014-04-09",
+    "jours": 5,
+    "brut_pct": 1.554,
+    "net_pct": 1.39,
+    "gain": 138.97
+   },
+   {
+    "entree_jour": "2014-05-08",
+    "sortie_jour": "2014-05-12",
+    "jours": 4,
+    "brut_pct": 2.173,
+    "net_pct": 2.025,
+    "gain": 202.49
+   },
+   {
+    "entree_jour": "2014-07-08",
+    "sortie_jour": "2014-07-11",
+    "jours": 3,
+    "brut_pct": 0.938,
+    "net_pct": 0.813,
+    "gain": 81.34
+   },
+   {
+    "entree_jour": "2014-07-31",
+    "sortie_jour": "2014-08-11",
+    "jours": 11,
+    "brut_pct": 0.428,
+    "net_pct": 0.172,
+    "gain": 17.24
+   },
+   {
+    "entree_jour": "2014-09-15",
+    "sortie_jour": "2014-09-17",
+    "jours": 2,
+    "brut_pct": 0.96,
+    "net_pct": 0.855,
+    "gain": 85.49
+   },
+   {
+    "entree_jour": "2014-10-01",
+    "sortie_jour": "2014-10-03",
+    "jours": 2,
+    "brut_pct": 0.873,
+    "net_pct": 0.767,
+    "gain": 76.73
+   },
+   {
+    "entree_jour": "2014-10-13",
+    "sortie_jour": "2014-10-17",
+    "jours": 4,
+    "brut_pct": -0.061,
+    "net_pct": -0.203,
+    "gain": -20.3
+   },
+   {
+    "entree_jour": "2014-12-08",
+    "sortie_jour": "2014-12-18",
+    "jours": 10,
+    "brut_pct": -0.348,
+    "net_pct": -0.58,
+    "gain": -58.04
+   },
+   {
+    "entree_jour": "2015-01-02",
+    "sortie_jour": "2015-01-08",
+    "jours": 6,
+    "brut_pct": 0.422,
+    "net_pct": 0.254,
+    "gain": 25.45
+   },
+   {
+    "entree_jour": "2015-01-15",
+    "sortie_jour": "2015-01-19",
+    "jours": 4,
+    "brut_pct": 1.523,
+    "net_pct": 1.386,
+    "gain": 138.6
+   },
+   {
+    "entree_jour": "2015-01-28",
+    "sortie_jour": "2015-02-02",
+    "jours": 5,
+    "brut_pct": 1.22,
+    "net_pct": 1.067,
+    "gain": 106.74
+   },
+   {
+    "entree_jour": "2015-03-10",
+    "sortie_jour": "2015-03-16",
+    "jours": 6,
+    "brut_pct": 0.439,
+    "net_pct": 0.273,
+    "gain": 27.33
+   },
+   {
+    "entree_jour": "2015-03-25",
+    "sortie_jour": "2015-03-30",
+    "jours": 5,
+    "brut_pct": 1.061,
+    "net_pct": 0.912,
+    "gain": 91.24
+   },
+   {
+    "entree_jour": "2015-04-30",
+    "sortie_jour": "2015-05-04",
+    "jours": 4,
+    "brut_pct": 1.461,
+    "net_pct": 1.329,
+    "gain": 132.93
+   },
+   {
+    "entree_jour": "2015-05-26",
+    "sortie_jour": "2015-05-27",
+    "jours": 1,
+    "brut_pct": 1.608,
+    "net_pct": 1.527,
+    "gain": 152.69
+   },
+   {
+    "entree_jour": "2015-06-08",
+    "sortie_jour": "2015-06-10",
+    "jours": 2,
+    "brut_pct": 1.129,
+    "net_pct": 1.031,
+    "gain": 103.07
+   },
+   {
+    "entree_jour": "2015-06-26",
+    "sortie_jour": "2015-07-02",
+    "jours": 6,
+    "brut_pct": -1.227,
+    "net_pct": -1.39,
+    "gain": -139.01
+   },
+   {
+    "entree_jour": "2015-07-08",
+    "sortie_jour": "2015-07-10",
+    "jours": 2,
+    "brut_pct": 1.541,
+    "net_pct": 1.442,
+    "gain": 144.18
+   },
+   {
+    "entree_jour": "2015-07-24",
+    "sortie_jour": "2015-07-29",
+    "jours": 5,
+    "brut_pct": 0.35,
+    "net_pct": 0.204,
+    "gain": 20.44
+   },
+   {
+    "entree_jour": "2015-11-10",
+    "sortie_jour": "2015-11-18",
+    "jours": 8,
+    "brut_pct": 0.227,
+    "net_pct": 0.033,
+    "gain": 3.31
+   },
+   {
+    "entree_jour": "2015-12-11",
+    "sortie_jour": "2015-12-15",
+    "jours": 4,
+    "brut_pct": 1.345,
+    "net_pct": 1.215,
+    "gain": 121.51
+   },
+   {
+    "entree_jour": "2016-01-04",
+    "sortie_jour": "2016-01-12",
+    "jours": 8,
+    "brut_pct": -3.602,
+    "net_pct": -3.798,
+    "gain": -379.82
+   },
+   {
+    "entree_jour": "2016-04-22",
+    "sortie_jour": "2016-05-09",
+    "jours": 17,
+    "brut_pct": -2.935,
+    "net_pct": -3.28,
+    "gain": -327.98
+   },
+   {
+    "entree_jour": "2016-06-10",
+    "sortie_jour": "2016-06-21",
+    "jours": 11,
+    "brut_pct": -1.108,
+    "net_pct": -1.354,
+    "gain": -135.36
+   },
+   {
+    "entree_jour": "2016-09-09",
+    "sortie_jour": "2016-09-14",
+    "jours": 5,
+    "brut_pct": 1.346,
+    "net_pct": 1.202,
+    "gain": 120.16
+   },
+   {
+    "entree_jour": "2016-10-28",
+    "sortie_jour": "2016-11-07",
+    "jours": 10,
+    "brut_pct": -0.743,
+    "net_pct": -0.967,
+    "gain": -96.74
+   },
+   {
+    "entree_jour": "2016-12-01",
+    "sortie_jour": "2016-12-06",
+    "jours": 5,
+    "brut_pct": 1.169,
+    "net_pct": 1.025,
+    "gain": 102.51
+   },
+   {
+    "entree_jour": "2016-12-30",
+    "sortie_jour": "2017-01-04",
+    "jours": 5,
+    "brut_pct": 1.42,
+    "net_pct": 1.278,
+    "gain": 127.84
+   },
+   {
+    "entree_jour": "2017-03-21",
+    "sortie_jour": "2017-03-27",
+    "jours": 6,
+    "brut_pct": 0.773,
+    "net_pct": 0.62,
+    "gain": 62.02
+   },
+   {
+    "entree_jour": "2017-04-11",
+    "sortie_jour": "2017-04-17",
+    "jours": 6,
+    "brut_pct": 0.013,
+    "net_pct": -0.139,
+    "gain": -13.94
+   },
+   {
+    "entree_jour": "2017-06-09",
+    "sortie_jour": "2017-06-19",
+    "jours": 10,
+    "brut_pct": 0.575,
+    "net_pct": 0.36,
+    "gain": 36.03
+   },
+   {
+    "entree_jour": "2017-06-27",
+    "sortie_jour": "2017-07-05",
+    "jours": 8,
+    "brut_pct": -0.437,
+    "net_pct": -0.62,
+    "gain": -62.0
+   },
+   {
+    "entree_jour": "2017-07-31",
+    "sortie_jour": "2017-08-02",
+    "jours": 2,
+    "brut_pct": 0.529,
+    "net_pct": 0.447,
+    "gain": 44.69
+   },
+   {
+    "entree_jour": "2017-08-10",
+    "sortie_jour": "2017-08-14",
+    "jours": 4,
+    "brut_pct": 2.04,
+    "net_pct": 1.924,
+    "gain": 192.38
+   },
+   {
+    "entree_jour": "2017-09-21",
+    "sortie_jour": "2017-09-27",
+    "jours": 6,
+    "brut_pct": 0.035,
+    "net_pct": -0.112,
+    "gain": -11.21
+   },
+   {
+    "entree_jour": "2017-11-15",
+    "sortie_jour": "2017-11-16",
+    "jours": 1,
+    "brut_pct": 1.275,
+    "net_pct": 1.212,
+    "gain": 121.23
+   },
+   {
+    "entree_jour": "2017-12-26",
+    "sortie_jour": "2018-01-02",
+    "jours": 7,
+    "brut_pct": 1.115,
+    "net_pct": 0.955,
+    "gain": 95.47
+   },
+   {
+    "entree_jour": "2018-02-02",
+    "sortie_jour": "2018-02-12",
+    "jours": 10,
+    "brut_pct": -3.585,
+    "net_pct": -3.792,
+    "gain": -379.21
+   },
+   {
+    "entree_jour": "2018-03-19",
+    "sortie_jour": "2018-03-26",
+    "jours": 7,
+    "brut_pct": -1.662,
+    "net_pct": -1.819,
+    "gain": -181.89
+   },
+   {
+    "entree_jour": "2018-04-24",
+    "sortie_jour": "2018-04-26",
+    "jours": 2,
+    "brut_pct": 3.314,
+    "net_pct": 3.237,
+    "gain": 323.65
+   },
+   {
+    "entree_jour": "2018-06-25",
+    "sortie_jour": "2018-06-29",
+    "jours": 4,
+    "brut_pct": 0.16,
+    "net_pct": 0.054,
+    "gain": 5.35
+   },
+   {
+    "entree_jour": "2018-07-30",
+    "sortie_jour": "2018-08-02",
+    "jours": 3,
+    "brut_pct": 2.5,
+    "net_pct": 2.411,
+    "gain": 241.06
+   },
+   {
+    "entree_jour": "2018-09-05",
+    "sortie_jour": "2018-09-11",
+    "jours": 6,
+    "brut_pct": -0.089,
+    "net_pct": -0.226,
+    "gain": -22.64
+   },
+   {
+    "entree_jour": "2018-10-04",
+    "sortie_jour": "2018-10-16",
+    "jours": 12,
+    "brut_pct": -2.269,
+    "net_pct": -2.505,
+    "gain": -250.49
+   },
+   {
+    "entree_jour": "2019-05-09",
+    "sortie_jour": "2019-05-15",
+    "jours": 6,
+    "brut_pct": -1.072,
+    "net_pct": -1.209,
+    "gain": -120.89
+   },
+   {
+    "entree_jour": "2019-05-28",
+    "sortie_jour": "2019-06-04",
+    "jours": 7,
+    "brut_pct": -1.114,
+    "net_pct": -1.269,
+    "gain": -126.91
+   },
+   {
+    "entree_jour": "2019-07-31",
+    "sortie_jour": "2019-08-08",
+    "jours": 8,
+    "brut_pct": -1.526,
+    "net_pct": -1.695,
+    "gain": -169.47
+   },
+   {
+    "entree_jour": "2019-10-02",
+    "sortie_jour": "2019-10-04",
+    "jours": 2,
+    "brut_pct": 2.712,
+    "net_pct": 2.641,
+    "gain": 264.08
+   },
+   {
+    "entree_jour": "2019-12-02",
+    "sortie_jour": "2019-12-06",
+    "jours": 4,
+    "brut_pct": 1.169,
+    "net_pct": 1.068,
+    "gain": 106.81
+   },
+   {
+    "entree_jour": "2020-01-27",
+    "sortie_jour": "2020-01-29",
+    "jours": 2,
+    "brut_pct": 1.616,
+    "net_pct": 1.551,
+    "gain": 155.06
+   },
+   {
+    "entree_jour": "2020-02-24",
+    "sortie_jour": "2020-03-02",
+    "jours": 7,
+    "brut_pct": -3.007,
+    "net_pct": -3.154,
+    "gain": -315.35
+   },
+   {
+    "entree_jour": "2020-07-24",
+    "sortie_jour": "2020-07-27",
+    "jours": 3,
+    "brut_pct": 2.268,
+    "net_pct": 2.191,
+    "gain": 219.09
+   },
+   {
+    "entree_jour": "2020-09-08",
+    "sortie_jour": "2020-09-09",
+    "jours": 1,
+    "brut_pct": 3.658,
+    "net_pct": 3.616,
+    "gain": 361.56
+   },
+   {
+    "entree_jour": "2020-10-19",
+    "sortie_jour": "2020-11-03",
+    "jours": 15,
+    "brut_pct": -3.406,
+    "net_pct": -3.677,
+    "gain": -367.72
+   },
+   {
+    "entree_jour": "2021-02-18",
+    "sortie_jour": "2021-03-01",
+    "jours": 11,
+    "brut_pct": -2.185,
+    "net_pct": -2.387,
+    "gain": -238.71
+   },
+   {
+    "entree_jour": "2021-05-03",
+    "sortie_jour": "2021-05-07",
+    "jours": 4,
+    "brut_pct": -0.388,
+    "net_pct": -0.475,
+    "gain": -47.52
+   },
+   {
+    "entree_jour": "2021-05-12",
+    "sortie_jour": "2021-05-14",
+    "jours": 2,
+    "brut_pct": 2.881,
+    "net_pct": 2.825,
+    "gain": 282.54
+   },
+   {
+    "entree_jour": "2021-07-19",
+    "sortie_jour": "2021-07-20",
+    "jours": 1,
+    "brut_pct": 1.066,
+    "net_pct": 1.03,
+    "gain": 103.0
+   },
+   {
+    "entree_jour": "2021-08-18",
+    "sortie_jour": "2021-08-20",
+    "jours": 2,
+    "brut_pct": 1.654,
+    "net_pct": 1.602,
+    "gain": 160.16
+   },
+   {
+    "entree_jour": "2021-09-10",
+    "sortie_jour": "2021-09-15",
+    "jours": 5,
+    "brut_pct": 0.338,
+    "net_pct": 0.237,
+    "gain": 23.74
+   },
+   {
+    "entree_jour": "2021-09-20",
+    "sortie_jour": "2021-09-23",
+    "jours": 3,
+    "brut_pct": 1.843,
+    "net_pct": 1.774,
+    "gain": 177.41
+   },
+   {
+    "entree_jour": "2021-09-28",
+    "sortie_jour": "2021-10-06",
+    "jours": 8,
+    "brut_pct": 0.037,
+    "net_pct": -0.114,
+    "gain": -11.41
+   },
+   {
+    "entree_jour": "2021-11-10",
+    "sortie_jour": "2021-11-12",
+    "jours": 2,
+    "brut_pct": 1.288,
+    "net_pct": 1.237,
+    "gain": 123.71
+   },
+   {
+    "entree_jour": "2021-11-26",
+    "sortie_jour": "2021-11-29",
+    "jours": 3,
+    "brut_pct": 2.429,
+    "net_pct": 2.362,
+    "gain": 236.17
+   },
+   {
+    "entree_jour": "2021-12-03",
+    "sortie_jour": "2021-12-07",
+    "jours": 4,
+    "brut_pct": 4.194,
+    "net_pct": 4.11,
+    "gain": 410.95
+   },
+   {
+    "entree_jour": "2022-01-05",
+    "sortie_jour": "2022-01-11",
+    "jours": 6,
+    "brut_pct": 0.238,
+    "net_pct": 0.121,
+    "gain": 12.07
+   },
+   {
+    "entree_jour": "2022-01-18",
+    "sortie_jour": "2022-01-28",
+    "jours": 10,
+    "brut_pct": -5.207,
+    "net_pct": -5.391,
+    "gain": -539.07
+   },
+   {
+    "entree_jour": "2023-02-21",
+    "sortie_jour": "2023-03-02",
+    "jours": 9,
+    "brut_pct": -0.538,
+    "net_pct": -0.71,
+    "gain": -70.99
+   },
+   {
+    "entree_jour": "2023-04-12",
+    "sortie_jour": "2023-04-13",
+    "jours": 1,
+    "brut_pct": 2.055,
+    "net_pct": 2.016,
+    "gain": 201.64
+   },
+   {
+    "entree_jour": "2023-04-24",
+    "sortie_jour": "2023-04-27",
+    "jours": 3,
+    "brut_pct": 1.311,
+    "net_pct": 1.239,
+    "gain": 123.91
+   },
+   {
+    "entree_jour": "2023-06-21",
+    "sortie_jour": "2023-06-22",
+    "jours": 1,
+    "brut_pct": 1.251,
+    "net_pct": 1.215,
+    "gain": 121.52
+   },
+   {
+    "entree_jour": "2023-08-04",
+    "sortie_jour": "2023-08-14",
+    "jours": 10,
+    "brut_pct": -0.363,
+    "net_pct": -0.547,
+    "gain": -54.67
+   },
+   {
+    "entree_jour": "2023-08-17",
+    "sortie_jour": "2023-08-21",
+    "jours": 4,
+    "brut_pct": 1.413,
+    "net_pct": 1.327,
+    "gain": 132.74
+   },
+   {
+    "entree_jour": "2023-09-06",
+    "sortie_jour": "2023-09-11",
+    "jours": 5,
+    "brut_pct": 0.481,
+    "net_pct": 0.38,
+    "gain": 37.97
+   },
+   {
+    "entree_jour": "2023-09-20",
+    "sortie_jour": "2023-09-28",
+    "jours": 8,
+    "brut_pct": -1.517,
+    "net_pct": -1.668,
+    "gain": -166.79
+   },
+   {
+    "entree_jour": "2023-10-19",
+    "sortie_jour": "2023-10-31",
+    "jours": 12,
+    "brut_pct": -2.485,
+    "net_pct": -2.702,
+    "gain": -270.18
+   },
+   {
+    "entree_jour": "2024-01-02",
+    "sortie_jour": "2024-01-08",
+    "jours": 6,
+    "brut_pct": 0.483,
+    "net_pct": 0.367,
+    "gain": 36.66
+   },
+   {
+    "entree_jour": "2024-03-15",
+    "sortie_jour": "2024-03-19",
+    "jours": 4,
+    "brut_pct": 1.075,
+    "net_pct": 0.993,
+    "gain": 99.34
+   },
+   {
+    "entree_jour": "2024-04-02",
+    "sortie_jour": "2024-04-03",
+    "jours": 1,
+    "brut_pct": 0.659,
+    "net_pct": 0.627,
+    "gain": 62.68
+   },
+   {
+    "entree_jour": "2024-04-18",
+    "sortie_jour": "2024-04-23",
+    "jours": 5,
+    "brut_pct": 1.27,
+    "net_pct": 1.172,
+    "gain": 117.15
+   },
+   {
+    "entree_jour": "2024-05-30",
+    "sortie_jour": "2024-06-04",
+    "jours": 5,
+    "brut_pct": 1.051,
+    "net_pct": 0.953,
+    "gain": 95.27
+   },
+   {
+    "entree_jour": "2024-06-24",
+    "sortie_jour": "2024-06-27",
+    "jours": 3,
+    "brut_pct": 1.743,
+    "net_pct": 1.679,
+    "gain": 167.89
+   },
+   {
+    "entree_jour": "2024-07-17",
+    "sortie_jour": "2024-07-31",
+    "jours": 14,
+    "brut_pct": -1.683,
+    "net_pct": -1.927,
+    "gain": -192.73
+   },
+   {
+    "entree_jour": "2024-08-06",
+    "sortie_jour": "2024-08-08",
+    "jours": 2,
+    "brut_pct": 3.091,
+    "net_pct": 3.042,
+    "gain": 304.17
+   },
+   {
+    "entree_jour": "2024-08-28",
+    "sortie_jour": "2024-08-30",
+    "jours": 2,
+    "brut_pct": 2.173,
+    "net_pct": 2.125,
+    "gain": 212.48
+   },
+   {
+    "entree_jour": "2024-09-04",
+    "sortie_jour": "2024-09-10",
+    "jours": 6,
+    "brut_pct": -0.408,
+    "net_pct": -0.522,
+    "gain": -52.21
+   },
+   {
+    "entree_jour": "2024-11-14",
+    "sortie_jour": "2024-11-20",
+    "jours": 6,
+    "brut_pct": -0.848,
+    "net_pct": -0.961,
+    "gain": -96.06
+   },
+   {
+    "entree_jour": "2024-12-19",
+    "sortie_jour": "2024-12-23",
+    "jours": 4,
+    "brut_pct": 1.779,
+    "net_pct": 1.699,
+    "gain": 169.93
+   },
+   {
+    "entree_jour": "2024-12-30",
+    "sortie_jour": "2025-01-03",
+    "jours": 4,
+    "brut_pct": 0.545,
+    "net_pct": 0.465,
+    "gain": 46.55
+   },
+   {
+    "entree_jour": "2025-01-10",
+    "sortie_jour": "2025-01-15",
+    "jours": 5,
+    "brut_pct": 1.905,
+    "net_pct": 1.809,
+    "gain": 180.93
+   },
+   {
+    "entree_jour": "2025-01-27",
+    "sortie_jour": "2025-01-30",
+    "jours": 3,
+    "brut_pct": 1.807,
+    "net_pct": 1.744,
+    "gain": 174.44
+   },
+   {
+    "entree_jour": "2025-02-21",
+    "sortie_jour": "2025-03-14",
+    "jours": 21,
+    "brut_pct": -9.126,
+    "net_pct": -9.485,
+    "gain": -948.5
+   },
+   {
+    "entree_jour": "2025-05-23",
+    "sortie_jour": "2025-05-26",
+    "jours": 3,
+    "brut_pct": 1.394,
+    "net_pct": 1.331,
+    "gain": 133.13
+   },
+   {
+    "entree_jour": "2025-08-19",
+    "sortie_jour": "2025-08-22",
+    "jours": 3,
+    "brut_pct": 0.699,
+    "net_pct": 0.638,
+    "gain": 63.75
+   },
+   {
+    "entree_jour": "2025-10-10",
+    "sortie_jour": "2025-10-15",
+    "jours": 5,
+    "brut_pct": 2.085,
+    "net_pct": 1.991,
+    "gain": 199.1
+   },
+   {
+    "entree_jour": "2025-11-04",
+    "sortie_jour": "2025-11-10",
+    "jours": 6,
+    "brut_pct": 1.028,
+    "net_pct": 0.918,
+    "gain": 91.75
+   },
+   {
+    "entree_jour": "2025-11-17",
+    "sortie_jour": "2025-11-19",
+    "jours": 2,
+    "brut_pct": 0.757,
+    "net_pct": 0.712,
+    "gain": 71.25
+   },
+   {
+    "entree_jour": "2025-12-12",
+    "sortie_jour": "2025-12-18",
+    "jours": 6,
+    "brut_pct": -0.71,
+    "net_pct": -0.82,
+    "gain": -81.97
+   },
+   {
+    "entree_jour": "2025-12-31",
+    "sortie_jour": "2026-01-05",
+    "jours": 5,
+    "brut_pct": 0.529,
+    "net_pct": 0.435,
+    "gain": 43.53
+   },
+   {
+    "entree_jour": "2026-01-20",
+    "sortie_jour": "2026-01-21",
+    "jours": 1,
+    "brut_pct": 1.752,
+    "net_pct": 1.724,
+    "gain": 172.35
+   },
+   {
+    "entree_jour": "2026-02-05",
+    "sortie_jour": "2026-02-09",
+    "jours": 4,
+    "brut_pct": 4.189,
+    "net_pct": 4.112,
+    "gain": 411.16
+   },
+   {
+    "entree_jour": "2026-03-03",
+    "sortie_jour": "2026-03-04",
+    "jours": 1,
+    "brut_pct": 1.907,
+    "net_pct": 1.879,
+    "gain": 187.88
+   },
+   {
+    "entree_jour": "2026-06-05",
+    "sortie_jour": "2026-06-11",
+    "jours": 6,
+    "brut_pct": 2.652,
+    "net_pct": 2.543,
+    "gain": 254.33
+   },
+   {
+    "entree_jour": "2026-06-23",
+    "sortie_jour": "2026-06-29",
+    "jours": 6,
+    "brut_pct": 1.076,
+    "net_pct": 0.968,
+    "gain": 96.79
+   },
+   {
+    "entree_jour": "2026-07-17",
+    "sortie_jour": "2026-07-21",
+    "jours": 4,
+    "brut_pct": 1.994,
+    "net_pct": 1.918,
+    "gain": 191.8
+   },
+   {
+    "entree_jour": "2026-07-24",
+    "sortie_jour": "2026-07-30",
+    "jours": 6,
+    "brut_pct": 0.57,
+    "net_pct": 0.461,
+    "gain": 46.06
+   },
+   {
+    "entree_jour": "2026-08-18",
+    "sortie_jour": "2026-08-26",
+    "jours": 8,
+    "brut_pct": 0.485,
+    "net_pct": 0.344,
+    "gain": 34.36
+   },
+   {
+    "entree_jour": "2026-09-01",
+    "sortie_jour": "2026-09-03",
+    "jours": 2,
+    "brut_pct": 1.285,
+    "net_pct": 1.242,
+    "gain": 124.23
+   },
+   {
+    "entree_jour": "2026-09-10",
+    "sortie_jour": "2026-09-16",
+    "jours": 6,
+    "brut_pct": 0.347,
+    "net_pct": 0.238,
+    "gain": 23.82
+   }
+  ]
+ },
+ "US500": {
+  "trades": 125,
+  "trades_mois": 0.74,
+  "gain": 3776,
+  "reussite": 0.78,
+  "gain_moyen_pct": 0.302,
+  "duree_moy_jours": 4.7,
+  "pire_baisse": -1232,
+  "mois_pos": "73/169 (mois sans trade = 0)",
+  "par_an": {
+   "2012": 51,
+   "2013": 326,
+   "2014": 136,
+   "2015": 442,
+   "2016": 254,
+   "2017": 683,
+   "2018": -924,
+   "2019": 66,
+   "2020": 164,
+   "2021": 1106,
+   "2022": -360,
+   "2023": -107,
+   "2024": 771,
+   "2025": 323,
+   "2026": 845
+  },
+  "acheter_garder": 43850,
+  "acheter_garder_par_an": {
+   "2012": -120,
+   "2013": 2960,
+   "2014": 1220,
+   "2015": 22,
+   "2016": 1129,
+   "2017": 1858,
+   "2018": -696,
+   "2019": 2849,
+   "2020": 1603,
+   "2021": 2890,
+   "2022": -1975,
+   "2023": 2386,
+   "2024": 2331,
+   "2025": 1632,
+   "2026": 1337
+  },
+  "mois": {
+   "2012-10": 27,
+   "2012-12": 25,
+   "2013-06": 224,
+   "2013-08": -28,
+   "2013-09": 30,
+   "2013-12": 101,
+   "2014-01": 25,
+   "2014-03": 87,
+   "2014-04": 126,
+   "2014-06": 45,
+   "2014-08": -35,
+   "2014-10": -93,
+   "2014-12": -20,
+   "2015-01": 178,
+   "2015-02": 80,
+   "2015-03": 39,
+   "2015-05": 175,
+   "2015-06": 110,
+   "2015-07": 17,
+   "2015-11": -157,
+   "2016-05": -44,
+   "2016-06": 1,
+   "2016-08": 138,
+   "2016-09": 67,
+   "2016-10": 48,
+   "2016-11": -5,
+   "2016-12": 49,
+   "2017-01": 58,
+   "2017-03": 73,
+   "2017-04": 5,
+   "2017-05": 178,
+   "2017-06": 71,
+   "2017-08": 192,
+   "2017-09": 33,
+   "2017-11": 74,
+   "2018-02": -397,
+   "2018-03": -284,
+   "2018-04": 119,
+   "2018-05": 108,
+   "2018-06": -172,
+   "2018-08": 40,
+   "2018-09": 4,
+   "2018-10": -342,
+   "2019-03": 72,
+   "2019-05": -94,
+   "2019-06": 9,
+   "2019-08": -146,
+   "2019-10": 215,
+   "2019-12": 10,
+   "2020-01": 119,
+   "2020-03": -493,
+   "2020-06": 338,
+   "2020-09": 259,
+   "2020-10": 24,
+   "2020-11": -185,
+   "2020-12": 102,
+   "2021-01": 131,
+   "2021-02": 285,
+   "2021-05": 333,
+   "2021-06": 39,
+   "2021-07": 142,
+   "2021-08": 88,
+   "2021-09": 45,
+   "2021-10": 37,
+   "2021-12": 5,
+   "2022-01": -360,
+   "2023-03": -88,
+   "2023-04": 228,
+   "2023-07": 67,
+   "2023-08": -35,
+   "2023-09": 30,
+   "2023-10": -308,
+   "2024-01": 187,
+   "2024-04": 91,
+   "2024-05": 52,
+   "2024-06": 68,
+   "2024-07": -129,
+   "2024-08": 158,
+   "2024-09": -30,
+   "2024-10": 28,
+   "2024-11": 184,
+   "2024-12": 162,
+   "2025-01": 266,
+   "2025-03": -692,
+   "2025-05": 109,
+   "2025-08": 284,
+   "2025-10": 157,
+   "2025-11": 136,
+   "2025-12": 63,
+   "2026-01": 108,
+   "2026-02": 256,
+   "2026-03": 107,
+   "2026-06": 123,
+   "2026-08": 30,
+   "2026-09": 221
+  },
+  "debut": "2012-10-09",
+  "trades_detail": [
+   {
+    "entree_jour": "2012-10-10",
+    "sortie_jour": "2012-10-15",
+    "jours": 5,
+    "brut_pct": 0.528,
+    "net_pct": 0.328,
+    "gain": 32.76
+   },
+   {
+    "entree_jour": "2012-10-23",
+    "sortie_jour": "2012-10-30",
+    "jours": 7,
+    "brut_pct": 0.176,
+    "net_pct": -0.059,
+    "gain": -5.92
+   },
+   {
+    "entree_jour": "2012-12-26",
+    "sortie_jour": "2012-12-31",
+    "jours": 5,
+    "brut_pct": 0.448,
+    "net_pct": 0.246,
+    "gain": 24.6
+   },
+   {
+    "entree_jour": "2013-06-05",
+    "sortie_jour": "2013-06-07",
+    "jours": 2,
+    "brut_pct": 1.861,
+    "net_pct": 1.723,
+    "gain": 172.28
+   },
+   {
+    "entree_jour": "2013-06-21",
+    "sortie_jour": "2013-06-26",
+    "jours": 5,
+    "brut_pct": 0.705,
+    "net_pct": 0.516,
+    "gain": 51.55
+   },
+   {
+    "entree_jour": "2013-08-15",
+    "sortie_jour": "2013-08-22",
+    "jours": 7,
+    "brut_pct": -0.065,
+    "net_pct": -0.283,
+    "gain": -28.27
+   },
+   {
+    "entree_jour": "2013-09-25",
+    "sortie_jour": "2013-09-26",
+    "jours": 1,
+    "brut_pct": 0.412,
+    "net_pct": 0.295,
+    "gain": 29.52
+   },
+   {
+    "entree_jour": "2013-12-03",
+    "sortie_jour": "2013-12-06",
+    "jours": 3,
+    "brut_pct": 0.727,
+    "net_pct": 0.582,
+    "gain": 58.24
+   },
+   {
+    "entree_jour": "2013-12-12",
+    "sortie_jour": "2013-12-16",
+    "jours": 4,
+    "brut_pct": 0.593,
+    "net_pct": 0.432,
+    "gain": 43.18
+   },
+   {
+    "entree_jour": "2014-01-03",
+    "sortie_jour": "2014-01-07",
+    "jours": 4,
+    "brut_pct": 0.382,
+    "net_pct": 0.224,
+    "gain": 22.35
+   },
+   {
+    "entree_jour": "2014-01-24",
+    "sortie_jour": "2014-01-30",
+    "jours": 6,
+    "brut_pct": 0.218,
+    "net_pct": 0.024,
+    "gain": 2.39
+   },
+   {
+    "entree_jour": "2014-03-14",
+    "sortie_jour": "2014-03-17",
+    "jours": 3,
+    "brut_pct": 1.016,
+    "net_pct": 0.874,
+    "gain": 87.41
+   },
+   {
+    "entree_jour": "2014-04-07",
+    "sortie_jour": "2014-04-09",
+    "jours": 2,
+    "brut_pct": 1.39,
+    "net_pct": 1.265,
+    "gain": 126.47
+   },
+   {
+    "entree_jour": "2014-06-12",
+    "sortie_jour": "2014-06-17",
+    "jours": 5,
+    "brut_pct": 0.621,
+    "net_pct": 0.45,
+    "gain": 45.04
+   },
+   {
+    "entree_jour": "2014-07-31",
+    "sortie_jour": "2014-08-08",
+    "jours": 8,
+    "brut_pct": -0.129,
+    "net_pct": -0.348,
+    "gain": -34.84
+   },
+   {
+    "entree_jour": "2014-09-23",
+    "sortie_jour": "2014-10-03",
+    "jours": 10,
+    "brut_pct": -0.677,
+    "net_pct": -0.928,
+    "gain": -92.76
+   },
+   {
+    "entree_jour": "2014-12-01",
+    "sortie_jour": "2014-12-02",
+    "jours": 1,
+    "brut_pct": 0.739,
+    "net_pct": 0.64,
+    "gain": 64.0
+   },
+   {
+    "entree_jour": "2014-12-10",
+    "sortie_jour": "2014-12-17",
+    "jours": 7,
+    "brut_pct": -0.642,
+    "net_pct": -0.841,
+    "gain": -84.1
+   },
+   {
+    "entree_jour": "2015-01-02",
+    "sortie_jour": "2015-01-08",
+    "jours": 6,
+    "brut_pct": 0.349,
+    "net_pct": 0.168,
+    "gain": 16.79
+   },
+   {
+    "entree_jour": "2015-01-15",
+    "sortie_jour": "2015-01-16",
+    "jours": 1,
+    "brut_pct": 1.713,
+    "net_pct": 1.611,
+    "gain": 161.11
+   },
+   {
+    "entree_jour": "2015-01-28",
+    "sortie_jour": "2015-02-02",
+    "jours": 5,
+    "brut_pct": 0.964,
+    "net_pct": 0.797,
+    "gain": 79.65
+   },
+   {
+    "entree_jour": "2015-03-06",
+    "sortie_jour": "2015-03-12",
+    "jours": 6,
+    "brut_pct": -0.215,
+    "net_pct": -0.395,
+    "gain": -39.53
+   },
+   {
+    "entree_jour": "2015-03-25",
+    "sortie_jour": "2015-03-30",
+    "jours": 5,
+    "brut_pct": 0.953,
+    "net_pct": 0.788,
+    "gain": 78.83
+   },
+   {
+    "entree_jour": "2015-04-30",
+    "sortie_jour": "2015-05-01",
+    "jours": 1,
+    "brut_pct": 1.054,
+    "net_pct": 0.956,
+    "gain": 95.64
+   },
+   {
+    "entree_jour": "2015-05-26",
+    "sortie_jour": "2015-05-27",
+    "jours": 1,
+    "brut_pct": 0.892,
+    "net_pct": 0.795,
+    "gain": 79.47
+   },
+   {
+    "entree_jour": "2015-06-08",
+    "sortie_jour": "2015-06-10",
+    "jours": 2,
+    "brut_pct": 1.212,
+    "net_pct": 1.097,
+    "gain": 109.73
+   },
+   {
+    "entree_jour": "2015-06-29",
+    "sortie_jour": "2015-07-02",
+    "jours": 3,
+    "brut_pct": 0.908,
+    "net_pct": 0.776,
+    "gain": 77.62
+   },
+   {
+    "entree_jour": "2015-07-23",
+    "sortie_jour": "2015-07-28",
+    "jours": 5,
+    "brut_pct": -0.443,
+    "net_pct": -0.606,
+    "gain": -60.58
+   },
+   {
+    "entree_jour": "2015-11-09",
+    "sortie_jour": "2015-11-17",
+    "jours": 8,
+    "brut_pct": -1.357,
+    "net_pct": -1.57,
+    "gain": -157.03
+   },
+   {
+    "entree_jour": "2016-04-29",
+    "sortie_jour": "2016-05-09",
+    "jours": 10,
+    "brut_pct": -0.197,
+    "net_pct": -0.444,
+    "gain": -44.4
+   },
+   {
+    "entree_jour": "2016-06-13",
+    "sortie_jour": "2016-06-20",
+    "jours": 7,
+    "brut_pct": 0.21,
+    "net_pct": 0.013,
+    "gain": 1.29
+   },
+   {
+    "entree_jour": "2016-08-02",
+    "sortie_jour": "2016-08-05",
+    "jours": 3,
+    "brut_pct": 1.135,
+    "net_pct": 1.007,
+    "gain": 100.72
+   },
+   {
+    "entree_jour": "2016-08-26",
+    "sortie_jour": "2016-08-29",
+    "jours": 3,
+    "brut_pct": 0.501,
+    "net_pct": 0.374,
+    "gain": 37.37
+   },
+   {
+    "entree_jour": "2016-09-09",
+    "sortie_jour": "2016-09-15",
+    "jours": 6,
+    "brut_pct": 0.847,
+    "net_pct": 0.668,
+    "gain": 66.82
+   },
+   {
+    "entree_jour": "2016-10-17",
+    "sortie_jour": "2016-10-18",
+    "jours": 1,
+    "brut_pct": 0.581,
+    "net_pct": 0.484,
+    "gain": 48.42
+   },
+   {
+    "entree_jour": "2016-10-28",
+    "sortie_jour": "2016-11-07",
+    "jours": 10,
+    "brut_pct": 0.197,
+    "net_pct": -0.047,
+    "gain": -4.74
+   },
+   {
+    "entree_jour": "2016-12-01",
+    "sortie_jour": "2016-12-05",
+    "jours": 4,
+    "brut_pct": 0.631,
+    "net_pct": 0.488,
+    "gain": 48.76
+   },
+   {
+    "entree_jour": "2016-12-30",
+    "sortie_jour": "2017-01-03",
+    "jours": 4,
+    "brut_pct": 0.725,
+    "net_pct": 0.583,
+    "gain": 58.33
+   },
+   {
+    "entree_jour": "2017-03-08",
+    "sortie_jour": "2017-03-10",
+    "jours": 2,
+    "brut_pct": 0.397,
+    "net_pct": 0.292,
+    "gain": 29.21
+   },
+   {
+    "entree_jour": "2017-03-21",
+    "sortie_jour": "2017-03-28",
+    "jours": 7,
+    "brut_pct": 0.623,
+    "net_pct": 0.435,
+    "gain": 43.55
+   },
+   {
+    "entree_jour": "2017-04-12",
+    "sortie_jour": "2017-04-17",
+    "jours": 5,
+    "brut_pct": 0.203,
+    "net_pct": 0.048,
+    "gain": 4.79
+   },
+   {
+    "entree_jour": "2017-05-12",
+    "sortie_jour": "2017-05-15",
+    "jours": 3,
+    "brut_pct": 0.525,
+    "net_pct": 0.405,
+    "gain": 40.46
+   },
+   {
+    "entree_jour": "2017-05-17",
+    "sortie_jour": "2017-05-22",
+    "jours": 5,
+    "brut_pct": 1.527,
+    "net_pct": 1.373,
+    "gain": 137.26
+   },
+   {
+    "entree_jour": "2017-06-27",
+    "sortie_jour": "2017-06-28",
+    "jours": 1,
+    "brut_pct": 0.793,
+    "net_pct": 0.707,
+    "gain": 70.66
+   },
+   {
+    "entree_jour": "2017-08-10",
+    "sortie_jour": "2017-08-14",
+    "jours": 4,
+    "brut_pct": 1.101,
+    "net_pct": 0.966,
+    "gain": 96.59
+   },
+   {
+    "entree_jour": "2017-08-18",
+    "sortie_jour": "2017-08-22",
+    "jours": 4,
+    "brut_pct": 1.086,
+    "net_pct": 0.951,
+    "gain": 95.05
+   },
+   {
+    "entree_jour": "2017-09-25",
+    "sortie_jour": "2017-09-27",
+    "jours": 2,
+    "brut_pct": 0.431,
+    "net_pct": 0.33,
+    "gain": 33.05
+   },
+   {
+    "entree_jour": "2017-11-15",
+    "sortie_jour": "2017-11-16",
+    "jours": 1,
+    "brut_pct": 0.821,
+    "net_pct": 0.738,
+    "gain": 73.81
+   },
+   {
+    "entree_jour": "2018-02-02",
+    "sortie_jour": "2018-02-12",
+    "jours": 10,
+    "brut_pct": -3.74,
+    "net_pct": -3.966,
+    "gain": -396.64
+   },
+   {
+    "entree_jour": "2018-03-19",
+    "sortie_jour": "2018-03-29",
+    "jours": 10,
+    "brut_pct": -2.614,
+    "net_pct": -2.842,
+    "gain": -284.15
+   },
+   {
+    "entree_jour": "2018-04-24",
+    "sortie_jour": "2018-04-26",
+    "jours": 2,
+    "brut_pct": 1.288,
+    "net_pct": 1.191,
+    "gain": 119.11
+   },
+   {
+    "entree_jour": "2018-05-29",
+    "sortie_jour": "2018-05-30",
+    "jours": 1,
+    "brut_pct": 1.157,
+    "net_pct": 1.077,
+    "gain": 107.7
+   },
+   {
+    "entree_jour": "2018-06-18",
+    "sortie_jour": "2018-06-29",
+    "jours": 11,
+    "brut_pct": -1.474,
+    "net_pct": -1.717,
+    "gain": -171.66
+   },
+   {
+    "entree_jour": "2018-08-13",
+    "sortie_jour": "2018-08-16",
+    "jours": 3,
+    "brut_pct": 0.51,
+    "net_pct": 0.4,
+    "gain": 40.01
+   },
+   {
+    "entree_jour": "2018-09-05",
+    "sortie_jour": "2018-09-11",
+    "jours": 6,
+    "brut_pct": 0.198,
+    "net_pct": 0.04,
+    "gain": 4.0
+   },
+   {
+    "entree_jour": "2018-10-04",
+    "sortie_jour": "2018-10-16",
+    "jours": 12,
+    "brut_pct": -3.166,
+    "net_pct": -3.422,
+    "gain": -342.18
+   },
+   {
+    "entree_jour": "2019-03-06",
+    "sortie_jour": "2019-03-11",
+    "jours": 5,
+    "brut_pct": 0.864,
+    "net_pct": 0.72,
+    "gain": 72.01
+   },
+   {
+    "entree_jour": "2019-05-09",
+    "sortie_jour": "2019-05-15",
+    "jours": 6,
+    "brut_pct": -0.78,
+    "net_pct": -0.938,
+    "gain": -93.76
+   },
+   {
+    "entree_jour": "2019-05-28",
+    "sortie_jour": "2019-06-04",
+    "jours": 7,
+    "brut_pct": 0.268,
+    "net_pct": 0.092,
+    "gain": 9.18
+   },
+   {
+    "entree_jour": "2019-07-31",
+    "sortie_jour": "2019-08-08",
+    "jours": 8,
+    "brut_pct": -1.272,
+    "net_pct": -1.461,
+    "gain": -146.07
+   },
+   {
+    "entree_jour": "2019-10-02",
+    "sortie_jour": "2019-10-04",
+    "jours": 2,
+    "brut_pct": 2.239,
+    "net_pct": 2.147,
+    "gain": 214.67
+   },
+   {
+    "entree_jour": "2019-12-02",
+    "sortie_jour": "2019-12-05",
+    "jours": 3,
+    "brut_pct": 0.202,
+    "net_pct": 0.099,
+    "gain": 9.85
+   },
+   {
+    "entree_jour": "2020-01-27",
+    "sortie_jour": "2020-01-30",
+    "jours": 3,
+    "brut_pct": 1.296,
+    "net_pct": 1.195,
+    "gain": 119.45
+   },
+   {
+    "entree_jour": "2020-02-24",
+    "sortie_jour": "2020-03-02",
+    "jours": 7,
+    "brut_pct": -4.765,
+    "net_pct": -4.933,
+    "gain": -493.26
+   },
+   {
+    "entree_jour": "2020-06-11",
+    "sortie_jour": "2020-06-16",
+    "jours": 5,
+    "brut_pct": 3.519,
+    "net_pct": 3.38,
+    "gain": 338.05
+   },
+   {
+    "entree_jour": "2020-09-08",
+    "sortie_jour": "2020-09-09",
+    "jours": 1,
+    "brut_pct": 2.615,
+    "net_pct": 2.548,
+    "gain": 254.77
+   },
+   {
+    "entree_jour": "2020-09-21",
+    "sortie_jour": "2020-09-25",
+    "jours": 4,
+    "brut_pct": 0.155,
+    "net_pct": 0.038,
+    "gain": 3.78
+   },
+   {
+    "entree_jour": "2020-10-19",
+    "sortie_jour": "2020-10-22",
+    "jours": 3,
+    "brut_pct": 0.335,
+    "net_pct": 0.236,
+    "gain": 23.64
+   },
+   {
+    "entree_jour": "2020-10-27",
+    "sortie_jour": "2020-11-02",
+    "jours": 6,
+    "brut_pct": -1.704,
+    "net_pct": -1.853,
+    "gain": -185.3
+   },
+   {
+    "entree_jour": "2020-12-14",
+    "sortie_jour": "2020-12-15",
+    "jours": 1,
+    "brut_pct": 1.087,
+    "net_pct": 1.024,
+    "gain": 102.39
+   },
+   {
+    "entree_jour": "2021-01-15",
+    "sortie_jour": "2021-01-19",
+    "jours": 4,
+    "brut_pct": 1.419,
+    "net_pct": 1.308,
+    "gain": 130.81
+   },
+   {
+    "entree_jour": "2021-01-27",
+    "sortie_jour": "2021-02-01",
+    "jours": 5,
+    "brut_pct": 1.655,
+    "net_pct": 1.527,
+    "gain": 152.71
+   },
+   {
+    "entree_jour": "2021-02-22",
+    "sortie_jour": "2021-02-24",
+    "jours": 2,
+    "brut_pct": 1.404,
+    "net_pct": 1.327,
+    "gain": 132.71
+   },
+   {
+    "entree_jour": "2021-05-04",
+    "sortie_jour": "2021-05-06",
+    "jours": 2,
+    "brut_pct": 0.824,
+    "net_pct": 0.751,
+    "gain": 75.06
+   },
+   {
+    "entree_jour": "2021-05-12",
+    "sortie_jour": "2021-05-14",
+    "jours": 2,
+    "brut_pct": 2.658,
+    "net_pct": 2.584,
+    "gain": 258.37
+   },
+   {
+    "entree_jour": "2021-06-16",
+    "sortie_jour": "2021-06-21",
+    "jours": 5,
+    "brut_pct": 0.513,
+    "net_pct": 0.391,
+    "gain": 39.06
+   },
+   {
+    "entree_jour": "2021-07-19",
+    "sortie_jour": "2021-07-20",
+    "jours": 1,
+    "brut_pct": 1.479,
+    "net_pct": 1.423,
+    "gain": 142.29
+   },
+   {
+    "entree_jour": "2021-08-18",
+    "sortie_jour": "2021-08-20",
+    "jours": 2,
+    "brut_pct": 0.952,
+    "net_pct": 0.881,
+    "gain": 88.06
+   },
+   {
+    "entree_jour": "2021-09-09",
+    "sortie_jour": "2021-09-15",
+    "jours": 6,
+    "brut_pct": -0.154,
+    "net_pct": -0.291,
+    "gain": -29.08
+   },
+   {
+    "entree_jour": "2021-09-20",
+    "sortie_jour": "2021-09-22",
+    "jours": 2,
+    "brut_pct": 0.811,
+    "net_pct": 0.739,
+    "gain": 73.89
+   },
+   {
+    "entree_jour": "2021-09-30",
+    "sortie_jour": "2021-10-05",
+    "jours": 5,
+    "brut_pct": 0.492,
+    "net_pct": 0.371,
+    "gain": 37.08
+   },
+   {
+    "entree_jour": "2021-11-26",
+    "sortie_jour": "2021-12-06",
+    "jours": 10,
+    "brut_pct": 0.249,
+    "net_pct": 0.047,
+    "gain": 4.72
+   },
+   {
+    "entree_jour": "2022-01-05",
+    "sortie_jour": "2022-01-11",
+    "jours": 6,
+    "brut_pct": 0.127,
+    "net_pct": -0.007,
+    "gain": -0.75
+   },
+   {
+    "entree_jour": "2022-01-18",
+    "sortie_jour": "2022-01-28",
+    "jours": 10,
+    "brut_pct": -3.393,
+    "net_pct": -3.595,
+    "gain": -359.47
+   },
+   {
+    "entree_jour": "2023-02-21",
+    "sortie_jour": "2023-03-02",
+    "jours": 9,
+    "brut_pct": -0.692,
+    "net_pct": -0.883,
+    "gain": -88.26
+   },
+   {
+    "entree_jour": "2023-04-12",
+    "sortie_jour": "2023-04-13",
+    "jours": 1,
+    "brut_pct": 1.452,
+    "net_pct": 1.394,
+    "gain": 139.43
+   },
+   {
+    "entree_jour": "2023-04-25",
+    "sortie_jour": "2023-04-27",
+    "jours": 2,
+    "brut_pct": 0.956,
+    "net_pct": 0.882,
+    "gain": 88.16
+   },
+   {
+    "entree_jour": "2023-07-07",
+    "sortie_jour": "2023-07-11",
+    "jours": 4,
+    "brut_pct": 0.779,
+    "net_pct": 0.674,
+    "gain": 67.42
+   },
+   {
+    "entree_jour": "2023-08-03",
+    "sortie_jour": "2023-08-07",
+    "jours": 4,
+    "brut_pct": 0.201,
+    "net_pct": 0.098,
+    "gain": 9.8
+   },
+   {
+    "entree_jour": "2023-08-16",
+    "sortie_jour": "2023-08-22",
+    "jours": 6,
+    "brut_pct": -0.311,
+    "net_pct": -0.448,
+    "gain": -44.82
+   },
+   {
+    "entree_jour": "2023-09-06",
+    "sortie_jour": "2023-09-11",
+    "jours": 5,
+    "brut_pct": 0.422,
+    "net_pct": 0.302,
+    "gain": 30.17
+   },
+   {
+    "entree_jour": "2023-09-20",
+    "sortie_jour": "2023-10-02",
+    "jours": 12,
+    "brut_pct": -2.423,
+    "net_pct": -2.659,
+    "gain": -265.89
+   },
+   {
+    "entree_jour": "2023-10-03",
+    "sortie_jour": "2023-10-06",
+    "jours": 3,
+    "brut_pct": 1.939,
+    "net_pct": 1.85,
+    "gain": 184.99
+   },
+   {
+    "entree_jour": "2023-10-19",
+    "sortie_jour": "2023-10-31",
+    "jours": 12,
+    "brut_pct": -2.038,
+    "net_pct": -2.275,
+    "gain": -227.54
+   },
+   {
+    "entree_jour": "2024-01-03",
+    "sortie_jour": "2024-01-08",
+    "jours": 5,
+    "brut_pct": 1.071,
+    "net_pct": 0.953,
+    "gain": 95.29
+   },
+   {
+    "entree_jour": "2024-01-17",
+    "sortie_jour": "2024-01-18",
+    "jours": 1,
+    "brut_pct": 0.972,
+    "net_pct": 0.92,
+    "gain": 91.98
+   },
+   {
+    "entree_jour": "2024-04-17",
+    "sortie_jour": "2024-04-23",
+    "jours": 6,
+    "brut_pct": 1.041,
+    "net_pct": 0.908,
+    "gain": 90.83
+   },
+   {
+    "entree_jour": "2024-05-29",
+    "sortie_jour": "2024-05-31",
+    "jours": 2,
+    "brut_pct": 0.59,
+    "net_pct": 0.525,
+    "gain": 52.45
+   },
+   {
+    "entree_jour": "2024-06-24",
+    "sortie_jour": "2024-06-27",
+    "jours": 3,
+    "brut_pct": 0.762,
+    "net_pct": 0.681,
+    "gain": 68.12
+   },
+   {
+    "entree_jour": "2024-07-19",
+    "sortie_jour": "2024-07-30",
+    "jours": 11,
+    "brut_pct": -1.077,
+    "net_pct": -1.289,
+    "gain": -128.92
+   },
+   {
+    "entree_jour": "2024-08-05",
+    "sortie_jour": "2024-08-08",
+    "jours": 3,
+    "brut_pct": 1.667,
+    "net_pct": 1.585,
+    "gain": 158.49
+   },
+   {
+    "entree_jour": "2024-09-05",
+    "sortie_jour": "2024-09-10",
+    "jours": 5,
+    "brut_pct": -0.186,
+    "net_pct": -0.299,
+    "gain": -29.88
+   },
+   {
+    "entree_jour": "2024-10-23",
+    "sortie_jour": "2024-10-28",
+    "jours": 5,
+    "brut_pct": 0.387,
+    "net_pct": 0.276,
+    "gain": 27.56
+   },
+   {
+    "entree_jour": "2024-10-31",
+    "sortie_jour": "2024-11-05",
+    "jours": 5,
+    "brut_pct": 1.321,
+    "net_pct": 1.209,
+    "gain": 120.92
+   },
+   {
+    "entree_jour": "2024-11-15",
+    "sortie_jour": "2024-11-20",
+    "jours": 5,
+    "brut_pct": 0.739,
+    "net_pct": 0.628,
+    "gain": 62.77
+   },
+   {
+    "entree_jour": "2024-12-18",
+    "sortie_jour": "2024-12-23",
+    "jours": 5,
+    "brut_pct": 1.729,
+    "net_pct": 1.618,
+    "gain": 161.82
+   },
+   {
+    "entree_jour": "2024-12-30",
+    "sortie_jour": "2025-01-03",
+    "jours": 4,
+    "brut_pct": 0.654,
+    "net_pct": 0.559,
+    "gain": 55.95
+   },
+   {
+    "entree_jour": "2025-01-10",
+    "sortie_jour": "2025-01-15",
+    "jours": 5,
+    "brut_pct": 2.214,
+    "net_pct": 2.102,
+    "gain": 210.25
+   },
+   {
+    "entree_jour": "2025-02-21",
+    "sortie_jour": "2025-03-14",
+    "jours": 21,
+    "brut_pct": -6.544,
+    "net_pct": -6.917,
+    "gain": -691.74
+   },
+   {
+    "entree_jour": "2025-05-23",
+    "sortie_jour": "2025-05-26",
+    "jours": 3,
+    "brut_pct": 1.165,
+    "net_pct": 1.086,
+    "gain": 108.62
+   },
+   {
+    "entree_jour": "2025-08-01",
+    "sortie_jour": "2025-08-06",
+    "jours": 5,
+    "brut_pct": 1.842,
+    "net_pct": 1.733,
+    "gain": 173.26
+   },
+   {
+    "entree_jour": "2025-08-20",
+    "sortie_jour": "2025-08-22",
+    "jours": 2,
+    "brut_pct": 1.163,
+    "net_pct": 1.104,
+    "gain": 110.36
+   },
+   {
+    "entree_jour": "2025-10-10",
+    "sortie_jour": "2025-10-15",
+    "jours": 5,
+    "brut_pct": 1.676,
+    "net_pct": 1.568,
+    "gain": 156.76
+   },
+   {
+    "entree_jour": "2025-11-04",
+    "sortie_jour": "2025-11-10",
+    "jours": 6,
+    "brut_pct": 1.083,
+    "net_pct": 0.959,
+    "gain": 95.87
+   },
+   {
+    "entree_jour": "2025-11-17",
+    "sortie_jour": "2025-11-19",
+    "jours": 2,
+    "brut_pct": 0.462,
+    "net_pct": 0.404,
+    "gain": 40.41
+   },
+   {
+    "entree_jour": "2025-12-16",
+    "sortie_jour": "2025-12-19",
+    "jours": 3,
+    "brut_pct": 0.703,
+    "net_pct": 0.628,
+    "gain": 62.82
+   },
+   {
+    "entree_jour": "2025-12-31",
+    "sortie_jour": "2026-01-05",
+    "jours": 5,
+    "brut_pct": 0.725,
+    "net_pct": 0.618,
+    "gain": 61.76
+   },
+   {
+    "entree_jour": "2026-01-19",
+    "sortie_jour": "2026-01-22",
+    "jours": 3,
+    "brut_pct": 0.54,
+    "net_pct": 0.466,
+    "gain": 46.58
+   },
+   {
+    "entree_jour": "2026-02-05",
+    "sortie_jour": "2026-02-06",
+    "jours": 1,
+    "brut_pct": 2.6,
+    "net_pct": 2.558,
+    "gain": 255.81
+   },
+   {
+    "entree_jour": "2026-03-03",
+    "sortie_jour": "2026-03-04",
+    "jours": 1,
+    "brut_pct": 1.107,
+    "net_pct": 1.066,
+    "gain": 106.57
+   },
+   {
+    "entree_jour": "2026-06-05",
+    "sortie_jour": "2026-06-11",
+    "jours": 6,
+    "brut_pct": 0.701,
+    "net_pct": 0.58,
+    "gain": 57.95
+   },
+   {
+    "entree_jour": "2026-06-23",
+    "sortie_jour": "2026-06-29",
+    "jours": 6,
+    "brut_pct": 0.774,
+    "net_pct": 0.652,
+    "gain": 65.2
+   },
+   {
+    "entree_jour": "2026-08-18",
+    "sortie_jour": "2026-08-26",
+    "jours": 8,
+    "brut_pct": 0.456,
+    "net_pct": 0.302,
+    "gain": 30.21
+   },
+   {
+    "entree_jour": "2026-09-01",
+    "sortie_jour": "2026-09-03",
+    "jours": 2,
+    "brut_pct": 1.436,
+    "net_pct": 1.38,
+    "gain": 138.04
+   },
+   {
+    "entree_jour": "2026-09-10",
+    "sortie_jour": "2026-09-11",
+    "jours": 1,
+    "brut_pct": 0.868,
+    "net_pct": 0.83,
+    "gain": 82.95
+   }
+  ]
+ },
+ "US30": {
+  "trades": 113,
+  "trades_mois": 0.76,
+  "gain": 2399,
+  "reussite": 0.75,
+  "gain_moyen_pct": 0.212,
+  "duree_moy_jours": 5.1,
+  "pire_baisse": -1043,
+  "mois_pos": "64/148 (mois sans trade = 0)",
+  "par_an": {
+   "2014": -242,
+   "2015": 529,
+   "2016": 189,
+   "2017": 585,
+   "2018": 80,
+   "2019": 160,
+   "2020": -958,
+   "2021": 1193,
+   "2022": 88,
+   "2023": 232,
+   "2024": -234,
+   "2025": 269,
+   "2026": 509
+  },
+  "acheter_garder": 20063,
+  "acheter_garder_par_an": {
+   "2014": 524,
+   "2015": -140,
+   "2016": 1535,
+   "2017": 2456,
+   "2018": -605,
+   "2019": 2212,
+   "2020": 705,
+   "2021": 2041,
+   "2022": -922,
+   "2023": 1337,
+   "2024": 1284,
+   "2025": 1303,
+   "2026": 649
+  },
+  "mois": {
+   "2014-08": -275,
+   "2014-10": 103,
+   "2014-12": -70,
+   "2015-01": 140,
+   "2015-02": 62,
+   "2015-03": 100,
+   "2015-04": 95,
+   "2015-05": 92,
+   "2015-06": 120,
+   "2015-07": -81,
+   "2016-05": -36,
+   "2016-06": 24,
+   "2016-08": 39,
+   "2016-09": 52,
+   "2016-11": 111,
+   "2017-01": -3,
+   "2017-02": 90,
+   "2017-03": 16,
+   "2017-04": 13,
+   "2017-05": 148,
+   "2017-06": 55,
+   "2017-07": 36,
+   "2017-08": 102,
+   "2017-09": 127,
+   "2017-11": 1,
+   "2018-02": -373,
+   "2018-03": 172,
+   "2018-04": 101,
+   "2018-05": 161,
+   "2018-06": -232,
+   "2018-08": 132,
+   "2018-10": 119,
+   "2019-03": 25,
+   "2019-05": 2,
+   "2019-08": -182,
+   "2019-09": 55,
+   "2019-10": 182,
+   "2019-12": 77,
+   "2020-01": 85,
+   "2020-03": -825,
+   "2020-08": 57,
+   "2020-09": -31,
+   "2020-10": 12,
+   "2020-11": -255,
+   "2021-01": 73,
+   "2021-02": 202,
+   "2021-05": 218,
+   "2021-06": -144,
+   "2021-07": 227,
+   "2021-08": 121,
+   "2021-09": 26,
+   "2021-10": 102,
+   "2021-11": 36,
+   "2021-12": 331,
+   "2022-01": -162,
+   "2022-12": 250,
+   "2023-01": 93,
+   "2023-03": -82,
+   "2023-04": 126,
+   "2023-05": 171,
+   "2023-06": 51,
+   "2023-07": 82,
+   "2023-08": -49,
+   "2023-09": 49,
+   "2023-10": -210,
+   "2024-01": 27,
+   "2024-03": 38,
+   "2024-04": -55,
+   "2024-05": -102,
+   "2024-06": 48,
+   "2024-08": 131,
+   "2024-09": -4,
+   "2024-11": 43,
+   "2024-12": -359,
+   "2025-01": 129,
+   "2025-02": -116,
+   "2025-08": 14,
+   "2025-09": 155,
+   "2025-10": 159,
+   "2025-11": -72,
+   "2026-01": 178,
+   "2026-03": -326,
+   "2026-04": 212,
+   "2026-06": 227,
+   "2026-07": 11,
+   "2026-08": -20,
+   "2026-09": 171,
+   "2026-10": 57
+  },
+  "debut": "2014-07-14",
+  "trades_detail": [
+   {
+    "entree_jour": "2014-07-25",
+    "sortie_jour": "2014-08-08",
+    "jours": 14,
+    "brut_pct": -2.486,
+    "net_pct": -2.751,
+    "gain": -275.13
+   },
+   {
+    "entree_jour": "2014-10-01",
+    "sortie_jour": "2014-10-03",
+    "jours": 2,
+    "brut_pct": 1.096,
+    "net_pct": 1.028,
+    "gain": 102.77
+   },
+   {
+    "entree_jour": "2014-12-01",
+    "sortie_jour": "2014-12-02",
+    "jours": 1,
+    "brut_pct": 0.593,
+    "net_pct": 0.543,
+    "gain": 54.32
+   },
+   {
+    "entree_jour": "2014-12-10",
+    "sortie_jour": "2014-12-17",
+    "jours": 7,
+    "brut_pct": -1.089,
+    "net_pct": -1.238,
+    "gain": -123.83
+   },
+   {
+    "entree_jour": "2015-01-02",
+    "sortie_jour": "2015-01-08",
+    "jours": 6,
+    "brut_pct": 0.475,
+    "net_pct": 0.342,
+    "gain": 34.24
+   },
+   {
+    "entree_jour": "2015-01-15",
+    "sortie_jour": "2015-01-19",
+    "jours": 4,
+    "brut_pct": 1.158,
+    "net_pct": 1.057,
+    "gain": 105.72
+   },
+   {
+    "entree_jour": "2015-01-28",
+    "sortie_jour": "2015-02-02",
+    "jours": 5,
+    "brut_pct": 0.737,
+    "net_pct": 0.62,
+    "gain": 62.03
+   },
+   {
+    "entree_jour": "2015-03-06",
+    "sortie_jour": "2015-03-12",
+    "jours": 6,
+    "brut_pct": 0.08,
+    "net_pct": -0.053,
+    "gain": -5.25
+   },
+   {
+    "entree_jour": "2015-03-25",
+    "sortie_jour": "2015-03-30",
+    "jours": 5,
+    "brut_pct": 1.172,
+    "net_pct": 1.056,
+    "gain": 105.63
+   },
+   {
+    "entree_jour": "2015-04-17",
+    "sortie_jour": "2015-04-20",
+    "jours": 3,
+    "brut_pct": 1.036,
+    "net_pct": 0.954,
+    "gain": 95.35
+   },
+   {
+    "entree_jour": "2015-04-30",
+    "sortie_jour": "2015-05-01",
+    "jours": 1,
+    "brut_pct": 0.97,
+    "net_pct": 0.92,
+    "gain": 92.0
+   },
+   {
+    "entree_jour": "2015-05-26",
+    "sortie_jour": "2015-06-03",
+    "jours": 8,
+    "brut_pct": 0.185,
+    "net_pct": 0.02,
+    "gain": 2.0
+   },
+   {
+    "entree_jour": "2015-06-08",
+    "sortie_jour": "2015-06-10",
+    "jours": 2,
+    "brut_pct": 1.251,
+    "net_pct": 1.184,
+    "gain": 118.42
+   },
+   {
+    "entree_jour": "2015-07-22",
+    "sortie_jour": "2015-07-29",
+    "jours": 7,
+    "brut_pct": -0.666,
+    "net_pct": -0.815,
+    "gain": -81.49
+   },
+   {
+    "entree_jour": "2016-04-29",
+    "sortie_jour": "2016-05-06",
+    "jours": 7,
+    "brut_pct": -0.216,
+    "net_pct": -0.365,
+    "gain": -36.48
+   },
+   {
+    "entree_jour": "2016-06-13",
+    "sortie_jour": "2016-06-20",
+    "jours": 7,
+    "brut_pct": 0.387,
+    "net_pct": 0.238,
+    "gain": 23.79
+   },
+   {
+    "entree_jour": "2016-07-28",
+    "sortie_jour": "2016-08-05",
+    "jours": 8,
+    "brut_pct": 0.428,
+    "net_pct": 0.264,
+    "gain": 26.41
+   },
+   {
+    "entree_jour": "2016-08-25",
+    "sortie_jour": "2016-08-29",
+    "jours": 4,
+    "brut_pct": 0.225,
+    "net_pct": 0.126,
+    "gain": 12.63
+   },
+   {
+    "entree_jour": "2016-09-09",
+    "sortie_jour": "2016-09-15",
+    "jours": 6,
+    "brut_pct": 0.65,
+    "net_pct": 0.518,
+    "gain": 51.78
+   },
+   {
+    "entree_jour": "2016-11-01",
+    "sortie_jour": "2016-11-07",
+    "jours": 6,
+    "brut_pct": 1.239,
+    "net_pct": 1.107,
+    "gain": 110.74
+   },
+   {
+    "entree_jour": "2016-12-28",
+    "sortie_jour": "2017-01-03",
+    "jours": 6,
+    "brut_pct": 0.204,
+    "net_pct": 0.075,
+    "gain": 7.53
+   },
+   {
+    "entree_jour": "2017-01-17",
+    "sortie_jour": "2017-01-20",
+    "jours": 3,
+    "brut_pct": -0.028,
+    "net_pct": -0.107,
+    "gain": -10.73
+   },
+   {
+    "entree_jour": "2017-01-31",
+    "sortie_jour": "2017-02-03",
+    "jours": 3,
+    "brut_pct": 0.982,
+    "net_pct": 0.902,
+    "gain": 90.22
+   },
+   {
+    "entree_jour": "2017-03-08",
+    "sortie_jour": "2017-03-10",
+    "jours": 2,
+    "brut_pct": 0.211,
+    "net_pct": 0.149,
+    "gain": 14.93
+   },
+   {
+    "entree_jour": "2017-03-21",
+    "sortie_jour": "2017-03-28",
+    "jours": 7,
+    "brut_pct": 0.16,
+    "net_pct": 0.016,
+    "gain": 1.56
+   },
+   {
+    "entree_jour": "2017-04-12",
+    "sortie_jour": "2017-04-17",
+    "jours": 5,
+    "brut_pct": 0.243,
+    "net_pct": 0.132,
+    "gain": 13.15
+   },
+   {
+    "entree_jour": "2017-05-11",
+    "sortie_jour": "2017-05-15",
+    "jours": 4,
+    "brut_pct": 0.323,
+    "net_pct": 0.228,
+    "gain": 22.83
+   },
+   {
+    "entree_jour": "2017-05-17",
+    "sortie_jour": "2017-05-22",
+    "jours": 5,
+    "brut_pct": 1.358,
+    "net_pct": 1.247,
+    "gain": 124.71
+   },
+   {
+    "entree_jour": "2017-06-27",
+    "sortie_jour": "2017-06-28",
+    "jours": 1,
+    "brut_pct": 0.598,
+    "net_pct": 0.553,
+    "gain": 55.34
+   },
+   {
+    "entree_jour": "2017-07-24",
+    "sortie_jour": "2017-07-25",
+    "jours": 1,
+    "brut_pct": 0.405,
+    "net_pct": 0.361,
+    "gain": 36.08
+   },
+   {
+    "entree_jour": "2017-08-10",
+    "sortie_jour": "2017-08-14",
+    "jours": 4,
+    "brut_pct": 0.572,
+    "net_pct": 0.479,
+    "gain": 47.88
+   },
+   {
+    "entree_jour": "2017-08-17",
+    "sortie_jour": "2017-08-22",
+    "jours": 5,
+    "brut_pct": 0.647,
+    "net_pct": 0.538,
+    "gain": 53.75
+   },
+   {
+    "entree_jour": "2017-09-05",
+    "sortie_jour": "2017-09-11",
+    "jours": 6,
+    "brut_pct": 1.4,
+    "net_pct": 1.274,
+    "gain": 127.36
+   },
+   {
+    "entree_jour": "2017-11-10",
+    "sortie_jour": "2017-11-16",
+    "jours": 6,
+    "brut_pct": 0.13,
+    "net_pct": 0.006,
+    "gain": 0.6
+   },
+   {
+    "entree_jour": "2018-02-02",
+    "sortie_jour": "2018-02-12",
+    "jours": 10,
+    "brut_pct": -3.541,
+    "net_pct": -3.729,
+    "gain": -372.88
+   },
+   {
+    "entree_jour": "2018-03-01",
+    "sortie_jour": "2018-03-06",
+    "jours": 5,
+    "brut_pct": 1.144,
+    "net_pct": 1.038,
+    "gain": 103.76
+   },
+   {
+    "entree_jour": "2018-03-22",
+    "sortie_jour": "2018-03-29",
+    "jours": 7,
+    "brut_pct": 0.826,
+    "net_pct": 0.686,
+    "gain": 68.63
+   },
+   {
+    "entree_jour": "2018-04-24",
+    "sortie_jour": "2018-04-26",
+    "jours": 2,
+    "brut_pct": 1.064,
+    "net_pct": 1.006,
+    "gain": 100.63
+   },
+   {
+    "entree_jour": "2018-05-02",
+    "sortie_jour": "2018-05-04",
+    "jours": 2,
+    "brut_pct": 1.665,
+    "net_pct": 1.607,
+    "gain": 160.65
+   },
+   {
+    "entree_jour": "2018-05-29",
+    "sortie_jour": "2018-06-01",
+    "jours": 3,
+    "brut_pct": 1.168,
+    "net_pct": 1.094,
+    "gain": 109.37
+   },
+   {
+    "entree_jour": "2018-06-15",
+    "sortie_jour": "2018-06-29",
+    "jours": 14,
+    "brut_pct": -3.161,
+    "net_pct": -3.415,
+    "gain": -341.48
+   },
+   {
+    "entree_jour": "2018-08-13",
+    "sortie_jour": "2018-08-16",
+    "jours": 3,
+    "brut_pct": 1.389,
+    "net_pct": 1.316,
+    "gain": 131.61
+   },
+   {
+    "entree_jour": "2018-10-10",
+    "sortie_jour": "2018-10-16",
+    "jours": 6,
+    "brut_pct": 1.317,
+    "net_pct": 1.194,
+    "gain": 119.43
+   },
+   {
+    "entree_jour": "2019-03-06",
+    "sortie_jour": "2019-03-11",
+    "jours": 5,
+    "brut_pct": 0.359,
+    "net_pct": 0.253,
+    "gain": 25.32
+   },
+   {
+    "entree_jour": "2019-05-09",
+    "sortie_jour": "2019-05-16",
+    "jours": 7,
+    "brut_pct": 0.157,
+    "net_pct": 0.018,
+    "gain": 1.84
+   },
+   {
+    "entree_jour": "2019-07-31",
+    "sortie_jour": "2019-08-08",
+    "jours": 8,
+    "brut_pct": -1.666,
+    "net_pct": -1.82,
+    "gain": -181.95
+   },
+   {
+    "entree_jour": "2019-09-20",
+    "sortie_jour": "2019-09-23",
+    "jours": 3,
+    "brut_pct": 0.624,
+    "net_pct": 0.552,
+    "gain": 55.2
+   },
+   {
+    "entree_jour": "2019-10-02",
+    "sortie_jour": "2019-10-04",
+    "jours": 2,
+    "brut_pct": 1.881,
+    "net_pct": 1.825,
+    "gain": 182.46
+   },
+   {
+    "entree_jour": "2019-12-02",
+    "sortie_jour": "2019-12-06",
+    "jours": 4,
+    "brut_pct": 0.858,
+    "net_pct": 0.77,
+    "gain": 77.03
+   },
+   {
+    "entree_jour": "2020-01-27",
+    "sortie_jour": "2020-01-30",
+    "jours": 3,
+    "brut_pct": 0.918,
+    "net_pct": 0.848,
+    "gain": 84.8
+   },
+   {
+    "entree_jour": "2020-02-21",
+    "sortie_jour": "2020-03-02",
+    "jours": 10,
+    "brut_pct": -8.068,
+    "net_pct": -8.253,
+    "gain": -825.34
+   },
+   {
+    "entree_jour": "2020-08-19",
+    "sortie_jour": "2020-08-20",
+    "jours": 1,
+    "brut_pct": 0.603,
+    "net_pct": 0.565,
+    "gain": 56.53
+   },
+   {
+    "entree_jour": "2020-09-21",
+    "sortie_jour": "2020-09-25",
+    "jours": 4,
+    "brut_pct": -0.227,
+    "net_pct": -0.314,
+    "gain": -31.43
+   },
+   {
+    "entree_jour": "2020-10-19",
+    "sortie_jour": "2020-10-22",
+    "jours": 3,
+    "brut_pct": 0.189,
+    "net_pct": 0.118,
+    "gain": 11.83
+   },
+   {
+    "entree_jour": "2020-10-26",
+    "sortie_jour": "2020-11-02",
+    "jours": 7,
+    "brut_pct": -2.409,
+    "net_pct": -2.546,
+    "gain": -254.61
+   },
+   {
+    "entree_jour": "2021-01-15",
+    "sortie_jour": "2021-01-19",
+    "jours": 4,
+    "brut_pct": 0.819,
+    "net_pct": 0.734,
+    "gain": 73.4
+   },
+   {
+    "entree_jour": "2021-01-27",
+    "sortie_jour": "2021-02-02",
+    "jours": 6,
+    "brut_pct": 2.134,
+    "net_pct": 2.015,
+    "gain": 201.55
+   },
+   {
+    "entree_jour": "2021-05-12",
+    "sortie_jour": "2021-05-14",
+    "jours": 2,
+    "brut_pct": 2.236,
+    "net_pct": 2.185,
+    "gain": 218.48
+   },
+   {
+    "entree_jour": "2021-06-14",
+    "sortie_jour": "2021-06-21",
+    "jours": 7,
+    "brut_pct": -1.307,
+    "net_pct": -1.439,
+    "gain": -143.94
+   },
+   {
+    "entree_jour": "2021-07-19",
+    "sortie_jour": "2021-07-21",
+    "jours": 2,
+    "brut_pct": 2.316,
+    "net_pct": 2.266,
+    "gain": 226.57
+   },
+   {
+    "entree_jour": "2021-08-18",
+    "sortie_jour": "2021-08-23",
+    "jours": 5,
+    "brut_pct": 1.309,
+    "net_pct": 1.21,
+    "gain": 121.0
+   },
+   {
+    "entree_jour": "2021-09-07",
+    "sortie_jour": "2021-09-13",
+    "jours": 6,
+    "brut_pct": -0.398,
+    "net_pct": -0.514,
+    "gain": -51.38
+   },
+   {
+    "entree_jour": "2021-09-20",
+    "sortie_jour": "2021-09-22",
+    "jours": 2,
+    "brut_pct": 0.827,
+    "net_pct": 0.776,
+    "gain": 77.61
+   },
+   {
+    "entree_jour": "2021-09-30",
+    "sortie_jour": "2021-10-05",
+    "jours": 5,
+    "brut_pct": 1.122,
+    "net_pct": 1.022,
+    "gain": 102.23
+   },
+   {
+    "entree_jour": "2021-11-19",
+    "sortie_jour": "2021-11-23",
+    "jours": 4,
+    "brut_pct": 0.441,
+    "net_pct": 0.359,
+    "gain": 35.89
+   },
+   {
+    "entree_jour": "2021-11-26",
+    "sortie_jour": "2021-12-06",
+    "jours": 10,
+    "brut_pct": 1.554,
+    "net_pct": 1.373,
+    "gain": 137.26
+   },
+   {
+    "entree_jour": "2021-12-20",
+    "sortie_jour": "2021-12-22",
+    "jours": 2,
+    "brut_pct": 1.99,
+    "net_pct": 1.94,
+    "gain": 194.02
+   },
+   {
+    "entree_jour": "2022-01-10",
+    "sortie_jour": "2022-01-12",
+    "jours": 2,
+    "brut_pct": 0.622,
+    "net_pct": 0.573,
+    "gain": 57.29
+   },
+   {
+    "entree_jour": "2022-01-18",
+    "sortie_jour": "2022-01-28",
+    "jours": 10,
+    "brut_pct": -2.014,
+    "net_pct": -2.195,
+    "gain": -219.55
+   },
+   {
+    "entree_jour": "2022-12-06",
+    "sortie_jour": "2022-12-12",
+    "jours": 6,
+    "brut_pct": 1.041,
+    "net_pct": 0.925,
+    "gain": 92.47
+   },
+   {
+    "entree_jour": "2022-12-16",
+    "sortie_jour": "2022-12-21",
+    "jours": 5,
+    "brut_pct": 1.674,
+    "net_pct": 1.574,
+    "gain": 157.37
+   },
+   {
+    "entree_jour": "2023-01-18",
+    "sortie_jour": "2023-01-23",
+    "jours": 5,
+    "brut_pct": 1.034,
+    "net_pct": 0.934,
+    "gain": 93.37
+   },
+   {
+    "entree_jour": "2023-02-21",
+    "sortie_jour": "2023-03-02",
+    "jours": 9,
+    "brut_pct": -0.651,
+    "net_pct": -0.817,
+    "gain": -81.69
+   },
+   {
+    "entree_jour": "2023-04-26",
+    "sortie_jour": "2023-04-27",
+    "jours": 1,
+    "brut_pct": 1.299,
+    "net_pct": 1.264,
+    "gain": 126.44
+   },
+   {
+    "entree_jour": "2023-05-04",
+    "sortie_jour": "2023-05-05",
+    "jours": 1,
+    "brut_pct": 1.529,
+    "net_pct": 1.495,
+    "gain": 149.47
+   },
+   {
+    "entree_jour": "2023-05-12",
+    "sortie_jour": "2023-05-17",
+    "jours": 5,
+    "brut_pct": 0.314,
+    "net_pct": 0.214,
+    "gain": 21.39
+   },
+   {
+    "entree_jour": "2023-06-23",
+    "sortie_jour": "2023-06-27",
+    "jours": 4,
+    "brut_pct": 0.596,
+    "net_pct": 0.512,
+    "gain": 51.24
+   },
+   {
+    "entree_jour": "2023-07-06",
+    "sortie_jour": "2023-07-11",
+    "jours": 5,
+    "brut_pct": 0.918,
+    "net_pct": 0.818,
+    "gain": 81.83
+   },
+   {
+    "entree_jour": "2023-08-04",
+    "sortie_jour": "2023-08-07",
+    "jours": 3,
+    "brut_pct": 1.113,
+    "net_pct": 1.047,
+    "gain": 104.66
+   },
+   {
+    "entree_jour": "2023-08-15",
+    "sortie_jour": "2023-08-23",
+    "jours": 8,
+    "brut_pct": -1.392,
+    "net_pct": -1.54,
+    "gain": -154.04
+   },
+   {
+    "entree_jour": "2023-09-06",
+    "sortie_jour": "2023-09-11",
+    "jours": 5,
+    "brut_pct": 0.591,
+    "net_pct": 0.492,
+    "gain": 49.15
+   },
+   {
+    "entree_jour": "2023-09-21",
+    "sortie_jour": "2023-10-06",
+    "jours": 15,
+    "brut_pct": -1.834,
+    "net_pct": -2.098,
+    "gain": -209.77
+   },
+   {
+    "entree_jour": "2024-01-16",
+    "sortie_jour": "2024-01-18",
+    "jours": 2,
+    "brut_pct": 0.321,
+    "net_pct": 0.272,
+    "gain": 27.16
+   },
+   {
+    "entree_jour": "2024-03-05",
+    "sortie_jour": "2024-03-08",
+    "jours": 3,
+    "brut_pct": 0.441,
+    "net_pct": 0.376,
+    "gain": 37.56
+   },
+   {
+    "entree_jour": "2024-04-04",
+    "sortie_jour": "2024-04-09",
+    "jours": 5,
+    "brut_pct": 0.78,
+    "net_pct": 0.682,
+    "gain": 68.19
+   },
+   {
+    "entree_jour": "2024-04-10",
+    "sortie_jour": "2024-04-19",
+    "jours": 9,
+    "brut_pct": -1.069,
+    "net_pct": -1.233,
+    "gain": -123.28
+   },
+   {
+    "entree_jour": "2024-05-23",
+    "sortie_jour": "2024-05-31",
+    "jours": 8,
+    "brut_pct": -0.869,
+    "net_pct": -1.016,
+    "gain": -101.62
+   },
+   {
+    "entree_jour": "2024-06-13",
+    "sortie_jour": "2024-06-17",
+    "jours": 4,
+    "brut_pct": 0.565,
+    "net_pct": 0.484,
+    "gain": 48.36
+   },
+   {
+    "entree_jour": "2024-08-05",
+    "sortie_jour": "2024-08-08",
+    "jours": 3,
+    "brut_pct": 1.374,
+    "net_pct": 1.31,
+    "gain": 130.95
+   },
+   {
+    "entree_jour": "2024-09-05",
+    "sortie_jour": "2024-09-09",
+    "jours": 4,
+    "brut_pct": 0.04,
+    "net_pct": -0.04,
+    "gain": -4.05
+   },
+   {
+    "entree_jour": "2024-10-23",
+    "sortie_jour": "2024-11-05",
+    "jours": 13,
+    "brut_pct": -0.408,
+    "net_pct": -0.636,
+    "gain": -63.59
+   },
+   {
+    "entree_jour": "2024-11-18",
+    "sortie_jour": "2024-11-21",
+    "jours": 3,
+    "brut_pct": 1.125,
+    "net_pct": 1.062,
+    "gain": 106.2
+   },
+   {
+    "entree_jour": "2024-12-09",
+    "sortie_jour": "2024-12-23",
+    "jours": 14,
+    "brut_pct": -3.351,
+    "net_pct": -3.595,
+    "gain": -359.46
+   },
+   {
+    "entree_jour": "2024-12-30",
+    "sortie_jour": "2025-01-03",
+    "jours": 4,
+    "brut_pct": 0.294,
+    "net_pct": 0.214,
+    "gain": 21.45
+   },
+   {
+    "entree_jour": "2025-01-10",
+    "sortie_jour": "2025-01-13",
+    "jours": 3,
+    "brut_pct": 1.134,
+    "net_pct": 1.071,
+    "gain": 107.08
+   },
+   {
+    "entree_jour": "2025-02-20",
+    "sortie_jour": "2025-02-28",
+    "jours": 8,
+    "brut_pct": -1.011,
+    "net_pct": -1.156,
+    "gain": -115.6
+   },
+   {
+    "entree_jour": "2025-07-31",
+    "sortie_jour": "2025-08-06",
+    "jours": 6,
+    "brut_pct": 0.253,
+    "net_pct": 0.141,
+    "gain": 14.1
+   },
+   {
+    "entree_jour": "2025-09-02",
+    "sortie_jour": "2025-09-04",
+    "jours": 2,
+    "brut_pct": 0.935,
+    "net_pct": 0.889,
+    "gain": 88.91
+   },
+   {
+    "entree_jour": "2025-09-25",
+    "sortie_jour": "2025-09-26",
+    "jours": 1,
+    "brut_pct": 0.694,
+    "net_pct": 0.665,
+    "gain": 66.49
+   },
+   {
+    "entree_jour": "2025-10-10",
+    "sortie_jour": "2025-10-14",
+    "jours": 4,
+    "brut_pct": 1.665,
+    "net_pct": 1.586,
+    "gain": 158.59
+   },
+   {
+    "entree_jour": "2025-11-03",
+    "sortie_jour": "2025-11-10",
+    "jours": 7,
+    "brut_pct": 0.232,
+    "net_pct": 0.104,
+    "gain": 10.44
+   },
+   {
+    "entree_jour": "2025-11-17",
+    "sortie_jour": "2025-11-21",
+    "jours": 4,
+    "brut_pct": -0.748,
+    "net_pct": -0.827,
+    "gain": -82.66
+   },
+   {
+    "entree_jour": "2025-12-31",
+    "sortie_jour": "2026-01-02",
+    "jours": 2,
+    "brut_pct": 0.558,
+    "net_pct": 0.513,
+    "gain": 51.31
+   },
+   {
+    "entree_jour": "2026-01-20",
+    "sortie_jour": "2026-01-21",
+    "jours": 1,
+    "brut_pct": 1.295,
+    "net_pct": 1.267,
+    "gain": 126.66
+   },
+   {
+    "entree_jour": "2026-03-03",
+    "sortie_jour": "2026-03-17",
+    "jours": 14,
+    "brut_pct": -3.018,
+    "net_pct": -3.26,
+    "gain": -326.04
+   },
+   {
+    "entree_jour": "2026-04-29",
+    "sortie_jour": "2026-04-30",
+    "jours": 1,
+    "brut_pct": 2.148,
+    "net_pct": 2.119,
+    "gain": 211.89
+   },
+   {
+    "entree_jour": "2026-06-10",
+    "sortie_jour": "2026-06-11",
+    "jours": 1,
+    "brut_pct": 2.297,
+    "net_pct": 2.269,
+    "gain": 226.88
+   },
+   {
+    "entree_jour": "2026-07-17",
+    "sortie_jour": "2026-07-22",
+    "jours": 5,
+    "brut_pct": 0.202,
+    "net_pct": 0.108,
+    "gain": 10.8
+   },
+   {
+    "entree_jour": "2026-08-17",
+    "sortie_jour": "2026-08-24",
+    "jours": 7,
+    "brut_pct": -0.076,
+    "net_pct": -0.203,
+    "gain": -20.26
+   },
+   {
+    "entree_jour": "2026-09-01",
+    "sortie_jour": "2026-09-03",
+    "jours": 2,
+    "brut_pct": 1.723,
+    "net_pct": 1.678,
+    "gain": 167.83
+   },
+   {
+    "entree_jour": "2026-09-09",
+    "sortie_jour": "2026-09-21",
+    "jours": 12,
+    "brut_pct": -0.811,
+    "net_pct": -1.02,
+    "gain": -101.95
+   },
+   {
+    "entree_jour": "2026-09-24",
+    "sortie_jour": "2026-09-25",
+    "jours": 1,
+    "brut_pct": 1.08,
+    "net_pct": 1.052,
+    "gain": 105.18
+   },
+   {
+    "entree_jour": "2026-10-01",
+    "sortie_jour": "2026-10-05",
+    "jours": 4,
+    "brut_pct": 0.644,
+    "net_pct": 0.566,
+    "gain": 56.63
+   }
+  ]
+ },
+ "DAX": {
+  "trades": 101,
+  "trades_mois": 0.68,
+  "gain": -606,
+  "reussite": 0.67,
+  "gain_moyen_pct": -0.06,
+  "duree_moy_jours": 5.6,
+  "pire_baisse": -3264,
+  "mois_pos": "51/148 (mois sans trade = 0)",
+  "par_an": {
+   "2014": -979,
+   "2015": -1102,
+   "2016": 279,
+   "2017": 157,
+   "2018": -550,
+   "2019": 438,
+   "2020": -1306,
+   "2021": 252,
+   "2022": -27,
+   "2023": 445,
+   "2024": 630,
+   "2025": 1261,
+   "2026": -103
+  },
+  "acheter_garder": 15550,
+  "acheter_garder_par_an": {
+   "2014": -7,
+   "2015": 1009,
+   "2016": 1047,
+   "2017": 1097,
+   "2018": -1791,
+   "2019": 2252,
+   "2020": 414,
+   "2021": 1565,
+   "2022": -1363,
+   "2023": 1960,
+   "2024": 1805,
+   "2025": 2343,
+   "2026": 200
+  },
+  "mois": {
+   "2014-07": -35,
+   "2014-10": -829,
+   "2014-12": -115,
+   "2015-04": -34,
+   "2015-05": 188,
+   "2015-06": -358,
+   "2015-07": -105,
+   "2015-08": -793,
+   "2016-08": 221,
+   "2016-09": -31,
+   "2016-11": -41,
+   "2016-12": 130,
+   "2017-02": 163,
+   "2017-03": 83,
+   "2017-04": -67,
+   "2017-05": 82,
+   "2017-08": -14,
+   "2017-11": -90,
+   "2018-01": 32,
+   "2018-02": -449,
+   "2018-06": -133,
+   "2019-05": 112,
+   "2019-06": 256,
+   "2019-07": 10,
+   "2019-08": -275,
+   "2019-09": 43,
+   "2019-10": 124,
+   "2019-11": 48,
+   "2019-12": 120,
+   "2020-01": 231,
+   "2020-02": 28,
+   "2020-03": -1025,
+   "2020-08": -142,
+   "2020-09": 170,
+   "2020-11": -769,
+   "2020-12": 201,
+   "2021-01": 292,
+   "2021-02": 91,
+   "2021-04": 58,
+   "2021-07": -26,
+   "2021-08": 48,
+   "2021-09": 202,
+   "2021-10": 107,
+   "2021-12": -520,
+   "2022-01": -128,
+   "2022-12": 101,
+   "2023-01": 78,
+   "2023-03": 4,
+   "2023-05": 14,
+   "2023-06": 177,
+   "2023-07": 175,
+   "2023-08": -45,
+   "2023-09": 41,
+   "2024-01": 247,
+   "2024-04": 28,
+   "2024-05": 138,
+   "2024-06": 133,
+   "2024-07": 65,
+   "2024-08": 2,
+   "2024-09": -56,
+   "2024-10": 103,
+   "2024-11": 90,
+   "2024-12": -119,
+   "2025-01": 52,
+   "2025-02": 164,
+   "2025-03": 259,
+   "2025-04": 585,
+   "2025-06": -251,
+   "2025-08": 220,
+   "2025-09": 44,
+   "2025-10": 145,
+   "2025-11": -60,
+   "2025-12": 104,
+   "2026-01": -30,
+   "2026-02": 163,
+   "2026-03": -414,
+   "2026-06": -17,
+   "2026-07": 157,
+   "2026-08": -18,
+   "2026-09": 7,
+   "2026-10": 48
+  },
+  "debut": "2014-07-08",
+  "trades_detail": [
+   {
+    "entree_jour": "2014-07-08",
+    "sortie_jour": "2014-07-14",
+    "jours": 6,
+    "brut_pct": -0.201,
+    "net_pct": -0.347,
+    "gain": -34.69
+   },
+   {
+    "entree_jour": "2014-09-23",
+    "sortie_jour": "2014-10-17",
+    "jours": 24,
+    "brut_pct": -7.85,
+    "net_pct": -8.292,
+    "gain": -829.23
+   },
+   {
+    "entree_jour": "2014-12-10",
+    "sortie_jour": "2014-12-17",
+    "jours": 7,
+    "brut_pct": -0.989,
+    "net_pct": -1.152,
+    "gain": -115.17
+   },
+   {
+    "entree_jour": "2015-04-16",
+    "sortie_jour": "2015-04-21",
+    "jours": 5,
+    "brut_pct": -0.217,
+    "net_pct": -0.337,
+    "gain": -33.75
+   },
+   {
+    "entree_jour": "2015-04-30",
+    "sortie_jour": "2015-05-04",
+    "jours": 4,
+    "brut_pct": 1.987,
+    "net_pct": 1.881,
+    "gain": 188.06
+   },
+   {
+    "entree_jour": "2015-05-26",
+    "sortie_jour": "2015-06-10",
+    "jours": 15,
+    "brut_pct": -3.297,
+    "net_pct": -3.583,
+    "gain": -358.29
+   },
+   {
+    "entree_jour": "2015-07-06",
+    "sortie_jour": "2015-07-09",
+    "jours": 3,
+    "brut_pct": 0.839,
+    "net_pct": 0.748,
+    "gain": 74.78
+   },
+   {
+    "entree_jour": "2015-07-23",
+    "sortie_jour": "2015-07-29",
+    "jours": 6,
+    "brut_pct": -1.659,
+    "net_pct": -1.798,
+    "gain": -179.82
+   },
+   {
+    "entree_jour": "2015-08-12",
+    "sortie_jour": "2015-08-26",
+    "jours": 14,
+    "brut_pct": -7.662,
+    "net_pct": -7.934,
+    "gain": -793.41
+   },
+   {
+    "entree_jour": "2016-08-02",
+    "sortie_jour": "2016-08-05",
+    "jours": 3,
+    "brut_pct": 2.203,
+    "net_pct": 2.108,
+    "gain": 210.8
+   },
+   {
+    "entree_jour": "2016-08-19",
+    "sortie_jour": "2016-08-23",
+    "jours": 4,
+    "brut_pct": 0.213,
+    "net_pct": 0.103,
+    "gain": 10.35
+   },
+   {
+    "entree_jour": "2016-09-09",
+    "sortie_jour": "2016-09-15",
+    "jours": 6,
+    "brut_pct": -0.167,
+    "net_pct": -0.309,
+    "gain": -30.93
+   },
+   {
+    "entree_jour": "2016-11-01",
+    "sortie_jour": "2016-11-07",
+    "jours": 6,
+    "brut_pct": -0.266,
+    "net_pct": -0.408,
+    "gain": -40.8
+   },
+   {
+    "entree_jour": "2016-11-28",
+    "sortie_jour": "2016-12-05",
+    "jours": 7,
+    "brut_pct": 1.459,
+    "net_pct": 1.301,
+    "gain": 130.07
+   },
+   {
+    "entree_jour": "2017-01-31",
+    "sortie_jour": "2017-02-03",
+    "jours": 3,
+    "brut_pct": 0.652,
+    "net_pct": 0.563,
+    "gain": 56.27
+   },
+   {
+    "entree_jour": "2017-02-06",
+    "sortie_jour": "2017-02-09",
+    "jours": 3,
+    "brut_pct": 1.156,
+    "net_pct": 1.067,
+    "gain": 106.66
+   },
+   {
+    "entree_jour": "2017-03-21",
+    "sortie_jour": "2017-03-23",
+    "jours": 2,
+    "brut_pct": 0.901,
+    "net_pct": 0.83,
+    "gain": 82.97
+   },
+   {
+    "entree_jour": "2017-04-12",
+    "sortie_jour": "2017-04-21",
+    "jours": 9,
+    "brut_pct": -0.484,
+    "net_pct": -0.669,
+    "gain": -66.95
+   },
+   {
+    "entree_jour": "2017-05-17",
+    "sortie_jour": "2017-05-23",
+    "jours": 6,
+    "brut_pct": 0.956,
+    "net_pct": 0.821,
+    "gain": 82.12
+   },
+   {
+    "entree_jour": "2017-07-18",
+    "sortie_jour": "2017-08-01",
+    "jours": 14,
+    "brut_pct": -1.49,
+    "net_pct": -1.757,
+    "gain": -175.73
+   },
+   {
+    "entree_jour": "2017-08-10",
+    "sortie_jour": "2017-08-14",
+    "jours": 4,
+    "brut_pct": 1.721,
+    "net_pct": 1.617,
+    "gain": 161.72
+   },
+   {
+    "entree_jour": "2017-11-09",
+    "sortie_jour": "2017-11-16",
+    "jours": 7,
+    "brut_pct": -0.753,
+    "net_pct": -0.902,
+    "gain": -90.25
+   },
+   {
+    "entree_jour": "2017-12-28",
+    "sortie_jour": "2018-01-03",
+    "jours": 6,
+    "brut_pct": 0.185,
+    "net_pct": 0.051,
+    "gain": 5.07
+   },
+   {
+    "entree_jour": "2018-01-15",
+    "sortie_jour": "2018-01-17",
+    "jours": 2,
+    "brut_pct": 0.335,
+    "net_pct": 0.267,
+    "gain": 26.73
+   },
+   {
+    "entree_jour": "2018-02-01",
+    "sortie_jour": "2018-02-14",
+    "jours": 13,
+    "brut_pct": -4.241,
+    "net_pct": -4.49,
+    "gain": -448.99
+   },
+   {
+    "entree_jour": "2018-05-24",
+    "sortie_jour": "2018-06-01",
+    "jours": 8,
+    "brut_pct": -1.164,
+    "net_pct": -1.331,
+    "gain": -133.15
+   },
+   {
+    "entree_jour": "2019-05-07",
+    "sortie_jour": "2019-05-10",
+    "jours": 3,
+    "brut_pct": 1.211,
+    "net_pct": 1.124,
+    "gain": 112.37
+   },
+   {
+    "entree_jour": "2019-05-30",
+    "sortie_jour": "2019-06-04",
+    "jours": 5,
+    "brut_pct": 1.723,
+    "net_pct": 1.602,
+    "gain": 160.2
+   },
+   {
+    "entree_jour": "2019-06-25",
+    "sortie_jour": "2019-06-27",
+    "jours": 2,
+    "brut_pct": 1.034,
+    "net_pct": 0.963,
+    "gain": 96.29
+   },
+   {
+    "entree_jour": "2019-07-09",
+    "sortie_jour": "2019-07-15",
+    "jours": 6,
+    "brut_pct": -0.336,
+    "net_pct": -0.471,
+    "gain": -47.13
+   },
+   {
+    "entree_jour": "2019-07-19",
+    "sortie_jour": "2019-07-22",
+    "jours": 3,
+    "brut_pct": 0.654,
+    "net_pct": 0.567,
+    "gain": 56.73
+   },
+   {
+    "entree_jour": "2019-07-30",
+    "sortie_jour": "2019-08-08",
+    "jours": 9,
+    "brut_pct": -2.568,
+    "net_pct": -2.754,
+    "gain": -275.36
+   },
+   {
+    "entree_jour": "2019-09-24",
+    "sortie_jour": "2019-09-27",
+    "jours": 3,
+    "brut_pct": 0.513,
+    "net_pct": 0.426,
+    "gain": 42.59
+   },
+   {
+    "entree_jour": "2019-10-02",
+    "sortie_jour": "2019-10-07",
+    "jours": 5,
+    "brut_pct": 1.357,
+    "net_pct": 1.237,
+    "gain": 123.67
+   },
+   {
+    "entree_jour": "2019-11-20",
+    "sortie_jour": "2019-11-22",
+    "jours": 2,
+    "brut_pct": 0.553,
+    "net_pct": 0.485,
+    "gain": 48.49
+   },
+   {
+    "entree_jour": "2019-12-02",
+    "sortie_jour": "2019-12-04",
+    "jours": 2,
+    "brut_pct": 1.272,
+    "net_pct": 1.204,
+    "gain": 120.38
+   },
+   {
+    "entree_jour": "2019-12-30",
+    "sortie_jour": "2020-01-02",
+    "jours": 3,
+    "brut_pct": 2.393,
+    "net_pct": 2.308,
+    "gain": 230.82
+   },
+   {
+    "entree_jour": "2020-01-27",
+    "sortie_jour": "2020-02-04",
+    "jours": 8,
+    "brut_pct": 0.449,
+    "net_pct": 0.283,
+    "gain": 28.29
+   },
+   {
+    "entree_jour": "2020-02-21",
+    "sortie_jour": "2020-03-04",
+    "jours": 12,
+    "brut_pct": -10.02,
+    "net_pct": -10.251,
+    "gain": -1025.09
+   },
+   {
+    "entree_jour": "2020-07-24",
+    "sortie_jour": "2020-08-03",
+    "jours": 10,
+    "brut_pct": -1.222,
+    "net_pct": -1.422,
+    "gain": -142.18
+   },
+   {
+    "entree_jour": "2020-09-21",
+    "sortie_jour": "2020-09-28",
+    "jours": 7,
+    "brut_pct": 1.852,
+    "net_pct": 1.7,
+    "gain": 170.04
+   },
+   {
+    "entree_jour": "2020-10-15",
+    "sortie_jour": "2020-11-02",
+    "jours": 18,
+    "brut_pct": -7.355,
+    "net_pct": -7.687,
+    "gain": -768.72
+   },
+   {
+    "entree_jour": "2020-12-11",
+    "sortie_jour": "2020-12-15",
+    "jours": 4,
+    "brut_pct": 2.109,
+    "net_pct": 2.008,
+    "gain": 200.82
+   },
+   {
+    "entree_jour": "2021-01-15",
+    "sortie_jour": "2021-01-20",
+    "jours": 5,
+    "brut_pct": 1.753,
+    "net_pct": 1.637,
+    "gain": 163.74
+   },
+   {
+    "entree_jour": "2021-01-25",
+    "sortie_jour": "2021-01-26",
+    "jours": 1,
+    "brut_pct": 1.334,
+    "net_pct": 1.284,
+    "gain": 128.39
+   },
+   {
+    "entree_jour": "2021-02-18",
+    "sortie_jour": "2021-02-24",
+    "jours": 6,
+    "brut_pct": 1.046,
+    "net_pct": 0.914,
+    "gain": 91.43
+   },
+   {
+    "entree_jour": "2021-04-14",
+    "sortie_jour": "2021-04-15",
+    "jours": 1,
+    "brut_pct": 0.626,
+    "net_pct": 0.579,
+    "gain": 57.94
+   },
+   {
+    "entree_jour": "2021-07-16",
+    "sortie_jour": "2021-07-21",
+    "jours": 5,
+    "brut_pct": -0.146,
+    "net_pct": -0.258,
+    "gain": -25.78
+   },
+   {
+    "entree_jour": "2021-08-19",
+    "sortie_jour": "2021-08-23",
+    "jours": 4,
+    "brut_pct": 0.576,
+    "net_pct": 0.481,
+    "gain": 48.09
+   },
+   {
+    "entree_jour": "2021-09-03",
+    "sortie_jour": "2021-09-06",
+    "jours": 3,
+    "brut_pct": 0.878,
+    "net_pct": 0.8,
+    "gain": 79.99
+   },
+   {
+    "entree_jour": "2021-09-09",
+    "sortie_jour": "2021-09-13",
+    "jours": 4,
+    "brut_pct": 1.144,
+    "net_pct": 1.048,
+    "gain": 104.82
+   },
+   {
+    "entree_jour": "2021-09-17",
+    "sortie_jour": "2021-09-22",
+    "jours": 5,
+    "brut_pct": 0.284,
+    "net_pct": 0.172,
+    "gain": 17.17
+   },
+   {
+    "entree_jour": "2021-10-04",
+    "sortie_jour": "2021-10-07",
+    "jours": 3,
+    "brut_pct": 1.151,
+    "net_pct": 1.071,
+    "gain": 107.1
+   },
+   {
+    "entree_jour": "2021-11-22",
+    "sortie_jour": "2021-12-02",
+    "jours": 10,
+    "brut_pct": -5.011,
+    "net_pct": -5.204,
+    "gain": -520.41
+   },
+   {
+    "entree_jour": "2022-01-10",
+    "sortie_jour": "2022-01-12",
+    "jours": 2,
+    "brut_pct": 0.826,
+    "net_pct": 0.764,
+    "gain": 76.41
+   },
+   {
+    "entree_jour": "2022-01-18",
+    "sortie_jour": "2022-01-26",
+    "jours": 8,
+    "brut_pct": -1.887,
+    "net_pct": -2.047,
+    "gain": -204.74
+   },
+   {
+    "entree_jour": "2022-12-08",
+    "sortie_jour": "2022-12-12",
+    "jours": 4,
+    "brut_pct": 0.567,
+    "net_pct": 0.469,
+    "gain": 46.87
+   },
+   {
+    "entree_jour": "2022-12-15",
+    "sortie_jour": "2022-12-21",
+    "jours": 6,
+    "brut_pct": 0.676,
+    "net_pct": 0.544,
+    "gain": 54.44
+   },
+   {
+    "entree_jour": "2023-01-19",
+    "sortie_jour": "2023-01-23",
+    "jours": 4,
+    "brut_pct": 0.88,
+    "net_pct": 0.784,
+    "gain": 78.35
+   },
+   {
+    "entree_jour": "2023-03-13",
+    "sortie_jour": "2023-03-20",
+    "jours": 7,
+    "brut_pct": 0.185,
+    "net_pct": 0.039,
+    "gain": 3.89
+   },
+   {
+    "entree_jour": "2023-05-24",
+    "sortie_jour": "2023-05-30",
+    "jours": 6,
+    "brut_pct": 0.271,
+    "net_pct": 0.143,
+    "gain": 14.34
+   },
+   {
+    "entree_jour": "2023-05-31",
+    "sortie_jour": "2023-06-02",
+    "jours": 2,
+    "brut_pct": 2.092,
+    "net_pct": 2.03,
+    "gain": 203.0
+   },
+   {
+    "entree_jour": "2023-06-21",
+    "sortie_jour": "2023-06-28",
+    "jours": 7,
+    "brut_pct": -0.118,
+    "net_pct": -0.261,
+    "gain": -26.13
+   },
+   {
+    "entree_jour": "2023-07-06",
+    "sortie_jour": "2023-07-11",
+    "jours": 5,
+    "brut_pct": 1.864,
+    "net_pct": 1.752,
+    "gain": 175.21
+   },
+   {
+    "entree_jour": "2023-08-02",
+    "sortie_jour": "2023-08-09",
+    "jours": 7,
+    "brut_pct": -0.701,
+    "net_pct": -0.844,
+    "gain": -84.44
+   },
+   {
+    "entree_jour": "2023-08-17",
+    "sortie_jour": "2023-08-22",
+    "jours": 5,
+    "brut_pct": 0.508,
+    "net_pct": 0.396,
+    "gain": 39.61
+   },
+   {
+    "entree_jour": "2023-09-06",
+    "sortie_jour": "2023-09-11",
+    "jours": 5,
+    "brut_pct": 0.519,
+    "net_pct": 0.407,
+    "gain": 40.72
+   },
+   {
+    "entree_jour": "2024-01-03",
+    "sortie_jour": "2024-01-08",
+    "jours": 5,
+    "brut_pct": 1.379,
+    "net_pct": 1.269,
+    "gain": 126.92
+   },
+   {
+    "entree_jour": "2024-01-17",
+    "sortie_jour": "2024-01-18",
+    "jours": 1,
+    "brut_pct": 1.247,
+    "net_pct": 1.202,
+    "gain": 120.22
+   },
+   {
+    "entree_jour": "2024-04-12",
+    "sortie_jour": "2024-04-22",
+    "jours": 10,
+    "brut_pct": 0.469,
+    "net_pct": 0.278,
+    "gain": 27.84
+   },
+   {
+    "entree_jour": "2024-05-23",
+    "sortie_jour": "2024-05-24",
+    "jours": 1,
+    "brut_pct": 0.572,
+    "net_pct": 0.531,
+    "gain": 53.06
+   },
+   {
+    "entree_jour": "2024-05-29",
+    "sortie_jour": "2024-05-31",
+    "jours": 2,
+    "brut_pct": 0.903,
+    "net_pct": 0.845,
+    "gain": 84.48
+   },
+   {
+    "entree_jour": "2024-06-11",
+    "sortie_jour": "2024-06-12",
+    "jours": 1,
+    "brut_pct": 1.373,
+    "net_pct": 1.332,
+    "gain": 133.17
+   },
+   {
+    "entree_jour": "2024-07-18",
+    "sortie_jour": "2024-07-22",
+    "jours": 4,
+    "brut_pct": 0.738,
+    "net_pct": 0.647,
+    "gain": 64.72
+   },
+   {
+    "entree_jour": "2024-08-02",
+    "sortie_jour": "2024-08-08",
+    "jours": 6,
+    "brut_pct": 0.14,
+    "net_pct": 0.015,
+    "gain": 1.55
+   },
+   {
+    "entree_jour": "2024-09-04",
+    "sortie_jour": "2024-09-11",
+    "jours": 7,
+    "brut_pct": -0.421,
+    "net_pct": -0.561,
+    "gain": -56.11
+   },
+   {
+    "entree_jour": "2024-10-03",
+    "sortie_jour": "2024-10-04",
+    "jours": 1,
+    "brut_pct": 1.075,
+    "net_pct": 1.034,
+    "gain": 103.43
+   },
+   {
+    "entree_jour": "2024-10-31",
+    "sortie_jour": "2024-11-05",
+    "jours": 5,
+    "brut_pct": 1.009,
+    "net_pct": 0.902,
+    "gain": 90.25
+   },
+   {
+    "entree_jour": "2024-12-17",
+    "sortie_jour": "2024-12-24",
+    "jours": 7,
+    "brut_pct": -1.056,
+    "net_pct": -1.194,
+    "gain": -119.35
+   },
+   {
+    "entree_jour": "2024-12-30",
+    "sortie_jour": "2025-01-02",
+    "jours": 3,
+    "brut_pct": 0.59,
+    "net_pct": 0.518,
+    "gain": 51.77
+   },
+   {
+    "entree_jour": "2025-02-21",
+    "sortie_jour": "2025-02-25",
+    "jours": 4,
+    "brut_pct": 1.722,
+    "net_pct": 1.636,
+    "gain": 163.55
+   },
+   {
+    "entree_jour": "2025-03-11",
+    "sortie_jour": "2025-03-14",
+    "jours": 3,
+    "brut_pct": 2.661,
+    "net_pct": 2.591,
+    "gain": 259.11
+   },
+   {
+    "entree_jour": "2025-03-28",
+    "sortie_jour": "2025-04-01",
+    "jours": 4,
+    "brut_pct": 0.311,
+    "net_pct": 0.225,
+    "gain": 22.5
+   },
+   {
+    "entree_jour": "2025-04-04",
+    "sortie_jour": "2025-04-09",
+    "jours": 5,
+    "brut_pct": 5.728,
+    "net_pct": 5.623,
+    "gain": 562.33
+   },
+   {
+    "entree_jour": "2025-06-11",
+    "sortie_jour": "2025-06-20",
+    "jours": 9,
+    "brut_pct": -2.347,
+    "net_pct": -2.514,
+    "gain": -251.39
+   },
+   {
+    "entree_jour": "2025-08-01",
+    "sortie_jour": "2025-08-06",
+    "jours": 5,
+    "brut_pct": 2.299,
+    "net_pct": 2.197,
+    "gain": 219.7
+   },
+   {
+    "entree_jour": "2025-08-27",
+    "sortie_jour": "2025-09-04",
+    "jours": 8,
+    "brut_pct": -0.745,
+    "net_pct": -0.896,
+    "gain": -89.55
+   },
+   {
+    "entree_jour": "2025-09-16",
+    "sortie_jour": "2025-09-18",
+    "jours": 2,
+    "brut_pct": 1.389,
+    "net_pct": 1.336,
+    "gain": 133.65
+   },
+   {
+    "entree_jour": "2025-10-17",
+    "sortie_jour": "2025-10-20",
+    "jours": 3,
+    "brut_pct": 1.52,
+    "net_pct": 1.452,
+    "gain": 145.17
+   },
+   {
+    "entree_jour": "2025-10-31",
+    "sortie_jour": "2025-11-05",
+    "jours": 5,
+    "brut_pct": 0.624,
+    "net_pct": 0.523,
+    "gain": 52.29
+   },
+   {
+    "entree_jour": "2025-11-17",
+    "sortie_jour": "2025-11-24",
+    "jours": 7,
+    "brut_pct": -0.986,
+    "net_pct": -1.121,
+    "gain": -112.11
+   },
+   {
+    "entree_jour": "2025-12-17",
+    "sortie_jour": "2025-12-18",
+    "jours": 1,
+    "brut_pct": 1.072,
+    "net_pct": 1.036,
+    "gain": 103.59
+   },
+   {
+    "entree_jour": "2026-01-19",
+    "sortie_jour": "2026-01-23",
+    "jours": 4,
+    "brut_pct": -0.217,
+    "net_pct": -0.301,
+    "gain": -30.12
+   },
+   {
+    "entree_jour": "2026-01-29",
+    "sortie_jour": "2026-02-02",
+    "jours": 4,
+    "brut_pct": 1.718,
+    "net_pct": 1.633,
+    "gain": 163.31
+   },
+   {
+    "entree_jour": "2026-03-02",
+    "sortie_jour": "2026-03-16",
+    "jours": 14,
+    "brut_pct": -3.891,
+    "net_pct": -4.14,
+    "gain": -413.96
+   },
+   {
+    "entree_jour": "2026-06-03",
+    "sortie_jour": "2026-06-11",
+    "jours": 8,
+    "brut_pct": -0.016,
+    "net_pct": -0.166,
+    "gain": -16.63
+   },
+   {
+    "entree_jour": "2026-07-08",
+    "sortie_jour": "2026-07-14",
+    "jours": 6,
+    "brut_pct": 0.285,
+    "net_pct": 0.168,
+    "gain": 16.76
+   },
+   {
+    "entree_jour": "2026-07-20",
+    "sortie_jour": "2026-07-21",
+    "jours": 1,
+    "brut_pct": 1.441,
+    "net_pct": 1.406,
+    "gain": 140.64
+   },
+   {
+    "entree_jour": "2026-08-18",
+    "sortie_jour": "2026-08-24",
+    "jours": 6,
+    "brut_pct": -0.062,
+    "net_pct": -0.179,
+    "gain": -17.86
+   },
+   {
+    "entree_jour": "2026-09-09",
+    "sortie_jour": "2026-09-16",
+    "jours": 7,
+    "brut_pct": 0.202,
+    "net_pct": 0.069,
+    "gain": 6.94
+   },
+   {
+    "entree_jour": "2026-09-30",
+    "sortie_jour": "2026-10-05",
+    "jours": 5,
+    "brut_pct": 0.576,
+    "net_pct": 0.475,
+    "gain": 47.52
+   }
+  ]
+ }
+}
