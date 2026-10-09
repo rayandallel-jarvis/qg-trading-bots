@@ -122,6 +122,13 @@ def perso(m, i, p):
     sens = int(st["tendance"][ns - 1])
     if sens == 0:
         return _non("pas de tendance")
+    if p.get("sens_autorise") and sens != p["sens_autorise"]:
+        return _non("sens non autorisé")
+    if p.get("filtre_tendance"):
+        ut_f = m.ut(p["filtre_tendance"], p.get("k_filtre", 2))
+        nf = ut_f["n"][i]
+        if nf < 5 or int(ut_f["st"]["tendance"][nf - 1]) != sens:
+            return _non("contre la tendance supérieure")
     k = int(np.searchsorted(us["bos_m"], ns - 1, side="right")) - 1
     while k >= 0 and st["bos"][k][1] != sens:
         k -= 1
@@ -176,10 +183,10 @@ def perso(m, i, p):
     xi = touche + int(np.argmax(h3[seg]) if sens == -1 else np.argmin(l3[seg]))
     extreme = h3[xi] if sens == -1 else l3[xi]
     idx_sw = np.where(u3["st"]["sl" if sens == -1 else "sh"])[0]
-    sw = [x for x in idx_sw if x < xi and x + u3["k"] <= b]
-    if not sw:
+    q = int(np.searchsorted(idx_sw, min(xi - 1, b - u3["k"]), side="right")) - 1   # dernier swing confirmé avant l'extrême
+    if q < 0:
         return _non("pas de swing 3 min")
-    niveau = (l3 if sens == -1 else h3)[sw[-1]]
+    niveau = (l3 if sens == -1 else h3)[idx_sw[q]]
     mss = c3[b] < niveau <= c3[b - 1] if sens == -1 else c3[b] > niveau >= c3[b - 1]
     if not mss:
         return _non("pas de MSS 3 min")
