@@ -213,6 +213,7 @@ class Marche:
             self._ut = {}
         if cle in self._ut:
             return self._ut[cle]
+        regle, _, decal_force = regle.partition("@")      # ex. "4h@1h" : bougies 4 h décalées d'1 h (heure serveur UTC+3)
         agg = {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}
         if regle == "1D":
             g = self.df.groupby(self.session).agg(agg)
@@ -225,7 +226,7 @@ class Marche:
                 fin = pd.DatetimeIndex([pd.Timestamp(x, tz="UTC") + pd.Timedelta(days=1)
                                         for x in g.index]).to_numpy()
         else:
-            decal = "30min" if self.type == "action" and regle.endswith("h") else None
+            decal = decal_force or ("30min" if self.type == "action" and regle.endswith("h") else None)
             d = self.df.resample(regle, label="left", closed="left", offset=decal).agg(agg).dropna()
             fin = (d.index + pd.Timedelta(regle)).to_numpy()
             if self.type == "action":     # une bougie ne dépasse pas la clôture de 16 h à New York

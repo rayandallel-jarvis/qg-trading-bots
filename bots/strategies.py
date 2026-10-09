@@ -284,6 +284,141 @@ def perso(m, i, p):
     return sig
 
 
+# ---------------------------------------------------------------- 2 bis. OB dans un OB (modèle de Rayan, 9 oct. 21 h)
+# 1. Tendance 4 h : dernier BOS dans le sens de la tendance 4 h (clôtures).
+# 2. Gros OB 4 h : dernière bougie opposée de la jambe qui a cassé (mèche à mèche).
+# 3. Retour du prix dans l'OB 4 h (une mèche au-delà est permise tant qu'aucune bougie 4 h ne clôture au-delà).
+# 4. Reprise 1 h : BOS 1 h dans le même sens, après le contact avec l'OB 4 h.
+# 5. Petit OB 1 h : dernière bougie opposée de la jambe 1 h qui a cassé.
+# 6. Déclencheur 1 h : une bougie touche l'OB 1 h et clôture sans le casser (mèche), puis une bougie verte
+#    (rouge pour une vente) clôture → entrée au marché à l'ouverture suivante.
+# 7. Stop : au-delà du creux (sommet) du retour, marge 0,1 ATR 1 h.
+# 8. Objectif : la liquidité la plus proche (swing 1 h confirmé) à au moins r_min, ou un R fixe (r_fixe).
+def _ob_de_jambe(u, sens, mb, i0):
+    O, C = u["o"], u["c"]
+    opp = (C > O) if sens == -1 else (C < O)
+    if i0 < 0:
+        return None
+    return next((x for x in range(mb, max(i0, 0) - 1, -1) if opp[x]), None)
+
+
+def ob_imbrique(m, i, p):
+    u1 = m.ut(p.get("ut", "1h"), p.get("k_1h", 2))
+    if not (i > 0 and u1["n"][i] > u1["n"][i - 1]):
+        return None
+    n1 = u1["n"][i]
+    b = n1 - 1                                       # dernière bougie 1 h terminée
+    if b < 30:
+        return _non("historique")
+    u4 = m.ut(p.get("ut_htf", "4h@1h"), p.get("k_4h", 2))
+    n4 = u4["n"][i]
+    if n4 < 30:
+        return _non("historique 4 h")
+    st4 = u4["st"]
+    sens = int(st4["tendance"][n4 - 1])
+    if sens == 0:
+        return _non("pas de tendance 4 h")
+    if p.get("sens_autorise") and sens != p["sens_autorise"]:
+        return _non("sens non autorisé")
+    # 1-2. dernier BOS 4 h dans le sens, et son OB
+    k4 = int(np.searchsorted(u4["bos_m"], n4 - 1, side="right")) - 1
+    while k4 >= 0 and st4["bos"][k4][1] != sens:
+        k4 -= 1
+    if k4 < 0:
+        return _non("pas de BOS 4 h")
+    mb4, _, _, i04 = st4["bos"][k4]
+    if n4 - 1 - mb4 > p.get("age_max_4h", 60):
+        return _non("BOS 4 h trop ancien")
+    j4 = _ob_de_jambe(u4, sens, mb4, i04)
+    if j4 is None:
+        return _non("pas d'OB 4 h")
+    H4, L4, C4 = u4["h"], u4["l"], u4["c"]
+    ob4_h, ob4_l = H4[j4], L4[j4]
+    loin4 = ob4_l if sens == 1 else ob4_h
+    apres4 = C4[mb4 + 1:n4]
+    if len(apres4) and ((apres4 < loin4).any() if sens == 1 else (apres4 > loin4).any()):
+        return _non("OB 4 h invalidé")
+    # 3. contact avec l'OB 4 h après l'extrême de la jambe
+    ext4 = mb4 + (int(np.argmax(H4[mb4:n4])) if sens == 1 else int(np.argmin(L4[mb4:n4])))
+    contact = [x for x in range(ext4 + 1, n4) if (L4[x] <= ob4_h if sens == 1 else H4[x] >= ob4_l)]
+    if not contact:
+        return _non("OB 4 h pas touché")
+    t_contact = u4["d"].index[contact[0]]
+    # 4. BOS 1 h dans le sens, après le contact
+    st1 = u1["st"]
+    if int(st1["tendance"][b]) != sens:
+        return _non("1 h pas encore retournée")
+    k1 = int(np.searchsorted(u1["bos_m"], b, side="right")) - 1
+    while k1 >= 0 and st1["bos"][k1][1] != sens:
+        k1 -= 1
+    if k1 < 0:
+        return _non("pas de BOS 1 h")
+    mb1, _, _, i01 = st1["bos"][k1]
+    D1 = u1["d"].index
+    if D1[mb1] < t_contact:
+        return _non("BOS 1 h avant le contact 4 h")
+    if b - mb1 > p.get("age_max_1h", 24):
+        return _non("BOS 1 h trop ancien")
+    # 5. OB 1 h
+    j1 = _ob_de_jambe(u1, sens, mb1, i01)
+    if j1 is None:
+        return _non("pas d'OB 1 h")
+    H1, L1, O1, C1 = u1["h"], u1["l"], u1["o"], u1["c"]
+    ob1_h, ob1_l = H1[j1], L1[j1]
+    loin1 = ob1_l if sens == 1 else ob1_h
+    pres1 = ob1_h if sens == 1 else ob1_l
+    ext1 = mb1 + (int(np.argmax(H1[mb1:b + 1])) if sens == 1 else int(np.argmin(L1[mb1:b + 1])))
+    if ext1 >= b - 1:
+        return _non("jambe 1 h en cours")
+    apres1 = C1[mb1 + 1:b + 1]
+    if len(apres1) and ((apres1 < loin1).any() if sens == 1 else (apres1 > loin1).any()):
+        return _non("OB 1 h invalidé")
+    touches = [x for x in range(ext1 + 1, b + 1) if (L1[x] <= pres1 if sens == 1 else H1[x] >= pres1)]
+    if not touches:
+        return _non("OB 1 h pas touché")
+    ft = touches[0]
+    if ft < b - p.get("fenetre_declencheur", 3):
+        return _non("déclencheur trop tardif")
+    # 6. mèche puis bougie de confirmation
+    meche = b - 1
+    if not (L1[meche] <= pres1 if sens == 1 else H1[meche] >= pres1):
+        return _non("pas de mèche dans l'OB")
+    if not ((C1[b] > O1[b]) if sens == 1 else (C1[b] < O1[b])):
+        return _non("pas de bougie de confirmation")
+    cle_ob = (COURANT, "imbrique", str(D1[j1]))
+    if cle_ob in OB_UTILISES:
+        return _non("OB 1 h déjà tradé")
+    entree = C1[b]
+    extreme = L1[ft:b + 1].min() if sens == 1 else H1[ft:b + 1].max()
+    stop = extreme - sens * p.get("marge_stop_atr", 0.1) * u1["atr"][b]
+    risque = (entree - stop) * sens
+    if risque <= 0:
+        return _non("risque nul")
+    # 8. objectif
+    if p.get("r_fixe"):
+        cible = entree + sens * p["r_fixe"] * risque
+        r_min = p["r_fixe"]
+    else:
+        cle = "sh" if sens == 1 else "sl"
+        niv = [(H1 if sens == 1 else L1)[x] for x in np.where(st1[cle])[0] if x + u1["k"] <= b]
+        niv = sorted([x for x in niv if (x - entree) * sens / risque >= p.get("r_min", 1.5)],
+                     key=lambda x: (x - entree) * sens)
+        if not niv:
+            return _non("pas de liquidité à r_min")
+        cible = niv[0]
+        r_min = p.get("r_min", 1.5)
+    DIAG[COURANT]["signal"] += 1
+    sig = _signal(sens, entree, stop, cible, "ob_imbrique", r_min - 1e-9, "marche", 0)
+    if sig:
+        OB_UTILISES.add(cle_ob)
+        sig.update({"etoiles": 0, "ut": "1h", "zone": [round(float(ob1_l), 4), round(float(ob1_h), 4)],
+                    "dessin": {"ob4_t": str(u4["d"].index[j4]), "ob4": [float(ob4_l), float(ob4_h)],
+                               "bos4_t": str(u4["d"].index[mb4]), "contact4_t": str(t_contact),
+                               "ob1_t": str(D1[j1]), "ob1": [float(ob1_l), float(ob1_h)],
+                               "bos1_t": str(D1[mb1]), "meche_t": str(D1[meche]), "conf_t": str(D1[b])}})
+    return sig
+
+
 # ---------------------------------------------------------------- 3. Support / résistance
 def _zones(prix, tol, touches_min):
     zones, groupe = [], []
@@ -416,9 +551,9 @@ def vp(m, i, p):
     return None
 
 
-FONCTIONS = {"ict": ict, "perso": perso, "sr": sr, "vp": vp}
+FONCTIONS = {"ict": ict, "perso": perso, "ob_imbrique": ob_imbrique, "sr": sr, "vp": vp}
 NOMS = {"ict": "ICT strict", "perso_1h": "Perso 1 h", "perso_2h": "Perso 2 h", "sr": "Support / résistance",
-        "vp": "Volume Profile"}
+        "vp": "Volume Profile", "imbrique": "OB dans un OB"}
 
 
 def fonction(nom, p):

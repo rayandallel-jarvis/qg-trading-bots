@@ -201,6 +201,19 @@ strategies:
     marge_stop_atr: 0.1
     attente_mss_bougies3: 80
     age_max_bos: 36
+  imbrique:                        # « OB dans un OB » : OB 4 h → BOS 1 h → OB 1 h → mèche + bougie de confirmation (Rayan, 9 oct.)
+    fonction: ob_imbrique
+    actif: false
+    max_trades_jour: 2
+    ut: 1h
+    ut_htf: "4h@1h"                # bougies 4 h alignées sur l'heure serveur de Rayan (UTC+3)
+    k_1h: 2
+    k_4h: 2
+    age_max_4h: 60                 # BOS 4 h de moins de 60 bougies 4 h (~2 semaines)
+    age_max_1h: 24
+    fenetre_declencheur: 3         # le déclencheur doit venir dans les 3 bougies 1 h après le 1er contact
+    marge_stop_atr: 0.1
+    r_min: 1.5                     # objectif : liquidité 1 h la plus proche à ≥ 1,5R
   sr:
     actif: true
     max_trades_jour: 3

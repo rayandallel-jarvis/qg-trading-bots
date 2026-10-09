@@ -1,0 +1,297 @@
+{
+ "modele": {
+  "ensemble": {
+   "trades": 17,
+   "gain": 36,
+   "r_trade": 0.042,
+   "brut_trade": 0.111,
+   "reussite": 0.41,
+   "r_prevu_moyen": 1.88,
+   "pire_baisse": -215,
+   "mois_pos": "4/7",
+   "mois": {
+    "2026-01": 115,
+    "2026-02": -112,
+    "2026-03": 23,
+    "2026-04": 68,
+    "2026-06": -52,
+    "2026-08": 50,
+    "2026-09": -56
+   }
+  },
+  "par_actif": {
+   "NAS100": {
+    "trades": 5,
+    "gain": -10,
+    "r_trade": -0.039,
+    "brut_trade": 0.026,
+    "reussite": 0.4,
+    "r_prevu_moyen": 1.81,
+    "pire_baisse": -109,
+    "mois_pos": "2/3",
+    "mois": {
+     "2026-01": 21,
+     "2026-02": -53,
+     "2026-03": 23
+    }
+   },
+   "US500": {
+    "trades": 7,
+    "gain": 167,
+    "r_trade": 0.478,
+    "brut_trade": 0.557,
+    "reussite": 0.57,
+    "r_prevu_moyen": 1.69,
+    "pire_baisse": -111,
+    "mois_pos": "2/4",
+    "mois": {
+     "2026-01": 147,
+     "2026-02": -59,
+     "2026-04": -24,
+     "2026-08": 103
+    }
+   },
+   "OR": {
+    "trades": 5,
+    "gain": -122,
+    "r_trade": -0.486,
+    "brut_trade": -0.429,
+    "reussite": 0.2,
+    "r_prevu_moyen": 2.21,
+    "pire_baisse": -160,
+    "mois_pos": "1/5",
+    "mois": {
+     "2026-01": -53,
+     "2026-04": 92,
+     "2026-06": -52,
+     "2026-08": -52,
+     "2026-09": -56
+    }
+   }
+  },
+  "achats": {
+   "trades": 11,
+   "gain": -27,
+   "r_trade": -0.049,
+   "brut_trade": 0.023,
+   "reussite": 0.36,
+   "r_prevu_moyen": 1.69,
+   "pire_baisse": -215,
+   "mois_pos": "3/6",
+   "mois": {
+    "2026-01": 75,
+    "2026-02": -112,
+    "2026-04": 68,
+    "2026-06": -52,
+    "2026-08": 50,
+    "2026-09": -56
+   }
+  },
+  "ventes": {
+   "trades": 6,
+   "gain": 63,
+   "r_trade": 0.21,
+   "brut_trade": 0.272,
+   "reussite": 0.5,
+   "r_prevu_moyen": 2.24,
+   "pire_baisse": -107,
+   "mois_pos": "2/2",
+   "mois": {
+    "2026-01": 40,
+    "2026-03": 23
+   }
+  }
+ },
+ "objectif_2R": {
+  "ensemble": {
+   "trades": 17,
+   "gain": -15,
+   "r_trade": -0.017,
+   "brut_trade": 0.051,
+   "reussite": 0.35,
+   "r_prevu_moyen": 2.0,
+   "pire_baisse": -240,
+   "mois_pos": "3/7",
+   "mois": {
+    "2026-01": 182,
+    "2026-02": -112,
+    "2026-03": -107,
+    "2026-04": 83,
+    "2026-06": -52,
+    "2026-08": 47,
+    "2026-09": -56
+   }
+  },
+  "par_actif": {
+   "NAS100": {
+    "trades": 5,
+    "gain": -116,
+    "r_trade": -0.462,
+    "brut_trade": -0.398,
+    "reussite": 0.2,
+    "r_prevu_moyen": 2.0,
+    "pire_baisse": -160,
+    "mois_pos": "1/3",
+    "mois": {
+     "2026-01": 44,
+     "2026-02": -53,
+     "2026-03": -107
+    }
+   },
+   "US500": {
+    "trades": 7,
+    "gain": 216,
+    "r_trade": 0.616,
+    "brut_trade": 0.695,
+    "reussite": 0.57,
+    "r_prevu_moyen": 2.0,
+    "pire_baisse": -111,
+    "mois_pos": "2/4",
+    "mois": {
+     "2026-01": 190,
+     "2026-02": -59,
+     "2026-04": -15,
+     "2026-08": 100
+    }
+   },
+   "OR": {
+    "trades": 5,
+    "gain": -115,
+    "r_trade": -0.459,
+    "brut_trade": -0.402,
+    "reussite": 0.2,
+    "r_prevu_moyen": 2.0,
+    "pire_baisse": -160,
+    "mois_pos": "1/5",
+    "mois": {
+     "2026-01": -53,
+     "2026-04": 98,
+     "2026-06": -52,
+     "2026-08": -52,
+     "2026-09": -56
+    }
+   }
+  },
+  "achats": {
+   "trades": 11,
+   "gain": 9,
+   "r_trade": 0.016,
+   "brut_trade": 0.088,
+   "reussite": 0.36,
+   "r_prevu_moyen": 2.0,
+   "pire_baisse": -215,
+   "mois_pos": "3/6",
+   "mois": {
+    "2026-01": 99,
+    "2026-02": -112,
+    "2026-04": 83,
+    "2026-06": -52,
+    "2026-08": 47,
+    "2026-09": -56
+   }
+  },
+  "ventes": {
+   "trades": 6,
+   "gain": -24,
+   "r_trade": -0.079,
+   "brut_trade": -0.017,
+   "reussite": 0.33,
+   "r_prevu_moyen": 2.0,
+   "pire_baisse": -120,
+   "mois_pos": "1/2",
+   "mois": {
+    "2026-01": 83,
+    "2026-03": -107
+   }
+  }
+ },
+ "achat_seul": {
+  "ensemble": {
+   "trades": 11,
+   "gain": -27,
+   "r_trade": -0.049,
+   "brut_trade": 0.023,
+   "reussite": 0.36,
+   "r_prevu_moyen": 1.69,
+   "pire_baisse": -215,
+   "mois_pos": "3/6",
+   "mois": {
+    "2026-01": 75,
+    "2026-02": -112,
+    "2026-04": 68,
+    "2026-06": -52,
+    "2026-08": 50,
+    "2026-09": -56
+   }
+  },
+  "par_actif": {
+   "NAS100": {
+    "trades": 2,
+    "gain": 22,
+    "r_trade": 0.217,
+    "brut_trade": 0.268,
+    "reussite": 0.5,
+    "r_prevu_moyen": 1.68,
+    "pire_baisse": -53,
+    "mois_pos": "1/2",
+    "mois": {
+     "2026-01": 75,
+     "2026-02": -53
+    }
+   },
+   "US500": {
+    "trades": 5,
+    "gain": 20,
+    "r_trade": 0.08,
+    "brut_trade": 0.171,
+    "reussite": 0.4,
+    "r_prevu_moyen": 1.74,
+    "pire_baisse": -111,
+    "mois_pos": "1/3",
+    "mois": {
+     "2026-02": -59,
+     "2026-04": -24,
+     "2026-08": 103
+    }
+   },
+   "OR": {
+    "trades": 4,
+    "gain": -69,
+    "r_trade": -0.343,
+    "brut_trade": -0.286,
+    "reussite": 0.25,
+    "r_prevu_moyen": 1.62,
+    "pire_baisse": -160,
+    "mois_pos": "1/4",
+    "mois": {
+     "2026-04": 92,
+     "2026-06": -52,
+     "2026-08": -52,
+     "2026-09": -56
+    }
+   }
+  },
+  "achats": {
+   "trades": 11,
+   "gain": -27,
+   "r_trade": -0.049,
+   "brut_trade": 0.023,
+   "reussite": 0.36,
+   "r_prevu_moyen": 1.69,
+   "pire_baisse": -215,
+   "mois_pos": "3/6",
+   "mois": {
+    "2026-01": 75,
+    "2026-02": -112,
+    "2026-04": 68,
+    "2026-06": -52,
+    "2026-08": 50,
+    "2026-09": -56
+   }
+  },
+  "ventes": {
+   "trades": 0,
+   "gain": 0
+  }
+ }
+}
