@@ -1,0 +1,15 @@
+{
+ "description": "Trades réels de Rayan, pour traduire son modèle OB en règles. Heures de Paris. Prix IG (US Tech 100 au comptant).",
+ "trades": [
+  {"n": 1, "actif": "NAS100", "sens": "achat", "date": "2026-10-09",
+   "contexte": ["daily et 4 h haussiers", "retour sur une ancienne résistance daily devenue support",
+                "le 8 oct. 18 h–19 h : chute à ~30 552 sous les plus bas du 5–6 oct. (~30 725), puis rebond",
+                "le 9 oct. : hausse à ~31 040, BOS haussier 1 h"],
+   "ob": "1 h : dernière bougie rouge avant la jambe de hausse (zone = mèche basse → mèche haute)",
+   "declencheur": "le prix revient dans l'OB, une bougie clôture en laissant une mèche, puis une bougie verte haussière clôture → entrée",
+   "confluences": ["double bottom en 30 min"],
+   "entree": 30855, "stop": 30725, "tp": 31100,
+   "tp_raison": "mèche haute du 8 oct. à 16 h (~31 126) : liquidité au-dessus des plus hauts",
+   "r_prevu": 1.9, "resultat": "en cours (+88 € à 20 h 48 avec 3 contrats)"}
+ ]
+}
