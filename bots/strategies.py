@@ -88,13 +88,13 @@ def ict(m, i, p):
 
 
 # ---------------------------------------------------------------- 2. Perso (modèle de Rayan, revu le 9 oct.)
-# OB sur l'unité de structure (1 h ou 2 h) = dernière bougie opposée avant la clôture qui casse le dernier
+# OB sur l'unité de structure (1 h ou 2 h) = dernier order block de la jambe qui casse le dernier
 # plus bas (vente) / plus haut (achat) : critère n° 1, obligatoire.
 # Score de l'OB (1 à 5) : 1 de base, +1 s'il libère un FVG, +1 par unité supérieure où il est aussi
 # visible (2 h, 4 h, daily ; « visible » = la bougie de cette unité qui contient l'OB est de la même
 # couleur et une des 3 bougies suivantes clôture au-delà de son extrême). Le score ne filtre pas : il classe.
 # Zone = OB ∩ OTE (62–79 % de la jambe) · invalidation : clôture de l'unité de structure au-delà de l'OB.
-# Après contact : MSS 3 min, ordre limite à 61,8 % de la jambe 3 min · stop au-delà de l'extrême 3 min.
+# Après contact : MSS 3 min, ordre limite à 61,8 % de la jambe 3 min · stop au-delà de l'OB (unité de structure).
 # Objectif : R fixe (2R), plus de visée de liquidité · break-even optionnel.
 def _visible(m, i, regle, t_ob, sens):
     u = m.ut(regle, 2)
@@ -127,13 +127,13 @@ def perso(m, i, p):
         k -= 1
     if k < 0:
         return _non("pas de BOS")
-    mb = st["bos"][k][0]
+    mb, _, _, i0 = st["bos"][k]
     if (ns - 1 - mb) > p["age_max_bos"]:
         return _non("BOS trop ancien")
     H, L, O, C = us["h"], us["l"], us["o"], us["c"]
-    # OB = dernière bougie opposée avant (ou égale à) la bougie de cassure
+    # OB = dernier order block de la jambe : dernière bougie opposée entre le départ de la jambe et la cassure
     opp = (C > O) if sens == -1 else (C < O)
-    j = next((x for x in range(mb, max(mb - 30, -1), -1) if opp[x]), None)
+    j = next((x for x in range(mb, max(i0, 0) - 1, -1) if opp[x]), None) if i0 >= 0 else None
     if j is None:
         return _non("pas d'OB")
     if sens == -1:
@@ -185,7 +185,8 @@ def perso(m, i, p):
         fond = l3[xi:b + 1].min(); entree = fond + p["entree_ote"] * (extreme - fond)
     else:
         fond = h3[xi:b + 1].max(); entree = fond - p["entree_ote"] * (fond - extreme)
-    stop = extreme + sens * p["marge_stop_atr"] * u3["atr"][b]
+    # stop au-delà de l'OB de l'unité de structure (règle de Rayan, 9 oct. 3 h) ; marge en ATR de cette unité
+    stop = (H[j] if sens == -1 else L[j]) + sens * p["marge_stop_atr"] * us["atr"][ns - 1]
     risque = (entree - stop) * sens
     if risque <= 0:
         return _non("risque nul")

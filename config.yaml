@@ -117,7 +117,7 @@ strategies:
     expiration_minutes: 60
     r_cible: 2.0                   # objectif fixe : 2R (règle de Rayan, 9 oct.)
     break_even_r: 1.0
-    marge_stop_atr: 0.1            # marge au-delà de la mèche (ATR 3 min)
+    marge_stop_atr: 0.1            # marge au-delà de l'OB (ATR de l'unité de structure)
     attente_mss_bougies3: 80       # le MSS 3 min doit venir dans les 4 h après le contact
     age_max_bos: 72                # en bougies de structure
   perso_2h:                        # même modèle, structure 2 h
