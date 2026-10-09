@@ -1,84 +1,121 @@
 {
- "date": "2026-10-09T00:01:19+00:00",
+ "date": "2026-10-09T00:26:55+00:00",
  "jours": 182,
+ "compte": "10 000 $ au départ, 0,5 % du solde risqué par trade (1R ≈ 50 $)",
  "par_strategie": {
   "ict": {
-   "trades": 325,
-   "esperance_r": -0.117,
-   "taux_reussite": 0.255,
-   "profit_factor": 0.86,
-   "total_r": -38.16,
-   "drawdown_max_r": -57.02,
-   "esperance_brute_r": 0.004,
-   "reussite_brute": 0.255,
+   "trades": 328,
+   "esperance_r": -0.128,
+   "taux_reussite": 0.253,
+   "profit_factor": 0.85,
+   "total_r": -41.84,
+   "drawdown_max_r": -61.52,
+   "esperance_brute_r": -0.005,
+   "reussite_brute": 0.253,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 8004.83,
+    "gain": -1995.17,
+    "gain_pct": -19.95,
+    "pire_baisse": -2942.19
+   },
    "feu_vert": false
   },
   "perso_1h": {
-   "trades": 105,
-   "esperance_r": -0.083,
-   "taux_reussite": 0.39,
+   "trades": 107,
+   "esperance_r": -0.082,
+   "taux_reussite": 0.393,
    "profit_factor": 0.86,
-   "total_r": -8.72,
+   "total_r": -8.74,
    "drawdown_max_r": -13.88,
    "esperance_brute_r": 0.036,
-   "reussite_brute": 0.39,
+   "reussite_brute": 0.393,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9554.34,
+    "gain": -445.66,
+    "gain_pct": -4.46,
+    "pire_baisse": -680.5
+   },
    "feu_vert": false
   },
   "perso_2h": {
-   "trades": 62,
-   "esperance_r": -0.192,
-   "taux_reussite": 0.258,
-   "profit_factor": 0.7,
-   "total_r": -11.89,
+   "trades": 64,
+   "esperance_r": -0.181,
+   "taux_reussite": 0.266,
+   "profit_factor": 0.72,
+   "total_r": -11.57,
    "drawdown_max_r": -16.98,
-   "esperance_brute_r": -0.062,
-   "reussite_brute": 0.258,
+   "esperance_brute_r": -0.049,
+   "reussite_brute": 0.266,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9424.33,
+    "gain": -575.67,
+    "gain_pct": -5.76,
+    "pire_baisse": -828.49
+   },
    "feu_vert": false
   },
   "sr": {
    "trades": 587,
-   "esperance_r": -0.269,
-   "taux_reussite": 0.233,
-   "profit_factor": 0.69,
-   "total_r": -157.82,
+   "esperance_r": -0.263,
+   "taux_reussite": 0.235,
+   "profit_factor": 0.7,
+   "total_r": -154.38,
    "drawdown_max_r": -172.0,
-   "esperance_brute_r": -0.122,
-   "reussite_brute": 0.233,
+   "esperance_brute_r": -0.116,
+   "reussite_brute": 0.235,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 4513.87,
+    "gain": -5486.13,
+    "gain_pct": -54.86,
+    "pire_baisse": -6112.4
+   },
    "feu_vert": false
   }
  },
  "entonnoir": {
   "ict": {
-   "hors killzone": 643603,
-   "pas de déplacement": 149109,
-   "pas de biais 4h": 351,
-   "pas de liquidité à 2R": 349,
-   "pas de sweep": 1267,
-   "pas de MSS": 2421
+   "hors killzone": 643207,
+   "pas de biais 4h": 346,
+   "pas de déplacement": 148777,
+   "pas de liquidité à 2R": 351,
+   "pas de sweep": 1260,
+   "pas de MSS": 2409
   },
   "perso_1h": {
-   "historique": 1596,
-   "attente": 3129,
-   "zone pas touchée": 148422,
-   "OB hors OTE": 70263,
-   "pas de MSS 3 min": 28461,
-   "signal": 804,
-   "MSS trop tardif": 25932,
-   "zone invalidée": 9033,
-   "pas de liquidité à 1R": 3
+   "historique": 1592,
+   "zone pas touchée": 148582,
+   "attente": 3137,
+   "pas de MSS 3 min": 28573,
+   "signal": 812,
+   "MSS trop tardif": 25500,
+   "zone invalidée": 8853,
+   "OB hors OTE": 70312,
+   "pas de liquidité à 1R": 3,
+   "BOS trop ancien": 140
   },
   "perso_2h": {
-   "historique": 3097,
-   "BOS trop ancien": 165,
-   "MSS trop tardif": 30034,
-   "zone pas touchée": 156109,
-   "pas de MSS 3 min": 16896,
-   "attente": 1573,
+   "historique": 3117,
+   "MSS trop tardif": 29908,
+   "zone pas touchée": 156700,
+   "pas de MSS 3 min": 16871,
+   "attente": 1581,
    "OB hors OTE": 75565,
-   "signal": 411,
+   "signal": 413,
    "zone invalidée": 5727,
    "pas de liquidité à 1R": 3,
-   "pas de tendance": 601
+   "pas de tendance": 341
   }
  },
  "refus": {
@@ -88,31 +125,40 @@
   "sr|NAS100|frais trop lourds": 116,
   "sr|NAS100|stop plus court que le minimum du broker": 1,
   "ict|OR|frais trop lourds": 19,
-  "perso_1h|OR|frais trop lourds": 29,
+  "perso_1h|OR|frais trop lourds": 30,
   "perso_2h|OR|frais trop lourds": 17,
-  "sr|OR|frais trop lourds": 205,
+  "sr|OR|frais trop lourds": 208,
   "sr|OR|stop plus court que le minimum du broker": 5,
   "ict|EURUSD|frais trop lourds": 135,
   "ict|EURUSD|stop plus court que le minimum du broker": 45,
-  "perso_1h|EURUSD|frais trop lourds": 83,
+  "perso_1h|EURUSD|frais trop lourds": 85,
   "perso_1h|EURUSD|stop plus court que le minimum du broker": 27,
-  "perso_2h|EURUSD|frais trop lourds": 40,
+  "perso_2h|EURUSD|frais trop lourds": 41,
   "perso_2h|EURUSD|stop plus court que le minimum du broker": 16,
-  "sr|EURUSD|frais trop lourds": 287,
-  "sr|EURUSD|stop plus court que le minimum du broker": 359,
-  "ict|BTC|stop plus court que le minimum du broker": 496,
-  "perso_1h|BTC|stop plus court que le minimum du broker": 420,
+  "sr|EURUSD|frais trop lourds": 283,
+  "sr|EURUSD|stop plus court que le minimum du broker": 363,
+  "ict|BTC|stop plus court que le minimum du broker": 493,
+  "perso_1h|BTC|stop plus court que le minimum du broker": 421,
   "perso_2h|BTC|stop plus court que le minimum du broker": 193,
-  "sr|BTC|stop plus court que le minimum du broker": 1288
+  "sr|BTC|stop plus court que le minimum du broker": 1281
  },
  "par_strategie_actif": {
   "ict|NAS100": {
-   "trades": 105,
-   "esperance_r": -0.198,
-   "taux_reussite": 0.229,
-   "profit_factor": 0.77,
-   "total_r": -20.83,
-   "drawdown_max_r": -35.75
+   "trades": 107,
+   "esperance_r": -0.217,
+   "taux_reussite": 0.224,
+   "profit_factor": 0.75,
+   "total_r": -23.21,
+   "drawdown_max_r": -38.13,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 8868.24,
+    "gain": -1131.76,
+    "gain_pct": -11.32,
+    "pire_baisse": -1883.68
+   }
   },
   "perso_1h|NAS100": {
    "trades": 46,
@@ -120,7 +166,16 @@
    "taux_reussite": 0.239,
    "profit_factor": 0.51,
    "total_r": -14.49,
-   "drawdown_max_r": -15.49
+   "drawdown_max_r": -15.49,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9294.34,
+    "gain": -705.66,
+    "gain_pct": -7.06,
+    "pire_baisse": -755.76
+   }
   },
   "perso_2h|NAS100": {
    "trades": 25,
@@ -128,31 +183,67 @@
    "taux_reussite": 0.2,
    "profit_factor": 0.7,
    "total_r": -4.78,
-   "drawdown_max_r": -7.52
+   "drawdown_max_r": -7.52,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9757.45,
+    "gain": -242.55,
+    "gain_pct": -2.43,
+    "pire_baisse": -370.5
+   }
   },
   "sr|NAS100": {
-   "trades": 258,
-   "esperance_r": -0.13,
-   "taux_reussite": 0.244,
+   "trades": 260,
+   "esperance_r": -0.125,
+   "taux_reussite": 0.246,
    "profit_factor": 0.85,
-   "total_r": -33.49,
-   "drawdown_max_r": -47.75
+   "total_r": -32.47,
+   "drawdown_max_r": -47.75,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 8387.41,
+    "gain": -1612.59,
+    "gain_pct": -16.13,
+    "pire_baisse": -2202.54
+   }
   },
   "ict|OR": {
-   "trades": 144,
-   "esperance_r": 0.031,
-   "taux_reussite": 0.278,
-   "profit_factor": 1.04,
-   "total_r": 4.4,
-   "drawdown_max_r": -20.16
+   "trades": 145,
+   "esperance_r": 0.022,
+   "taux_reussite": 0.276,
+   "profit_factor": 1.03,
+   "total_r": 3.2,
+   "drawdown_max_r": -20.16,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10090.74,
+    "gain": 90.74,
+    "gain_pct": 0.91,
+    "pire_baisse": -1033.67
+   }
   },
   "perso_1h|OR": {
-   "trades": 33,
-   "esperance_r": -0.054,
-   "taux_reussite": 0.424,
+   "trades": 35,
+   "esperance_r": -0.051,
+   "taux_reussite": 0.429,
    "profit_factor": 0.92,
-   "total_r": -1.77,
-   "drawdown_max_r": -8.17
+   "total_r": -1.79,
+   "drawdown_max_r": -8.17,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9904.07,
+    "gain": -95.93,
+    "gain_pct": -0.96,
+    "pire_baisse": -405.63
+   }
   },
   "perso_2h|OR": {
    "trades": 18,
@@ -160,23 +251,50 @@
    "taux_reussite": 0.333,
    "profit_factor": 0.85,
    "total_r": -1.67,
-   "drawdown_max_r": -6.65
+   "drawdown_max_r": -6.65,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9913.27,
+    "gain": -86.73,
+    "gain_pct": -0.87,
+    "pire_baisse": -334.8
+   }
   },
   "sr|OR": {
    "trades": 272,
    "esperance_r": -0.386,
    "taux_reussite": 0.213,
    "profit_factor": 0.57,
-   "total_r": -104.97,
-   "drawdown_max_r": -122.58
+   "total_r": -104.9,
+   "drawdown_max_r": -122.58,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 5867.24,
+    "gain": -4132.76,
+    "gain_pct": -41.33,
+    "pire_baisse": -4904.04
+   }
   },
   "ict|EURUSD": {
    "trades": 75,
-   "esperance_r": -0.275,
+   "esperance_r": -0.276,
    "taux_reussite": 0.253,
-   "profit_factor": 0.69,
-   "total_r": -20.63,
-   "drawdown_max_r": -25.52
+   "profit_factor": 0.68,
+   "total_r": -20.72,
+   "drawdown_max_r": -27.75,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 8995.1,
+    "gain": -1004.9,
+    "gain_pct": -10.05,
+    "pire_baisse": -1358.45
+   }
   },
   "perso_1h|EURUSD": {
    "trades": 26,
@@ -184,23 +302,50 @@
    "taux_reussite": 0.615,
    "profit_factor": 1.7,
    "total_r": 7.54,
-   "drawdown_max_r": -4.69
+   "drawdown_max_r": -4.69,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10379.32,
+    "gain": 379.32,
+    "gain_pct": 3.79,
+    "pire_baisse": -234.41
+   }
   },
   "perso_2h|EURUSD": {
-   "trades": 19,
-   "esperance_r": -0.286,
-   "taux_reussite": 0.263,
-   "profit_factor": 0.57,
-   "total_r": -5.44,
-   "drawdown_max_r": -8.53
+   "trades": 21,
+   "esperance_r": -0.244,
+   "taux_reussite": 0.286,
+   "profit_factor": 0.63,
+   "total_r": -5.12,
+   "drawdown_max_r": -8.53,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9743.1,
+    "gain": -256.9,
+    "gain_pct": -2.57,
+    "pire_baisse": -419.34
+   }
   },
   "sr|EURUSD": {
-   "trades": 57,
-   "esperance_r": -0.34,
-   "taux_reussite": 0.281,
-   "profit_factor": 0.6,
-   "total_r": -19.36,
-   "drawdown_max_r": -21.05
+   "trades": 55,
+   "esperance_r": -0.309,
+   "taux_reussite": 0.291,
+   "profit_factor": 0.63,
+   "total_r": -17.0,
+   "drawdown_max_r": -18.76,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9172.49,
+    "gain": -827.51,
+    "gain_pct": -8.28,
+    "pire_baisse": -907.36
+   }
   },
   "ict|BTC": {
    "trades": 1,
@@ -208,19 +353,110 @@
    "taux_reussite": 0.0,
    "profit_factor": 0.0,
    "total_r": -1.11,
-   "drawdown_max_r": -1.11
+   "drawdown_max_r": -1.11,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9944.55,
+    "gain": -55.45,
+    "gain_pct": -0.55,
+    "pire_baisse": -55.45
+   }
   },
   "perso_1h|BTC": {
-   "trades": 0
+   "trades": 0,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10000,
+    "gain": 0,
+    "gain_pct": 0.0,
+    "pire_baisse": 0.0
+   }
   },
   "perso_2h|BTC": {
-   "trades": 0
+   "trades": 0,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10000,
+    "gain": 0,
+    "gain_pct": 0.0,
+    "pire_baisse": 0.0
+   }
   },
   "sr|BTC": {
-   "trades": 0
+   "trades": 0,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10000,
+    "gain": 0,
+    "gain_pct": 0.0,
+    "pire_baisse": 0.0
+   }
   }
  },
  "trades": [
+  {
+   "strategie": "perso_1h",
+   "actif": "OR",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 4023.8254,
+   "stop": 4023.8254,
+   "stop_initial": 4021.6874285714284,
+   "cible": 4028.845,
+   "be_r": 1.0,
+   "r_prevu": 2.35,
+   "jour": "2026-07-28",
+   "debut": "2026-07-28 20:04:00+00:00",
+   "pm": 1324,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    4023.0643,
+    4028.2204
+   ],
+   "be": true,
+   "sortie": 4028.845,
+   "motif": "objectif",
+   "r": 1.833,
+   "r_brut": 2.348,
+   "fin": "2026-07-28 20:37:00+00:00"
+  },
+  {
+   "strategie": "perso_1h",
+   "actif": "NAS100",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 27774.4838,
+   "stop": 27738.1196,
+   "stop_initial": 27738.1196,
+   "cible": 27820.758,
+   "be_r": 1.0,
+   "r_prevu": 1.27,
+   "jour": "2026-07-29",
+   "debut": "2026-07-28 22:21:00+00:00",
+   "pm": 21,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    27738.6656,
+    27779.8167
+   ],
+   "sortie": 27738.1196,
+   "motif": "stop",
+   "r": -1.08,
+   "r_brut": -1.0,
+   "fin": "2026-07-28 22:33:00+00:00"
+  },
   {
    "strategie": "sr",
    "actif": "NAS100",
@@ -8643,6 +8879,276 @@
    "r": -1.174,
    "r_brut": -1.0,
    "fin": "2026-10-07 23:16:00+00:00"
+  },
+  {
+   "strategie": "sr",
+   "actif": "NAS100",
+   "setup": "cassure_retest",
+   "sens": 1,
+   "entree": 31168.687,
+   "stop": 31154.837828571428,
+   "stop_initial": 31154.837828571428,
+   "cible": 31201.865,
+   "be_r": null,
+   "r_prevu": 2.36,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 01:26:00+00:00",
+   "pm": 206,
+   "sortie": 31201.865,
+   "motif": "objectif",
+   "r": 2.186,
+   "r_brut": 2.396,
+   "fin": "2026-10-08 01:36:00+00:00"
+  },
+  {
+   "strategie": "sr",
+   "actif": "OR",
+   "setup": "rebond",
+   "sens": -1,
+   "entree": 4125.725,
+   "stop": 4132.285714285715,
+   "stop_initial": 4132.285714285715,
+   "cible": 4114.075,
+   "be_r": null,
+   "r_prevu": 1.86,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 01:11:00+00:00",
+   "pm": 191,
+   "sortie": 4132.2857,
+   "motif": "stop",
+   "r": -1.168,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 01:36:00+00:00"
+  },
+  {
+   "strategie": "sr",
+   "actif": "NAS100",
+   "setup": "cassure_retest",
+   "sens": -1,
+   "entree": 31191.653,
+   "stop": 31209.199671428574,
+   "stop_initial": 31209.199671428574,
+   "cible": 31161.186,
+   "be_r": null,
+   "r_prevu": 1.71,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 02:21:00+00:00",
+   "pm": 261,
+   "sortie": 31209.1997,
+   "motif": "stop",
+   "r": -1.165,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 02:27:00+00:00"
+  },
+  {
+   "strategie": "ict",
+   "actif": "NAS100",
+   "setup": "sweep_fvg",
+   "sens": 1,
+   "entree": 31010.4915,
+   "stop": 30998.157814285714,
+   "stop_initial": 30998.157814285714,
+   "cible": 31130.265,
+   "be_r": null,
+   "r_prevu": 9.71,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 07:37:00+00:00",
+   "pm": 577,
+   "sortie": 30998.1578,
+   "motif": "stop",
+   "r": -1.235,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 07:55:00+00:00"
+  },
+  {
+   "strategie": "ict",
+   "actif": "OR",
+   "setup": "sweep_fvg",
+   "sens": -1,
+   "entree": 4122.555,
+   "stop": 4124.9962857142855,
+   "stop_initial": 4124.9962857142855,
+   "cible": 4114.215,
+   "be_r": null,
+   "r_prevu": 3.42,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 07:38:00+00:00",
+   "pm": 578,
+   "sortie": 4124.9963,
+   "motif": "stop",
+   "r": -1.205,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 08:05:00+00:00"
+  },
+  {
+   "strategie": "perso_1h",
+   "actif": "OR",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 4118.9612,
+   "stop": 4118.9612,
+   "stop_initial": 4114.548785714286,
+   "cible": 4124.095,
+   "be_r": 1.0,
+   "r_prevu": 1.16,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 07:35:00+00:00",
+   "pm": 575,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    4109.1928,
+    4115.965
+   ],
+   "be": true,
+   "sortie": 4124.095,
+   "motif": "objectif",
+   "r": 1.05,
+   "r_brut": 1.163,
+   "fin": "2026-10-08 08:05:00+00:00"
+  },
+  {
+   "strategie": "ict",
+   "actif": "EURUSD",
+   "setup": "sweep_fvg",
+   "sens": -1,
+   "entree": 1.1192,
+   "stop": 1.1199074285714286,
+   "stop_initial": 1.1199074285714286,
+   "cible": 1.11647,
+   "be_r": null,
+   "r_prevu": 3.96,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 07:14:00+00:00",
+   "pm": 554,
+   "sortie": 1.1199,
+   "motif": "stop",
+   "r": -1.127,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 08:19:00+00:00"
+  },
+  {
+   "strategie": "ict",
+   "actif": "NAS100",
+   "setup": "sweep_fvg",
+   "sens": 1,
+   "entree": 31023.2195,
+   "stop": 31003.392821428573,
+   "stop_initial": 31003.392821428573,
+   "cible": 31130.265,
+   "be_r": null,
+   "r_prevu": 5.4,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 08:23:00+00:00",
+   "pm": 623,
+   "sortie": 31003.3928,
+   "motif": "stop",
+   "r": -1.146,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 08:33:00+00:00"
+  },
+  {
+   "strategie": "perso_1h",
+   "actif": "OR",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 4121.3552,
+   "stop": 4114.462157142857,
+   "stop_initial": 4114.462157142857,
+   "cible": 4133.055,
+   "be_r": 1.0,
+   "r_prevu": 1.7,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 10:05:00+00:00",
+   "pm": 725,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "1h",
+   "zone": [
+    4109.1928,
+    4115.965
+   ],
+   "sortie": 4114.4622,
+   "motif": "stop",
+   "r": -1.073,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 10:33:00+00:00"
+  },
+  {
+   "strategie": "perso_2h",
+   "actif": "EURUSD",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 1.118,
+   "stop": 1.1176115714285715,
+   "stop_initial": 1.1176115714285715,
+   "cible": 1.12038,
+   "be_r": 1.0,
+   "r_prevu": 6.53,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 11:03:00+00:00",
+   "pm": 783,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    1.1176,
+    1.1183
+   ],
+   "sortie": 1.1176,
+   "motif": "stop",
+   "r": -1.232,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 11:07:00+00:00"
+  },
+  {
+   "strategie": "ict",
+   "actif": "EURUSD",
+   "setup": "sweep_fvg",
+   "sens": -1,
+   "entree": 1.1191,
+   "stop": 1.1200030714285714,
+   "stop_initial": 1.1200030714285714,
+   "cible": 1.11647,
+   "be_r": null,
+   "r_prevu": 3.14,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 08:50:00+00:00",
+   "pm": 650,
+   "sortie": 1.12,
+   "motif": "stop",
+   "r": -1.1,
+   "r_brut": -1.0,
+   "fin": "2026-10-08 13:52:00+00:00"
+  },
+  {
+   "strategie": "perso_2h",
+   "actif": "EURUSD",
+   "setup": "ob_ote_mss3",
+   "sens": 1,
+   "entree": 1.1192,
+   "stop": 1.1192,
+   "stop_initial": 1.1184959285714284,
+   "cible": 1.12038,
+   "be_r": 1.0,
+   "r_prevu": 1.74,
+   "jour": "2026-10-08",
+   "debut": "2026-10-08 16:22:00+00:00",
+   "pm": 1102,
+   "cible_type": "interne",
+   "etoiles": 0,
+   "ut": "2h",
+   "zone": [
+    1.1178,
+    1.1188
+   ],
+   "be": true,
+   "sortie": 1.1204,
+   "motif": "objectif",
+   "r": 1.548,
+   "r_brut": 1.676,
+   "fin": "2026-10-08 17:09:00+00:00"
   }
  ]
 }
