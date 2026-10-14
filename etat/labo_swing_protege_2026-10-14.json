@@ -1,0 +1,224 @@
+{
+ "date": "2026-10-14",
+ "periode": "1 an (oct. 2025 → 13 oct. 2026), bougies 1 min Dukascopy, coûts IG",
+ "compte": "10 000 $, 0,5 % risqué par trade",
+ "comparaison": "structure actuelle vs swing protégé (structure_protegee: true)",
+ "resultats": {
+  "perso_1h|NAS100|actuel": {
+   "trades": 83,
+   "esperance_r": 0.053,
+   "taux_reussite": 0.373,
+   "profit_factor": 1.08,
+   "total_r": 4.41,
+   "drawdown_max_r": -11.81,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10200.49,
+    "gain": 200.49,
+    "gain_pct": 2.0,
+    "pire_baisse": -593.1
+   },
+   "brut": 0.12
+  },
+  "perso_2h|NAS100|actuel": {
+   "trades": 56,
+   "esperance_r": 0.285,
+   "taux_reussite": 0.5,
+   "profit_factor": 1.41,
+   "total_r": 15.96,
+   "drawdown_max_r": -13.71,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10800.7,
+    "gain": 800.7,
+    "gain_pct": 8.01,
+    "pire_baisse": -734.87
+   },
+   "brut": 0.338
+  },
+  "perso_1h|NAS100|protege": {
+   "trades": 81,
+   "esperance_r": 0.118,
+   "taux_reussite": 0.395,
+   "profit_factor": 1.18,
+   "total_r": 9.52,
+   "drawdown_max_r": -9.49,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10464.74,
+    "gain": 464.74,
+    "gain_pct": 4.65,
+    "pire_baisse": -478.59
+   },
+   "brut": 0.184
+  },
+  "perso_2h|NAS100|protege": {
+   "trades": 43,
+   "esperance_r": -0.154,
+   "taux_reussite": 0.372,
+   "profit_factor": 0.82,
+   "total_r": -6.6,
+   "drawdown_max_r": -15.55,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9654.08,
+    "gain": -345.92,
+    "gain_pct": -3.46,
+    "pire_baisse": -775.27
+   },
+   "brut": -0.095
+  },
+  "perso_1h|OR|actuel": {
+   "trades": 94,
+   "esperance_r": -0.045,
+   "taux_reussite": 0.351,
+   "profit_factor": 0.94,
+   "total_r": -4.22,
+   "drawdown_max_r": -16.55,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9767.35,
+    "gain": -232.65,
+    "gain_pct": -2.33,
+    "pire_baisse": -826.78
+   },
+   "brut": 0.047
+  },
+  "perso_2h|OR|actuel": {
+   "trades": 40,
+   "esperance_r": -0.242,
+   "taux_reussite": 0.275,
+   "profit_factor": 0.69,
+   "total_r": -9.68,
+   "drawdown_max_r": -14.41,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9518.49,
+    "gain": -481.51,
+    "gain_pct": -4.82,
+    "pire_baisse": -712.39
+   },
+   "brut": -0.188
+  },
+  "perso_1h|OR|protege": {
+   "trades": 55,
+   "esperance_r": -0.169,
+   "taux_reussite": 0.309,
+   "profit_factor": 0.78,
+   "total_r": -9.31,
+   "drawdown_max_r": -16.84,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9532.44,
+    "gain": -467.56,
+    "gain_pct": -4.68,
+    "pire_baisse": -849.25
+   },
+   "brut": -0.084
+  },
+  "perso_2h|OR|protege": {
+   "trades": 29,
+   "esperance_r": -0.354,
+   "taux_reussite": 0.241,
+   "profit_factor": 0.57,
+   "total_r": -10.27,
+   "drawdown_max_r": -10.27,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9493.5,
+    "gain": -506.5,
+    "gain_pct": -5.07,
+    "pire_baisse": -506.5
+   },
+   "brut": -0.294
+  },
+  "perso_1h|EURUSD|actuel": {
+   "trades": 69,
+   "esperance_r": -0.105,
+   "taux_reussite": 0.348,
+   "profit_factor": 0.86,
+   "total_r": -7.22,
+   "drawdown_max_r": -17.51,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9629.04,
+    "gain": -370.96,
+    "gain_pct": -3.71,
+    "pire_baisse": -885.66
+   },
+   "brut": 0.029
+  },
+  "perso_2h|EURUSD|actuel": {
+   "trades": 41,
+   "esperance_r": -0.026,
+   "taux_reussite": 0.366,
+   "profit_factor": 0.96,
+   "total_r": -1.08,
+   "drawdown_max_r": -9.18,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9935.6,
+    "gain": -64.4,
+    "gain_pct": -0.64,
+    "pire_baisse": -462.65
+   },
+   "brut": 0.098
+  },
+  "perso_1h|EURUSD|protege": {
+   "trades": 50,
+   "esperance_r": -0.304,
+   "taux_reussite": 0.28,
+   "profit_factor": 0.63,
+   "total_r": -15.21,
+   "drawdown_max_r": -16.69,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 9257.02,
+    "gain": -742.98,
+    "gain_pct": -7.43,
+    "pire_baisse": -816.2
+   },
+   "brut": -0.177
+  },
+  "perso_2h|EURUSD|protege": {
+   "trades": 32,
+   "esperance_r": 0.079,
+   "taux_reussite": 0.406,
+   "profit_factor": 1.12,
+   "total_r": 2.51,
+   "drawdown_max_r": -8.11,
+   "valeur": {
+    "compte_depart": 10000,
+    "risque_pct": 0.5,
+    "valeur_1r": 50.0,
+    "solde_final": 10117.67,
+    "gain": 117.67,
+    "gain_pct": 1.18,
+    "pire_baisse": -421.47
+   },
+   "brut": 0.211
+  }
+ }
+}

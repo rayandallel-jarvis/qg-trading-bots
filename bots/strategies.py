@@ -115,7 +115,7 @@ OB_UTILISES = set()            # piste 5 « OB frais » : un OB ne sert qu'une f
 
 def perso(m, i, p):
     u3 = m.ut("3min", p["k_3m"])
-    us = m.ut(p["ut"], p["k_structure"])
+    us = m.ut(p["ut"], p["k_structure"], p.get("structure_protegee", False))
     limite_ob = p.get("entree") == "limite"
     if limite_ob:
         if not (i > 0 and us["n"][i] > us["n"][i - 1]):

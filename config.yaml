@@ -173,6 +173,7 @@ strategies:
     ut: 1h
     max_trades_jour: 2
     k_structure: 2                 # swings fractals (2 bougies de chaque côté)
+    structure_protegee: false      # true = la tendance ne change qu'à la reprise du haut/bas protégé (testé le 14 oct.)
     k_4h: 2
     k_3m: 2
     ote_min: 0.62
@@ -190,6 +191,7 @@ strategies:
     ut: 2h
     max_trades_jour: 2
     k_structure: 2
+    structure_protegee: false      # true = la tendance ne change qu'à la reprise du haut/bas protégé (testé le 14 oct.)
     k_4h: 2
     k_3m: 2
     ote_min: 0.62

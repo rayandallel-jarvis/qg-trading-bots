@@ -104,6 +104,56 @@ def structure(h, l, c, k):
     return {"sh": sh, "sl": sl, "dsh": dsh, "dsl": dsl, "ish": ish, "isl": isl, "tendance": tendance, "bos": bos}
 
 
+def structure_protegee(h, l, c, k):
+    """Structure avec swing protégé (lecture de Rayan, 14 oct.).
+
+    En tendance baissière, seul un plus bas cassé en clôture fait une nouvelle cassure (BOS) ;
+    la tendance ne repasse haussière que si une clôture reprend le haut protégé, c'est-à-dire le plus
+    haut de la jambe qui a fait la dernière cassure baissière (le « lower high » d'origine).
+    Les petits swings hauts cassés à l'intérieur de la tendance sont ignorés. Symétrique en hausse.
+    """
+    n = len(c)
+    base = structure(h, l, c, k)
+    dsh, dsl, ish, isl = base["dsh"], base["dsl"], base["ish"], base["isl"]
+    tendance = np.zeros(n, dtype=int)
+    bos, protege = [], np.full(n, np.nan)
+    etat, niv_p, dern_bos = 0, np.nan, 0
+    casse_h = casse_l = None
+    for m in range(n):
+        if etat == 0:
+            if dsh[m] == dsh[m] and c[m] > dsh[m]:
+                d0 = max(int(isl[m]), 0)
+                j = d0 + int(np.argmin(l[d0:m + 1]))
+                etat, niv_p, dern_bos, casse_h = 1, l[j], m, ish[m]
+                bos.append((m, 1, float(dsh[m]), j))
+            elif dsl[m] == dsl[m] and c[m] < dsl[m]:
+                d0 = max(int(ish[m]), 0)
+                j = d0 + int(np.argmax(h[d0:m + 1]))
+                etat, niv_p, dern_bos, casse_l = -1, h[j], m, isl[m]
+                bos.append((m, -1, float(dsl[m]), j))
+        elif etat == -1:
+            if c[m] > niv_p:                                  # changement de caractère : haut protégé repris
+                j = dern_bos + int(np.argmin(l[dern_bos:m + 1]))
+                bos.append((m, 1, float(niv_p), j))
+                etat, niv_p, dern_bos, casse_h = 1, l[j], m, ish[m]
+            elif dsl[m] == dsl[m] and c[m] < dsl[m] and casse_l != isl[m]:   # continuation baissière
+                j = dern_bos + int(np.argmax(h[dern_bos:m + 1]))
+                bos.append((m, -1, float(dsl[m]), j))
+                niv_p, dern_bos, casse_l = h[j], m, isl[m]
+        else:
+            if c[m] < niv_p:
+                j = dern_bos + int(np.argmax(h[dern_bos:m + 1]))
+                bos.append((m, -1, float(niv_p), j))
+                etat, niv_p, dern_bos, casse_l = -1, h[j], m, isl[m]
+            elif dsh[m] == dsh[m] and c[m] > dsh[m] and casse_h != ish[m]:
+                j = dern_bos + int(np.argmin(l[dern_bos:m + 1]))
+                bos.append((m, 1, float(dsh[m]), j))
+                niv_p, dern_bos, casse_h = l[j], m, ish[m]
+        tendance[m] = etat
+        protege[m] = niv_p
+    return {**base, "tendance": tendance, "bos": bos, "protege": protege}
+
+
 class Marche:
     def __init__(self, df, type_actif, k=3, part_valeur=0.70, k_h1=2, k_m5=2):
         self.type = type_actif
@@ -206,9 +256,12 @@ class Marche:
 
 
     # ------------------------------------------------------------------ unités à la demande
-    def ut(self, regle, k=2):
-        """Bougies d'une unité de temps (ex. '3min', '1h', '2h', '4h', '1D') avec leur structure."""
-        cle = (regle, k)
+    def ut(self, regle, k=2, protege=False):
+        """Bougies d'une unité de temps (ex. '3min', '1h', '2h', '4h', '1D') avec leur structure.
+
+        protege=True : structure à swing protégé (la tendance ne change qu'à la reprise du haut/bas protégé).
+        """
+        cle = (regle, k, bool(protege))
         if not hasattr(self, "_ut"):
             self._ut = {}
         if cle in self._ut:
@@ -237,7 +290,7 @@ class Marche:
         o, h, l, c = (d[x].to_numpy() for x in ("open", "high", "low", "close"))
         res = {"d": d, "o": o, "h": h, "l": l, "c": c, "fin": fin, "atr": atr(d),
                "n": np.searchsorted(fin, self.fin1.to_numpy(), side="right"),
-               "st": structure(h, l, c, k), "k": k}
+               "st": (structure_protegee if protege else structure)(h, l, c, k), "k": k}
         res["bos_m"] = np.array([b[0] for b in res["st"]["bos"]], dtype=int)
         self._ut[cle] = res
         return res
