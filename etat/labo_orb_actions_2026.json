@@ -1,0 +1,78 @@
+{
+ "source": "Zarattini, Barbon, Aziz (2024), ORB 5 min Stocks in Play",
+ "univers": "86 actions US Dukascopy",
+ "periode": "2026-01-01 → 2026-10-15",
+ "note": "minute d'entrée ambiguë dans ~1/3 des trades ; tranchée par les ticks sur 832 cas : stop touché en premier dans 42 % → estimation = optimiste + 0,42 × (prudent − optimiste)",
+ "resultats": [
+  {
+   "variante": "Stocks in Play : top 20, volume relatif ≥ 100 % (papier)",
+   "trades": 3840,
+   "trades_jour": 19.6,
+   "gain_2026_estime": -4413,
+   "borne_prudente": -6098,
+   "borne_optimiste": -3192,
+   "r_net_estime": -0.269,
+   "r_brut_estime": -0.171,
+   "reussite": [
+    0.11,
+    0.15
+   ]
+  },
+  {
+   "variante": "Stocks in Play : top 5, volume relatif ≥ 100 %",
+   "trades": 980,
+   "trades_jour": 5.0,
+   "gain_2026_estime": -4392,
+   "borne_prudente": -6798,
+   "borne_optimiste": -2650,
+   "r_net_estime": -0.216,
+   "r_brut_estime": -0.12,
+   "reussite": [
+    0.09,
+    0.13
+   ]
+  },
+  {
+   "variante": "Stocks in Play : volume relatif ≥ 200 %, top 20",
+   "trades": 460,
+   "trades_jour": 2.8,
+   "gain_2026_estime": -3574,
+   "borne_prudente": -6372,
+   "borne_optimiste": -1548,
+   "r_net_estime": -0.114,
+   "r_brut_estime": -0.017,
+   "reussite": [
+    0.06,
+    0.1
+   ]
+  },
+  {
+   "variante": "Base : toutes les actions, sans filtre de volume",
+   "trades": 13505,
+   "trades_jour": 68.9,
+   "gain_2026_estime": -5094,
+   "borne_prudente": -6247,
+   "borne_optimiste": -4259,
+   "r_net_estime": -0.295,
+   "r_brut_estime": -0.199,
+   "reussite": [
+    0.12,
+    0.15
+   ]
+  },
+  {
+   "variante": "Stocks in Play top 20, risque 0,5 % (règle de Rayan)",
+   "trades": 3840,
+   "trades_jour": 19.6,
+   "gain_2026_estime": -4413,
+   "borne_prudente": -6098,
+   "borne_optimiste": -3192,
+   "r_net_estime": -0.269,
+   "r_brut_estime": -0.171,
+   "reussite": [
+    0.11,
+    0.15
+   ]
+  }
+ ]
+}
