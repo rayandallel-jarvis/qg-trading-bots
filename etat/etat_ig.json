@@ -450,12 +450,12 @@
    "max": 150
   },
   "BTC|23h": {
-   "n": 9339,
+   "n": 9422,
    "moy": 150.0,
    "max": 150
   },
   "BTC|00h": {
-   "n": 9416,
+   "n": 9452,
    "moy": 150.0,
    "max": 150
   },
@@ -614,11 +614,15 @@
  "capital": 100210.36,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-10-24T21:52:04+00:00",
+ "maj": "2026-10-24T22:03:06+00:00",
  "erreurs": [
   {
    "t": "2026-10-12T10:48:31+00:00",
    "txt": "prix IG : HTTP 403 sur GET /markets : {\"errorCode\":\"error.security.api-key-invalid\"}"
+  },
+  {
+   "t": "2026-10-24T21:53:07+00:00",
+   "txt": "échantillonnage : URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
   }
  ]
 }
