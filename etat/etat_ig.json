@@ -210,22 +210,22 @@
    "max": 150
   },
   "NAS100|11h": {
-   "n": 12968,
+   "n": 13090,
    "moy": 2.5,
    "max": 2.5
   },
   "OR|11h": {
-   "n": 12968,
-   "moy": 0.958236,
+   "n": 13090,
+   "moy": 0.957913,
    "max": 1.1
   },
   "EURUSD|11h": {
-   "n": 12968,
+   "n": 13090,
    "moy": 0.0001,
    "max": 0.00015
   },
   "BTC|11h": {
-   "n": 18443,
+   "n": 18565,
    "moy": 150.0,
    "max": 150
   },
@@ -619,7 +619,7 @@
  "capital": 103148.56,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-11-05T10:13:04+00:00",
+ "maj": "2026-11-05T10:24:07+00:00",
  "erreurs": [
   {
    "t": "2026-10-12T10:48:31+00:00",
@@ -628,6 +628,10 @@
   {
    "t": "2026-10-24T21:53:07+00:00",
    "txt": "échantillonnage : URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
+  },
+  {
+   "t": "2026-11-05T10:13:48+00:00",
+   "txt": "prix IG : HTTP 403 sur GET /markets : {\"errorCode\":\"error.security.api-key-invalid\"}"
   }
  ]
 }
