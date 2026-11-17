@@ -430,22 +430,22 @@
    "max": 150
   },
   "NAS100|22h": {
-   "n": 16083,
-   "moy": 2.916793,
+   "n": 16084,
+   "moy": 2.916767,
    "max": 5.0
   },
   "OR|22h": {
-   "n": 13365,
-   "moy": 1.065308,
+   "n": 13366,
+   "moy": 1.065311,
    "max": 10.6
   },
   "EURUSD|22h": {
-   "n": 18473,
+   "n": 18474,
    "moy": 0.000352,
    "max": 0.0018
   },
   "BTC|22h": {
-   "n": 23545,
+   "n": 23546,
    "moy": 150.0,
    "max": 150
   },
@@ -492,11 +492,6 @@
  },
  "broker": "IG démo",
  "demarrages": [
-  {
-   "t": "2026-11-15T07:48:59+00:00",
-   "actif": "NAS100",
-   "bougies_ig": 0
-  },
   {
    "t": "2026-11-15T07:48:59+00:00",
    "actif": "OR",
@@ -591,6 +586,11 @@
    "t": "2026-11-17T09:10:31+00:00",
    "actif": "BTC",
    "bougies_ig": 277
+  },
+  {
+   "t": "2026-11-17T21:44:47+00:00",
+   "actif": "NAS100",
+   "bougies_ig": 359
   }
  ],
  "stats_cycle": {
@@ -616,10 +616,10 @@
    "trades": 0
   }
  },
- "capital": 91942.53,
+ "capital": 88074.93,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-11-17T14:50:34+00:00",
+ "maj": "2026-11-17T21:44:49+00:00",
  "erreurs": [
   {
    "t": "2026-10-12T10:48:31+00:00",
@@ -632,6 +632,18 @@
   {
    "t": "2026-11-05T10:13:48+00:00",
    "txt": "prix IG : HTTP 403 sur GET /markets : {\"errorCode\":\"error.security.api-key-invalid\"}"
+  },
+  {
+   "t": "2026-11-17T21:44:47+00:00",
+   "txt": "OR : trou non comblé (HTTP 403 sur GET /prices/CS.D.CFEGOLD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-17T21:44:48+00:00",
+   "txt": "EURUSD : trou non comblé (HTTP 403 sur GET /prices/CS.D.EURUSD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-17T21:44:48+00:00",
+   "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
   }
  ]
 }
