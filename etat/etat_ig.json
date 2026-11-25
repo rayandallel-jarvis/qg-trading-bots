@@ -190,22 +190,22 @@
    "max": 150
   },
   "NAS100|10h": {
-   "n": 21506,
+   "n": 21507,
    "moy": 2.5,
    "max": 2.5
   },
   "OR|10h": {
-   "n": 21497,
-   "moy": 0.964951,
+   "n": 21498,
+   "moy": 0.964948,
    "max": 1.88
   },
   "EURUSD|10h": {
-   "n": 21506,
+   "n": 21507,
    "moy": 0.0001,
    "max": 0.00017
   },
   "BTC|10h": {
-   "n": 31049,
+   "n": 31050,
    "moy": 150.0,
    "max": 150
   },
@@ -494,11 +494,6 @@
  "demarrages": [
   {
    "t": "2026-11-22T20:18:54+00:00",
-   "actif": "NAS100",
-   "bougies_ig": 0
-  },
-  {
-   "t": "2026-11-22T20:18:54+00:00",
    "actif": "OR",
    "bougies_ig": 0
   },
@@ -591,6 +586,11 @@
    "t": "2026-11-24T22:59:57+00:00",
    "actif": "BTC",
    "bougies_ig": 359
+  },
+  {
+   "t": "2026-11-25T09:48:13+00:00",
+   "actif": "NAS100",
+   "bougies_ig": 309
   }
  ],
  "stats_cycle": {
@@ -619,12 +619,8 @@
  "capital": 88074.93,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-11-25T04:39:58+00:00",
+ "maj": "2026-11-25T09:48:16+00:00",
  "erreurs": [
-  {
-   "t": "2026-10-12T10:48:31+00:00",
-   "txt": "prix IG : HTTP 403 sur GET /markets : {\"errorCode\":\"error.security.api-key-invalid\"}"
-  },
   {
    "t": "2026-10-24T21:53:07+00:00",
    "txt": "échantillonnage : URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
@@ -691,6 +687,18 @@
   },
   {
    "t": "2026-11-19T08:44:48+00:00",
+   "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T09:48:13+00:00",
+   "txt": "OR : trou non comblé (HTTP 403 sur GET /prices/CS.D.CFEGOLD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T09:48:14+00:00",
+   "txt": "EURUSD : trou non comblé (HTTP 403 sur GET /prices/CS.D.EURUSD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T09:48:14+00:00",
    "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
   }
  ]
