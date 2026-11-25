@@ -450,7 +450,7 @@
    "max": 150
   },
   "BTC|23h": {
-   "n": 26391,
+   "n": 26392,
    "moy": 150.0,
    "max": 150
   },
@@ -460,7 +460,7 @@
    "max": 150
   },
   "EURUSD|23h": {
-   "n": 19383,
+   "n": 19384,
    "moy": 0.000762,
    "max": 0.0018
   },
@@ -480,8 +480,8 @@
    "max": 4.49
   },
   "NAS100|23h": {
-   "n": 15545,
-   "moy": 4.463671,
+   "n": 15546,
+   "moy": 4.463705,
    "max": 5.0
   },
   "OR|23h": {
@@ -619,24 +619,8 @@
  "capital": 88074.93,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-11-25T15:28:17+00:00",
+ "maj": "2026-11-25T22:28:37+00:00",
  "erreurs": [
-  {
-   "t": "2026-10-24T21:53:07+00:00",
-   "txt": "échantillonnage : URLError(TimeoutError('_ssl.c:993: The handshake operation timed out'))"
-  },
-  {
-   "t": "2026-11-05T10:13:48+00:00",
-   "txt": "prix IG : HTTP 403 sur GET /markets : {\"errorCode\":\"error.security.api-key-invalid\"}"
-  },
-  {
-   "t": "2026-11-17T21:44:47+00:00",
-   "txt": "OR : trou non comblé (HTTP 403 sur GET /prices/CS.D.CFEGOLD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
-  },
-  {
-   "t": "2026-11-17T21:44:48+00:00",
-   "txt": "EURUSD : trou non comblé (HTTP 403 sur GET /prices/CS.D.EURUSD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
-  },
   {
    "t": "2026-11-17T21:44:48+00:00",
    "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
@@ -699,6 +683,22 @@
   },
   {
    "t": "2026-11-25T09:48:14+00:00",
+   "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T22:28:35+00:00",
+   "txt": "NAS100 : trou non comblé (HTTP 403 sur GET /prices/IX.D.NASDAQ.IEN.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T22:28:35+00:00",
+   "txt": "OR : trou non comblé (HTTP 403 sur GET /prices/CS.D.CFEGOLD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T22:28:36+00:00",
+   "txt": "EURUSD : trou non comblé (HTTP 403 sur GET /prices/CS.D.EURUSD.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-25T22:28:36+00:00",
    "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
   }
  ]
