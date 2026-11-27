@@ -619,12 +619,8 @@
  "capital": 88074.93,
  "devise": "EUR",
  "mode": "essai",
- "maj": "2026-11-27T23:00:06+00:00",
+ "maj": "2026-11-27T23:11:04+00:00",
  "erreurs": [
-  {
-   "t": "2026-11-18T08:30:23+00:00",
-   "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
-  },
   {
    "t": "2026-11-18T21:23:37+00:00",
    "txt": "NAS100 : trou non comblé (HTTP 403 sur GET /prices/IX.D.NASDAQ.IEN.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
@@ -700,6 +696,10 @@
   {
    "t": "2026-11-26T09:29:21+00:00",
    "txt": "BTC : trou non comblé (HTTP 403 sur GET /prices/CS.D.BITCOIN.CEF.IP : {\"errorCode\":\"error.public-api.exceeded-account-historical-data-allowance\"})"
+  },
+  {
+   "t": "2026-11-27T23:07:53+00:00",
+   "txt": "prix IG : HTTP 500 sur GET /markets : {\"errorCode\":\"Service bean method[getMultipleMarketDetails] failure: Task rx.internal.schedulers.ExecutorScheduler$ExecutorSchedulerWorker@4a75fc8c rejected from java.util.concurrent.ThreadPoolExecutor@4b8f8053[Terminated, pool size = 0, active threads = 0, queu"
   }
  ]
 }
